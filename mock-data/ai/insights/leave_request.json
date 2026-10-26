@@ -1,0 +1,30 @@
+{
+  "screen_key": "leave_request",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "amber",
+        "title": "6 đơn nghỉ & 7 đơn OT chờ duyệt",
+        "content": "Duyệt trước ngày nghỉ để nhật ký công việc và báo cáo tháng cập nhật kịp."
+      },
+      {
+        "variant": "blue",
+        "title": "Phép năm còn nhiều vào cuối năm",
+        "content": "Một số nhân sự còn trên 8 ngày phép — nhắc lên kế hoạch nghỉ để tránh dồn vào tháng 12."
+      }
+    ],
+    "en": [
+      {
+        "variant": "amber",
+        "title": "6 leave & 7 overtime requests pending",
+        "content": "Approve before the leave date so timesheets and monthly reports stay up to date."
+      },
+      {
+        "variant": "blue",
+        "title": "Large leave balances late in the year",
+        "content": "Several people still have more than 8 days left — remind them to plan leave before December."
+      }
+    ]
+  }
+}

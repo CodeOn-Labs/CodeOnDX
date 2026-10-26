@@ -1,0 +1,1014 @@
+[
+  {
+    "id": "04f12c6e-cea4-5526-96f7-995e477cee94",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "project_status",
+    "code": "RUNNING",
+    "name": "Đang chạy",
+    "name_en": "Running",
+    "description": null,
+    "metadata": {
+      "color": "green"
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "a59e16a1-e138-5b6f-9df4-d4a590fd5efb",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "project_status",
+    "code": "ENDING",
+    "name": "Sắp KT",
+    "name_en": "Ending soon",
+    "description": null,
+    "metadata": {
+      "color": "amber"
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "a337523a-fb45-513c-8803-5f3e7f3ed93f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "project_status",
+    "code": "PLANNING",
+    "name": "Kế hoạch",
+    "name_en": "Planning",
+    "description": null,
+    "metadata": {
+      "color": "violet"
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "832d1af6-45f5-56ea-b1fd-731e38be1bbc",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "project_status",
+    "code": "COMPLETED",
+    "name": "Hoàn thành",
+    "name_en": "Completed",
+    "description": null,
+    "metadata": {
+      "color": "slate"
+    },
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "afa3f6c2-2cd7-5ee5-9db3-fb72e2464911",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "project_level",
+    "code": "S",
+    "name": "S",
+    "name_en": "S",
+    "description": null,
+    "metadata": {
+      "color": "red",
+      "rank": 1
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "f3eb391f-44fe-5dff-8142-ff98d1fcc2ae",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "project_level",
+    "code": "A",
+    "name": "A",
+    "name_en": "A",
+    "description": null,
+    "metadata": {
+      "color": "amber",
+      "rank": 2
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "a60f7519-a299-57d3-a85e-6d4963f2d997",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "project_level",
+    "code": "B",
+    "name": "B",
+    "name_en": "B",
+    "description": null,
+    "metadata": {
+      "color": "pr",
+      "rank": 3
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "832a59b7-73f7-53a3-8957-f99d04585886",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "project_level",
+    "code": "C",
+    "name": "C",
+    "name_en": "C",
+    "description": null,
+    "metadata": {
+      "color": "slate",
+      "rank": 4
+    },
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "73dc4769-6c1e-5165-8c67-ac12cc4aa9f0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "risk_level",
+    "code": "HIGH",
+    "name": "Cao",
+    "name_en": "High",
+    "description": null,
+    "metadata": {
+      "color": "red"
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "c4b5b5ac-3e85-5fa7-981a-d48c3326c555",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "risk_level",
+    "code": "MEDIUM",
+    "name": "Trung bình",
+    "name_en": "Medium",
+    "description": null,
+    "metadata": {
+      "color": "amber"
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "57df8ba8-eed1-589f-9b07-2be224a9d520",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "risk_level",
+    "code": "LOW",
+    "name": "Thấp",
+    "name_en": "Low",
+    "description": null,
+    "metadata": {
+      "color": "green"
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "73840d66-b475-509f-8028-6bdaf9390614",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "hr_level",
+    "code": "INTERN",
+    "name": "Intern",
+    "name_en": "Intern",
+    "description": null,
+    "metadata": {
+      "rank": 1,
+      "color": "slate"
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "50628bf4-625a-5f13-9acd-5a5acc4e798c",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "hr_level",
+    "code": "FRESHER",
+    "name": "Fresher",
+    "name_en": "Fresher",
+    "description": null,
+    "metadata": {
+      "rank": 2,
+      "color": "emerald"
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "4cfee40b-e508-5324-927d-44fe63412932",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "hr_level",
+    "code": "JUNIOR",
+    "name": "Junior",
+    "name_en": "Junior",
+    "description": null,
+    "metadata": {
+      "rank": 3,
+      "color": "blue"
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "05c383f9-2d1c-5053-a56b-052fa2743d8b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "hr_level",
+    "code": "MID",
+    "name": "Mid",
+    "name_en": "Mid",
+    "description": null,
+    "metadata": {
+      "rank": 4,
+      "color": "indigo"
+    },
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "ae7458aa-5d85-5a40-b4af-43a872db0ac7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "hr_level",
+    "code": "SENIOR",
+    "name": "Senior",
+    "name_en": "Senior",
+    "description": null,
+    "metadata": {
+      "rank": 5,
+      "color": "violet"
+    },
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "c6a6325e-1949-5b58-b2eb-65eb151fc5c1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "hr_level",
+    "code": "LEAD",
+    "name": "Lead",
+    "name_en": "Lead",
+    "description": null,
+    "metadata": {
+      "rank": 6,
+      "color": "amber"
+    },
+    "sort_seq": 6,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "6a78f7ec-db5b-5607-b30d-3a20d4cf9b1f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "hr_level",
+    "code": "PRINCIPAL",
+    "name": "Principal",
+    "name_en": "Principal",
+    "description": null,
+    "metadata": {
+      "rank": 7,
+      "color": "rose"
+    },
+    "sort_seq": 7,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "c4783d89-e0cb-5cbb-bc22-75e8be77adef",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "PO",
+    "name": "PO",
+    "name_en": "PO",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "5431a761-640b-57b9-81c5-aecbfff4e644",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "PM",
+    "name": "PM",
+    "name_en": "PM",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "6ff5109b-4b24-5853-b232-2ff0c00e05a0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "BRSE",
+    "name": "BrSE",
+    "name_en": "BrSE",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "7f0283c9-3a4a-50e2-a391-00add1c4749f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "DEV_BE",
+    "name": "Dev BE",
+    "name_en": "Backend developer",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "ae8c8138-e876-5c07-8072-f949ba6e11cc",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "DEV_FE",
+    "name": "Dev FE",
+    "name_en": "Frontend developer",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "17110694-0344-59e4-be5a-d8b297ae980b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "DEV_MOBILE",
+    "name": "Dev Mobile",
+    "name_en": "Mobile developer",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 6,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "09aad9d6-a757-5032-a8f5-c024ff40f749",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "DEV_AI",
+    "name": "Dev AI",
+    "name_en": "AI engineer",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 7,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "7dab46a5-b9d8-5072-8945-1c360d0753e6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "TESTER",
+    "name": "Tester",
+    "name_en": "Tester",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 8,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "982ebe0e-6835-5ddc-ab0f-f94a81d34a3e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "COMTOR",
+    "name": "Comtor",
+    "name_en": "Interpreter",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 9,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "78de7a03-c240-5a10-8f36-55246bfce937",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "job_position",
+    "code": "INFRA",
+    "name": "Infra",
+    "name_en": "Infrastructure",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 10,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "fa0cf8f5-4bd7-5b70-82de-c35ad33e245c",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "task_type",
+    "code": "PROJECT",
+    "name": "Dự án",
+    "name_en": "Project",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "b889d8ed-b417-54b3-8747-78b972f922f1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "task_type",
+    "code": "MEETING",
+    "name": "Họp",
+    "name_en": "Meeting",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "d8a09394-6a16-5287-8229-e1d05abf1910",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "task_type",
+    "code": "RESEARCH",
+    "name": "Nghiên cứu",
+    "name_en": "Research",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "1d96048f-551d-5bb5-965b-0614b912801e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "task_type",
+    "code": "DOCUMENT",
+    "name": "Tài liệu",
+    "name_en": "Documentation",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "f3c5b6e9-fa3c-5dd4-9007-c3224ae193bc",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "task_type",
+    "code": "ACTIVITY",
+    "name": "Các hoạt động",
+    "name_en": "Activities",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "6a4af849-9ecc-501a-9798-c6f8f5e6bf89",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "task_type",
+    "code": "OTHER",
+    "name": "Khác",
+    "name_en": "Other",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 6,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "435c78ff-8dd4-582d-979f-362b86ea9e97",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "task_type",
+    "code": "OT",
+    "name": "Làm thêm giờ (OT)",
+    "name_en": "Overtime",
+    "description": null,
+    "metadata": {
+      "system": true
+    },
+    "sort_seq": 7,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "e36cdc0c-b061-50b3-a6e8-c0f611e12fa1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "task_type",
+    "code": "LEAVE",
+    "name": "Nghỉ phép",
+    "name_en": "Leave",
+    "description": null,
+    "metadata": {
+      "system": true
+    },
+    "sort_seq": 8,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "8586e480-b76d-530f-9e53-6821e105294e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "employee_status",
+    "code": "PROBATION",
+    "name": "Thử việc",
+    "name_en": "Probation",
+    "description": null,
+    "metadata": {
+      "color": "blue",
+      "working": true
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "d20846c3-177d-5636-80fb-a785d7a522c0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "employee_status",
+    "code": "ACTIVE",
+    "name": "Đang làm việc",
+    "name_en": "Active",
+    "description": null,
+    "metadata": {
+      "color": "green",
+      "working": true
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "448331af-a20e-5f39-aef3-d10f964b19d4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "employee_status",
+    "code": "MATERNITY_LEAVE",
+    "name": "Nghỉ thai sản",
+    "name_en": "Maternity leave",
+    "description": null,
+    "metadata": {
+      "color": "amber",
+      "working": false
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "88d7e593-ff26-583b-b79b-9193a23f4276",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "employee_status",
+    "code": "UNPAID_LEAVE",
+    "name": "Nghỉ không lương dài hạn",
+    "name_en": "Long unpaid leave",
+    "description": null,
+    "metadata": {
+      "color": "slate",
+      "working": false
+    },
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "5864424f-6abb-5850-9704-85deb46d0fe0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "employee_status",
+    "code": "RESIGNED",
+    "name": "Đã nghỉ việc",
+    "name_en": "Resigned",
+    "description": null,
+    "metadata": {
+      "color": "red",
+      "working": false
+    },
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "6f5855d4-ec9b-561f-99af-e558558aeab0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "leave_type",
+    "code": "ANNUAL",
+    "name": "Nghỉ phép năm",
+    "name_en": "Annual leave",
+    "description": null,
+    "metadata": {
+      "color": "green",
+      "paid": true,
+      "deduct_balance": true
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "ee36f79c-7f81-5b18-a709-63742d5273bc",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "leave_type",
+    "code": "SICK",
+    "name": "Nghỉ ốm",
+    "name_en": "Sick leave",
+    "description": null,
+    "metadata": {
+      "color": "amber",
+      "paid": false,
+      "deduct_balance": false,
+      "need_attachment": true
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "04c7003d-b738-5c25-997b-b6bca2c0ba46",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "leave_type",
+    "code": "COMPENSATORY",
+    "name": "Nghỉ bù",
+    "name_en": "Compensatory leave",
+    "description": null,
+    "metadata": {
+      "color": "teal",
+      "paid": true,
+      "deduct_balance": false
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "de0498d8-2913-5a29-9cc4-b4994b8dbc63",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "leave_type",
+    "code": "PERSONAL_PAID",
+    "name": "Nghỉ việc riêng có lương (cưới, tang…)",
+    "name_en": "Paid personal leave (wedding, bereavement…)",
+    "description": null,
+    "metadata": {
+      "color": "violet",
+      "paid": true,
+      "deduct_balance": false
+    },
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "abd796d0-0867-5104-8deb-0092ae088fca",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "leave_type",
+    "code": "UNPAID",
+    "name": "Nghỉ không lương",
+    "name_en": "Unpaid leave",
+    "description": null,
+    "metadata": {
+      "color": "slate",
+      "paid": false,
+      "deduct_balance": false
+    },
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "4381a6ab-12be-5595-8661-67c0e5d93040",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "link_type",
+    "code": "JIRA",
+    "name": "Jira",
+    "name_en": "Jira",
+    "description": null,
+    "metadata": {
+      "kind": "ticket"
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "f4be5e90-426a-55d2-90bb-162ab4e2161f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "link_type",
+    "code": "BACKLOG",
+    "name": "Backlog",
+    "name_en": "Backlog",
+    "description": null,
+    "metadata": {
+      "kind": "ticket"
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "5d1cf303-b56f-579e-a9f2-160cc856ee79",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "link_type",
+    "code": "GITHUB",
+    "name": "GitHub",
+    "name_en": "GitHub",
+    "description": null,
+    "metadata": {
+      "kind": "source"
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "bab61e05-17f1-5bd4-8d2c-8daf67d55b43",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "link_type",
+    "code": "GITLAB",
+    "name": "GitLab",
+    "name_en": "GitLab",
+    "description": null,
+    "metadata": {
+      "kind": "source"
+    },
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "1bf76d0c-8fdd-57b2-b7ba-71310d60132e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "link_type",
+    "code": "GOOGLE_DRIVE",
+    "name": "Google Drive",
+    "name_en": "Google Drive",
+    "description": null,
+    "metadata": {
+      "kind": "storage"
+    },
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "573e1a61-3664-5583-b98d-399ac241faff",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "country",
+    "code": "VN",
+    "name": "Việt Nam",
+    "name_en": "Vietnam",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "81055ab6-3001-5586-89c5-d32d7e91cb8d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "country",
+    "code": "JP",
+    "name": "Nhật Bản",
+    "name_en": "Japan",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "bbfb70c1-ee36-5855-b7aa-0c6053de8cc1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "country",
+    "code": "SG",
+    "name": "Singapore",
+    "name_en": "Singapore",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "4d9f0db2-a5c8-5efa-af0e-fd95fa12e18d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "country",
+    "code": "US",
+    "name": "Hoa Kỳ",
+    "name_en": "United States",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "0f9da7dc-45fc-507a-b567-8d948d455ffe",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "country",
+    "code": "KR",
+    "name": "Hàn Quốc",
+    "name_en": "South Korea",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "68b0cbcf-7f91-526d-bfbf-571674329c41",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "industry",
+    "code": "RETAIL",
+    "name": "Bán lẻ",
+    "name_en": "Retail",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "3fde5b0e-afc9-5c5b-9311-8f8ae1478427",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "industry",
+    "code": "FINANCE",
+    "name": "Tài chính – Bảo hiểm",
+    "name_en": "Finance & insurance",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "a31e0d73-0a5d-5183-8ba0-67052e035bf9",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "industry",
+    "code": "MANUFACTURING",
+    "name": "Sản xuất",
+    "name_en": "Manufacturing",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "1d27a01d-0487-5f44-9af4-24659f073111",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "industry",
+    "code": "LOGISTICS",
+    "name": "Vận tải – Kho vận",
+    "name_en": "Logistics",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "e90bb252-d182-5fdf-b1b0-3b2d5d9f7131",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "industry",
+    "code": "SOFTWARE",
+    "name": "Phần mềm",
+    "name_en": "Software",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "43a61098-1df3-58b8-80ce-dd89a5baba8e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "industry",
+    "code": "FOOD",
+    "name": "Thực phẩm",
+    "name_en": "Food & beverage",
+    "description": null,
+    "metadata": {},
+    "sort_seq": 6,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "85fbe9b1-3776-5c5b-b24a-114b80a5af60",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "currency",
+    "code": "USD",
+    "name": "USD",
+    "name_en": "USD",
+    "description": null,
+    "metadata": {
+      "symbol": "$"
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "3a665f0b-e988-5446-8368-5a2a92e40669",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "currency",
+    "code": "JPY",
+    "name": "JPY",
+    "name_en": "JPY",
+    "description": null,
+    "metadata": {
+      "symbol": "¥"
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "e5aae0cc-eee2-526c-b5cc-c3f8e0f39847",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "currency",
+    "code": "VND",
+    "name": "VND",
+    "name_en": "VND",
+    "description": null,
+    "metadata": {
+      "symbol": "₫"
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "4cacaede-b6db-54ed-9c88-d2e72e9f8a6b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "performance_level",
+    "code": "TRAINEE",
+    "name": "Học việc",
+    "name_en": "Trainee",
+    "description": null,
+    "metadata": {
+      "coefficient": 0,
+      "color": "slate"
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "5e9b2c72-8f32-535f-8e7f-63f042d76b67",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "performance_level",
+    "code": "PARTIAL",
+    "name": "Hỗ trợ một phần",
+    "name_en": "Partial contribution",
+    "description": null,
+    "metadata": {
+      "coefficient": 0.5,
+      "color": "amber"
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "340dbc63-d54c-54c9-8ea5-7a6627165412",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "performance_level",
+    "code": "PROBATION",
+    "name": "Thử việc",
+    "name_en": "Probation",
+    "description": null,
+    "metadata": {
+      "coefficient": 0.8,
+      "color": "blue"
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "46cb99d9-cea7-5872-b5a3-bce0f2b3a2ff",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "performance_level",
+    "code": "FULL",
+    "name": "Chính thức",
+    "name_en": "Full contribution",
+    "description": null,
+    "metadata": {
+      "coefficient": 1,
+      "color": "emerald"
+    },
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  }
+]

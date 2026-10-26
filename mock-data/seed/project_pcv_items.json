@@ -1,0 +1,542 @@
+[
+  {
+    "id": "86aef8b8-e043-50a7-a13d-f12249d2d889",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Lập kế hoạch",
+    "content": "Kế hoạch dự án được cập nhật trong tháng",
+    "sort_seq": 1,
+    "is_deleted": false
+  },
+  {
+    "id": "44ba535a-d6b6-5833-8f66-e685e7a077d6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Lập kế hoạch",
+    "content": "Danh sách rủi ro được rà soát và có người phụ trách",
+    "sort_seq": 2,
+    "is_deleted": false
+  },
+  {
+    "id": "ada27f2e-a3b5-5f0a-b1dd-99a3b37a90b0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Yêu cầu",
+    "content": "Yêu cầu thay đổi được ghi nhận và phê duyệt",
+    "sort_seq": 3,
+    "is_deleted": false
+  },
+  {
+    "id": "a4a0e753-3a9a-52ed-beab-e869df729977",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Thiết kế",
+    "content": "Tài liệu thiết kế được review trước khi code",
+    "sort_seq": 4,
+    "is_deleted": false
+  },
+  {
+    "id": "124459d0-b2c1-54f6-9405-b7a12d3b1d87",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Phát triển",
+    "content": "Mọi merge request đều được review",
+    "sort_seq": 5,
+    "is_deleted": false
+  },
+  {
+    "id": "140579db-5919-5f44-b564-dbbdd747daf5",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Kiểm thử",
+    "content": "Có test case cho chức năng mới",
+    "sort_seq": 6,
+    "is_deleted": false
+  },
+  {
+    "id": "262babb3-fc68-58a1-a666-c89b7a183bab",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Kiểm thử",
+    "content": "Lỗi nghiêm trọng được xử lý trước khi bàn giao",
+    "sort_seq": 7,
+    "is_deleted": false
+  },
+  {
+    "id": "a3ddd64d-3b3d-5b8f-8a2e-f5ec92ed5b09",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Bàn giao",
+    "content": "Biên bản bàn giao được khách hàng xác nhận",
+    "sort_seq": 8,
+    "is_deleted": false
+  },
+  {
+    "id": "f64e87ad-94d7-564d-b424-6bfa87ebe4cf",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Cấu hình",
+    "content": "Mã nguồn và tài liệu được quản lý phiên bản",
+    "sort_seq": 9,
+    "is_deleted": false
+  },
+  {
+    "id": "a35e5290-bec2-57c5-9806-dc263961fda7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "group_name": "Báo cáo",
+    "content": "Báo cáo tuần được gửi khách hàng đúng hạn",
+    "sort_seq": 10,
+    "is_deleted": false
+  },
+  {
+    "id": "21fbdb4f-bbc8-50ee-9635-d49465514c09",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Lập kế hoạch",
+    "content": "Kế hoạch dự án được cập nhật trong tháng",
+    "sort_seq": 1,
+    "is_deleted": false
+  },
+  {
+    "id": "54b68250-0d31-5906-bbe9-3971cd332ede",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Lập kế hoạch",
+    "content": "Danh sách rủi ro được rà soát và có người phụ trách",
+    "sort_seq": 2,
+    "is_deleted": false
+  },
+  {
+    "id": "b379bcc7-079f-5e7e-8e37-f72029ccb417",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Yêu cầu",
+    "content": "Yêu cầu thay đổi được ghi nhận và phê duyệt",
+    "sort_seq": 3,
+    "is_deleted": false
+  },
+  {
+    "id": "05674205-78f0-5cb8-b041-a1fb5bdac9cd",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Thiết kế",
+    "content": "Tài liệu thiết kế được review trước khi code",
+    "sort_seq": 4,
+    "is_deleted": false
+  },
+  {
+    "id": "24436e82-2b06-5e73-9903-09e3d3780562",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Phát triển",
+    "content": "Mọi merge request đều được review",
+    "sort_seq": 5,
+    "is_deleted": false
+  },
+  {
+    "id": "5a4b040d-71d0-554d-8e9d-fab683ca7bef",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Kiểm thử",
+    "content": "Có test case cho chức năng mới",
+    "sort_seq": 6,
+    "is_deleted": false
+  },
+  {
+    "id": "b200553f-10f4-5539-bdb8-0de97d7fbdec",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Kiểm thử",
+    "content": "Lỗi nghiêm trọng được xử lý trước khi bàn giao",
+    "sort_seq": 7,
+    "is_deleted": false
+  },
+  {
+    "id": "7e67e171-c3bc-5682-990b-d8cd91fa80f4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Bàn giao",
+    "content": "Biên bản bàn giao được khách hàng xác nhận",
+    "sort_seq": 8,
+    "is_deleted": false
+  },
+  {
+    "id": "5eacb556-f017-59df-95d9-f0fc832cdadb",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Cấu hình",
+    "content": "Mã nguồn và tài liệu được quản lý phiên bản",
+    "sort_seq": 9,
+    "is_deleted": false
+  },
+  {
+    "id": "f977642a-22b5-5c02-8c6f-b0292822e5e6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "group_name": "Báo cáo",
+    "content": "Báo cáo tuần được gửi khách hàng đúng hạn",
+    "sort_seq": 10,
+    "is_deleted": false
+  },
+  {
+    "id": "a1924915-7b27-5e29-a994-8dc1e4895d03",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Lập kế hoạch",
+    "content": "Kế hoạch dự án được cập nhật trong tháng",
+    "sort_seq": 1,
+    "is_deleted": false
+  },
+  {
+    "id": "e0c2ec4b-2a1d-5d60-9bc1-a5d4454a4095",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Lập kế hoạch",
+    "content": "Danh sách rủi ro được rà soát và có người phụ trách",
+    "sort_seq": 2,
+    "is_deleted": false
+  },
+  {
+    "id": "7ca9b40c-12f2-56c4-b575-0da265eae23a",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Yêu cầu",
+    "content": "Yêu cầu thay đổi được ghi nhận và phê duyệt",
+    "sort_seq": 3,
+    "is_deleted": false
+  },
+  {
+    "id": "1ddea50e-6f5b-5054-abe6-896bcc2590d9",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Thiết kế",
+    "content": "Tài liệu thiết kế được review trước khi code",
+    "sort_seq": 4,
+    "is_deleted": false
+  },
+  {
+    "id": "d5b46dec-698b-51af-b4f5-1cfc025a837b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Phát triển",
+    "content": "Mọi merge request đều được review",
+    "sort_seq": 5,
+    "is_deleted": false
+  },
+  {
+    "id": "d003cbbe-cb8a-5a9a-8948-781a9da98e63",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Kiểm thử",
+    "content": "Có test case cho chức năng mới",
+    "sort_seq": 6,
+    "is_deleted": false
+  },
+  {
+    "id": "07af7fd8-9bfd-57dd-8aa2-1eacd2c0659a",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Kiểm thử",
+    "content": "Lỗi nghiêm trọng được xử lý trước khi bàn giao",
+    "sort_seq": 7,
+    "is_deleted": false
+  },
+  {
+    "id": "0a84d717-5152-59fc-9b6f-130ac3c7b33d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Bàn giao",
+    "content": "Biên bản bàn giao được khách hàng xác nhận",
+    "sort_seq": 8,
+    "is_deleted": false
+  },
+  {
+    "id": "e329d717-1e2a-5ef1-acc8-76269efda79f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Cấu hình",
+    "content": "Mã nguồn và tài liệu được quản lý phiên bản",
+    "sort_seq": 9,
+    "is_deleted": false
+  },
+  {
+    "id": "473b5ec3-8019-586a-86a0-0ac250012d31",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "group_name": "Báo cáo",
+    "content": "Báo cáo tuần được gửi khách hàng đúng hạn",
+    "sort_seq": 10,
+    "is_deleted": false
+  },
+  {
+    "id": "470bd678-f988-5c25-8e74-ede91b7cad14",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Lập kế hoạch",
+    "content": "Kế hoạch dự án được cập nhật trong tháng",
+    "sort_seq": 1,
+    "is_deleted": false
+  },
+  {
+    "id": "4e78083c-c913-5f20-a92c-77a3b849b21f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Lập kế hoạch",
+    "content": "Danh sách rủi ro được rà soát và có người phụ trách",
+    "sort_seq": 2,
+    "is_deleted": false
+  },
+  {
+    "id": "be5f2060-304b-5dce-93da-cb12c2e61a21",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Yêu cầu",
+    "content": "Yêu cầu thay đổi được ghi nhận và phê duyệt",
+    "sort_seq": 3,
+    "is_deleted": false
+  },
+  {
+    "id": "24c595af-9590-5570-9a0b-937b3fbd4722",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Thiết kế",
+    "content": "Tài liệu thiết kế được review trước khi code",
+    "sort_seq": 4,
+    "is_deleted": false
+  },
+  {
+    "id": "1d23f644-75a2-5149-9ae5-c46bef3b3a01",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Phát triển",
+    "content": "Mọi merge request đều được review",
+    "sort_seq": 5,
+    "is_deleted": false
+  },
+  {
+    "id": "5df82649-0aa2-5086-9ad9-d7a4e088ff18",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Kiểm thử",
+    "content": "Có test case cho chức năng mới",
+    "sort_seq": 6,
+    "is_deleted": false
+  },
+  {
+    "id": "88b709ba-94de-503b-99d5-55b52588d9e4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Kiểm thử",
+    "content": "Lỗi nghiêm trọng được xử lý trước khi bàn giao",
+    "sort_seq": 7,
+    "is_deleted": false
+  },
+  {
+    "id": "99434623-8d83-5218-9d86-3f138797c142",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Bàn giao",
+    "content": "Biên bản bàn giao được khách hàng xác nhận",
+    "sort_seq": 8,
+    "is_deleted": false
+  },
+  {
+    "id": "b785933f-889e-575f-ab5d-594c5bbb36bf",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Cấu hình",
+    "content": "Mã nguồn và tài liệu được quản lý phiên bản",
+    "sort_seq": 9,
+    "is_deleted": false
+  },
+  {
+    "id": "4eea2264-c95f-51c7-b413-6f1a1f98c224",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "group_name": "Báo cáo",
+    "content": "Báo cáo tuần được gửi khách hàng đúng hạn",
+    "sort_seq": 10,
+    "is_deleted": false
+  },
+  {
+    "id": "12234aef-3a59-553c-afcd-6cdb0b366a64",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Lập kế hoạch",
+    "content": "Kế hoạch dự án được cập nhật trong tháng",
+    "sort_seq": 1,
+    "is_deleted": false
+  },
+  {
+    "id": "eda6aec1-427c-552d-b001-53c0a56023e7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Lập kế hoạch",
+    "content": "Danh sách rủi ro được rà soát và có người phụ trách",
+    "sort_seq": 2,
+    "is_deleted": false
+  },
+  {
+    "id": "52e8dae5-8b1d-585b-bb06-81ff934a44c1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Yêu cầu",
+    "content": "Yêu cầu thay đổi được ghi nhận và phê duyệt",
+    "sort_seq": 3,
+    "is_deleted": false
+  },
+  {
+    "id": "8f72a6c5-4ef2-5d34-b34c-b6e2a68f78c4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Thiết kế",
+    "content": "Tài liệu thiết kế được review trước khi code",
+    "sort_seq": 4,
+    "is_deleted": false
+  },
+  {
+    "id": "519d321d-904e-5ffe-a622-3cfa7a4deec0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Phát triển",
+    "content": "Mọi merge request đều được review",
+    "sort_seq": 5,
+    "is_deleted": false
+  },
+  {
+    "id": "7853d184-9908-5517-bfce-527915195747",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Kiểm thử",
+    "content": "Có test case cho chức năng mới",
+    "sort_seq": 6,
+    "is_deleted": false
+  },
+  {
+    "id": "dc8be519-8993-5410-ad8e-9959f85dde24",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Kiểm thử",
+    "content": "Lỗi nghiêm trọng được xử lý trước khi bàn giao",
+    "sort_seq": 7,
+    "is_deleted": false
+  },
+  {
+    "id": "b911fe33-6a0a-5b04-a2e4-8b807de858aa",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Bàn giao",
+    "content": "Biên bản bàn giao được khách hàng xác nhận",
+    "sort_seq": 8,
+    "is_deleted": false
+  },
+  {
+    "id": "d13e1fac-ed4e-51d9-8ce6-b6bb1a5e6956",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Cấu hình",
+    "content": "Mã nguồn và tài liệu được quản lý phiên bản",
+    "sort_seq": 9,
+    "is_deleted": false
+  },
+  {
+    "id": "d15f61ce-8a89-5408-bbc1-d6b0afcfa8fb",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "group_name": "Báo cáo",
+    "content": "Báo cáo tuần được gửi khách hàng đúng hạn",
+    "sort_seq": 10,
+    "is_deleted": false
+  },
+  {
+    "id": "32a16c4a-b70a-5364-9a71-afc29c7d1399",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Lập kế hoạch",
+    "content": "Kế hoạch dự án được cập nhật trong tháng",
+    "sort_seq": 1,
+    "is_deleted": false
+  },
+  {
+    "id": "bcd40adb-8321-54f4-83eb-ed466d432839",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Lập kế hoạch",
+    "content": "Danh sách rủi ro được rà soát và có người phụ trách",
+    "sort_seq": 2,
+    "is_deleted": false
+  },
+  {
+    "id": "5416ebff-fd6c-5502-8b78-b1f407c9b71f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Yêu cầu",
+    "content": "Yêu cầu thay đổi được ghi nhận và phê duyệt",
+    "sort_seq": 3,
+    "is_deleted": false
+  },
+  {
+    "id": "e782d9df-0d88-5d1b-8ff6-0fcd1dfb41c0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Thiết kế",
+    "content": "Tài liệu thiết kế được review trước khi code",
+    "sort_seq": 4,
+    "is_deleted": false
+  },
+  {
+    "id": "2283454c-8e3b-542c-a651-025d8f505538",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Phát triển",
+    "content": "Mọi merge request đều được review",
+    "sort_seq": 5,
+    "is_deleted": false
+  },
+  {
+    "id": "33c3b162-702f-508c-a80a-c55581820bb7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Kiểm thử",
+    "content": "Có test case cho chức năng mới",
+    "sort_seq": 6,
+    "is_deleted": false
+  },
+  {
+    "id": "0b5af291-c702-5360-9574-4c71bc177753",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Kiểm thử",
+    "content": "Lỗi nghiêm trọng được xử lý trước khi bàn giao",
+    "sort_seq": 7,
+    "is_deleted": false
+  },
+  {
+    "id": "f5a16f58-fbd1-5e3d-aefa-9042b4e1d076",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Bàn giao",
+    "content": "Biên bản bàn giao được khách hàng xác nhận",
+    "sort_seq": 8,
+    "is_deleted": false
+  },
+  {
+    "id": "3ec8f88b-b8c9-52bb-b670-c8c2da21715f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Cấu hình",
+    "content": "Mã nguồn và tài liệu được quản lý phiên bản",
+    "sort_seq": 9,
+    "is_deleted": false
+  },
+  {
+    "id": "b2fae08a-6331-5d1f-9654-95572dfa3cf3",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "group_name": "Báo cáo",
+    "content": "Báo cáo tuần được gửi khách hàng đúng hạn",
+    "sort_seq": 10,
+    "is_deleted": false
+  }
+]

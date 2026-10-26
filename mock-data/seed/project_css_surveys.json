@@ -1,0 +1,168 @@
+[
+  {
+    "id": "844916cb-d436-5886-b9ae-be5fc14ad4a7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "survey_month": "2026-09-01",
+    "token": "4c06528780299725981f3d2784703dcb16b369edae7bc949bd607d69dcfc3aa3",
+    "status": "submitted",
+    "submitted_at": "2026-10-03T09:30:00+07:00",
+    "scores": [
+      {
+        "question": "Chất lượng sản phẩm bàn giao",
+        "score": 5
+      },
+      {
+        "question": "Tiến độ bàn giao so với kế hoạch",
+        "score": 4
+      },
+      {
+        "question": "Khả năng giao tiếp của đội dự án",
+        "score": 5
+      },
+      {
+        "question": "Mức độ chủ động đề xuất cải tiến",
+        "score": null
+      },
+      {
+        "question": "Mức độ hài lòng chung",
+        "score": 5
+      }
+    ]
+  },
+  {
+    "id": "7d77c46f-799f-5b17-8e56-75e8cdf71428",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "survey_month": "2026-09-01",
+    "token": "205ba280ed4fb5daf43515d883907350a66246b8c402b28bb6f0ede03a953a62",
+    "status": "submitted",
+    "submitted_at": "2026-10-03T09:30:00+07:00",
+    "scores": [
+      {
+        "question": "Chất lượng sản phẩm bàn giao",
+        "score": 3
+      },
+      {
+        "question": "Tiến độ bàn giao so với kế hoạch",
+        "score": 5
+      },
+      {
+        "question": "Khả năng giao tiếp của đội dự án",
+        "score": 3
+      },
+      {
+        "question": "Mức độ chủ động đề xuất cải tiến",
+        "score": null
+      },
+      {
+        "question": "Mức độ hài lòng chung",
+        "score": 3
+      }
+    ]
+  },
+  {
+    "id": "982f32e6-8ab4-5f3a-bed6-cb381d08aed2",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "survey_month": "2026-09-01",
+    "token": "5b9c17e6f3936a83034d1a8e7c62b663b6a4b09a8d0722f2ae1e280fe9b7ce85",
+    "status": "submitted",
+    "submitted_at": "2026-10-03T09:30:00+07:00",
+    "scores": [
+      {
+        "question": "Chất lượng sản phẩm bàn giao",
+        "score": 4
+      },
+      {
+        "question": "Tiến độ bàn giao so với kế hoạch",
+        "score": 3
+      },
+      {
+        "question": "Khả năng giao tiếp của đội dự án",
+        "score": 5
+      },
+      {
+        "question": "Mức độ chủ động đề xuất cải tiến",
+        "score": 5
+      },
+      {
+        "question": "Mức độ hài lòng chung",
+        "score": 4
+      }
+    ]
+  },
+  {
+    "id": "8eec166d-7da4-5c67-af74-ce7a2e9976b1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "survey_month": "2026-09-01",
+    "token": "08e0c9b8fb5aa08eb7be666b25e76f25dd8fd73bab2b99ea7caa969e660c679d",
+    "status": "submitted",
+    "submitted_at": "2026-10-03T09:30:00+07:00",
+    "scores": [
+      {
+        "question": "Chất lượng sản phẩm bàn giao",
+        "score": 3
+      },
+      {
+        "question": "Tiến độ bàn giao so với kế hoạch",
+        "score": 3
+      },
+      {
+        "question": "Khả năng giao tiếp của đội dự án",
+        "score": 3
+      },
+      {
+        "question": "Mức độ chủ động đề xuất cải tiến",
+        "score": 5
+      },
+      {
+        "question": "Mức độ hài lòng chung",
+        "score": 5
+      }
+    ]
+  },
+  {
+    "id": "faaca613-81cf-5aa3-a340-77216a48ec09",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "survey_month": "2026-10-01",
+    "token": "3745a25752f7e347185da22b101333a89a35aa322f902ae922013e961bf5335d",
+    "status": "sent",
+    "sent_to": "contact@prj-01.example.com",
+    "sent_at": "2026-10-18T10:00:00+07:00",
+    "submitted_at": null,
+    "respondent": null,
+    "comment": null,
+    "scores": []
+  },
+  {
+    "id": "271db112-eb2d-5bb0-a1df-2e1871ab8dd2",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "survey_month": "2026-10-01",
+    "token": "767fba2c917075c30976c7ea342c6effef87c420f271a1a1c5c33a4146b099da",
+    "status": "sent",
+    "sent_to": "contact@prj-03.example.com",
+    "sent_at": "2026-10-18T10:00:00+07:00",
+    "submitted_at": null,
+    "respondent": null,
+    "comment": null,
+    "scores": []
+  },
+  {
+    "id": "d9a9c826-918e-5e70-b463-82024f6c61af",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "survey_month": "2026-10-01",
+    "token": "8b1dcc2e99a4c899a28744958d745496670dd8cb911f107fe537bd8424749797",
+    "status": "sent",
+    "sent_to": "contact@prj-04.example.com",
+    "sent_at": "2026-10-18T10:00:00+07:00",
+    "submitted_at": null,
+    "respondent": null,
+    "comment": null,
+    "scores": []
+  }
+]

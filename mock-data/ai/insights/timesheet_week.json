@@ -1,0 +1,30 @@
+{
+  "screen_key": "timesheet_week",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "teal",
+        "title": "Tuần này: 38,5h / 40h",
+        "content": "Bạn còn thiếu 1,5h; thứ Sáu chưa ghi công."
+      },
+      {
+        "variant": "purple",
+        "title": "Phân bổ tuần",
+        "content": "Dự án chiếm 82%, họp 12%, nghiên cứu 6% — tương đương tuần trước."
+      }
+    ],
+    "en": [
+      {
+        "variant": "teal",
+        "title": "This week: 38.5h / 40h",
+        "content": "You are 1.5h short; Friday has no entries yet."
+      },
+      {
+        "variant": "purple",
+        "title": "Weekly allocation",
+        "content": "Projects 82%, meetings 12%, research 6% — similar to last week."
+      }
+    ]
+  }
+}

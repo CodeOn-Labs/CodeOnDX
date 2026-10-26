@@ -1,0 +1,30 @@
+{
+  "screen_key": "project_detail",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "amber",
+        "title": "Thiếu 1 vị trí Dev BE",
+        "content": "Hợp đồng yêu cầu 3 Dev BE nhưng mới gán 2 người; FTE thực tế thấp hơn hợp đồng 1.0."
+      },
+      {
+        "variant": "blue",
+        "title": "Burn rate ổn định",
+        "content": "Chi phí 4 tuần gần nhất bám sát kế hoạch, chưa có dấu hiệu vượt ngân sách."
+      }
+    ],
+    "en": [
+      {
+        "variant": "amber",
+        "title": "One Backend developer slot open",
+        "content": "Contract requires 3 backend developers but only 2 are assigned; actual FTE is 1.0 below contract."
+      },
+      {
+        "variant": "blue",
+        "title": "Stable burn rate",
+        "content": "Cost over the last 4 weeks tracks the plan; no sign of budget overrun."
+      }
+    ]
+  }
+}

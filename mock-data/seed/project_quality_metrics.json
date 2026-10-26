@@ -1,0 +1,362 @@
+[
+  {
+    "id": "960836eb-f045-5253-9457-e6dbdaf1db3b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "metric_month": "2026-07-01",
+    "kind": "defect",
+    "defect_count": 23,
+    "product_size": 8,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "9ea3a49a-69c8-5e7b-9f07-b0887506a394",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "metric_month": "2026-07-01",
+    "kind": "leakage",
+    "defect_count": 6,
+    "product_size": 7,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "90beeac3-f3c3-5734-b700-3ef44307684e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "metric_month": "2026-08-01",
+    "kind": "defect",
+    "defect_count": 30,
+    "product_size": 4,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "c76dd097-b571-5f16-be2c-3b3ba1248629",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "metric_month": "2026-08-01",
+    "kind": "leakage",
+    "defect_count": 1,
+    "product_size": 7,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "2d21acfa-78ba-51df-8445-2f85fc302d1e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "metric_month": "2026-09-01",
+    "kind": "defect",
+    "defect_count": 39,
+    "product_size": 11,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "7cd200bd-d831-5fc6-9412-145f4212ec68",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "metric_month": "2026-09-01",
+    "kind": "leakage",
+    "defect_count": 1,
+    "product_size": 6,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "9dc27a9b-5ce9-5dac-b9c1-35a2223b442b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "metric_month": "2026-07-01",
+    "kind": "defect",
+    "defect_count": 29,
+    "product_size": 10,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "300e54ec-2bd8-5afe-a157-28e39e169668",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "metric_month": "2026-07-01",
+    "kind": "leakage",
+    "defect_count": 6,
+    "product_size": 11,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "27dbd6c8-fbbb-58d0-b940-9188862799af",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "metric_month": "2026-08-01",
+    "kind": "defect",
+    "defect_count": 38,
+    "product_size": 10,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "2b5d00e0-bcc2-52ca-ab99-d81d64318f36",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "metric_month": "2026-08-01",
+    "kind": "leakage",
+    "defect_count": 4,
+    "product_size": 8,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "ccbbcbd7-bc33-5276-bbf6-d878f5989f9b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "metric_month": "2026-09-01",
+    "kind": "defect",
+    "defect_count": 9,
+    "product_size": 5,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "129c1b6a-888e-5e5f-afda-e5097b2ad006",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "metric_month": "2026-09-01",
+    "kind": "leakage",
+    "defect_count": 3,
+    "product_size": 8,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "05ede1c3-6d43-5eac-8f53-5512fbd257d8",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "metric_month": "2026-07-01",
+    "kind": "defect",
+    "defect_count": 29,
+    "product_size": 9,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "324470a7-8e87-5dc8-8e0f-89a74d3c36df",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "metric_month": "2026-07-01",
+    "kind": "leakage",
+    "defect_count": 0,
+    "product_size": 11,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "29e8c627-932f-5b9f-be94-b9c73e11b767",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "metric_month": "2026-08-01",
+    "kind": "defect",
+    "defect_count": 31,
+    "product_size": 8,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "4af98310-740c-549b-a2cc-f35c53bf6ac3",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "metric_month": "2026-08-01",
+    "kind": "leakage",
+    "defect_count": 4,
+    "product_size": 5,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "2f085333-e14b-51ae-b60c-8ec4d127488b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "metric_month": "2026-09-01",
+    "kind": "defect",
+    "defect_count": 38,
+    "product_size": 10,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "cedd977a-6bf0-5e35-98d3-0ae58b917a61",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "metric_month": "2026-09-01",
+    "kind": "leakage",
+    "defect_count": 3,
+    "product_size": 7,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "ec89c938-d405-562a-9c1d-42e137f576b5",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "metric_month": "2026-07-01",
+    "kind": "defect",
+    "defect_count": 39,
+    "product_size": 8,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "edb867dd-165c-5d89-8266-28cc3a4df77e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "metric_month": "2026-07-01",
+    "kind": "leakage",
+    "defect_count": 6,
+    "product_size": 12,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "97f6e85b-ebc3-5489-bc75-12f3b5ab4494",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "metric_month": "2026-08-01",
+    "kind": "defect",
+    "defect_count": 37,
+    "product_size": 10,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "2bb1d9fb-e78f-5aba-96b3-4be6cecfe4f6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "metric_month": "2026-08-01",
+    "kind": "leakage",
+    "defect_count": 0,
+    "product_size": 5,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "1ca4de1a-0e14-53bf-a22f-9afaaa0cafbc",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "metric_month": "2026-09-01",
+    "kind": "defect",
+    "defect_count": 29,
+    "product_size": 10,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "ffa3fe70-9dd9-5f21-bdc6-82ced046b5ae",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "metric_month": "2026-09-01",
+    "kind": "leakage",
+    "defect_count": 1,
+    "product_size": 6,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "fa68a02a-f4d1-556f-bb22-b77d8509ba14",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "metric_month": "2026-07-01",
+    "kind": "defect",
+    "defect_count": 23,
+    "product_size": 8,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "c5450116-1e3f-519a-9585-16f98204a444",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "metric_month": "2026-07-01",
+    "kind": "leakage",
+    "defect_count": 5,
+    "product_size": 9,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "782ae7bc-6bcc-51f0-9077-15bc6effdfc5",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "metric_month": "2026-08-01",
+    "kind": "defect",
+    "defect_count": 27,
+    "product_size": 7,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "4ed9a1a1-92fe-5afa-aba7-e367cb2935a5",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "metric_month": "2026-08-01",
+    "kind": "leakage",
+    "defect_count": 1,
+    "product_size": 8,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "3d9b5b0c-6452-5a65-b6b3-9621aff56ecc",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "metric_month": "2026-09-01",
+    "kind": "defect",
+    "defect_count": 28,
+    "product_size": 10,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "60e298a7-06e9-5ef0-a7be-fa4d274603bc",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "metric_month": "2026-09-01",
+    "kind": "leakage",
+    "defect_count": 6,
+    "product_size": 10,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "1a2ddb7f-27fa-52e3-9357-0e4d663ff36a",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "metric_month": "2026-07-01",
+    "kind": "defect",
+    "defect_count": 25,
+    "product_size": 6,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "cb400a60-c694-5045-b9d6-171b3d3c2fe6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "metric_month": "2026-07-01",
+    "kind": "leakage",
+    "defect_count": 0,
+    "product_size": 12,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "856a8abe-2c01-5790-9404-d0f47fd5adb3",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "metric_month": "2026-08-01",
+    "kind": "defect",
+    "defect_count": 33,
+    "product_size": 8,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "e07e7f33-6f2d-51a7-a5e6-00c920411f6c",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "metric_month": "2026-08-01",
+    "kind": "leakage",
+    "defect_count": 1,
+    "product_size": 7,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "37d731e1-3e58-56a7-8549-be81e41b5e06",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "metric_month": "2026-09-01",
+    "kind": "defect",
+    "defect_count": 30,
+    "product_size": 12,
+    "product_size_unit": "KLOC"
+  },
+  {
+    "id": "7f793aec-3f8a-5220-8cba-303bf14fe055",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "metric_month": "2026-09-01",
+    "kind": "leakage",
+    "defect_count": 1,
+    "product_size": 9,
+    "product_size_unit": "KLOC"
+  }
+]

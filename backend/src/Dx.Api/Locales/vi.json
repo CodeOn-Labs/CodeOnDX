@@ -1,0 +1,546 @@
+{
+  "common": {
+    "msg_success": "Thành công"
+  },
+  "error": {
+    "validation_failed": "Dữ liệu không hợp lệ",
+    "unauthorized": "Phiên đăng nhập đã hết hạn",
+    "forbidden": "Bạn không có quyền thực hiện thao tác này",
+    "not_found": "Không tìm thấy dữ liệu",
+    "method_not_allowed": "Phương thức không được hỗ trợ",
+    "conflict": "Dữ liệu đã tồn tại",
+    "concurrency": "Dữ liệu đã được người khác cập nhật, vui lòng tải lại",
+    "too_many_requests": "Bạn thao tác quá nhanh, vui lòng thử lại sau",
+    "internal": "Hệ thống đang gặp sự cố, vui lòng thử lại sau"
+  },
+  "validation": {
+    "required": "Không được để trống",
+    "max_length": "Tối đa {max} ký tự",
+    "invalid_email": "Email không hợp lệ",
+    "invalid_date": "Ngày không hợp lệ (định dạng yyyy-MM-dd)",
+    "invalid_number": "Giá trị phải là số",
+    "invalid_value": "Giá trị không hợp lệ",
+    "integer": "Giá trị phải là số nguyên",
+    "min_value": "Giá trị tối thiểu là {min}",
+    "max_value": "Giá trị tối đa là {max}",
+    "invalid_time": "Giờ không hợp lệ (định dạng HH:mm)",
+    "invalid_url": "Đường dẫn không hợp lệ (bắt đầu bằng http:// hoặc https://)"
+  },
+  "auth_login": {
+    "msg_success": "Đăng nhập thành công",
+    "err_invalid_credentials": "Email hoặc mật khẩu không đúng",
+    "err_account_disabled": "Tài khoản đã bị khoá, vui lòng liên hệ quản trị viên"
+  },
+  "auth_logout": {
+    "msg_success": "Đã đăng xuất"
+  },
+  "auth_refresh": {
+    "err_session_expired": "Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại"
+  },
+  "ai_insight_run": {
+    "msg_success": "Đã phân tích xong",
+    "err_not_configured": "Tính năng AI chưa được cấu hình, vui lòng liên hệ quản trị viên"
+  },
+  "ai_chat_send": {
+    "msg_success": "Đã trả lời",
+    "err_not_configured": "Tính năng AI chưa được cấu hình, vui lòng liên hệ quản trị viên"
+  },
+  "category_save": {
+    "err_type_locked": "Không đổi được loại của danh mục đã tạo",
+    "err_code_format": "Mã chỉ gồm chữ in hoa, số và dấu gạch dưới (tối đa 30 ký tự)",
+    "err_duplicate_code": "Mã này đã có trong cùng loại danh mục",
+    "err_metadata_key": "Tên thuộc tính chỉ gồm chữ thường, số và dấu gạch dưới"
+  },
+  "category_delete": {
+    "msg_success": "Đã xoá \"{name}\"",
+    "err_system": "Danh mục do hệ thống sử dụng, không xoá được",
+    "err_in_use": "\"{name}\" đang được dữ liệu khác sử dụng — hãy tạm khoá thay vì xoá"
+  },
+  "system_rule_update": {
+    "msg_success": "Đã cập nhật quy tắc"
+  },
+  "admin_setting_update": {
+    "msg_success": "Đã lưu cài đặt",
+    "err_logo_invalid": "Logo phải là file ảnh, tối đa khoảng 300 KB",
+    "err_end_before_start": "Giờ kết thúc phải sau giờ bắt đầu"
+  },
+  "holiday_delete": {
+    "msg_success": "Đã xoá ngày lễ"
+  },
+  "pcv_template_delete": {
+    "msg_success": "Đã xoá tiêu chí khỏi biểu mẫu"
+  },
+  "css_template_update": {
+    "msg_success": "Đã cập nhật nội dung biểu mẫu"
+  },
+  "css_question_delete": {
+    "msg_success": "Đã xoá câu hỏi khỏi biểu mẫu"
+  },
+  "category_create": {
+    "msg_success": "Đã tạo danh mục"
+  },
+  "category_update": {
+    "msg_success": "Đã cập nhật danh mục"
+  },
+  "holiday_create": {
+    "msg_success": "Đã thêm ngày lễ",
+    "err_duplicate_date": "Ngày này đã có trong danh sách ngày lễ"
+  },
+  "pcv_template_create": {
+    "msg_success": "Đã thêm tiêu chí vào biểu mẫu"
+  },
+  "pcv_template_update": {
+    "msg_success": "Đã cập nhật tiêu chí trong biểu mẫu"
+  },
+  "css_question_create": {
+    "msg_success": "Đã thêm câu hỏi vào biểu mẫu"
+  },
+  "css_question_update": {
+    "msg_success": "Đã cập nhật câu hỏi trong biểu mẫu"
+  },
+  "client_save": {
+    "err_duplicate_name": "Đã có khách hàng cùng tên",
+    "err_code_format": "Mã chỉ gồm chữ in hoa, số và dấu gạch dưới",
+    "err_duplicate_code": "Mã khách hàng đã tồn tại"
+  },
+  "client_create": {
+    "msg_success": "Đã thêm khách hàng mới"
+  },
+  "client_update": {
+    "msg_success": "Đã cập nhật khách hàng"
+  },
+  "client_delete": {
+    "msg_success": "Đã xoá vĩnh viễn \"{name}\"",
+    "err_in_use": "\"{name}\" vẫn còn dự án tham chiếu, không xoá vĩnh viễn được"
+  },
+  "client_restore": {
+    "msg_success": "Đã khôi phục \"{name}\""
+  },
+  "org_unit_save": {
+    "err_code_format": "Mã chỉ gồm chữ in hoa, số, dấu gạch ngang và gạch dưới",
+    "err_duplicate_code": "Mã này đã tồn tại"
+  },
+  "department_create": {
+    "msg_success": "Đã tạo phòng ban"
+  },
+  "department_update": {
+    "msg_success": "Đã cập nhật phòng ban"
+  },
+  "department_delete": {
+    "msg_success": "Đã xoá phòng ban \"{name}\"",
+    "err_not_empty": "Phòng ban \"{name}\" còn team hoặc nhân sự, hãy chuyển đi trước khi xoá"
+  },
+  "team_create": {
+    "msg_success": "Đã tạo team"
+  },
+  "team_update": {
+    "msg_success": "Đã cập nhật team"
+  },
+  "team_delete": {
+    "msg_success": "Đã xoá team \"{name}\"",
+    "err_not_empty": "Team \"{name}\" còn nhân sự, hãy chuyển đi trước khi xoá"
+  },
+  "employee_save": {
+    "err_duplicate_email": "Email này đã được dùng cho nhân sự khác",
+    "err_code_format": "Mã nhân sự chỉ gồm chữ in hoa, số, dấu gạch ngang và gạch dưới",
+    "err_duplicate_code": "Mã nhân sự đã tồn tại",
+    "err_team_department": "Team không thuộc phòng ban đã chọn",
+    "err_left_before_joined": "Ngày nghỉ việc phải sau ngày vào làm"
+  },
+  "employee_create": {
+    "msg_success": "Đã thêm nhân sự"
+  },
+  "employee_update": {
+    "msg_success": "Đã cập nhật nhân sự"
+  },
+  "employee_delete": {
+    "msg_success": "Đã chuyển \"{name}\" vào thùng rác",
+    "err_has_assignments": "\"{name}\" đang được phân công vào dự án, hãy kết thúc phân công trước"
+  },
+  "employee_restore": {
+    "msg_success": "Đã khôi phục \"{name}\""
+  },
+  "employee_invite": {
+    "msg_success": "Đã gửi lời mời tạo tài khoản tới {email}",
+    "err_has_account": "Nhân sự này đã có tài khoản"
+  },
+  "client_trash": {
+    "msg_success": "Đã chuyển \"{name}\" vào thùng rác"
+  },
+  "role_save": {
+    "err_system_name_locked": "Không thể đổi tên vai trò mặc định",
+    "err_duplicate_name": "Tên vai trò đã tồn tại",
+    "err_no_permission": "Vai trò phải có ít nhất một quyền",
+    "err_last_admin": "Phải còn ít nhất một người dùng có quyền quản lý vai trò"
+  },
+  "role_create": {
+    "msg_success": "Tạo vai trò thành công!"
+  },
+  "role_update": {
+    "msg_success": "Cập nhật vai trò thành công!"
+  },
+  "role_bulk_update": {
+    "msg_success": "Đã cập nhật quyền cho {count} vai trò"
+  },
+  "role_delete": {
+    "msg_success": "Đã xoá vai trò \"{name}\" và gỡ {count} người dùng",
+    "err_system": "Không thể xoá vai trò mặc định"
+  },
+  "role_assign": {
+    "msg_success": "Đã gán người dùng!"
+  },
+  "role_unassign": {
+    "msg_success": "Đã gỡ người dùng"
+  },
+  "ai_insight_create": {
+    "msg_success": "Lưu Insight thành công!"
+  },
+  "ai_insight_update": {
+    "msg_success": "Lưu Insight thành công!"
+  },
+  "ai_insight_delete": {
+    "msg_success": "Đã xoá Insight \"{name}\""
+  },
+  "ai_insight_preview": {
+    "err_prompt_required": "Cần nhập prompt để xem trước"
+  },
+  "prompt_template_save": {
+    "err_unbalanced": "Template không hợp lệ: số dấu mở biến và đóng biến không khớp",
+    "err_empty_variable": "Template có biến rỗng (không có tên biến)"
+  },
+  "prompt_template_create": {
+    "msg_success": "Đã tạo template"
+  },
+  "prompt_template_update": {
+    "msg_success": "Đã lưu template"
+  },
+  "prompt_template_delete": {
+    "msg_success": "Đã xoá template \"{name}\"",
+    "err_last_active": "Không thể xoá template đang hoạt động duy nhất của phạm vi này"
+  },
+  "integration_update": {
+    "msg_success": "Đã lưu cấu hình tích hợp",
+    "err_https": "Đường dẫn phải bắt đầu bằng https://"
+  },
+  "integration_test": {
+    "msg_success": "Kết nối thành công",
+    "err_disabled": "Tích hợp đang tắt",
+    "err_failed": "Kết nối thất bại — kiểm tra khoá bí mật trên máy chủ"
+  },
+  "account_password": {
+    "err_too_short": "Mật khẩu tối thiểu {min} ký tự",
+    "err_weak": "Mật khẩu phải có chữ hoa, chữ thường và số",
+    "err_mismatch": "Mật khẩu nhập lại không khớp",
+    "err_current_wrong": "Mật khẩu hiện tại không đúng",
+    "err_same_as_current": "Mật khẩu mới phải khác mật khẩu hiện tại"
+  },
+  "account_token": {
+    "err_expired": "Đường dẫn đã hết hạn hoặc đã được sử dụng",
+    "err_invalid": "Đường dẫn không hợp lệ"
+  },
+  "auth_forgot_password": {
+    "msg_success": "Nếu email có trong hệ thống, bạn sẽ nhận được hướng dẫn đặt lại mật khẩu (hiệu lực {minutes} phút)"
+  },
+  "auth_reset_password": {
+    "msg_success": "Đã đặt lại mật khẩu, vui lòng đăng nhập"
+  },
+  "auth_accept_invite": {
+    "msg_success": "Đã tạo tài khoản, vui lòng đăng nhập"
+  },
+  "profile_update": {
+    "msg_success": "Đã cập nhật hồ sơ",
+    "err_avatar_invalid": "Ảnh đại diện phải là file ảnh, tối đa khoảng 300 KB"
+  },
+  "profile_change_password": {
+    "msg_success": "Đã đổi mật khẩu"
+  },
+  "css_survey": {
+    "err_invalid_token": "Liên kết khảo sát không hợp lệ",
+    "err_already_submitted": "Khảo sát này đã được gửi",
+    "err_invalid_answers": "Câu trả lời không hợp lệ",
+    "err_missing_required": "Vui lòng trả lời các câu hỏi bắt buộc"
+  },
+  "css_survey_submit": {
+    "msg_success": "Cảm ơn Quý khách đã gửi đánh giá"
+  },
+  "work_common": {
+    "err_no_employee": "Tài khoản chưa gắn với hồ sơ nhân sự, vui lòng liên hệ quản trị"
+  },
+  "timesheet_save": {
+    "msg_success": "Đã lưu nhật ký công việc ({days} ngày)",
+    "err_quarter_hour": "Số giờ phải là bội số của 0,25 (15 phút)",
+    "err_no_assignment": "Nhân sự không có phân công trong dự án tại ngày này",
+    "err_max_hours": "Tổng giờ trong ngày vượt quá {hours} giờ",
+    "err_weekly_max_hours": "Tổng giờ trong tuần ({total} giờ) vượt quá {hours} giờ",
+    "err_all_locked": "Tất cả các ngày đã chọn đều bị khoá, không thể lưu"
+  },
+  "timesheet_approve": {
+    "msg_success": "Đã duyệt nhật ký công việc của {count} nhân viên"
+  },
+  "timesheet_reject": {
+    "msg_success": "Đã từ chối nhật ký công việc của {count} nhân viên"
+  },
+  "request_decide": {
+    "err_not_cancellable": "Đơn này không huỷ được",
+    "err_past_approved": "Không huỷ được đơn đã duyệt có ngày trong quá khứ",
+    "err_self_approve": "Không tự duyệt đơn của chính mình",
+    "err_not_pending": "Đơn không còn ở trạng thái chờ duyệt",
+    "err_reason_required": "Vui lòng nhập lý do"
+  },
+  "request_approve": {
+    "msg_success": "Đã duyệt đơn {code}"
+  },
+  "request_reject": {
+    "msg_success": "Đã từ chối đơn {code}"
+  },
+  "request_cancel": {
+    "msg_success": "Đã huỷ đơn {code}"
+  },
+  "leave_save": {
+    "err_to_before_from": "Ngày kết thúc phải từ ngày bắt đầu trở đi",
+    "err_half_day_range": "Nghỉ nửa ngày chỉ chọn được một ngày",
+    "err_min_notice": "Cần báo trước ít nhất {days} ngày",
+    "err_attachment_required": "Loại nghỉ này cần đính kèm giấy tờ",
+    "err_no_working_day": "Khoảng đã chọn không có ngày làm việc nào",
+    "err_balance": "Số ngày nghỉ vượt quá quỹ phép còn lại",
+    "err_overlap": "Trùng với đơn nghỉ khác đang chờ hoặc đã duyệt"
+  },
+  "leave_create": {
+    "msg_success": "Đã gửi đơn nghỉ {code}"
+  },
+  "ot_save": {
+    "err_end_before_start": "Giờ kết thúc phải sau giờ bắt đầu",
+    "err_limit_day": "Vượt giới hạn OT {hours} giờ/ngày",
+    "err_limit_month": "Vượt giới hạn OT {hours} giờ/tháng",
+    "err_limit_year": "Vượt giới hạn OT {hours} giờ/năm"
+  },
+  "ot_create": {
+    "msg_success": "Đã gửi đơn OT {code}"
+  },
+  "attendance_check": {
+    "err_disabled": "Chấm công trên phần mềm đang tắt",
+    "err_already_in": "Bạn đã chấm công vào hôm nay",
+    "err_not_in": "Bạn chưa chấm công vào hôm nay"
+  },
+  "attendance_check_in": {
+    "msg_success": "Đã chấm công vào lúc {time}"
+  },
+  "attendance_check_out": {
+    "msg_success": "Đã chấm công ra lúc {time}"
+  },
+  "attendance_save": {
+    "msg_success": "Đã lưu giờ vào/ra",
+    "err_out_before_in": "Giờ ra phải sau giờ vào",
+    "err_note_required": "Sửa tay cần ghi chú lý do",
+    "err_future": "Không nhập giờ cho ngày trong tương lai",
+    "err_edit_limit": "Chỉ tự bổ sung được trong {days} ngày gần nhất",
+    "err_self_overwrite": "Không tự sửa giờ đã ghi nhận, hãy liên hệ quản lý"
+  },
+  "attendance_import": {
+    "msg_success": "Đã nhập {imported} dòng, bỏ qua {skipped} dòng đã sửa tay"
+  },
+  "timesheet_approval_empty": {
+    "msg_success": "Không có mục nào đang chờ duyệt trong khoảng đã chọn"
+  },
+  "effort_update": {
+    "msg_success": "Đã lưu thay đổi của {name}",
+    "err_project_mapped": "Dự án này đã thuộc phòng ban khác"
+  },
+  "effort_add": {
+    "msg_success": "Đã thêm {name} vào lưới công số",
+    "err_duplicate": "Nhân sự đã có vai trò này trong dự án"
+  },
+  "effort_delete": {
+    "msg_success": "Đã xoá dòng công số của {name}"
+  },
+  "project_detail": {
+    "err_no_access": "Bạn không được phân bổ vào dự án này",
+    "err_deleted": "Dự án đã bị xoá — khôi phục để chỉnh sửa"
+  },
+  "project_save": {
+    "err_end_before_start": "Ngày kết thúc phải sau hoặc bằng ngày bắt đầu",
+    "err_contract_staff_required": "Cần ít nhất một vai trò hợp đồng",
+    "err_staff_before_project": "Không được trước ngày bắt đầu dự án",
+    "err_staff_after_project": "Không được sau ngày kết thúc dự án",
+    "err_staff_in_use": "Vị trí đang có nhân sự được phân bổ — bỏ phân bổ trước khi giảm số lượng hoặc xoá"
+  },
+  "project_create": {
+    "msg_success": "Đã tạo dự án {name}"
+  },
+  "project_update": {
+    "msg_success": "Đã cập nhật dự án {name}"
+  },
+  "project_delete": {
+    "msg_success": "Đã xoá dự án {name}"
+  },
+  "project_restore": {
+    "msg_success": "Đã khôi phục dự án {name}"
+  },
+  "project_dates_update": {
+    "msg_success": "Đã cập nhật ngày dự án"
+  },
+  "project_assignment": {
+    "err_interval_required": "Phải có ít nhất 1 giai đoạn",
+    "err_before_project": "Ngày bắt đầu phải từ ngày {date}",
+    "err_after_project": "Ngày kết thúc phải trước hoặc bằng ngày {date}",
+    "err_overlap": "Giai đoạn {a} và {b} bị trùng thời gian",
+    "err_already_assigned": "Nhân sự này đã được gán vào vị trí khác trong dự án",
+    "err_handover_before_start": "Ngày bàn giao phải sau ngày bắt đầu phân bổ của nhân sự cũ",
+    "err_handover_after_end": "Không còn giai đoạn nào sau ngày bàn giao"
+  },
+  "project_assignment_create": {
+    "msg_success": "Đã phân bổ {name} vào dự án"
+  },
+  "project_assignment_update": {
+    "msg_success": "Đã cập nhật phân bổ của {name}"
+  },
+  "project_assignment_handover": {
+    "msg_success": "Đã bàn giao công việc cho {name} và lưu lịch sử phân bổ"
+  },
+  "project_assignment_delete": {
+    "msg_success": "Đã bỏ phân bổ {name}"
+  },
+  "project_milestone": {
+    "err_actual_future": "Ngày hoàn thành không được ở tương lai"
+  },
+  "project_milestone_create": {
+    "msg_success": "Đã thêm mốc {name}"
+  },
+  "project_milestone_update": {
+    "msg_success": "Đã cập nhật mốc {name}"
+  },
+  "project_milestone_delete": {
+    "msg_success": "Đã xoá mốc {name}"
+  },
+  "project_quality_save": {
+    "msg_success": "Đã lưu số liệu chất lượng"
+  },
+  "project_pcv": {
+    "err_future_month": "Không thể chấm PCV cho tháng tương lai",
+    "err_empty": "Hãy chọn Đạt hoặc Không đạt cho ít nhất 1 tiêu chí",
+    "err_note_required": "Tiêu chí Không đạt phải ghi chú lỗi"
+  },
+  "project_pcv_save": {
+    "msg_success": "Đã lưu đánh giá PCV tháng {month} — điểm {score}%"
+  },
+  "project_pcv_item_create": {
+    "msg_success": "Đã thêm tiêu chí cho dự án"
+  },
+  "project_pcv_item_update": {
+    "msg_success": "Đã cập nhật tiêu chí của dự án"
+  },
+  "project_pcv_item_delete": {
+    "msg_success": "Đã xoá tiêu chí khỏi dự án"
+  },
+  "project_css": {
+    "err_future_month": "Không thể tạo link khảo sát cho tháng tương lai",
+    "err_no_questions": "Form chưa có câu hỏi nào — thêm câu hỏi trước khi tạo link"
+  },
+  "project_css_link": {
+    "msg_success": "Đã tạo link khảo sát tháng {month}"
+  },
+  "project_css_form_update": {
+    "msg_success": "Đã cập nhật nội dung form của dự án"
+  },
+  "project_css_question_create": {
+    "msg_success": "Đã thêm câu hỏi cho dự án"
+  },
+  "project_css_question_update": {
+    "msg_success": "Đã cập nhật câu hỏi"
+  },
+  "project_css_question_delete": {
+    "msg_success": "Đã xoá câu hỏi khỏi dự án"
+  },
+  "project_document_group_create": {
+    "msg_success": "Đã tạo nhóm {name}"
+  },
+  "project_document_group_update": {
+    "msg_success": "Đã cập nhật nhóm {name}"
+  },
+  "project_document_group_delete": {
+    "msg_success": "Đã xoá nhóm {name}"
+  },
+  "project_document_create": {
+    "msg_success": "Đã thêm tài liệu {name}"
+  },
+  "project_document_update": {
+    "msg_success": "Đã cập nhật tài liệu {name}"
+  },
+  "project_document_delete": {
+    "msg_success": "Đã xoá tài liệu {name}"
+  },
+  "project_risk": {
+    "err_due_before_identified": "Hạn xử lý phải sau hoặc bằng ngày nhận diện"
+  },
+  "project_risk_create": {
+    "msg_success": "Đã thêm rủi ro {name}"
+  },
+  "project_risk_update": {
+    "msg_success": "Đã cập nhật rủi ro {name}"
+  },
+  "project_risk_delete": {
+    "msg_success": "Đã xoá rủi ro {name}"
+  },
+  "project_change": {
+    "err_area_required": "Chọn ít nhất 1 lĩnh vực bị ảnh hưởng"
+  },
+  "project_change_create": {
+    "msg_success": "Đã thêm yêu cầu thay đổi {name}"
+  },
+  "project_change_update": {
+    "msg_success": "Đã cập nhật yêu cầu thay đổi {name}"
+  },
+  "project_change_delete": {
+    "msg_success": "Đã xoá yêu cầu thay đổi {name}"
+  },
+  "project_issue_create": {
+    "msg_success": "Đã thêm link issue {name}"
+  },
+  "project_issue_update": {
+    "msg_success": "Đã cập nhật link issue {name}"
+  },
+  "project_issue_delete": {
+    "msg_success": "Đã xoá link issue {name}"
+  },
+  "monthly_report_save": {
+    "msg_success": "Đã lưu"
+  },
+  "monthly_report_cell": {
+    "err_hours_step": "Giờ làm nhập theo bước 0,5"
+  },
+  "monthly_report_sync_hours": {
+    "msg_success": "Đã đồng bộ lại giờ làm từ Nhật ký công việc ({count} ô sửa tay được thay)"
+  },
+  "monthly_report_sync_time": {
+    "msg_success": "Đã lấy lại giờ bắt đầu / kết thúc từ Chấm công ({count} ô sửa tay được thay)"
+  },
+  "monthly_report_column": {
+    "err_duplicate": "Tên cột đã tồn tại. Vui lòng chọn tên khác.",
+    "err_system": "Không xoá được cột hệ thống"
+  },
+  "monthly_report_column_create": {
+    "msg_success": "Đã thêm cột"
+  },
+  "monthly_report_column_update": {
+    "msg_success": "Đã cập nhật cột"
+  },
+  "monthly_report_column_delete": {
+    "msg_success": "Đã xoá cột {name}"
+  },
+  "project_status_report": {
+    "err_items_required": "Báo cáo cần ít nhất 1 hạng mục"
+  },
+  "project_status_report_save": {
+    "msg_success": "Đã lưu báo cáo dự án"
+  },
+  "project_status_report_ai": {
+    "msg_success": "AI đã phân tích và điền nội dung"
+  },
+  "project_import": {
+    "msg_success": "Đã import {count} dự án",
+    "err_client_not_found": "Không tìm thấy khách hàng \"{value}\"",
+    "err_grade_not_found": "Không tìm thấy cấp độ dự án \"{value}\"",
+    "err_risk_not_found": "Không tìm thấy mức rủi ro \"{value}\"",
+    "err_role_not_found": "Không tìm thấy vai trò \"{value}\""
+  }
+}

@@ -1,0 +1,722 @@
+[
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "86aef8b8-e043-50a7-a13d-f12249d2d889",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "44ba535a-d6b6-5833-8f66-e685e7a077d6",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "ada27f2e-a3b5-5f0a-b1dd-99a3b37a90b0",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "a4a0e753-3a9a-52ed-beab-e869df729977",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "124459d0-b2c1-54f6-9405-b7a12d3b1d87",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "140579db-5919-5f44-b564-dbbdd747daf5",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "262babb3-fc68-58a1-a666-c89b7a183bab",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "a3ddd64d-3b3d-5b8f-8a2e-f5ec92ed5b09",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "f64e87ad-94d7-564d-b424-6bfa87ebe4cf",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "928518e5-c5f9-540a-b6b6-f049cd8da28a",
+    "item_id": "a35e5290-bec2-57c5-9806-dc263961fda7",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "86aef8b8-e043-50a7-a13d-f12249d2d889",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "44ba535a-d6b6-5833-8f66-e685e7a077d6",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "ada27f2e-a3b5-5f0a-b1dd-99a3b37a90b0",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "a4a0e753-3a9a-52ed-beab-e869df729977",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "124459d0-b2c1-54f6-9405-b7a12d3b1d87",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "140579db-5919-5f44-b564-dbbdd747daf5",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "262babb3-fc68-58a1-a666-c89b7a183bab",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "a3ddd64d-3b3d-5b8f-8a2e-f5ec92ed5b09",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "f64e87ad-94d7-564d-b424-6bfa87ebe4cf",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8cf571e-cfc9-5289-ba27-f3a1841a99a7",
+    "item_id": "a35e5290-bec2-57c5-9806-dc263961fda7",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "21fbdb4f-bbc8-50ee-9635-d49465514c09",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "54b68250-0d31-5906-bbe9-3971cd332ede",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "b379bcc7-079f-5e7e-8e37-f72029ccb417",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "05674205-78f0-5cb8-b041-a1fb5bdac9cd",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "24436e82-2b06-5e73-9903-09e3d3780562",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "5a4b040d-71d0-554d-8e9d-fab683ca7bef",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "b200553f-10f4-5539-bdb8-0de97d7fbdec",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "7e67e171-c3bc-5682-990b-d8cd91fa80f4",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "5eacb556-f017-59df-95d9-f0fc832cdadb",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "12900f4e-36a5-5b39-8e3a-853120f44473",
+    "item_id": "f977642a-22b5-5c02-8c6f-b0292822e5e6",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "21fbdb4f-bbc8-50ee-9635-d49465514c09",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "54b68250-0d31-5906-bbe9-3971cd332ede",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "b379bcc7-079f-5e7e-8e37-f72029ccb417",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "05674205-78f0-5cb8-b041-a1fb5bdac9cd",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "24436e82-2b06-5e73-9903-09e3d3780562",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "5a4b040d-71d0-554d-8e9d-fab683ca7bef",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "b200553f-10f4-5539-bdb8-0de97d7fbdec",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "7e67e171-c3bc-5682-990b-d8cd91fa80f4",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "5eacb556-f017-59df-95d9-f0fc832cdadb",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "bb75a386-4ffd-53c8-8125-6e8afc8f4d2b",
+    "item_id": "f977642a-22b5-5c02-8c6f-b0292822e5e6",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "a1924915-7b27-5e29-a994-8dc1e4895d03",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "e0c2ec4b-2a1d-5d60-9bc1-a5d4454a4095",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "7ca9b40c-12f2-56c4-b575-0da265eae23a",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "1ddea50e-6f5b-5054-abe6-896bcc2590d9",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "d5b46dec-698b-51af-b4f5-1cfc025a837b",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "d003cbbe-cb8a-5a9a-8948-781a9da98e63",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "07af7fd8-9bfd-57dd-8aa2-1eacd2c0659a",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "0a84d717-5152-59fc-9b6f-130ac3c7b33d",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "e329d717-1e2a-5ef1-acc8-76269efda79f",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "dfa07ae3-6a73-5ecb-84c0-bdfc1a680109",
+    "item_id": "473b5ec3-8019-586a-86a0-0ac250012d31",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "a1924915-7b27-5e29-a994-8dc1e4895d03",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "e0c2ec4b-2a1d-5d60-9bc1-a5d4454a4095",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "7ca9b40c-12f2-56c4-b575-0da265eae23a",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "1ddea50e-6f5b-5054-abe6-896bcc2590d9",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "d5b46dec-698b-51af-b4f5-1cfc025a837b",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "d003cbbe-cb8a-5a9a-8948-781a9da98e63",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "07af7fd8-9bfd-57dd-8aa2-1eacd2c0659a",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "0a84d717-5152-59fc-9b6f-130ac3c7b33d",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "e329d717-1e2a-5ef1-acc8-76269efda79f",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "78d4de32-47ad-51db-a789-47eb2305ece0",
+    "item_id": "473b5ec3-8019-586a-86a0-0ac250012d31",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "470bd678-f988-5c25-8e74-ede91b7cad14",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "4e78083c-c913-5f20-a92c-77a3b849b21f",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "be5f2060-304b-5dce-93da-cb12c2e61a21",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "24c595af-9590-5570-9a0b-937b3fbd4722",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "1d23f644-75a2-5149-9ae5-c46bef3b3a01",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "5df82649-0aa2-5086-9ad9-d7a4e088ff18",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "88b709ba-94de-503b-99d5-55b52588d9e4",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "99434623-8d83-5218-9d86-3f138797c142",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "b785933f-889e-575f-ab5d-594c5bbb36bf",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "32d543ab-652b-59f0-94a9-7af998cd7531",
+    "item_id": "4eea2264-c95f-51c7-b413-6f1a1f98c224",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "470bd678-f988-5c25-8e74-ede91b7cad14",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "4e78083c-c913-5f20-a92c-77a3b849b21f",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "be5f2060-304b-5dce-93da-cb12c2e61a21",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "24c595af-9590-5570-9a0b-937b3fbd4722",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "1d23f644-75a2-5149-9ae5-c46bef3b3a01",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "5df82649-0aa2-5086-9ad9-d7a4e088ff18",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "88b709ba-94de-503b-99d5-55b52588d9e4",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "99434623-8d83-5218-9d86-3f138797c142",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "b785933f-889e-575f-ab5d-594c5bbb36bf",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "00f75544-0d37-5638-ae84-512c6a968380",
+    "item_id": "4eea2264-c95f-51c7-b413-6f1a1f98c224",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "12234aef-3a59-553c-afcd-6cdb0b366a64",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "eda6aec1-427c-552d-b001-53c0a56023e7",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "52e8dae5-8b1d-585b-bb06-81ff934a44c1",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "8f72a6c5-4ef2-5d34-b34c-b6e2a68f78c4",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "519d321d-904e-5ffe-a622-3cfa7a4deec0",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "7853d184-9908-5517-bfce-527915195747",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "dc8be519-8993-5410-ad8e-9959f85dde24",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "b911fe33-6a0a-5b04-a2e4-8b807de858aa",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "d13e1fac-ed4e-51d9-8ce6-b6bb1a5e6956",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "c8168007-0fa8-5ae1-b537-5f65c46fc4d9",
+    "item_id": "d15f61ce-8a89-5408-bbc1-d6b0afcfa8fb",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "12234aef-3a59-553c-afcd-6cdb0b366a64",
+    "result": null,
+    "error_note": null
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "eda6aec1-427c-552d-b001-53c0a56023e7",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "52e8dae5-8b1d-585b-bb06-81ff934a44c1",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "8f72a6c5-4ef2-5d34-b34c-b6e2a68f78c4",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "519d321d-904e-5ffe-a622-3cfa7a4deec0",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "7853d184-9908-5517-bfce-527915195747",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "dc8be519-8993-5410-ad8e-9959f85dde24",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "b911fe33-6a0a-5b04-a2e4-8b807de858aa",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "d13e1fac-ed4e-51d9-8ce6-b6bb1a5e6956",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "2467a387-b93a-5d70-9caa-2d6450454b96",
+    "item_id": "d15f61ce-8a89-5408-bbc1-d6b0afcfa8fb",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "32a16c4a-b70a-5364-9a71-afc29c7d1399",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "bcd40adb-8321-54f4-83eb-ed466d432839",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "5416ebff-fd6c-5502-8b78-b1f407c9b71f",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "e782d9df-0d88-5d1b-8ff6-0fcd1dfb41c0",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "2283454c-8e3b-542c-a651-025d8f505538",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "33c3b162-702f-508c-a80a-c55581820bb7",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "0b5af291-c702-5360-9574-4c71bc177753",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "f5a16f58-fbd1-5e3d-aefa-9042b4e1d076",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "3ec8f88b-b8c9-52bb-b670-c8c2da21715f",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "b872e441-19a0-57b6-a018-4540baa8710c",
+    "item_id": "b2fae08a-6331-5d1f-9654-95572dfa3cf3",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "32a16c4a-b70a-5364-9a71-afc29c7d1399",
+    "result": "fail",
+    "error_note": "Chưa có bằng chứng thực hiện trong tháng"
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "bcd40adb-8321-54f4-83eb-ed466d432839",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "5416ebff-fd6c-5502-8b78-b1f407c9b71f",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "e782d9df-0d88-5d1b-8ff6-0fcd1dfb41c0",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "2283454c-8e3b-542c-a651-025d8f505538",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "33c3b162-702f-508c-a80a-c55581820bb7",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "0b5af291-c702-5360-9574-4c71bc177753",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "f5a16f58-fbd1-5e3d-aefa-9042b4e1d076",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "3ec8f88b-b8c9-52bb-b670-c8c2da21715f",
+    "result": "pass",
+    "error_note": null
+  },
+  {
+    "assessment_id": "f7ce9aad-080d-50d9-be61-c73ff8df9a1c",
+    "item_id": "b2fae08a-6331-5d1f-9654-95572dfa3cf3",
+    "result": "pass",
+    "error_note": null
+  }
+]

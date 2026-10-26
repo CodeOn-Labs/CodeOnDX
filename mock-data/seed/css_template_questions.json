@@ -1,0 +1,42 @@
+[
+  {
+    "id": "7647f591-dc84-53a4-8dc9-ee49a972c94a",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "template_id": "39fbc5d5-2cd1-53b1-a96d-ef1c56f6e074",
+    "content": "Chất lượng sản phẩm bàn giao",
+    "is_required": true,
+    "sort_seq": 1
+  },
+  {
+    "id": "79f9141a-5f5e-5850-bf59-8d77c87db232",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "template_id": "39fbc5d5-2cd1-53b1-a96d-ef1c56f6e074",
+    "content": "Tiến độ bàn giao so với kế hoạch",
+    "is_required": true,
+    "sort_seq": 2
+  },
+  {
+    "id": "ae8ee165-f43d-5f66-a786-4105b5e343b8",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "template_id": "39fbc5d5-2cd1-53b1-a96d-ef1c56f6e074",
+    "content": "Khả năng giao tiếp của đội dự án",
+    "is_required": true,
+    "sort_seq": 3
+  },
+  {
+    "id": "ca936df6-42ba-59be-83c8-26d3e115e31b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "template_id": "39fbc5d5-2cd1-53b1-a96d-ef1c56f6e074",
+    "content": "Mức độ chủ động đề xuất cải tiến",
+    "is_required": false,
+    "sort_seq": 4
+  },
+  {
+    "id": "b6d96c96-0e2e-5b47-b429-0010416eb9f8",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "template_id": "39fbc5d5-2cd1-53b1-a96d-ef1c56f6e074",
+    "content": "Mức độ hài lòng chung",
+    "is_required": true,
+    "sort_seq": 5
+  }
+]

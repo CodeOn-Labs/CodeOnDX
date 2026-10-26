@@ -1,0 +1,546 @@
+{
+  "common": {
+    "msg_success": "Success"
+  },
+  "error": {
+    "validation_failed": "Invalid data",
+    "unauthorized": "Your session has expired",
+    "forbidden": "You do not have permission to perform this action",
+    "not_found": "Data not found",
+    "method_not_allowed": "Method not allowed",
+    "conflict": "The data already exists",
+    "concurrency": "Someone else has updated this data, please reload",
+    "too_many_requests": "Too many requests, please try again later",
+    "internal": "Something went wrong, please try again later"
+  },
+  "validation": {
+    "required": "This field is required",
+    "max_length": "At most {max} characters",
+    "invalid_email": "Invalid email address",
+    "invalid_date": "Invalid date (format yyyy-MM-dd)",
+    "invalid_number": "Must be a number",
+    "invalid_value": "Invalid value",
+    "integer": "Value must be a whole number",
+    "min_value": "Minimum value is {min}",
+    "max_value": "Maximum value is {max}",
+    "invalid_time": "Invalid time (format HH:mm)",
+    "invalid_url": "Invalid link (must start with http:// or https://)"
+  },
+  "auth_login": {
+    "msg_success": "Signed in",
+    "err_invalid_credentials": "Incorrect email or password",
+    "err_account_disabled": "This account is disabled, please contact your administrator"
+  },
+  "auth_logout": {
+    "msg_success": "Signed out"
+  },
+  "auth_refresh": {
+    "err_session_expired": "Your session has expired, please sign in again"
+  },
+  "ai_insight_run": {
+    "msg_success": "Analysis complete",
+    "err_not_configured": "AI is not configured yet, please contact your administrator"
+  },
+  "ai_chat_send": {
+    "msg_success": "Answered",
+    "err_not_configured": "AI is not configured yet, please contact your administrator"
+  },
+  "category_save": {
+    "err_type_locked": "The type of an existing category cannot be changed",
+    "err_code_format": "Code may only contain uppercase letters, digits and underscores (max 30 characters)",
+    "err_duplicate_code": "This code already exists in the same category type",
+    "err_metadata_key": "Property names may only contain lowercase letters, digits and underscores"
+  },
+  "category_delete": {
+    "msg_success": "Deleted \"{name}\"",
+    "err_system": "This category is used by the system and cannot be deleted",
+    "err_in_use": "\"{name}\" is used by other data — deactivate it instead of deleting"
+  },
+  "system_rule_update": {
+    "msg_success": "Rule updated"
+  },
+  "admin_setting_update": {
+    "msg_success": "Settings saved",
+    "err_logo_invalid": "Logo must be an image file of about 300 KB at most",
+    "err_end_before_start": "End time must be after start time"
+  },
+  "holiday_delete": {
+    "msg_success": "Holiday deleted"
+  },
+  "pcv_template_delete": {
+    "msg_success": "Criterion removed from the template"
+  },
+  "css_template_update": {
+    "msg_success": "Template content updated"
+  },
+  "css_question_delete": {
+    "msg_success": "Question removed from the template"
+  },
+  "category_create": {
+    "msg_success": "Category created"
+  },
+  "category_update": {
+    "msg_success": "Category updated"
+  },
+  "holiday_create": {
+    "msg_success": "Holiday added",
+    "err_duplicate_date": "This date is already a holiday"
+  },
+  "pcv_template_create": {
+    "msg_success": "Criterion added to the template"
+  },
+  "pcv_template_update": {
+    "msg_success": "Criterion updated in the template"
+  },
+  "css_question_create": {
+    "msg_success": "Question added to the template"
+  },
+  "css_question_update": {
+    "msg_success": "Question updated in the template"
+  },
+  "client_save": {
+    "err_duplicate_name": "A client with this name already exists",
+    "err_code_format": "Code may only contain uppercase letters, digits and underscores",
+    "err_duplicate_code": "Client code already exists"
+  },
+  "client_create": {
+    "msg_success": "Client added"
+  },
+  "client_update": {
+    "msg_success": "Client updated"
+  },
+  "client_delete": {
+    "msg_success": "Permanently deleted \"{name}\"",
+    "err_in_use": "\"{name}\" is still referenced by projects and cannot be deleted permanently"
+  },
+  "client_restore": {
+    "msg_success": "Restored \"{name}\""
+  },
+  "org_unit_save": {
+    "err_code_format": "Code may only contain uppercase letters, digits, dashes and underscores",
+    "err_duplicate_code": "This code already exists"
+  },
+  "department_create": {
+    "msg_success": "Department created"
+  },
+  "department_update": {
+    "msg_success": "Department updated"
+  },
+  "department_delete": {
+    "msg_success": "Deleted department \"{name}\"",
+    "err_not_empty": "Department \"{name}\" still has teams or people; move them before deleting"
+  },
+  "team_create": {
+    "msg_success": "Team created"
+  },
+  "team_update": {
+    "msg_success": "Team updated"
+  },
+  "team_delete": {
+    "msg_success": "Deleted team \"{name}\"",
+    "err_not_empty": "Team \"{name}\" still has people; move them before deleting"
+  },
+  "employee_save": {
+    "err_duplicate_email": "This email is already used by another person",
+    "err_code_format": "Employee code may only contain uppercase letters, digits, dashes and underscores",
+    "err_duplicate_code": "Employee code already exists",
+    "err_team_department": "The team does not belong to the selected department",
+    "err_left_before_joined": "Leaving date must be after the joining date"
+  },
+  "employee_create": {
+    "msg_success": "Employee added"
+  },
+  "employee_update": {
+    "msg_success": "Employee updated"
+  },
+  "employee_delete": {
+    "msg_success": "Moved \"{name}\" to trash",
+    "err_has_assignments": "\"{name}\" is assigned to projects; end the assignments first"
+  },
+  "employee_restore": {
+    "msg_success": "Restored \"{name}\""
+  },
+  "employee_invite": {
+    "msg_success": "Account invitation sent to {email}",
+    "err_has_account": "This person already has an account"
+  },
+  "client_trash": {
+    "msg_success": "Moved \"{name}\" to trash"
+  },
+  "role_save": {
+    "err_system_name_locked": "Default roles cannot be renamed",
+    "err_duplicate_name": "Role name already exists",
+    "err_no_permission": "A role must have at least one permission",
+    "err_last_admin": "At least one user must keep the role management permission"
+  },
+  "role_create": {
+    "msg_success": "Role created!"
+  },
+  "role_update": {
+    "msg_success": "Role updated!"
+  },
+  "role_bulk_update": {
+    "msg_success": "Updated permissions of {count} roles"
+  },
+  "role_delete": {
+    "msg_success": "Deleted role \"{name}\" and removed {count} users",
+    "err_system": "Default roles cannot be deleted"
+  },
+  "role_assign": {
+    "msg_success": "User assigned!"
+  },
+  "role_unassign": {
+    "msg_success": "User removed"
+  },
+  "ai_insight_create": {
+    "msg_success": "Insight saved!"
+  },
+  "ai_insight_update": {
+    "msg_success": "Insight saved!"
+  },
+  "ai_insight_delete": {
+    "msg_success": "Deleted insight \"{name}\""
+  },
+  "ai_insight_preview": {
+    "err_prompt_required": "Enter a prompt to preview"
+  },
+  "prompt_template_save": {
+    "err_unbalanced": "Invalid template: opening and closing variable markers do not match",
+    "err_empty_variable": "Template contains an empty variable (no name)"
+  },
+  "prompt_template_create": {
+    "msg_success": "Template created"
+  },
+  "prompt_template_update": {
+    "msg_success": "Template saved"
+  },
+  "prompt_template_delete": {
+    "msg_success": "Deleted template \"{name}\"",
+    "err_last_active": "Cannot delete the only active template of this scope"
+  },
+  "integration_update": {
+    "msg_success": "Integration settings saved",
+    "err_https": "The URL must start with https://"
+  },
+  "integration_test": {
+    "msg_success": "Connection successful",
+    "err_disabled": "This integration is disabled",
+    "err_failed": "Connection failed — check the secret key on the server"
+  },
+  "account_password": {
+    "err_too_short": "Password must be at least {min} characters",
+    "err_weak": "Password must contain uppercase, lowercase letters and digits",
+    "err_mismatch": "Passwords do not match",
+    "err_current_wrong": "Current password is incorrect",
+    "err_same_as_current": "New password must differ from the current one"
+  },
+  "account_token": {
+    "err_expired": "This link has expired or was already used",
+    "err_invalid": "Invalid link"
+  },
+  "auth_forgot_password": {
+    "msg_success": "If the email exists, you will receive password reset instructions (valid for {minutes} minutes)"
+  },
+  "auth_reset_password": {
+    "msg_success": "Password reset, please sign in"
+  },
+  "auth_accept_invite": {
+    "msg_success": "Account created, please sign in"
+  },
+  "profile_update": {
+    "msg_success": "Profile updated",
+    "err_avatar_invalid": "Avatar must be an image file of about 300 KB at most"
+  },
+  "profile_change_password": {
+    "msg_success": "Password changed"
+  },
+  "css_survey": {
+    "err_invalid_token": "Invalid survey link",
+    "err_already_submitted": "This survey has already been submitted",
+    "err_invalid_answers": "Invalid answers",
+    "err_missing_required": "Please answer the required questions"
+  },
+  "css_survey_submit": {
+    "msg_success": "Thank you for your feedback"
+  },
+  "work_common": {
+    "err_no_employee": "This account is not linked to an employee profile; please contact an administrator"
+  },
+  "timesheet_save": {
+    "msg_success": "Work log saved ({days} days)",
+    "err_quarter_hour": "Hours must be a multiple of 0.25 (15 minutes)",
+    "err_no_assignment": "The employee is not assigned to the project on this date",
+    "err_max_hours": "Daily total exceeds {hours} hours",
+    "err_weekly_max_hours": "Weekly total ({total} hours) exceeds {hours} hours",
+    "err_all_locked": "All selected days are locked and cannot be saved"
+  },
+  "timesheet_approve": {
+    "msg_success": "Approved work logs of {count} employees"
+  },
+  "timesheet_reject": {
+    "msg_success": "Rejected work logs of {count} employees"
+  },
+  "request_decide": {
+    "err_not_cancellable": "This request cannot be cancelled",
+    "err_past_approved": "Approved requests in the past cannot be cancelled",
+    "err_self_approve": "You cannot approve your own request",
+    "err_not_pending": "The request is no longer pending",
+    "err_reason_required": "Please enter a reason"
+  },
+  "request_approve": {
+    "msg_success": "Approved request {code}"
+  },
+  "request_reject": {
+    "msg_success": "Rejected request {code}"
+  },
+  "request_cancel": {
+    "msg_success": "Cancelled request {code}"
+  },
+  "leave_save": {
+    "err_to_before_from": "End date must be on or after the start date",
+    "err_half_day_range": "A half-day leave covers a single day",
+    "err_min_notice": "At least {days} days of notice is required",
+    "err_attachment_required": "This leave type requires an attachment",
+    "err_no_working_day": "The selected range has no working day",
+    "err_balance": "Requested days exceed the remaining leave balance",
+    "err_overlap": "Overlaps another pending or approved leave request"
+  },
+  "leave_create": {
+    "msg_success": "Leave request {code} submitted"
+  },
+  "ot_save": {
+    "err_end_before_start": "End time must be after start time",
+    "err_limit_day": "Exceeds the overtime limit of {hours} hours/day",
+    "err_limit_month": "Exceeds the overtime limit of {hours} hours/month",
+    "err_limit_year": "Exceeds the overtime limit of {hours} hours/year"
+  },
+  "ot_create": {
+    "msg_success": "Overtime request {code} submitted"
+  },
+  "attendance_check": {
+    "err_disabled": "In-app attendance is disabled",
+    "err_already_in": "You have already checked in today",
+    "err_not_in": "You have not checked in today"
+  },
+  "attendance_check_in": {
+    "msg_success": "Checked in at {time}"
+  },
+  "attendance_check_out": {
+    "msg_success": "Checked out at {time}"
+  },
+  "attendance_save": {
+    "msg_success": "Check-in/out saved",
+    "err_out_before_in": "Check-out must be after check-in",
+    "err_note_required": "A note is required for manual edits",
+    "err_future": "Cannot enter times for a future date",
+    "err_edit_limit": "You can only fill in the last {days} days",
+    "err_self_overwrite": "You cannot change recorded times; please contact your manager"
+  },
+  "attendance_import": {
+    "msg_success": "Imported {imported} rows, skipped {skipped} manually edited rows"
+  },
+  "timesheet_approval_empty": {
+    "msg_success": "Nothing is pending approval in the selected range"
+  },
+  "effort_update": {
+    "msg_success": "Saved changes for {name}",
+    "err_project_mapped": "This project already belongs to another department"
+  },
+  "effort_add": {
+    "msg_success": "Added {name} to the effort grid",
+    "err_duplicate": "This employee already has this role on the project"
+  },
+  "effort_delete": {
+    "msg_success": "Deleted the effort row of {name}"
+  },
+  "project_detail": {
+    "err_no_access": "You are not assigned to this project",
+    "err_deleted": "The project has been deleted — restore it to edit"
+  },
+  "project_save": {
+    "err_end_before_start": "End date must be on or after the start date",
+    "err_contract_staff_required": "At least one contract role is required",
+    "err_staff_before_project": "Must not be before the project start date",
+    "err_staff_after_project": "Must not be after the project end date",
+    "err_staff_in_use": "This position has assigned staff — unassign them before reducing or removing it"
+  },
+  "project_create": {
+    "msg_success": "Created project {name}"
+  },
+  "project_update": {
+    "msg_success": "Updated project {name}"
+  },
+  "project_delete": {
+    "msg_success": "Deleted project {name}"
+  },
+  "project_restore": {
+    "msg_success": "Restored project {name}"
+  },
+  "project_dates_update": {
+    "msg_success": "Project dates updated"
+  },
+  "project_assignment": {
+    "err_interval_required": "At least 1 phase is required",
+    "err_before_project": "Start date must be from {date}",
+    "err_after_project": "End date must be on or before {date}",
+    "err_overlap": "Phases {a} and {b} overlap",
+    "err_already_assigned": "This employee is already assigned to another position in the project",
+    "err_handover_before_start": "Handover date must be after the previous assignee's start date",
+    "err_handover_after_end": "No phase remains after the handover date"
+  },
+  "project_assignment_create": {
+    "msg_success": "Assigned {name} to the project"
+  },
+  "project_assignment_update": {
+    "msg_success": "Updated the allocation of {name}"
+  },
+  "project_assignment_handover": {
+    "msg_success": "Handed over to {name} and kept the allocation history"
+  },
+  "project_assignment_delete": {
+    "msg_success": "Unassigned {name}"
+  },
+  "project_milestone": {
+    "err_actual_future": "Completion date cannot be in the future"
+  },
+  "project_milestone_create": {
+    "msg_success": "Added milestone {name}"
+  },
+  "project_milestone_update": {
+    "msg_success": "Updated milestone {name}"
+  },
+  "project_milestone_delete": {
+    "msg_success": "Deleted milestone {name}"
+  },
+  "project_quality_save": {
+    "msg_success": "Quality figures saved"
+  },
+  "project_pcv": {
+    "err_future_month": "Cannot assess PCV for a future month",
+    "err_empty": "Mark at least 1 criterion as Pass or Fail",
+    "err_note_required": "A failed criterion needs an error note"
+  },
+  "project_pcv_save": {
+    "msg_success": "Saved the PCV assessment of {month} — score {score}%"
+  },
+  "project_pcv_item_create": {
+    "msg_success": "Added a criterion to the project"
+  },
+  "project_pcv_item_update": {
+    "msg_success": "Updated the project criterion"
+  },
+  "project_pcv_item_delete": {
+    "msg_success": "Removed the criterion from the project"
+  },
+  "project_css": {
+    "err_future_month": "Cannot create a survey link for a future month",
+    "err_no_questions": "The form has no questions — add questions before creating a link"
+  },
+  "project_css_link": {
+    "msg_success": "Created the survey link for {month}"
+  },
+  "project_css_form_update": {
+    "msg_success": "Updated the project's form content"
+  },
+  "project_css_question_create": {
+    "msg_success": "Added a question to the project"
+  },
+  "project_css_question_update": {
+    "msg_success": "Updated the question"
+  },
+  "project_css_question_delete": {
+    "msg_success": "Removed the question from the project"
+  },
+  "project_document_group_create": {
+    "msg_success": "Created group {name}"
+  },
+  "project_document_group_update": {
+    "msg_success": "Updated group {name}"
+  },
+  "project_document_group_delete": {
+    "msg_success": "Deleted group {name}"
+  },
+  "project_document_create": {
+    "msg_success": "Added document {name}"
+  },
+  "project_document_update": {
+    "msg_success": "Updated document {name}"
+  },
+  "project_document_delete": {
+    "msg_success": "Deleted document {name}"
+  },
+  "project_risk": {
+    "err_due_before_identified": "Due date must be on or after the identified date"
+  },
+  "project_risk_create": {
+    "msg_success": "Added risk {name}"
+  },
+  "project_risk_update": {
+    "msg_success": "Updated risk {name}"
+  },
+  "project_risk_delete": {
+    "msg_success": "Deleted risk {name}"
+  },
+  "project_change": {
+    "err_area_required": "Select at least 1 impacted area"
+  },
+  "project_change_create": {
+    "msg_success": "Added change request {name}"
+  },
+  "project_change_update": {
+    "msg_success": "Updated change request {name}"
+  },
+  "project_change_delete": {
+    "msg_success": "Deleted change request {name}"
+  },
+  "project_issue_create": {
+    "msg_success": "Added issue link {name}"
+  },
+  "project_issue_update": {
+    "msg_success": "Updated issue link {name}"
+  },
+  "project_issue_delete": {
+    "msg_success": "Deleted issue link {name}"
+  },
+  "monthly_report_save": {
+    "msg_success": "Saved"
+  },
+  "monthly_report_cell": {
+    "err_hours_step": "Hours must be in steps of 0.5"
+  },
+  "monthly_report_sync_hours": {
+    "msg_success": "Re-synced hours from the work log ({count} manual cells replaced)"
+  },
+  "monthly_report_sync_time": {
+    "msg_success": "Reloaded start / end times from attendance ({count} manual cells replaced)"
+  },
+  "monthly_report_column": {
+    "err_duplicate": "This column name already exists. Please choose another.",
+    "err_system": "System columns cannot be deleted"
+  },
+  "monthly_report_column_create": {
+    "msg_success": "Column added"
+  },
+  "monthly_report_column_update": {
+    "msg_success": "Column updated"
+  },
+  "monthly_report_column_delete": {
+    "msg_success": "Deleted column {name}"
+  },
+  "project_status_report": {
+    "err_items_required": "The report needs at least 1 item"
+  },
+  "project_status_report_save": {
+    "msg_success": "Project report saved"
+  },
+  "project_status_report_ai": {
+    "msg_success": "AI analysed and filled in the content"
+  },
+  "project_import": {
+    "msg_success": "Imported {count} projects",
+    "err_client_not_found": "Client \"{value}\" not found",
+    "err_grade_not_found": "Project grade \"{value}\" not found",
+    "err_risk_not_found": "Risk level \"{value}\" not found",
+    "err_role_not_found": "Role \"{value}\" not found"
+  }
+}

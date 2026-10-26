@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ee7b94da-fa82-53b0-9a63-78c941a97d03",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "code": "DEV1",
+    "name": "Phòng Phát triển 1",
+    "description": null,
+    "manager_employee_id": "1e61a875-e54a-509b-ade4-321fa5dbda7b",
+    "sort_seq": 1,
+    "is_active": true,
+    "created_at": "2026-01-05T08:00:00+07:00"
+  },
+  {
+    "id": "fd7c14ba-4b29-5992-8cba-80ab8ea4f373",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "code": "DEV2",
+    "name": "Phòng Phát triển 2",
+    "description": null,
+    "manager_employee_id": "78f9e7dc-71b1-5da9-b91f-d3d7f62c22a9",
+    "sort_seq": 2,
+    "is_active": true,
+    "created_at": "2026-01-05T08:00:00+07:00"
+  },
+  {
+    "id": "919fe162-b813-5861-a5a0-2616449bf0c2",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "code": "AIS",
+    "name": "Phòng Giải pháp AI",
+    "description": null,
+    "manager_employee_id": "ef1c2604-224b-55af-88d7-77404cbfdb86",
+    "sort_seq": 3,
+    "is_active": true,
+    "created_at": "2026-01-05T08:00:00+07:00"
+  }
+]

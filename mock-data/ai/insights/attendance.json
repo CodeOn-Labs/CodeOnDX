@@ -1,0 +1,30 @@
+{
+  "screen_key": "attendance",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "red",
+        "title": "28 lượt đi muộn trong tháng",
+        "content": "Vào sau 08:45 (đã trừ 15 phút cho phép). Xem chi tiết theo nhân sự ở bảng bên trái."
+      },
+      {
+        "variant": "amber",
+        "title": "7 ngày thiếu giờ ra",
+        "content": "Nhắc nhân sự bổ sung giờ ra trong 7 ngày, quá hạn cần quản lý sửa tay kèm ghi chú."
+      }
+    ],
+    "en": [
+      {
+        "variant": "red",
+        "title": "28 late arrivals this month",
+        "content": "Checked in after 08:45 (15-minute grace applied). See per-person details in the table."
+      },
+      {
+        "variant": "amber",
+        "title": "7 days missing check-out",
+        "content": "Remind people to add their check-out within 7 days; after that a manager must edit it with a note."
+      }
+    ]
+  }
+}

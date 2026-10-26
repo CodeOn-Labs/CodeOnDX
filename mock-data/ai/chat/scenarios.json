@@ -1,0 +1,63 @@
+{
+  "default_reply": {
+    "vi": "Đây là câu trả lời giả lập (chế độ mock). Khi bật AI thật (Integrations:Ai:UseMock = false), câu hỏi sẽ được gửi tới LLM kèm dữ liệu của màn hình hiện tại.",
+    "en": "This is a mocked answer. With the real AI enabled (Integrations:Ai:UseMock = false), your question is sent to the LLM together with the current screen's data."
+  },
+  "greeting": {
+    "vi": "Tôi là trợ lý AI. Tôi có thể giúp gì cho bạn?",
+    "en": "I am your AI assistant. How can I help?"
+  },
+  "scenarios": [
+    {
+      "keywords": [
+        "rủi ro",
+        "risk",
+        "chú ý",
+        "attention"
+      ],
+      "reply": {
+        "vi": "**4 dự án rủi ro cao:**\n- Hoshino – Cổng thanh toán B2B\n- Aoba – Cổng bồi thường bảo hiểm\n- Lâm Viên – Nền tảng học trực tuyến\n- Phương Nam – Quản lý vận tải\n\nĐề xuất: rà soát nhân sự còn trống và chi phí 4 tuần gần nhất.",
+        "en": "**4 high-risk projects:**\n- Hoshino – Cổng thanh toán B2B\n- Aoba – Cổng bồi thường bảo hiểm\n- Lâm Viên – Nền tảng học trực tuyến\n- Phương Nam – Quản lý vận tải\n\nSuggestion: review open staffing slots and the last 4 weeks of cost."
+      }
+    },
+    {
+      "keywords": [
+        "chậm",
+        "tiến độ",
+        "late",
+        "delay",
+        "progress"
+      ],
+      "reply": {
+        "vi": "Các dự án sắp đến hạn: Hoshino – Hệ thống quản lý kho, Minato – Chatbot chăm sóc khách hàng, Kawase – Giám sát dây chuyền IoT. Kiểm tra tab Metrics › Timeline để xem milestone trễ.",
+        "en": "Projects close to their deadline: Hoshino – Hệ thống quản lý kho, Minato – Chatbot chăm sóc khách hàng, Kawase – Giám sát dây chuyền IoT. Check Metrics › Timeline for late milestones."
+      }
+    },
+    {
+      "keywords": [
+        "nhân sự",
+        "thiếu",
+        "rảnh",
+        "staff",
+        "available",
+        "bench"
+      ],
+      "reply": {
+        "vi": "Hiện có 8 nhân sự phân bổ dưới 20% và 6 nhân sự trên 100%. Xem chi tiết ở màn Nhân sự.",
+        "en": "8 people are allocated below 20% and 6 above 100%. See the Employees screen for details."
+      }
+    },
+    {
+      "keywords": [
+        "ngân sách",
+        "budget",
+        "chi phí",
+        "cost"
+      ],
+      "reply": {
+        "vi": "Dự án dùng trên 75% ngân sách: Hoshino – Cổng thanh toán B2B, Hoshino – Hệ thống quản lý kho, Minato – Ứng dụng đặt lịch khám.",
+        "en": "Projects above 75% of budget: Hoshino – Cổng thanh toán B2B, Hoshino – Hệ thống quản lý kho, Minato – Ứng dụng đặt lịch khám."
+      }
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+[
+  {
+    "id": "8d65081a-f76c-528f-95e2-ee7215db789b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "code": "CR-01",
+    "file_name": "Bổ sung xuất báo cáo Excel",
+    "url": "https://drive.example.com/prj-01/cr-1",
+    "source": "customer",
+    "impact_level": "high",
+    "impact_areas": [
+      "scope",
+      "schedule"
+    ],
+    "impact_note": "Cần thêm khoảng 0,5 MM, lùi mốc UAT 1 tuần",
+    "created_at": "2026-09-30T09:00:00+07:00",
+    "updated_at": "2026-10-03T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "fafb123e-5f6f-5a90-a1f5-cccedc351722",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c0f33234-a50c-52e6-b0ca-dd6aa23d85be",
+    "code": "CR-01",
+    "file_name": "Bổ sung xuất báo cáo Excel",
+    "url": "https://drive.example.com/prj-02/cr-1",
+    "source": "customer",
+    "impact_level": "high",
+    "impact_areas": [
+      "scope",
+      "schedule"
+    ],
+    "impact_note": "Cần thêm khoảng 0,5 MM, lùi mốc UAT 1 tuần",
+    "created_at": "2026-09-30T09:00:00+07:00",
+    "updated_at": "2026-10-03T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "c2c90eed-38fd-5ea0-b82e-985e62013836",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c0f33234-a50c-52e6-b0ca-dd6aa23d85be",
+    "code": "CR-02",
+    "file_name": "Thay đổi luồng phê duyệt",
+    "url": "https://drive.example.com/prj-02/cr-2",
+    "source": "internal",
+    "impact_level": "high",
+    "impact_areas": [
+      "quality"
+    ],
+    "impact_note": null,
+    "created_at": "2026-10-01T09:00:00+07:00",
+    "updated_at": "2026-10-04T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "d8583e93-f5db-5284-8abe-cc586d30b333",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "code": "CR-01",
+    "file_name": "Bổ sung xuất báo cáo Excel",
+    "url": "https://drive.example.com/prj-03/cr-1",
+    "source": "customer",
+    "impact_level": "medium",
+    "impact_areas": [
+      "scope",
+      "schedule"
+    ],
+    "impact_note": "Cần thêm khoảng 0,5 MM, lùi mốc UAT 1 tuần",
+    "created_at": "2026-09-30T09:00:00+07:00",
+    "updated_at": "2026-10-03T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "c34bb0f5-1fd6-5128-bd5f-68ec6f995401",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "code": "CR-02",
+    "file_name": "Thay đổi luồng phê duyệt",
+    "url": "https://drive.example.com/prj-03/cr-2",
+    "source": "internal",
+    "impact_level": "high",
+    "impact_areas": [
+      "quality"
+    ],
+    "impact_note": null,
+    "created_at": "2026-10-01T09:00:00+07:00",
+    "updated_at": "2026-10-04T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "2fd799ee-52ae-5278-a0a2-147475dd5c4f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "code": "CR-03",
+    "file_name": "Thêm ngôn ngữ tiếng Anh",
+    "url": "https://drive.example.com/prj-03/cr-3",
+    "source": "customer",
+    "impact_level": "high",
+    "impact_areas": [
+      "scope",
+      "cost"
+    ],
+    "impact_note": null,
+    "created_at": "2026-10-02T09:00:00+07:00",
+    "updated_at": "2026-10-05T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "587091a5-21b1-531c-bcbb-009b18db38fd",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "code": "CR-01",
+    "file_name": "Bổ sung xuất báo cáo Excel",
+    "url": "https://drive.example.com/prj-04/cr-1",
+    "source": "customer",
+    "impact_level": "low",
+    "impact_areas": [
+      "scope",
+      "schedule"
+    ],
+    "impact_note": "Cần thêm khoảng 0,5 MM, lùi mốc UAT 1 tuần",
+    "created_at": "2026-09-30T09:00:00+07:00",
+    "updated_at": "2026-10-03T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "cdaa76f4-e94d-5fce-a743-c78a8a74a25c",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "code": "CR-01",
+    "file_name": "Bổ sung xuất báo cáo Excel",
+    "url": "https://drive.example.com/prj-05/cr-1",
+    "source": "customer",
+    "impact_level": "high",
+    "impact_areas": [
+      "scope",
+      "schedule"
+    ],
+    "impact_note": "Cần thêm khoảng 0,5 MM, lùi mốc UAT 1 tuần",
+    "created_at": "2026-09-30T09:00:00+07:00",
+    "updated_at": "2026-10-03T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "fcbfc30d-0357-59db-a153-42cc3eae6aa8",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "d03f3e01-4d34-55ed-83c4-35a30d0029b9",
+    "code": "CR-02",
+    "file_name": "Thay đổi luồng phê duyệt",
+    "url": "https://drive.example.com/prj-05/cr-2",
+    "source": "internal",
+    "impact_level": "medium",
+    "impact_areas": [
+      "quality"
+    ],
+    "impact_note": null,
+    "created_at": "2026-10-01T09:00:00+07:00",
+    "updated_at": "2026-10-04T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "4957a089-2ffe-58cf-814d-23e82293a3f2",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "code": "CR-01",
+    "file_name": "Bổ sung xuất báo cáo Excel",
+    "url": "https://drive.example.com/prj-06/cr-1",
+    "source": "customer",
+    "impact_level": "low",
+    "impact_areas": [
+      "scope",
+      "schedule"
+    ],
+    "impact_note": "Cần thêm khoảng 0,5 MM, lùi mốc UAT 1 tuần",
+    "created_at": "2026-09-30T09:00:00+07:00",
+    "updated_at": "2026-10-03T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "0a70a49b-76fe-5afc-bc1e-9e1f5e1a0a22",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "code": "CR-02",
+    "file_name": "Thay đổi luồng phê duyệt",
+    "url": "https://drive.example.com/prj-06/cr-2",
+    "source": "internal",
+    "impact_level": "high",
+    "impact_areas": [
+      "quality"
+    ],
+    "impact_note": null,
+    "created_at": "2026-10-01T09:00:00+07:00",
+    "updated_at": "2026-10-04T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "663ae844-708b-562c-bff9-4ee8c2c09b95",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "719e7556-b84e-5bd2-bbde-2960d3d3b92c",
+    "code": "CR-03",
+    "file_name": "Thêm ngôn ngữ tiếng Anh",
+    "url": "https://drive.example.com/prj-06/cr-3",
+    "source": "customer",
+    "impact_level": "high",
+    "impact_areas": [
+      "scope",
+      "cost"
+    ],
+    "impact_note": null,
+    "created_at": "2026-10-02T09:00:00+07:00",
+    "updated_at": "2026-10-05T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "a23cde45-4a3f-5fd5-b7b1-29986c4d5f3d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "737a4b0c-1d4e-5be3-a203-c43525f8fd0d",
+    "code": "CR-01",
+    "file_name": "Bổ sung xuất báo cáo Excel",
+    "url": "https://drive.example.com/prj-07/cr-1",
+    "source": "customer",
+    "impact_level": "high",
+    "impact_areas": [
+      "scope",
+      "schedule"
+    ],
+    "impact_note": "Cần thêm khoảng 0,5 MM, lùi mốc UAT 1 tuần",
+    "created_at": "2026-09-30T09:00:00+07:00",
+    "updated_at": "2026-10-03T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "972aa604-8d80-5b69-8cef-295d30748206",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "code": "CR-01",
+    "file_name": "Bổ sung xuất báo cáo Excel",
+    "url": "https://drive.example.com/prj-09/cr-1",
+    "source": "customer",
+    "impact_level": "low",
+    "impact_areas": [
+      "scope",
+      "schedule"
+    ],
+    "impact_note": "Cần thêm khoảng 0,5 MM, lùi mốc UAT 1 tuần",
+    "created_at": "2026-09-30T09:00:00+07:00",
+    "updated_at": "2026-10-03T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  },
+  {
+    "id": "21b2498f-f901-5c52-9612-af6dc3679309",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "c69071bd-42af-5032-add7-b3797dd368cf",
+    "code": "CR-02",
+    "file_name": "Thay đổi luồng phê duyệt",
+    "url": "https://drive.example.com/prj-09/cr-2",
+    "source": "internal",
+    "impact_level": "high",
+    "impact_areas": [
+      "quality"
+    ],
+    "impact_note": null,
+    "created_at": "2026-10-01T09:00:00+07:00",
+    "updated_at": "2026-10-04T09:00:00+07:00",
+    "created_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0",
+    "is_deleted": false
+  }
+]

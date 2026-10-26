@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Dx.Api/Dx.Api.csproj" />
+    <Project Path="src/Dx.Application/Dx.Application.csproj" />
+    <Project Path="src/Dx.Domain/Dx.Domain.csproj" />
+    <Project Path="src/Dx.Infrastructure/Dx.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Dx.IntegrationTests/Dx.IntegrationTests.csproj" />
+    <Project Path="tests/Dx.UnitTests/Dx.UnitTests.csproj" />
+  </Folder>
+</Solution>

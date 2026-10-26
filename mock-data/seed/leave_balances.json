@@ -1,0 +1,472 @@
+[
+  {
+    "id": "ea3adad0-d178-5520-bd2c-a89b7d2b0708",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "1e61a875-e54a-509b-ade4-321fa5dbda7b",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 2,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "8514cbdb-a608-5d45-9769-e23d8f5941a0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "78f9e7dc-71b1-5da9-b91f-d3d7f62c22a9",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 2,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "428c8c0d-16ea-5783-bba1-3868e45f8fc3",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "ef1c2604-224b-55af-88d7-77404cbfdb86",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "68c9194c-aaad-5a57-bbeb-c4834477bc5f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "0ee865e7-4c23-59ab-9f08-5da2e4190201",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "7ef6d619-766a-58b6-82a0-13eef3147498",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "3023a558-0d03-510e-a71c-3c05c21d8b70",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "5f8438b4-c932-52e6-9f54-7e87233cfd52",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "3f99b724-c513-5e07-9854-3b1b516b8737",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "bbae23fe-e94c-55ff-904b-8c0f5ee23b41",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "59f6e852-5b65-5674-8da2-85934d3d2c45",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "50334c7a-c3fa-5264-b5a4-76a16638ab79",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "ab82fc9e-09c9-57e7-bfc9-40df90a52ed9",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "13455067-77dd-5786-a841-5102aa64df1e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "d435302f-ebf9-5ce3-9a70-ee9dfb1f66b5",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "24955868-8a76-576c-92c8-826edb64d1c2",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "c2923244-73c9-5e78-8773-d294db889f1b",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "7900e139-f4ba-5b7f-8408-cafbaec9d548",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "e2797261-5e43-5769-a6b9-acaf0230d730",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 2,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "ef4a5f7d-0817-5c5e-b880-9b0ecc0ded91",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "18cadc45-f84f-532e-bc78-81750ada5a7f",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 2,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "ae1423b3-224b-5932-8c4b-5bf0c1da351f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "5edfe026-0a62-592e-a952-d91b0637bef2",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 3,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "75177cc3-bf87-504f-b8d6-24cd191520c4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "59e49101-e7a3-59f9-a2b5-5cd91b25efeb",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "86ea09eb-586e-5f51-86b3-2579e52df008",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 1,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "ac138925-d599-581a-9757-6f38f34f19e1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 2,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "38131cb7-cdbf-5953-8fee-14def434f2cf",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "b15b19c7-ec68-54db-9440-3d4ea942bf2a",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 1,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "f9a26149-f067-55b4-a053-4e0dd71579b3",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "7c9d4708-1fb2-5047-bd2b-2498f8cb092e",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 3,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "a55552b6-5591-51c9-b20d-536e44c54163",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "4370eafb-97df-58fa-bdfd-f68942eddb52",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "fed6be2a-463f-5376-8111-de811519ca60",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "be6d2714-8803-59ac-a1e2-0bdbf625ab14",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "b3482c04-035f-5285-a34e-bfc3c2fdfba8",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "cb7a086c-514c-5c44-8c45-8b3bf619e9e4",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "c7361d32-5672-59e2-8864-392f71cb2956",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 2,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "60c4180a-52ff-5348-b559-56b285758446",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 1,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "89244660-f144-55e3-9e41-42ae1c4ac40e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "a7aef5f5-9218-5e10-939b-536699f6a4d6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "0706b3fe-1b2f-509a-a825-514133e9bb68",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "81814d33-6309-59e1-b089-5087c6c6773c",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 1,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "413769e1-af23-5ce2-b77c-11b6b82f8bed",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "b6bc7c8c-18a9-5a9c-a4eb-191dc9aef2bd",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "0b67a478-2e88-551c-adc8-533f415ad7a6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "e887cd37-a705-5cf1-af9f-cc865ea9c6d0",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "f95218ef-a7a3-564c-b15f-6b3a1d54afc6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "29f6297f-59fe-58ed-aef7-5a9ff475f8c6",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "a30b69a3-323b-5a2b-8bdb-d9675e4da2bb",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "6911726f-37e1-5b8e-84a7-6fe067ac919b",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "19444f1e-6b34-5a6f-9411-6142877a6a7b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "55f48d4b-fb59-57c2-80c7-172391b191e0",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "cc7f5b96-d80d-5714-96fe-f7a41aeb6fe7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "4f4e91cf-e58a-531f-8597-b282ac40ad33",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 3,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "54273517-01d6-5d10-9644-475979eb8cbb",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "48e9c8c7-1104-5f8c-a3bc-efcded0aad99",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "ee12e3ff-d4cc-5dec-a5e8-8483cba5f623",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "1cb1e7b2-e9ad-53a9-a288-a0a369e5bc14",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 3,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "d549254d-881f-5e57-b69a-bea1d086dcf4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "3174dd79-7622-5122-985b-4437558c1ec5",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "d5c0526e-8e1f-52ff-9c64-9e8522019e82",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "c5537d41-6a95-5826-b520-69ad2ce40840",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 3,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "56c77ba0-fd0c-50f3-b6b9-75413b9eca99",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "1b25d24f-5e63-5795-b014-2ee6fa45f291",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "61651867-fbc3-53e2-8af5-76b3b09b6875",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "20a016b9-d04d-5ceb-81a2-c11aedad7486",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 3,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "0e0a4bb9-8038-5e64-8e1b-166b713ebe56",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "384c0b66-2283-589c-b4f5-8c83cfbe6f7f",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "f74ab78b-4b39-513e-b147-28264675ae82",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "ff57671c-c66f-5b80-a642-d5ef262e6f78",
+    "year": 2026,
+    "entitled_days": 13,
+    "carried_over_days": 4,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "eb175c0a-e8f5-5207-a179-9420647f0cbf",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "ffc9ed56-2de8-5494-97e1-55b0bc83ad2b",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 5,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "4a906b4c-7ead-5248-af49-3f5530492114",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "87e32d9b-fe31-5d38-a6d6-1e16a52d7ad1",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 2,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "fea9030c-7b39-5e93-b5b1-ff4195a07618",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "b9ec0bc3-3c9c-58e7-86c6-9339240608fe",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  },
+  {
+    "id": "11799259-0060-552f-b17c-e440bf7784aa",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "employee_id": "1d0ea5a9-dba9-51cc-a98e-0761fbf38e09",
+    "year": 2026,
+    "entitled_days": 12,
+    "carried_over_days": 0,
+    "adjusted_days": 0,
+    "note": null
+  }
+]

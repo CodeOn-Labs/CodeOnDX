@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dx.Application\Dx.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup-postgresql" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="10.0.13" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.23.0" />
+  </ItemGroup>
+
+  <!-- DB-first: database/migrations/V*.sql is the source of truth; DbUp applies them in name order. -->
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\database\migrations\V*.sql" LogicalName="migrations.%(Filename)%(Extension)" Link="Database\migrations\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>

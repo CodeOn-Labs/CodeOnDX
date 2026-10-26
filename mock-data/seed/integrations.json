@@ -1,0 +1,37 @@
+[
+  {
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "key": "Ai",
+    "enabled": true,
+    "use_mock": true,
+    "last_sync_at": null
+  },
+  {
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "key": "GitHub",
+    "enabled": false,
+    "use_mock": true,
+    "last_sync_at": null
+  },
+  {
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "key": "GitLab",
+    "enabled": false,
+    "use_mock": true,
+    "last_sync_at": null
+  },
+  {
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "key": "GoogleDrive",
+    "enabled": false,
+    "use_mock": true,
+    "last_sync_at": null
+  },
+  {
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "key": "Email",
+    "enabled": true,
+    "use_mock": true,
+    "last_sync_at": null
+  }
+]

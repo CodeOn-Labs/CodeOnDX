@@ -1,0 +1,66 @@
+# Backend DX — `CodeOn.Dx.slnx` (.NET 10)
+
+REST API thay cho `tools/mock-api`, cùng hợp đồng (`/api/v1`, `ErrorFullModel`, câu chữ trong `src/Dx.Api/Locales`). Hướng **DB-first**: lược đồ là script SQL trong `../database/migrations`, entity sinh từ DB.
+
+## Cấu trúc (Clean Architecture rút gọn)
+
+| Project | Nội dung |
+|---|---|
+| `Dx.Domain` | `Entities/` (**sinh tự động** từ DB, không sửa tay), `Constants/` (permission, loại danh mục, khoá quy tắc) |
+| `Dx.Application` | Service theo tính năng (`Auth`, `MasterData`, `Settings`, `Projects`…), DTO, exception nghiệp vụ (`Common/Exceptions.cs`). Service truy vấn EF Core trực tiếp qua `IAppDbContext`, không có tầng repository, không MediatR / AutoMapper (D6) |
+| `Dx.Infrastructure` | `DxDbContext` (sinh tự động) + `DxDbContext.Custom.cs` (filter tenant / xoá mềm, đặt `app.tenant_id` cho RLS, tự điền cột audit), DbUp (`Database/DatabaseMigrator.cs`), JWT, hash mật khẩu Identity V3 |
+| `Dx.Api` | `Program.cs`, `Common/` (`ErrorFullModel`, `ApiControllerBase`, `JsonStringLocalizer`, lưới an toàn), `Security/` (`[HasPermission]`, tenant / user hiện tại), `Controllers/` |
+| `tests/Dx.UnitTests` | xUnit v3 + Shouldly + NSubstitute, chạy bằng Microsoft.Testing.Platform. Logic không cần DB: `QueryParams`, `PageRequest`, `Localized`, `ValidationErrors`, map exception → `ErrorFullModel`, `JsonStringLocalizer`, JWT, hash mật khẩu, `RequestContext` |
+| `tests/Dx.IntegrationTests` | Gọi HTTP thật vào API (`WebApplicationFactory`) trên một cụm PostgreSQL 18 **tạm** do test tự `initdb` + `pg_ctl` (cổng ngẫu nhiên, xoá khi xong; không cần Docker, không đụng DB `dx` đang dùng). Áp `database/migrations` + seed demo + tenant thứ hai `test-beta` có số liệu biết trước (`Infrastructure/BetaTenant.cs`). App kết nối bằng `dx_app` nên kiểm được cả RLS. Tìm `initdb` ở biến môi trường `DX_PG_BIN`, rồi `C:\Program Files\PostgreSQL\18\bin`, rồi PATH |
+
+Đa tenant (D1): mọi truy vấn lọc theo `tenant_id` của access token (filter tên `tenant`), và mỗi lần mở kết nối API đặt `app.tenant_id` để RLS của PostgreSQL chặn thêm một lớp. App kết nối bằng `dx_app` (không phải owner); migration chạy bằng `dx_owner`.
+
+## Chạy lần đầu trên máy
+
+1. Tạo role + DB (một lần, trong `psql` bằng tài khoản `postgres`):
+   ```sql
+   CREATE ROLE dx_owner LOGIN PASSWORD '<mật khẩu owner>';
+   CREATE ROLE dx_app LOGIN PASSWORD '<mật khẩu app>';
+   CREATE DATABASE dx OWNER dx_owner;
+   ```
+2. Chép `src/Dx.Api/appsettings.Secrets.example.json` thành `appsettings.Secrets.json` (đã gitignore), điền 2 chuỗi kết nối và `Jwt:SigningKey` (chuỗi ngẫu nhiên ≥ 32 byte).
+3. Áp lược đồ và nạp tenant demo (dữ liệu hư cấu, D10):
+   ```bash
+   cd backend && dotnet run --project src/Dx.Api -- --seed-demo
+   ```
+   Chỉ áp lược đồ: `-- --migrate`. DbUp ghi script đã chạy vào `public.dx_schema_versions` và cấp quyền DML cho `dx_app`.
+4. Chạy API: `dotnet run --project src/Dx.Api` → http://127.0.0.1:5090 (Development), tài liệu API ở `/docs` (Scalar), OpenAPI ở `/openapi/v1.json`. Bản chạy thật (Windows Service `DxApi`) nghe `127.0.0.1:8082`.
+5. Frontend dùng BE thật: chạy thêm mock API (`node tools/mock-api/server.mjs`) rồi `cd frontend && npm run dev:hybrid` — endpoint đã có ở BE (danh sách `BACKEND_ROUTES` trong `frontend/vite.config.ts`, thêm vào khi làm xong endpoint mới) đi BE, còn lại đi mock; mock nhận JWT của BE nhờ cùng `Jwt:SigningKey`. Chỉ BE: `npm run dev:backend`.
+
+Tài khoản demo giống mock: `admin@`, `pm@`, `finance@`, `member@example.com` / `Demo@2026`.
+
+## Visual Studio 2026
+
+- Mở `backend/CodeOn.Dx.slnx`, đặt `Dx.Api` làm startup project, F5 mở `/docs`.
+- Chạy `--seed-demo` / `--migrate`: *Project Properties › Debug › Command line arguments*, hoặc lệnh ở trên.
+- Test: Test Explorer (dự án test dùng Microsoft.Testing.Platform, khai báo trong `global.json`).
+
+## Đổi lược đồ (quy trình DB-first)
+
+1. Thêm file mới `database/migrations/V013__<mo_ta>.sql`. **Không sửa** file đã áp vì DbUp không chạy lại file cũ.
+2. `dotnet run --project src/Dx.Api -- --migrate`
+3. Sinh lại entity: `powershell -ExecutionPolicy Bypass -File backend\scripts\scaffold-db.ps1` (đọc `ConnectionStrings:DxOwner` trong `appsettings.Secrets.json`). Script ghi đè `Dx.Domain/Entities/*.cs` và `DxDbContext.cs`; code viết tay để ở file partial khác. Bảng bị xoá thì tự xoá file entity tương ứng. Muốn dùng giao diện VS thì EF Core Power Tools (*Reverse Engineer*) cho cùng kết quả, với các lựa chọn: schema `dx`, entity vào `Dx.Domain/Entities` namespace `Dx.Domain.Entities`, context `DxDbContext` vào `Dx.Infrastructure/Persistence`, không sinh `OnConfiguring`.
+4. Đổi dữ liệu demo: sửa `tools/mock-data-gen`, chạy `node tools/mock-data-gen/generate.mjs` rồi `node tools/db-seed/generate.mjs` (sinh `database/seed/demo_tenant.sql`).
+
+## Endpoint đã có
+
+| Method | Đường dẫn | Quyền |
+|---|---|---|
+| POST | `/api/v1/auth/login`, `/refresh`, `/logout` | — (giới hạn 30 request/phút/IP; 5 lần sai mật khẩu / 5 phút / IP → 429; 5 lần sai liên tiếp của một tài khoản → khoá 15 phút) |
+| GET | `/api/v1/auth/me` | đăng nhập |
+| GET | `/api/v1/master-data?type=` | đăng nhập |
+| GET / PUT | `/api/v1/system-rules`, `/api/v1/system-rules/{key}` | xem: đăng nhập; sửa: `admin.settings` |
+| GET | `/api/v1/settings` | đăng nhập |
+| GET | `/api/v1/projects`, `/api/v1/projects/summary` | `project.view` (không có `project.manage` thì chỉ thấy dự án mình tham gia) |
+| GET | `/health` | — |
+
+Đã đối chiếu với mock API (cùng request, cùng tài khoản): 25/27 trường hợp giống hệt `status`, `messageText` và `data`. Hai chỗ khác là cố ý:
+- `statusIds` không phải GUID thì BE báo lỗi 400 ở field đó; mock bỏ qua.
+- `budgetUsedPercent` BE tính từ giờ công đã duyệt (`Σ giờ ÷ (TIMESHEET_FTE_HOURS × 20)`), còn mock lấy số có sẵn trong seed. Vì seed chỉ có giờ công khoảng 2 tháng nên % của BE thấp hơn mock.
+
+Endpoint còn lại làm tiếp theo danh sách trong `tools/mock-api/README.md`.

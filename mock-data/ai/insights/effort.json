@@ -1,0 +1,30 @@
+{
+  "screen_key": "effort",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "green",
+        "title": "5 nhân sự còn rảnh ở Phòng Phát triển 1",
+        "content": "Tổng công số rảnh 2,5 MM — có thể bổ sung cho dự án đang thiếu Dev BE."
+      },
+      {
+        "variant": "red",
+        "title": "2 nhân sự vượt 100%",
+        "content": "Hai nhân sự Phòng Phát triển 2 có công số thực tế cộng OT vượt 1,0 MM trong tháng 10."
+      }
+    ],
+    "en": [
+      {
+        "variant": "green",
+        "title": "5 people available in Development 1",
+        "content": "2.5 MM of free effort — could cover projects short of backend developers."
+      },
+      {
+        "variant": "red",
+        "title": "2 people above 100%",
+        "content": "Two Development 2 members exceed 1.0 MM including overtime in October."
+      }
+    ]
+  }
+}

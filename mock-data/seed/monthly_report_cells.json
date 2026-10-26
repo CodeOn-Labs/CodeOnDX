@@ -1,0 +1,5210 @@
+[
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-152"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-166"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-158"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-122"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-175"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-127"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-118"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-128"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-155"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-111"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-163"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-118"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-148"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-22",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-140"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-165"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-148"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-145"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-135"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-140"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-149"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-130"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-177"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-127"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-144"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-136"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-141"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-143"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-154"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-149"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-143"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-154"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-131"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-23",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-162"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-134"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-113"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-161"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-112"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-106"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-149"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-105"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-144"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-110"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-160"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-175"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-134"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-175"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-177"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-162"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-135"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-141"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-171"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-22",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-132"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-23",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-105"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-167"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-128"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-109"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-133"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-123"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-128"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-149"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-105"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-153"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-105"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-128"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-170"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-160"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-116"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-144"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-132"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-173"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-22",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-165"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-158"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-117"
+    }
+  },
+  {
+    "report_id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-149"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-143"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-150"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-156"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-06",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-180"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-172"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-164"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-176"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-159"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-169"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-103"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-145"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "7dce052f-3faa-5f95-9122-a7f12518ed97",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-169"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-124"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-178"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-109"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-06",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-108"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-134"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-169"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-175"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-127"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-119"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-164"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-137"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-175"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-154"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "ded30d8e-7159-5f93-af8e-0557e128744b",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-180"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-134"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-151"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-179"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-124"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-176"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-142"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-109"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-154"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-107"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-103"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-100"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-142"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ01-179"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-165"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ01-128"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ01-105"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ01-118"
+    }
+  },
+  {
+    "report_id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "employee_id": "bf8b30e3-7309-557c-8a1d-ddbc19f19aed",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ01-119"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-164"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-125"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-141"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-163"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-179"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-139"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-158"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-164"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-166"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-139"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-178"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-117"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-134"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-180"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-22",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-171"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-23",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-113"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-168"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-117"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-104"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-180"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-152"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-172"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-178"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-113"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-145"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-110"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-110"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-173"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-155"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-135"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-137"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-162"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-121"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-118"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-125"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-23",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-158"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-177"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-144"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-158"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-152"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-153"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-127"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-108"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-126"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-125"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-116"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-143"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-123"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-118"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-146"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-103"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-139"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-178"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-154"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-23",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-140"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-103"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-158"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-165"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-103"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-135"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-141"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-143"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-114"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-102"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-101"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-145"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-142"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-112"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-162"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-168"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-124"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-174"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-158"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-133"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-119"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-22",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-142"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-23",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-169"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-169"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-144"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-100"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-166"
+    }
+  },
+  {
+    "report_id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-118"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-117"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-154"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-150"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-166"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-111"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-149"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-171"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-144"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-125"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-122"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-151"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "d78b54c4-c5e0-5082-9010-d5e06696e615",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-164"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-132"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-180"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-06",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-140"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-141"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-178"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-128"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-180"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-159"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-121"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-145"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-129"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "7263d100-beef-519f-b900-83282d392e4b",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-101"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-165"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-172"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-06",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-112"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-101"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-143"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-103"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-130"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-143"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-158"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "1b6581a1-bdf2-52d9-89b7-70f698045585",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-156"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-146"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-116"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-160"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ03-140"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ03-100"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-136"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-141"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-118"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-160"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ03-146"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ03-162"
+    }
+  },
+  {
+    "report_id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "employee_id": "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ03-121"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-100"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-116"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-152"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-142"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-103"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-144"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-104"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-103"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-180"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-145"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-155"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-163"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-166"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-152"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-22",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-103"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-23",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-159"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-153"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-161"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-125"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-160"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-147"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-129"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-140"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-136"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-169"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-139"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-131"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-104"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-102"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-152"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-139"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-154"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-132"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-156"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-122"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-22",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-129"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-23",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-130"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-104"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-122"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-140"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-119"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-149"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-114"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-106"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-113"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-133"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-129"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-174"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-147"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-175"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-160"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-180"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-130"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-100"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-22",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-157"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-152"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-28",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-122"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-170"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-160"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-153"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-140"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-03",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-150"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-04",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-167"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-161"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-110"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-10",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-147"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-11",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-130"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-130"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-106"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-164"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-17",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-146"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-18",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-116"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-21",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-117"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-24",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-118"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-25",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-165"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-29",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-145"
+    }
+  },
+  {
+    "report_id": "19e18833-424c-5799-a331-b24469581be5",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-09-30",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-150"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-137"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-160"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-103"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-06",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-110"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-174"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-111"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-106"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-100"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-176"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-131"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-121"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-166"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-157"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-119"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-154"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-138"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-06",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-115"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-109"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-111"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-132"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-119"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-171"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-135"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-100"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-100"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "14ca7381-1094-5a76-abae-d0a1248b1d81",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-156"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-136"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-146"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-126"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-145"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-108"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-113"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-179"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-13",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-151"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-155"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-174"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-155"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+    "work_date": "2026-10-20",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-166"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-01",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-103"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-02",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-127"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-05",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-146"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-07",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-131"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-08",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-114"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-09",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-131"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-12",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Phát triển tính năng theo sprint",
+    "custom": {
+      "ticket": "PRJ04-140"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-14",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Sửa lỗi",
+    "custom": {
+      "ticket": "PRJ04-121"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-15",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Nghiên cứu công nghệ",
+    "custom": {
+      "ticket": "PRJ04-151"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-16",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Họp nội bộ",
+    "custom": {
+      "ticket": "PRJ04-170"
+    }
+  },
+  {
+    "report_id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "employee_id": "9398e772-3ee0-5c8f-8ca5-10cd739060d9",
+    "work_date": "2026-10-19",
+    "hours": null,
+    "source": "timesheet",
+    "start_time": null,
+    "end_time": null,
+    "time_source": "attendance",
+    "content": "Kiểm thử tích hợp",
+    "custom": {
+      "ticket": "PRJ04-119"
+    }
+  }
+]

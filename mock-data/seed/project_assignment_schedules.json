@@ -1,0 +1,762 @@
+[
+  {
+    "id": "9922b0f7-defb-511a-b8b4-0bf26ce70088",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "adc75c01-dd1a-5f0d-a117-5947f6ef495f",
+    "start_date": "2025-12-31",
+    "end_date": "2027-02-17",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "08949716-b23c-55bb-bffe-aaaed1cd92a1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "6cd99ae8-47df-5fe3-8f25-1386109d611f",
+    "start_date": "2026-01-05",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "edc18de9-99e5-555c-a05e-ee794a878079",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "8df44147-1e4b-599b-8212-f3bf46be69fd",
+    "start_date": "2026-01-09",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "1d257109-08ff-542e-bbb3-256ac87ca82e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "ea074ea5-52c3-5582-bd0d-6e19a8dbd001",
+    "start_date": "2026-01-03",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "e09c6318-420f-5eea-8356-941d0d5129c5",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "623f9d4a-0718-5d62-992a-59da3447b614",
+    "start_date": "2025-12-26",
+    "end_date": "2027-02-17",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "3e82da17-db86-55f7-8cd2-64e2456458c5",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "43ae3a60-864a-5d36-8ceb-cd45a59306d1",
+    "start_date": "2026-01-09",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "ff3f8ecd-408b-54a9-94d2-02f2847c3667",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "fa17d359-dda3-5104-be8c-171352ebdbd4",
+    "start_date": "2026-01-01",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "0d948006-febe-5e5b-9b0d-375eab91c6f1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "c6210883-98fa-5682-9a90-d9cd9c60496e",
+    "start_date": "2026-04-17",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "18519524-02fe-50ee-aa71-34a2aca9889c",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "59600b9b-4e25-5dd6-b0ef-a39ad97a6999",
+    "start_date": "2026-04-21",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "2b84cf24-6c76-57fd-87f2-77c4f3862a88",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "5379bc61-bffa-5ae8-9974-b8c46afb2bc9",
+    "start_date": "2026-04-11",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "30177732-f68a-5255-b884-4f306cbc5751",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "23ac5725-0124-5bbd-8240-401d836a4426",
+    "start_date": "2026-04-23",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "54abcfcf-892f-580f-a9d4-e7f8f665b925",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "49166fca-7ba3-5ad7-bd2d-f59d65fd1940",
+    "start_date": "2026-04-23",
+    "end_date": "2026-11-19",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "28a33d70-8338-5faa-9984-75d1b500e798",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "754b7f15-2579-5e06-8696-cb8601c30cc9",
+    "start_date": "2026-04-16",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "23cd6a5a-f663-5731-9dd2-d5e950c8c6aa",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "30f8f795-58da-5c39-b191-d801b009b2ca",
+    "start_date": "2026-06-01",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "471e482c-dcc7-5a8f-ab5b-8578ecb165dd",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "b979fc58-92fa-537b-bd33-1cad632bfc27",
+    "start_date": "2026-06-06",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "a130263d-e457-5978-830f-0ed597b2acb2",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "2899cc32-2d5c-54a6-a85a-453961a2845b",
+    "start_date": "2026-06-08",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "bf024754-492f-5631-9736-f0cd14833ebe",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "3806b79b-af0b-5b7b-b5e3-e5e24bb6c881",
+    "start_date": "2026-06-11",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "eb8c75c0-3eb3-5cb6-b012-5d3a33eeeffb",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "bef86d2a-468b-5796-b50e-98880218c512",
+    "start_date": "2026-06-05",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "3e41d061-b62c-5442-9a56-7266dd5909d7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "da008f6d-b81e-5037-a04e-7eaf01e72ac7",
+    "start_date": "2026-06-02",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "3b317d9d-3da0-52b7-917c-735266215f00",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "8f7defa1-e3f0-59eb-8bdb-df4452d9e4bc",
+    "start_date": "2026-05-27",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "88f174b3-6144-5b42-a31c-a4acee896ff1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "06311804-32de-5009-8ecc-276165da09ee",
+    "start_date": "2026-05-31",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "7c85c7b4-f408-5831-afe5-bde3367d81a8",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "a5e6623f-e541-575b-9e85-3d0a66bc9c17",
+    "start_date": "2026-05-23",
+    "end_date": "2027-04-18",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "2b080599-2370-555e-87ab-8be79b1f29d3",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "4fcdab26-b04c-545f-ae33-7945659c875f",
+    "start_date": "2026-07-31",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "4c2f6301-955e-5027-a70f-0bcb1ffd5b85",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "e401a0db-0172-518a-abc0-992101115924",
+    "start_date": "2026-08-04",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "8c7d27d0-7d34-588a-a11e-c8f8c23369ae",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "975a45d9-7de7-5f03-bd1d-2559285f3d1d",
+    "start_date": "2026-07-26",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "69959622-9673-5577-b522-685f9a873e2e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "eb7474d4-94ff-5db6-a06d-d4bc73f0fb02",
+    "start_date": "2026-07-23",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "9bfad190-c026-514d-95e1-c3e9859dc0f3",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "35695091-eeb8-520a-858b-41fe3663fe7b",
+    "start_date": "2026-07-22",
+    "end_date": "2026-11-14",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "1deaa6a6-868b-5d5e-9c60-56192b781361",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "437373b4-ca59-5796-8874-91f76f6e7ed8",
+    "start_date": "2025-09-25",
+    "end_date": "2027-02-17",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "23991a47-de87-5d42-9198-39365d79a9d0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "579b4ad5-8768-56e2-90f3-0a9e64eba94f",
+    "start_date": "2025-09-22",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "0cb2fa42-ab61-523f-accb-8f158dd6324f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "98829619-4d63-5f23-b2ca-e384aac9fb73",
+    "start_date": "2025-09-24",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "c9fac9c8-6fe5-517b-8041-9a986416fb31",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "b4e06cb9-22e0-54a9-8aa5-4ceee16e38c8",
+    "start_date": "2025-10-01",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "3331aed9-cfe1-5ae0-a45d-06329ffce656",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "f6d297d7-33e7-5a8f-a8e8-62fc034463bf",
+    "start_date": "2025-09-18",
+    "end_date": "2027-02-17",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "ba3022d1-9547-500f-9912-ed28092ca97d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "7dba0906-cfd6-5487-a18e-b41ccea10006",
+    "start_date": "2025-09-20",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "b99cbb95-da38-5600-bcf4-926f43bb4860",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "3fe0c78f-7658-5c4f-b12a-f45ce4e23397",
+    "start_date": "2025-10-03",
+    "end_date": "2027-02-17",
+    "fte_allocated": 1
+  },
+  {
+    "id": "bc908d21-f8a2-55a3-b999-7b1cf77d146f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "a3fb1205-a752-5eb5-8b57-badbdaacad7f",
+    "start_date": "2026-08-28",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "b91b1771-9f15-50c1-a79d-b375048a19cc",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "85cee106-e908-55c1-8d27-37ca0171c576",
+    "start_date": "2026-08-21",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "21ea5473-7a00-574b-a52b-3d72b8fedbef",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "5c475064-1ae5-502c-81e3-b643aeea6a9c",
+    "start_date": "2026-09-10",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "58f798c8-0bf0-507a-93bf-348fc4ae0a59",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "ac704a95-6db4-5c15-889d-d9765c580cf4",
+    "start_date": "2026-08-30",
+    "end_date": "2027-04-18",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "bedaba72-4b51-57bd-ac8c-83b540548355",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "52bcedc8-e453-5b46-9a6b-4fc3c02f53dd",
+    "start_date": "2026-02-28",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "8d9f638b-9414-5419-adad-ecf7605a8a98",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "48a5bd3d-2d7c-5ac0-83fc-3330a4f9ddea",
+    "start_date": "2026-02-18",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "dbfc03c6-47d4-58a0-a125-91391a1a9f7a",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "0b85305d-821a-589d-a1b3-1264f4714720",
+    "start_date": "2026-02-12",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "2ccbfe35-5c20-53f4-8695-e1784ba7ddde",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "aed9cd0c-24a8-5958-954b-c266d8de31da",
+    "start_date": "2026-02-14",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "17d8c824-60d4-54e2-98bc-7754d8394a72",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "7e3e56ef-62ee-570f-a5dc-5e7d446a351a",
+    "start_date": "2026-02-25",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "caac172a-c779-5be4-978a-2f1045c5db08",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "673a10fc-e6b6-5176-b468-21d12343b924",
+    "start_date": "2026-03-04",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "de03919e-e141-574f-9870-4947f92a7172",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "3069be96-8d68-5fdb-9af5-c95c386e8a44",
+    "start_date": "2026-06-24",
+    "end_date": "2026-11-14",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "4a18a9bd-3f31-5051-a14f-a40041b6e13d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "5e08d89a-45dd-59fb-8dff-6f49da4ee055",
+    "start_date": "2026-07-04",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "5c2ce7a8-cfdb-5f00-9f3e-b2588c5e5103",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "e91c2367-dbfe-52bc-8163-c3b6fe95a3c1",
+    "start_date": "2026-07-04",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "f2a79d80-9660-5df0-976c-333d828c2354",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "fe5be99d-ac68-5b35-b47b-b90119229e44",
+    "start_date": "2026-06-22",
+    "end_date": "2026-11-14",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "d0346422-8e88-516f-a9f2-331a887d0048",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "5bc5746c-bc42-566b-87ee-dba559e1eddf",
+    "start_date": "2025-12-14",
+    "end_date": "2026-09-20",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "3220b601-965c-59ca-8e66-69fab53ec52b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "abcb799b-5899-529a-b156-47ccb5a053e9",
+    "start_date": "2025-12-13",
+    "end_date": "2026-09-20",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "af183d41-d258-580c-8d21-61b51611e280",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "6dbb6fd5-fbe4-57b1-8e66-20609e044dc2",
+    "start_date": "2025-12-06",
+    "end_date": "2026-09-20",
+    "fte_allocated": 1
+  },
+  {
+    "id": "20c67cb4-dc93-541f-becb-5414af0882fe",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "5e33eee2-8460-5acb-aede-0874fd928e89",
+    "start_date": "2025-12-13",
+    "end_date": "2026-09-20",
+    "fte_allocated": 1
+  },
+  {
+    "id": "4b5e7906-4ae3-57da-afa8-576e4bf3d0b9",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "47a58bfa-23cf-5f76-bf0c-d88f2f422241",
+    "start_date": "2025-12-05",
+    "end_date": "2026-09-20",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "ee8e87c7-c5c0-532c-99e3-5e2a9c79e0c0",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "75f0c448-c7d0-563c-b05f-8a3279305cb7",
+    "start_date": "2025-12-07",
+    "end_date": "2026-09-20",
+    "fte_allocated": 1
+  },
+  {
+    "id": "7f7d58b8-bb5a-5d42-b079-0336b3d96aea",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "49212e86-763b-5edb-863f-a8802fa7ba36",
+    "start_date": "2026-09-25",
+    "end_date": "2027-03-24",
+    "fte_allocated": 1
+  },
+  {
+    "id": "aff3a65c-e9c9-5e04-bbe2-58b5fda64517",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "8e46cc94-3ce2-54a0-a41e-bea037648fdd",
+    "start_date": "2026-09-18",
+    "end_date": "2027-03-24",
+    "fte_allocated": 1
+  },
+  {
+    "id": "9ec3dcd7-b89f-5e41-aefe-687e2dc8eabb",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "730e894d-43c4-5e4d-8c76-8b43e6d1edeb",
+    "start_date": "2026-09-15",
+    "end_date": "2027-03-24",
+    "fte_allocated": 1
+  },
+  {
+    "id": "18fb8ab4-fe46-5465-8274-7166f3b9e746",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "044f644c-f4c6-5809-9ec5-4d71c53594d4",
+    "start_date": "2026-05-07",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "bb16171e-8fba-56cc-b80e-30393de870c7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "d6dd276b-391e-59e7-b108-c835af53e9fb",
+    "start_date": "2026-05-07",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "9f23f72f-bfe3-5ffe-a9da-85fe85c1bf04",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "58ebcabd-f560-580d-9a46-06063ee39674",
+    "start_date": "2026-05-07",
+    "end_date": "2027-04-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "9ff45c64-bc0a-5e0d-b5b3-c562ef94c790",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "aff5e135-a6ec-54d6-97e1-f72e6bcec1be",
+    "start_date": "2026-04-28",
+    "end_date": "2027-04-18",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "b7e6d261-ed02-5021-9f2f-5fb2086963d4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "d00f9827-4cf6-5f67-8458-716cbfed10d9",
+    "start_date": "2026-09-20",
+    "end_date": "2027-01-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "5be5cc4f-c281-56a3-8436-44618e40972f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "62faf1e4-e452-5a1b-890c-911bca3c0069",
+    "start_date": "2026-09-20",
+    "end_date": "2027-01-18",
+    "fte_allocated": 1
+  },
+  {
+    "id": "48c23a23-22d6-5bda-8cea-4cfd041eaf94",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "c34c4831-99f9-5886-963d-e42e8400f285",
+    "start_date": "2026-02-22",
+    "end_date": "2026-11-19",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "8c1cc118-fc0f-55eb-ae4f-6b99f0d34a84",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "9e5a29f9-3cd8-5a42-89ef-2aef8b1d1700",
+    "start_date": "2026-02-05",
+    "end_date": "2026-11-19",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "c12bfaaa-c75e-53b8-9fe5-29c288238137",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "6c8c79bd-2f6b-5a1f-8f54-60c957ce90ff",
+    "start_date": "2026-02-22",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "23792bac-2141-59ef-8b37-49fbfa7122aa",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "9f441df8-aa01-50ce-8898-6237e1fbf3dc",
+    "start_date": "2026-02-14",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "b98f2d92-7afa-5b3b-8576-244192eb9d0c",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "2ef3b827-2820-5574-a36e-78e42c266bff",
+    "start_date": "2026-02-02",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "4592b128-d3b2-5d28-93a3-b2407b88b3c7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "22740162-530b-5e99-b725-ce35b4b6257a",
+    "start_date": "2026-02-02",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "99c4e11b-3443-5933-9f19-217cb5440f6d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "b420ec98-d109-5a33-a108-bd2eac4cd155",
+    "start_date": "2026-02-05",
+    "end_date": "2026-11-19",
+    "fte_allocated": 1
+  },
+  {
+    "id": "a8a8f980-2431-5bd4-b5cd-59763a5ccdb5",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "3110a6bf-91ec-5177-a1e5-e8ea4a75173a",
+    "start_date": "2026-07-25",
+    "end_date": "2027-05-08",
+    "fte_allocated": 1
+  },
+  {
+    "id": "8ef4371d-426b-5163-8354-cd997702f849",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "70aec79d-c2af-5246-8471-0c000bde337c",
+    "start_date": "2026-07-20",
+    "end_date": "2027-05-08",
+    "fte_allocated": 1
+  },
+  {
+    "id": "d1262403-bf43-5fcf-a5cc-5651b17e0459",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "647141c7-53ba-567c-9171-8897f88472a5",
+    "start_date": "2026-07-19",
+    "end_date": "2027-05-08",
+    "fte_allocated": 1
+  },
+  {
+    "id": "36d04467-4c70-5785-aab5-ded22d051a17",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "708dc41f-7c37-5300-ae82-f01e5ff03177",
+    "start_date": "2026-07-15",
+    "end_date": "2027-05-08",
+    "fte_allocated": 1
+  },
+  {
+    "id": "ad2a6a44-0a7b-53ff-ab76-17f495787c40",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "65d3a08b-d9cb-5834-aba7-18772f236fbe",
+    "start_date": "2025-06-15",
+    "end_date": "2026-07-12",
+    "fte_allocated": 1
+  },
+  {
+    "id": "46231b16-c5fc-575f-bae8-18d726c7161d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "b6eadb95-0780-53ec-8c06-a324ac2eb3e0",
+    "start_date": "2025-06-08",
+    "end_date": "2026-07-12",
+    "fte_allocated": 1
+  },
+  {
+    "id": "4e25d727-438d-539a-8880-3eb7ebf72a69",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "8729fbb4-35e5-56fa-95ee-e30dd8cb7449",
+    "start_date": "2025-06-26",
+    "end_date": "2026-07-12",
+    "fte_allocated": 1
+  },
+  {
+    "id": "91315b67-14ab-5358-9743-edcd238b8e79",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "3e69ce87-f9cf-5354-bc20-f0edfcb7c2d0",
+    "start_date": "2025-06-12",
+    "end_date": "2026-07-12",
+    "fte_allocated": 1
+  },
+  {
+    "id": "31c98b1d-5728-5436-8191-c5d8dab1bc00",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "fe6fcb04-4798-5ff8-9b49-9966f7994f8a",
+    "start_date": "2025-06-13",
+    "end_date": "2026-07-12",
+    "fte_allocated": 1
+  },
+  {
+    "id": "7f06f5e5-b1eb-5eb2-adf5-a9255e91d3a4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "ce789b12-5525-5db2-a498-4f423539e7d6",
+    "start_date": "2025-06-17",
+    "end_date": "2026-07-12",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "3bc24285-824f-5eaa-b3bd-6bea1d9aea66",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "54b3ae3f-4555-502a-a0a5-770bab5eab4b",
+    "start_date": "2025-11-03",
+    "end_date": "2026-11-04",
+    "fte_allocated": 1
+  },
+  {
+    "id": "3e639c99-479e-5c15-91f7-8c81cf96618d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "8e5702f0-4b9a-5501-8557-736843ecb4f7",
+    "start_date": "2025-11-09",
+    "end_date": "2026-11-04",
+    "fte_allocated": 1
+  },
+  {
+    "id": "9e28173e-503b-56b2-84f3-2405d733d89d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "b7939f25-accd-59be-a268-45864e0615a7",
+    "start_date": "2026-08-12",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "762e5b91-a684-5952-9195-99fb84361d62",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "905a4b93-ee69-5f8b-a735-4c98ffebc68a",
+    "start_date": "2026-08-24",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "95069d83-e45e-53b9-854f-9eb61e2b4435",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "cb74b739-5c02-56dc-973a-39d8e67118fc",
+    "start_date": "2026-08-20",
+    "end_date": "2026-11-14",
+    "fte_allocated": 1
+  },
+  {
+    "id": "6ae3ba28-f9b7-5a4a-b5e1-e05c83c5f5ad",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "e7689182-2d63-522d-8c25-d9afbb377c53",
+    "start_date": "2026-08-12",
+    "end_date": "2026-11-14",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "c55f2d40-a1b3-5bed-ae7d-3b5cc6963669",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "4f384f63-1e5f-53dd-b433-6df447e8cd42",
+    "start_date": "2026-10-07",
+    "end_date": "2027-03-29",
+    "fte_allocated": 1
+  },
+  {
+    "id": "525cf79e-d5d9-5ea0-bc79-31fe690f3ba1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "a5a686aa-7981-5801-be73-5e8d3c12c9ae",
+    "start_date": "2026-10-04",
+    "end_date": "2027-03-29",
+    "fte_allocated": 1
+  },
+  {
+    "id": "5d656f12-0be0-5f08-8dde-b9d5d3eed1ed",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "d83ccb2f-5d83-5684-83f1-462ddf94934b",
+    "start_date": "2025-08-26",
+    "end_date": "2026-09-10",
+    "fte_allocated": 1
+  },
+  {
+    "id": "505f2ccb-1b7a-5ebd-a3e7-f204900193a2",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "2872e446-62f4-5194-92ea-b91ec97350cb",
+    "start_date": "2025-09-09",
+    "end_date": "2026-09-10",
+    "fte_allocated": 1
+  },
+  {
+    "id": "c98057e1-1cd8-502e-b00b-e42149d418c1",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "4b35f8f0-118f-5537-ac13-b6ef1a0288b6",
+    "start_date": "2025-08-27",
+    "end_date": "2026-09-10",
+    "fte_allocated": 1
+  },
+  {
+    "id": "b6ebe29f-56a3-5727-91b6-70dd074444b4",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "d6d4c12d-224a-5ba6-9ca1-ec672f549c91",
+    "start_date": "2026-04-05",
+    "end_date": "2026-07-02",
+    "fte_allocated": 1
+  },
+  {
+    "id": "1dca8ab7-8016-5ec4-bac3-b9522624032f",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "b909430b-ce35-557e-a605-feeb098766c7",
+    "start_date": "2026-04-12",
+    "end_date": "2026-07-02",
+    "fte_allocated": 0.5
+  },
+  {
+    "id": "ce080d1b-3355-545d-b0c9-4855b9bb9958",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "eeab0c03-6d84-5ede-8557-ee2f06830a58",
+    "start_date": "2026-06-02",
+    "end_date": "2026-07-22",
+    "fte_allocated": 1
+  },
+  {
+    "id": "b838d771-f0eb-5872-8108-5783369cc516",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "assignment_id": "5d416d50-c1b0-534e-9fa6-b658e3243064",
+    "start_date": "2026-06-07",
+    "end_date": "2026-07-22",
+    "fte_allocated": 1
+  }
+]

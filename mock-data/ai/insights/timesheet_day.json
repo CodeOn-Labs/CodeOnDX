@@ -1,0 +1,20 @@
+{
+  "screen_key": "timesheet_day",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "blue",
+        "title": "Áp dụng lại công hôm qua?",
+        "content": "Hôm qua bạn ghi 5h cho dự án chính và 3h cho dự án thứ hai, 1h họp."
+      }
+    ],
+    "en": [
+      {
+        "variant": "blue",
+        "title": "Reuse yesterday's entries?",
+        "content": "Yesterday you logged 5h on your main project, 3h on the second project and 1h of meetings."
+      }
+    ]
+  }
+}

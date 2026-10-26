@@ -1,0 +1,20 @@
+{
+  "screen_key": "project_detail_metrics_timeline",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "red",
+        "title": "1 milestone quá hạn",
+        "content": "\"Kiểm thử tích hợp\" đã quá ngày kế hoạch 6 ngày và chưa có lý do."
+      }
+    ],
+    "en": [
+      {
+        "variant": "red",
+        "title": "1 overdue milestone",
+        "content": "\"Integration testing\" is 6 days past its planned date with no justification."
+      }
+    ]
+  }
+}

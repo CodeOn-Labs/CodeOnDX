@@ -1,0 +1,125 @@
+[
+  {
+    "id": "196ad782-033f-5849-b604-b4edf31b8e93",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "project_list",
+    "name": "Tổng quan rủi ro danh mục dự án",
+    "data_sources": [
+      "projects"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu projects và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "836f984e-f505-51b4-9223-f3999a19ab28",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "project_list",
+    "name": "Dự án cần chú ý ngân sách",
+    "data_sources": [
+      "projects"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu projects và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "48165d78-a089-5848-96a4-d5a31735c0eb",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "project_detail",
+    "name": "Sức khoẻ dự án đang xem",
+    "data_sources": [
+      "projects",
+      "assignments"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu projects, assignments và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "a55da1e1-77fa-571a-ad80-ac2e45fa9bee",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "project_detail_metrics_timeline",
+    "name": "Milestone trễ hạn",
+    "data_sources": [
+      "milestones"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu milestones và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "4da0a740-b218-5149-ab55-752683591cba",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "timesheet_week",
+    "name": "Tổng quan tuần",
+    "data_sources": [
+      "timesheets"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu timesheets và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "ca3c14da-d238-5db4-8a43-dbc795f6bd8d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "timesheet_day",
+    "name": "Gợi ý ghi công hôm nay",
+    "data_sources": [
+      "timesheets"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu timesheets và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "0b956a50-9984-5055-ac9b-c4175202cb65",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "effort",
+    "name": "Nhân sự rảnh / quá tải theo phòng ban",
+    "data_sources": [
+      "effort"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu effort và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "0a8ed36a-37c1-5fef-ac03-e509db83a315",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "leave_request",
+    "name": "Tình hình nghỉ phép & OT",
+    "data_sources": [
+      "leave_requests",
+      "ot_requests"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu leave_requests, ot_requests và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "fe2908e1-6ed5-5891-ba5c-b0ab49f9379a",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "attendance",
+    "name": "Đi muộn / thiếu giờ vào ra",
+    "data_sources": [
+      "attendance_records"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu attendance_records và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "cd99e314-165a-5079-93df-e1da720ed565",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "employee_list",
+    "name": "Phân bổ nhân sự",
+    "data_sources": [
+      "employees",
+      "assignments"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu employees, assignments và nêu tối đa 3 nhận định quan trọng nhất."
+  }
+]

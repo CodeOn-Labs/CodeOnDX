@@ -1,0 +1,178 @@
+[
+  {
+    "id": "cd0caf0b-dc13-5b69-9fcc-29e8bdf6f7de",
+    "key": "timesheet.edit",
+    "group": "timesheet",
+    "name": "Ghi công cá nhân",
+    "name_en": "Log own timesheet",
+    "sort_seq": 1
+  },
+  {
+    "id": "2fe7cfa6-7f77-5b5f-9418-b178281cdf2d",
+    "key": "timesheet.team",
+    "group": "timesheet",
+    "name": "Xem công số của nhóm",
+    "name_en": "View team timesheets",
+    "sort_seq": 2
+  },
+  {
+    "id": "739f2a4b-7185-54cf-8511-9954c6c047fd",
+    "key": "timesheet.all_view",
+    "group": "timesheet",
+    "name": "Xem tất cả công số",
+    "name_en": "View all timesheets",
+    "sort_seq": 3
+  },
+  {
+    "id": "f3fe0121-b302-5b66-a10f-9abe948f72b4",
+    "key": "timesheet.all_edit",
+    "group": "timesheet",
+    "name": "Sửa công số của người khác",
+    "name_en": "Edit others' timesheets",
+    "sort_seq": 4
+  },
+  {
+    "id": "2dc6b27e-ecfb-5b67-8710-be1b7a236a80",
+    "key": "timesheet.approve",
+    "group": "timesheet",
+    "name": "Duyệt công số",
+    "name_en": "Approve timesheets",
+    "sort_seq": 5
+  },
+  {
+    "id": "6089dd60-5756-5483-9b3b-6edc9a9637fa",
+    "key": "project.view",
+    "group": "project",
+    "name": "Xem dự án",
+    "name_en": "View projects",
+    "sort_seq": 6
+  },
+  {
+    "id": "d3fc60eb-18f7-51c0-82df-1f6753784cc5",
+    "key": "project.create",
+    "group": "project",
+    "name": "Tạo dự án",
+    "name_en": "Create projects",
+    "sort_seq": 7
+  },
+  {
+    "id": "72312800-bf0f-5cbb-a660-58b32d84f78e",
+    "key": "project.manage",
+    "group": "project",
+    "name": "Quản lý dự án",
+    "name_en": "Manage projects",
+    "sort_seq": 8
+  },
+  {
+    "id": "00590fae-1a44-5bd5-ab0f-9be368648d9c",
+    "key": "staffing",
+    "group": "project",
+    "name": "Phân bổ nhân sự",
+    "name_en": "Staffing",
+    "sort_seq": 9
+  },
+  {
+    "id": "44937fe0-9a9a-50be-9a8f-cb4d619fcc6c",
+    "key": "employee.view",
+    "group": "employee",
+    "name": "Xem nhân sự",
+    "name_en": "View employees",
+    "sort_seq": 10
+  },
+  {
+    "id": "23272434-5a35-55f8-ad1b-21f3a51a950d",
+    "key": "employee.manage",
+    "group": "employee",
+    "name": "Quản lý nhân sự",
+    "name_en": "Manage employees",
+    "sort_seq": 11
+  },
+  {
+    "id": "99ba7b10-bd79-58c8-a61b-59f7965c6b96",
+    "key": "effort.view",
+    "group": "effort",
+    "name": "Xem công số",
+    "name_en": "View effort",
+    "sort_seq": 12
+  },
+  {
+    "id": "ff96f5c3-124b-5645-a4aa-6ef344203dfe",
+    "key": "effort.edit",
+    "group": "effort",
+    "name": "Sửa công số",
+    "name_en": "Edit effort",
+    "sort_seq": 13
+  },
+  {
+    "id": "998c1623-0fd8-5c31-9c0e-68057593a93f",
+    "key": "pcv.manage",
+    "group": "quality",
+    "name": "Quản lý PCV",
+    "name_en": "Manage PCV",
+    "sort_seq": 14
+  },
+  {
+    "id": "4ebdf871-f1e1-5d2e-ae94-b4b4f8ef1966",
+    "key": "css.manage",
+    "group": "quality",
+    "name": "Quản lý CSS",
+    "name_en": "Manage CSS",
+    "sort_seq": 15
+  },
+  {
+    "id": "fdc6c0dc-98d3-51df-ab66-53f911aaa6a0",
+    "key": "report.basic",
+    "group": "report",
+    "name": "Báo cáo tổng quan",
+    "name_en": "Basic reports",
+    "sort_seq": 16
+  },
+  {
+    "id": "498904f3-8b4d-5ca3-abc5-d69fa7bca70c",
+    "key": "report.finance",
+    "group": "report",
+    "name": "Báo cáo tài chính",
+    "name_en": "Finance reports",
+    "sort_seq": 17
+  },
+  {
+    "id": "dabad080-33b0-5604-bc9c-bbeba99ee952",
+    "key": "report.quality",
+    "group": "report",
+    "name": "Báo cáo chất lượng",
+    "name_en": "Quality reports",
+    "sort_seq": 18
+  },
+  {
+    "id": "dfaa2cb9-74a6-552e-a04f-fd84dcf904f6",
+    "key": "admin.roles",
+    "group": "admin",
+    "name": "Quản lý vai trò",
+    "name_en": "Manage roles",
+    "sort_seq": 19
+  },
+  {
+    "id": "414c26dc-aa52-51fe-ab15-af86a9de51ab",
+    "key": "admin.settings",
+    "group": "admin",
+    "name": "Cài đặt hệ thống",
+    "name_en": "System settings",
+    "sort_seq": 20
+  },
+  {
+    "id": "7f92f20e-a101-54e9-81b3-d45265968ad4",
+    "key": "admin.integrations",
+    "group": "admin",
+    "name": "Quản lý tích hợp",
+    "name_en": "Manage integrations",
+    "sort_seq": 21
+  },
+  {
+    "id": "de04f94b-9d76-5b20-8b4b-0272de68f7ef",
+    "key": "admin.insights",
+    "group": "admin",
+    "name": "Quản lý AI Insight",
+    "name_en": "Manage AI insights",
+    "sort_seq": 22
+  }
+]

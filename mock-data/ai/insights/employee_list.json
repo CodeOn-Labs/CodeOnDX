@@ -1,0 +1,30 @@
+{
+  "screen_key": "employee_list",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "amber",
+        "title": "6 nhân sự quá tải",
+        "content": "Phân bổ trên 100% FTE — cân nhắc chuyển bớt việc sang nhân sự đang chờ việc."
+      },
+      {
+        "variant": "green",
+        "title": "8 nhân sự chờ việc",
+        "content": "Phân bổ dưới 20% — ưu tiên gán vào dự án sắp bắt đầu."
+      }
+    ],
+    "en": [
+      {
+        "variant": "amber",
+        "title": "6 people overloaded",
+        "content": "Allocated above 100% FTE — consider moving work to people on the bench."
+      },
+      {
+        "variant": "green",
+        "title": "8 people on the bench",
+        "content": "Allocated below 20% — prioritise them for upcoming projects."
+      }
+    ]
+  }
+}

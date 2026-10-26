@@ -1,0 +1,30 @@
+[
+  {
+    "id": "d13f3be9-4406-5f37-9b92-79edd4874b55",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "holiday_date": "2026-01-01",
+    "name": "Tết Dương lịch",
+    "is_paid": true
+  },
+  {
+    "id": "41a92a82-55a8-526d-b657-e32c854cf94b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "holiday_date": "2026-04-30",
+    "name": "Ngày Giải phóng miền Nam",
+    "is_paid": true
+  },
+  {
+    "id": "8e0019f1-0ba4-573b-8e82-36b2fabce72a",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "holiday_date": "2026-05-01",
+    "name": "Quốc tế Lao động",
+    "is_paid": true
+  },
+  {
+    "id": "f1093375-44f1-55b3-8d63-470c0acdc649",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "holiday_date": "2026-09-02",
+    "name": "Quốc khánh",
+    "is_paid": true
+  }
+]

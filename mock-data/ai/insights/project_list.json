@@ -1,0 +1,40 @@
+{
+  "screen_key": "project_list",
+  "generated_by": "mock",
+  "insights": {
+    "vi": [
+      {
+        "variant": "red",
+        "title": "4 dự án rủi ro cao",
+        "content": "Hoshino – Cổng thanh toán B2B, Aoba – Cổng bồi thường bảo hiểm, Lâm Viên – Nền tảng học trực tuyến đang ở mức rủi ro Cao, cần rà soát nhân sự và ngân sách trong tuần này."
+      },
+      {
+        "variant": "amber",
+        "title": "7 dự án sắp kết thúc",
+        "content": "Hoshino – Hệ thống quản lý kho, Minato – Chatbot chăm sóc khách hàng, Kawase – Giám sát dây chuyền IoT kết thúc trong 30 ngày tới — chuẩn bị kế hoạch bàn giao và giải phóng nhân sự."
+      },
+      {
+        "variant": "purple",
+        "title": "3 dự án đang lập kế hoạch",
+        "content": "Cần chốt nhân sự hợp đồng cho Kawase – Phân tích dữ liệu bảo trì, Sông Hồng – Báo cáo doanh thu thời gian thực, Minato – Trợ lý AI tra cứu tài liệu trước ngày bắt đầu."
+      }
+    ],
+    "en": [
+      {
+        "variant": "red",
+        "title": "4 high-risk projects",
+        "content": "Hoshino – Cổng thanh toán B2B, Aoba – Cổng bồi thường bảo hiểm, Lâm Viên – Nền tảng học trực tuyến are at High risk; review staffing and budget this week."
+      },
+      {
+        "variant": "amber",
+        "title": "7 projects ending soon",
+        "content": "Hoshino – Hệ thống quản lý kho, Minato – Chatbot chăm sóc khách hàng, Kawase – Giám sát dây chuyền IoT end within 30 days — prepare handover and release staff."
+      },
+      {
+        "variant": "purple",
+        "title": "3 projects in planning",
+        "content": "Confirm contract staffing for Kawase – Phân tích dữ liệu bảo trì, Sông Hồng – Báo cáo doanh thu thời gian thực, Minato – Trợ lý AI tra cứu tài liệu before their start dates."
+      }
+    ]
+  }
+}

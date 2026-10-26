@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ea66e913-3482-542e-96e3-ab366a44ab33",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "scope": "chat",
+    "status": "active",
+    "name": "Chat mặc định",
+    "template": "Bạn là trợ lý AI của {{company_name}}. Trả lời bằng {{locale_name}}, chỉ dựa trên dữ liệu được cung cấp."
+  },
+  {
+    "id": "17d8d0a7-0e13-53eb-8deb-3c6990dd8d17",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "scope": "insight",
+    "status": "active",
+    "name": "Insight mặc định",
+    "template": "Màn hình: {{screen_key}}. Dữ liệu: {{context}}. Trả JSON {\"insights\":[{\"variant\",\"title\",\"content\"}]}."
+  }
+]

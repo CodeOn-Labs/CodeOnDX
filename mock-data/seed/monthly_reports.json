@@ -1,0 +1,386 @@
+[
+  {
+    "id": "012f93cd-a2a8-52ec-9394-bd0213714b2d",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "report_month": "2026-09-01",
+    "client_name": "Hoshino Trading",
+    "company_name": "CodeOn Demo",
+    "order_no": "PO-PRJ-01-202609",
+    "work_name": "Hoshino – Cổng thanh toán B2B",
+    "responsible": "Nguyễn Gia Trang",
+    "language": "vi",
+    "columns": [
+      {
+        "id": "date",
+        "label": "Ngày",
+        "label_ja": "日付",
+        "type": "text",
+        "source": "date"
+      },
+      {
+        "id": "start",
+        "label": "Bắt đầu",
+        "label_ja": "開始",
+        "type": "text",
+        "source": "checkIn"
+      },
+      {
+        "id": "end",
+        "label": "Kết thúc",
+        "label_ja": "終了",
+        "type": "text",
+        "source": "checkOut"
+      },
+      {
+        "id": "hours",
+        "label": "Số giờ",
+        "label_ja": "作業時間",
+        "type": "number",
+        "source": "hours"
+      },
+      {
+        "id": "content",
+        "label": "Nội dung công việc",
+        "label_ja": "作業内容",
+        "type": "text",
+        "source": "content"
+      },
+      {
+        "id": "ticket",
+        "label": "Ticket",
+        "label_ja": "チケット",
+        "type": "text"
+      }
+    ],
+    "member_ids": [
+      "7dce052f-3faa-5f95-9122-a7f12518ed97",
+      "ded30d8e-7159-5f93-af8e-0557e128744b",
+      "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+      "bf8b30e3-7309-557c-8a1d-ddbc19f19aed"
+    ],
+    "removed_employee_ids": [],
+    "updated_at": "2026-09-28T17:00:00+07:00",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0"
+  },
+  {
+    "id": "a43fe165-52f8-5393-a720-47b61aaa70b9",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "0f9202be-7e59-5118-a5ce-2835b504996c",
+    "report_month": "2026-10-01",
+    "client_name": "Hoshino Trading",
+    "company_name": "CodeOn Demo",
+    "order_no": "PO-PRJ-01-202610",
+    "work_name": "Hoshino – Cổng thanh toán B2B",
+    "responsible": "Nguyễn Gia Trang",
+    "language": "vi",
+    "columns": [
+      {
+        "id": "date",
+        "label": "Ngày",
+        "label_ja": "日付",
+        "type": "text",
+        "source": "date"
+      },
+      {
+        "id": "start",
+        "label": "Bắt đầu",
+        "label_ja": "開始",
+        "type": "text",
+        "source": "checkIn"
+      },
+      {
+        "id": "end",
+        "label": "Kết thúc",
+        "label_ja": "終了",
+        "type": "text",
+        "source": "checkOut"
+      },
+      {
+        "id": "hours",
+        "label": "Số giờ",
+        "label_ja": "作業時間",
+        "type": "number",
+        "source": "hours"
+      },
+      {
+        "id": "content",
+        "label": "Nội dung công việc",
+        "label_ja": "作業内容",
+        "type": "text",
+        "source": "content"
+      },
+      {
+        "id": "ticket",
+        "label": "Ticket",
+        "label_ja": "チケット",
+        "type": "text"
+      }
+    ],
+    "member_ids": [
+      "7dce052f-3faa-5f95-9122-a7f12518ed97",
+      "ded30d8e-7159-5f93-af8e-0557e128744b",
+      "c7fa132b-6fa7-5e62-aa49-ea6c0e2a2862",
+      "bf8b30e3-7309-557c-8a1d-ddbc19f19aed"
+    ],
+    "removed_employee_ids": [],
+    "updated_at": "2026-10-28T17:00:00+07:00",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0"
+  },
+  {
+    "id": "1ca33ab4-8998-5e72-890b-3a958a849e6b",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "report_month": "2026-09-01",
+    "client_name": "Minato Digital",
+    "company_name": "CodeOn Demo",
+    "order_no": "PO-PRJ-03-202609",
+    "work_name": "Minato – Ứng dụng đặt lịch khám",
+    "responsible": "Nguyễn Gia Trang",
+    "language": "vi",
+    "columns": [
+      {
+        "id": "date",
+        "label": "Ngày",
+        "label_ja": "日付",
+        "type": "text",
+        "source": "date"
+      },
+      {
+        "id": "start",
+        "label": "Bắt đầu",
+        "label_ja": "開始",
+        "type": "text",
+        "source": "checkIn"
+      },
+      {
+        "id": "end",
+        "label": "Kết thúc",
+        "label_ja": "終了",
+        "type": "text",
+        "source": "checkOut"
+      },
+      {
+        "id": "hours",
+        "label": "Số giờ",
+        "label_ja": "作業時間",
+        "type": "number",
+        "source": "hours"
+      },
+      {
+        "id": "content",
+        "label": "Nội dung công việc",
+        "label_ja": "作業内容",
+        "type": "text",
+        "source": "content"
+      },
+      {
+        "id": "ticket",
+        "label": "Ticket",
+        "label_ja": "チケット",
+        "type": "text"
+      }
+    ],
+    "member_ids": [
+      "d78b54c4-c5e0-5082-9010-d5e06696e615",
+      "7263d100-beef-519f-b900-83282d392e4b",
+      "1b6581a1-bdf2-52d9-89b7-70f698045585",
+      "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef"
+    ],
+    "removed_employee_ids": [],
+    "updated_at": "2026-09-28T17:00:00+07:00",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0"
+  },
+  {
+    "id": "b7031ef1-b512-5477-b529-800d11dc23a7",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "5cf7eab7-c4fb-56d4-8929-0a5400e0eda5",
+    "report_month": "2026-10-01",
+    "client_name": "Minato Digital",
+    "company_name": "CodeOn Demo",
+    "order_no": "PO-PRJ-03-202610",
+    "work_name": "Minato – Ứng dụng đặt lịch khám",
+    "responsible": "Nguyễn Gia Trang",
+    "language": "vi",
+    "columns": [
+      {
+        "id": "date",
+        "label": "Ngày",
+        "label_ja": "日付",
+        "type": "text",
+        "source": "date"
+      },
+      {
+        "id": "start",
+        "label": "Bắt đầu",
+        "label_ja": "開始",
+        "type": "text",
+        "source": "checkIn"
+      },
+      {
+        "id": "end",
+        "label": "Kết thúc",
+        "label_ja": "終了",
+        "type": "text",
+        "source": "checkOut"
+      },
+      {
+        "id": "hours",
+        "label": "Số giờ",
+        "label_ja": "作業時間",
+        "type": "number",
+        "source": "hours"
+      },
+      {
+        "id": "content",
+        "label": "Nội dung công việc",
+        "label_ja": "作業内容",
+        "type": "text",
+        "source": "content"
+      },
+      {
+        "id": "ticket",
+        "label": "Ticket",
+        "label_ja": "チケット",
+        "type": "text"
+      }
+    ],
+    "member_ids": [
+      "d78b54c4-c5e0-5082-9010-d5e06696e615",
+      "7263d100-beef-519f-b900-83282d392e4b",
+      "1b6581a1-bdf2-52d9-89b7-70f698045585",
+      "dd6bbb6d-1afe-52a9-ae77-87ef14f9ffef"
+    ],
+    "removed_employee_ids": [],
+    "updated_at": "2026-10-28T17:00:00+07:00",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0"
+  },
+  {
+    "id": "19e18833-424c-5799-a331-b24469581be5",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "report_month": "2026-09-01",
+    "client_name": "Minato Digital",
+    "company_name": "CodeOn Demo",
+    "order_no": "PO-PRJ-04-202609",
+    "work_name": "Minato – Chatbot chăm sóc khách hàng",
+    "responsible": "Nguyễn Gia Trang",
+    "language": "vi",
+    "columns": [
+      {
+        "id": "date",
+        "label": "Ngày",
+        "label_ja": "日付",
+        "type": "text",
+        "source": "date"
+      },
+      {
+        "id": "start",
+        "label": "Bắt đầu",
+        "label_ja": "開始",
+        "type": "text",
+        "source": "checkIn"
+      },
+      {
+        "id": "end",
+        "label": "Kết thúc",
+        "label_ja": "終了",
+        "type": "text",
+        "source": "checkOut"
+      },
+      {
+        "id": "hours",
+        "label": "Số giờ",
+        "label_ja": "作業時間",
+        "type": "number",
+        "source": "hours"
+      },
+      {
+        "id": "content",
+        "label": "Nội dung công việc",
+        "label_ja": "作業内容",
+        "type": "text",
+        "source": "content"
+      },
+      {
+        "id": "ticket",
+        "label": "Ticket",
+        "label_ja": "チケット",
+        "type": "text"
+      }
+    ],
+    "member_ids": [
+      "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+      "14ca7381-1094-5a76-abae-d0a1248b1d81",
+      "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+      "9398e772-3ee0-5c8f-8ca5-10cd739060d9"
+    ],
+    "removed_employee_ids": [],
+    "updated_at": "2026-09-28T17:00:00+07:00",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0"
+  },
+  {
+    "id": "162e27e1-a3ea-5543-9fa6-68f295545513",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "project_id": "3890a95e-ac75-534d-8daf-89c44be09f97",
+    "report_month": "2026-10-01",
+    "client_name": "Minato Digital",
+    "company_name": "CodeOn Demo",
+    "order_no": "PO-PRJ-04-202610",
+    "work_name": "Minato – Chatbot chăm sóc khách hàng",
+    "responsible": "Nguyễn Gia Trang",
+    "language": "vi",
+    "columns": [
+      {
+        "id": "date",
+        "label": "Ngày",
+        "label_ja": "日付",
+        "type": "text",
+        "source": "date"
+      },
+      {
+        "id": "start",
+        "label": "Bắt đầu",
+        "label_ja": "開始",
+        "type": "text",
+        "source": "checkIn"
+      },
+      {
+        "id": "end",
+        "label": "Kết thúc",
+        "label_ja": "終了",
+        "type": "text",
+        "source": "checkOut"
+      },
+      {
+        "id": "hours",
+        "label": "Số giờ",
+        "label_ja": "作業時間",
+        "type": "number",
+        "source": "hours"
+      },
+      {
+        "id": "content",
+        "label": "Nội dung công việc",
+        "label_ja": "作業内容",
+        "type": "text",
+        "source": "content"
+      },
+      {
+        "id": "ticket",
+        "label": "Ticket",
+        "label_ja": "チケット",
+        "type": "text"
+      }
+    ],
+    "member_ids": [
+      "6f24e981-468f-55c7-8b8e-55b06ba0c4b1",
+      "14ca7381-1094-5a76-abae-d0a1248b1d81",
+      "7ca433e7-78f2-54ce-87ba-9e11d9001a37",
+      "9398e772-3ee0-5c8f-8ca5-10cd739060d9"
+    ],
+    "removed_employee_ids": [],
+    "updated_at": "2026-10-28T17:00:00+07:00",
+    "updated_by": "187cad52-3cc9-57f5-b5ae-5df5ee69fab0"
+  }
+]

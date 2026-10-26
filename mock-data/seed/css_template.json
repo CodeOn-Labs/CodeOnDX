@@ -1,0 +1,10 @@
+[
+  {
+    "id": "39fbc5d5-2cd1-53b1-a96d-ef1c56f6e074",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "title": "Khảo sát mức độ hài lòng của khách hàng",
+    "intro": "Cảm ơn Quý khách đã dành thời gian đánh giá dự án.\nKết quả khảo sát giúp đội dự án cải thiện chất lượng dịch vụ trong các tháng tiếp theo.",
+    "scale_note": "1: Rất không hài lòng · 2: Không hài lòng · 3: Bình thường · 4: Hài lòng · 5: Rất hài lòng",
+    "comment_label": "Quý khách có ý kiến hoặc đề xuất nào khác cho đội dự án không?"
+  }
+]

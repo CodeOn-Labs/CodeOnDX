@@ -1,0 +1,422 @@
+/*
+ * Port nguyên văn từ src/index.css của DX bản React (Tailwind CSS 4, design tokens DXAI-V2).
+ * Khác biệt duy nhất: #root -> #app; biến --radix-* -> --reka-*; bỏ khối CSS riêng của Recharts.
+ */
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  /* Custom Colors (mapped from tailwind.config.js + CSS vars) */
+  --color-bg1: var(--bg1);
+  --color-bg2: var(--bg2);
+  --color-bg3: var(--bg3);
+  --color-bg: var(--bg);
+  --color-t1: var(--t1);
+  --color-t2: var(--t2);
+  --color-t3: var(--t3);
+  --color-b1: var(--b1);
+  --color-b2: var(--b2);
+  --color-bl: #3b82f6;
+  --color-blbg: var(--blbg);
+  --color-blt: var(--blt);
+  --color-gn: #10b981;
+  --color-gnbg: var(--gnbg);
+  --color-gnt: var(--gnt);
+  --color-am: #f59e0b;
+  --color-ambg: var(--ambg);
+  --color-amt: var(--amt);
+  --color-rd: #ef4444;
+  --color-rdbg: var(--rdbg);
+  --color-rdt: var(--rdt);
+  --color-pr: #7c3aed;
+  --color-prbg: var(--prbg);
+  --color-prt: var(--prt);
+  --color-tl: var(--tl);
+  --color-tlbg: var(--tlbg);
+  --color-tlt: var(--tlt);
+
+  /* Custom Font Families */
+  --font-sans: "Be Vietnam Pro", sans-serif;
+  --font-fira: "Fira Sans", sans-serif;
+  --font-mono: "Fira Code", monospace;
+  /* Custom Font Sizes */
+  --text-2xs: 0.5rem;
+  --text-2xs--line-height: 0.75rem;
+  --text-xs: 0.625rem;
+  --text-xs--line-height: 0.875rem;
+  --text-sm: 0.75rem;
+  --text-sm--line-height: 1rem;
+  --text-md: 0.875rem;
+  --text-md--line-height: 1.25rem;
+  --text-lg: 1rem;
+  --text-lg--line-height: 1.5rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.625rem;
+  --text-2xl--line-height: 2rem;
+
+  /* Animation */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  --color-border: var(--border);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    overflow: hidden;
+  }
+
+  to {
+    height: var(--reka-accordion-content-height);
+    overflow: hidden;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--reka-accordion-content-height);
+    overflow: hidden;
+  }
+
+  to {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+
+  :root {
+    --bg1: #fff;
+    --bg2: #f8fafc;
+    --bg3: #f1f5f9;
+    --bg: #fafbff;
+    --t1: #0f172a;
+    --t2: #475569;
+    --t3: #94a3b8;
+    --b1: rgba(0, 0, 0, .05);
+    --b2: rgba(0, 0, 0, .03);
+
+    --pr: #7c3aed;
+    --prbg: #f5f3ff;
+    --prt: #4c1d95;
+
+    --bl: #3b82f6;
+    --blbg: #eff6ff;
+    --blt: #1e3a8a;
+
+    --am: #f59e0b;
+    --ambg: #fffbeb;
+    --amt: #78350f;
+
+    --tl: #10b981;
+    --tlbg: #ecfdf5;
+    --tlt: #064e3b;
+
+    --gn: #22c55e;
+    --gnbg: #f0fdf4;
+    --gnt: #14532d;
+
+    --or: #f97316;
+
+    --rd: #ef4444;
+    --rdbg: #fef2f2;
+    --rdt: #991b1b;
+
+    --border: oklch(0.922 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+  }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+  html,
+  body,
+  #app {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  body {
+    @apply font-sans text-t1 bg-bg antialiased text-sm;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+  }
+
+  h1 {
+    @apply text-2xl font-bold tracking-tight mb-4;
+  }
+
+  h2 {
+    @apply text-lg font-semibold mt-6 mb-3;
+  }
+
+
+  .btn {
+    @apply text-sm px-3 py-1.5 border border-b1 rounded-md bg-bg1 text-t2 inline-flex items-center justify-center cursor-pointer font-medium transition-all duration-150;
+    
+    &:hover {
+      @apply bg-bg2;
+    }
+  }
+
+  .btn-p {
+    @apply bg-pr text-white border-pr transition-colors duration-150;
+    
+    &:hover {
+      @apply bg-white text-pr shadow-md;
+    }
+  }
+
+  .btn-purple-grad {
+    @apply border-transparent text-white bg-gradient-to-r from-[#6f63f6] via-[#6b68f7] to-[#8e77ff] shadow-[0_12px_24px_rgba(99,102,241,0.18)] transition-all duration-150;
+    
+    &:hover {
+      @apply brightness-105;
+    }
+  }
+
+  .btn-green-grad {
+    @apply border-transparent text-white bg-gradient-to-r from-[#43d66f] to-[#67e65b] shadow-[0_12px_24px_rgba(74,222,128,0.18)] transition-all duration-150;
+    
+    &:hover {
+      @apply brightness-105;
+    }
+  }
+
+  .btn-orange-grad {
+    @apply border-transparent text-white bg-gradient-to-r from-[#ffb020] to-[#ff5b72] shadow-[0_12px_24px_rgba(251,146,60,0.18)] transition-all duration-150;
+    
+    &:hover {
+      @apply brightness-105;
+    }
+  }
+
+  .surface-card {
+    @apply bg-bg1 border border-b2 rounded-[12px] shadow-[0_10px_30px_rgba(17,24,39,0.03)];
+  }
+
+  .card-fr {
+    @apply border border-b2 rounded-xl overflow-hidden bg-bg1 shadow-sm;
+  }
+
+  .input-label {
+    @apply font-semibold text-t2 text-xs uppercase tracking-wider mb-1 block;
+  }
+
+  .input {
+    @apply border border-b1 rounded-xl px-3 py-2 text-sm text-t1 bg-bg1 w-full focus:outline-none focus:border-pr focus:ring-4 focus:ring-pr/10 transition-all;
+  }
+
+  .input::placeholder {
+    @apply text-t3;
+  }
+
+  .text-page-title {
+    @apply text-lg font-bold text-t1;
+  }
+
+  .text-section-title {
+    @apply text-base font-semibold text-t1;
+  }
+
+  .text-card-title {
+    @apply text-sm font-semibold text-t2;
+  }
+
+  .text-table-header {
+    @apply text-xs font-semibold text-t2 uppercase tracking-wider;
+  }
+
+  .text-table-cell {
+    @apply text-sm text-t1;
+  }
+
+  .text-label {
+    @apply text-xs font-medium text-t2;
+  }
+
+  .text-badge {
+    @apply text-xs font-medium;
+  }
+
+  .text-caption {
+    @apply text-xs text-t3;
+  }
+
+  .text-tiny {
+    @apply text-[10px] text-t3;
+  }
+
+  /* Basic scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--t3);
+    border-radius: 4px;
+    opacity: 0.5;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--t2);
+  }
+
+@keyframes shimmerBar {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    translate: -100% 0;
+  }
+
+  100% {
+    translate: 100% 0;
+  }
+}
+
+.animate-pulse {
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* Global focus reset for buttons to remove default browser outlines on click */
+button,
+[role="button"],
+.btn {
+  outline: none !important;
+  cursor: pointer;
+}
+
+button:focus,
+button:focus-visible,
+[role="button"]:focus {
+  outline: none !important;
+}
+
+/* Hide scrollbar while keeping scroll functionality */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Portal tooltip entrance animation */
+@keyframes tooltipIn {
+  from {
+    opacity: 0;
+    scale: 0.92;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Fix Tailwind CSS v4 scale transition issues (ensure scale/rotate/translate animate in both directions) */
+.transition,
+.transition-transform {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, scale, rotate, translate !important;
+}
+
+/* Dialog animations (Reka UI dùng cùng thuộc tính data-state như Radix) */
+@keyframes overlayShow {
+  from { opacity: 0; backdrop-filter: blur(0px); }
+  to { opacity: 1; backdrop-filter: blur(2px); }
+}
+
+@keyframes overlayHide {
+  from { opacity: 1; backdrop-filter: blur(2px); }
+  to { opacity: 0; backdrop-filter: blur(0px); }
+}
+
+@keyframes dialogShow {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes dialogHide {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to { opacity: 0; transform: scale(0.96) translateY(8px); }
+}
+
+.dialog-overlay[data-state='open'] {
+  animation: overlayShow 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dialog-overlay[data-state='closed'] {
+  animation: overlayHide 150ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dialog-content[data-state='open'] {
+  animation: dialogShow 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dialog-content[data-state='closed'] {
+  animation: dialogHide 150ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
