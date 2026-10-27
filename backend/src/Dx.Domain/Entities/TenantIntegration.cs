@@ -27,5 +27,9 @@ public partial class TenantIntegration
 
     public Guid? UpdatedBy { get; set; }
 
+    public DateTime? LastTestAt { get; set; }
+
+    public bool? LastTestOk { get; set; }
+
     public virtual Tenant Tenant { get; set; } = null!;
 }

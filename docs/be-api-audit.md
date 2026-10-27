@@ -4,6 +4,8 @@ Nguồn đối chiếu: route trong `tools/mock-api/server.mjs` + `tools/mock-ap
 
 **Tổng: mock có 175 endpoint `/api/v1`, BE thật mới có 10 (~6%).** Còn thiếu 165.
 
+> **Tiến độ (26/10):** đợt 1 (Cấu hình + Tổ chức, 39 endpoint, module 2 và 3) và đợt 2 (Phân quyền + Tài khoản + connector Email, 18 endpoint, module 1 và 4) đã xong → BE có **67/175 (38%)**. Đợt 3 (Dự án lõi, 20 endpoint, module 8) cũng xong → **87/175 (50%)**. Đợt 4 (Chấm công, nghỉ phép, OT + Công số, 25 endpoint, module 6 và 7) cũng xong → **112/175 (64%)**, còn thiếu 63. Chi tiết và chỗ khác mock ở `backend/README.md`. Đợt tiếp theo: 5 = Dự án mở rộng + khảo sát CSS công khai (44).
+
 ## Đã có ở BE (10)
 
 | Controller | Endpoint |

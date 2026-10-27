@@ -542,5 +542,13 @@
     "err_grade_not_found": "Không tìm thấy cấp độ dự án \"{value}\"",
     "err_risk_not_found": "Không tìm thấy mức rủi ro \"{value}\"",
     "err_role_not_found": "Không tìm thấy vai trò \"{value}\""
+  },
+  "email_invitation": {
+    "subject": "Lời mời tham gia DX Platform",
+    "body": "Chào {full_name},\n\nBạn được mời tạo tài khoản DX Platform. Mở liên kết sau để đặt mật khẩu (hiệu lực {hours} giờ):\n{link}\n\nNếu bạn không chờ email này, hãy bỏ qua."
+  },
+  "email_password_reset": {
+    "subject": "Đặt lại mật khẩu DX Platform",
+    "body": "Chào {full_name},\n\nMở liên kết sau để đặt lại mật khẩu (hiệu lực {minutes} phút):\n{link}\n\nNếu bạn không yêu cầu, hãy bỏ qua email này; mật khẩu hiện tại vẫn giữ nguyên."
   }
 }

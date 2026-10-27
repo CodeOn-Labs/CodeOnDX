@@ -34,6 +34,8 @@ public partial class AiInsightConfig
 
     public Guid? UpdatedBy { get; set; }
 
+    public string TriggerCondition { get; set; } = null!;
+
     public virtual ICollection<AiInsightResult> AiInsightResults { get; set; } = new List<AiInsightResult>();
 
     public virtual Tenant Tenant { get; set; } = null!;

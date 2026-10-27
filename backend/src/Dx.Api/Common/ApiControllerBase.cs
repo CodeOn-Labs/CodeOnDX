@@ -29,6 +29,8 @@ public abstract class ApiControllerBase : ControllerBase
             ForbiddenException e => (403, e.MessageKey, null, e.Args),
             NotFoundException e => (404, e.MessageKey, null, e.Args),
             ConflictException e => (409, e.MessageKey, null, e.Args),
+            GoneException e => (410, e.MessageKey, null, e.Args),
+            UpstreamException e => (502, e.MessageKey, null, e.Args),
             DbUpdateConcurrencyException => (409, "error.concurrency", null, null),
             BusinessException e => (422, e.MessageKey, e.ErrorData, e.Args),
             TooManyRequestsException e => (429, e.MessageKey, null, e.Args),

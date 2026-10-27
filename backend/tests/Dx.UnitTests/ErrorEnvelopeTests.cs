@@ -73,7 +73,8 @@ public sealed class ErrorEnvelopeTests
     {
         var body = Body(Controller("en").Fail(new Exception("boom at line 42")), 500);
         body.MessageText.ShouldBe("Something went wrong, please try again later");
-        body.Data.ShouldBeEquivalentTo(new { traceId = "trace-123" });
+        // Anonymous types of two assemblies never compare equal — compare the JSON the client receives.
+        System.Text.Json.JsonSerializer.Serialize(body.Data).ShouldBe("""{"traceId":"trace-123"}""");
     }
 
     [Fact]

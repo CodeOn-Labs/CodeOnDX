@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Dx.Infrastructure.Time;
 
-/// <summary>"Today" in the tenant time zone (tenants.time_zone, IANA id such as Asia/Ho_Chi_Minh).</summary>
+/// <summary>"Today" / "now" in the tenant time zone (tenants.time_zone, IANA id such as Asia/Ho_Chi_Minh).</summary>
 public sealed class TenantClock(IAppDbContext db, ITenantContext tenant, TimeProvider time) : ITenantClock
 {
     private static readonly ConcurrentDictionary<Guid, TimeZoneInfo> Zones = new();
@@ -13,6 +13,9 @@ public sealed class TenantClock(IAppDbContext db, ITenantContext tenant, TimePro
     public DateTimeOffset UtcNow => time.GetUtcNow();
 
     public async Task<DateOnly> TodayAsync(CancellationToken ct = default)
+        => DateOnly.FromDateTime(await LocalNowAsync(ct));
+
+    public async Task<DateTime> LocalNowAsync(CancellationToken ct = default)
     {
         var zone = TimeZoneInfo.Utc;
         if (tenant.TenantId is { } id)
@@ -24,6 +27,6 @@ public sealed class TenantClock(IAppDbContext db, ITenantContext tenant, TimePro
                 Zones[id] = zone;
             }
         }
-        return DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(time.GetUtcNow(), zone).DateTime);
+        return TimeZoneInfo.ConvertTime(time.GetUtcNow(), zone).DateTime;
     }
 }

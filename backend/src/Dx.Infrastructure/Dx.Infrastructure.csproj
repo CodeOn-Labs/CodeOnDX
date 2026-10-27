@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <PackageReference Include="dbup-postgresql" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="10.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.13" />
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="10.0.13" />
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.23.0" />
   </ItemGroup>

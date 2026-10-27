@@ -542,5 +542,13 @@
     "err_grade_not_found": "Project grade \"{value}\" not found",
     "err_risk_not_found": "Risk level \"{value}\" not found",
     "err_role_not_found": "Role \"{value}\" not found"
+  },
+  "email_invitation": {
+    "subject": "Invitation to DX Platform",
+    "body": "Hello {full_name},\n\nYou have been invited to create a DX Platform account. Open this link to set your password (valid for {hours} hours):\n{link}\n\nIf you were not expecting this e-mail, please ignore it."
+  },
+  "email_password_reset": {
+    "subject": "Reset your DX Platform password",
+    "body": "Hello {full_name},\n\nOpen this link to reset your password (valid for {minutes} minutes):\n{link}\n\nIf you did not ask for this, ignore this e-mail; your current password stays the same."
   }
 }

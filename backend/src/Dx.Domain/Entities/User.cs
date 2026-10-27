@@ -65,6 +65,8 @@ public partial class User
 
     public virtual ICollection<ProjectCssSurvey> ProjectCssSurveys { get; set; } = new List<ProjectCssSurvey>();
 
+    public virtual ICollection<ProjectMilestone> ProjectMilestones { get; set; } = new List<ProjectMilestone>();
+
     public virtual ICollection<ProjectPcvAssessment> ProjectPcvAssessments { get; set; } = new List<ProjectPcvAssessment>();
 
     public virtual ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();

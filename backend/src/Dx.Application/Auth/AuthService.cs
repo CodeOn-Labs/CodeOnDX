@@ -146,7 +146,7 @@ public sealed partial class AuthService(
     }
 
     /// <summary>User DTO + permission keys of the user in the tenant (tenant context must already be set).</summary>
-    private async Task<(UserDto User, IReadOnlyList<string> Permissions)> LoadProfileAsync(User user, Guid tenantId, CancellationToken ct)
+    internal async Task<(UserDto User, IReadOnlyList<string> Permissions)> LoadProfileAsync(User user, Guid tenantId, CancellationToken ct)
     {
         var tenantRow = await db.Set<Tenant>().AsNoTracking().Where(t => t.Id == tenantId)
             .Select(t => new TenantRefDto(t.Id, t.Code, t.Name)).FirstOrDefaultAsync(ct);

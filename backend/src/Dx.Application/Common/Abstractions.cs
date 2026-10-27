@@ -46,4 +46,7 @@ public interface ITenantClock
     DateTimeOffset UtcNow { get; }
 
     Task<DateOnly> TodayAsync(CancellationToken ct = default);
+
+    /// <summary>Wall-clock date and time in the tenant time zone.</summary>
+    Task<DateTime> LocalNowAsync(CancellationToken ct = default);
 }

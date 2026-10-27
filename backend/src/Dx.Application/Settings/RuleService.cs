@@ -35,6 +35,14 @@ public sealed class RuleService(IAppDbContext db, ICurrentUser user)
         return TryNumber(json, out var number) ? number : fallback;
     }
 
+    /// <summary>Every rule of the tenant in one read, for code that checks many rules (timesheets, leave, attendance).</summary>
+    public async Task<RuleSet> SnapshotAsync(CancellationToken ct)
+    {
+        var defs = await db.Set<SystemRule>().AsNoTracking().ToDictionaryAsync(r => r.Key, r => r.DefaultValue, ct);
+        var values = await db.Set<TenantRule>().AsNoTracking().ToDictionaryAsync(v => v.RuleKey, v => (v.Value, v.IsEnabled), ct);
+        return new RuleSet(defs, values);
+    }
+
     /// <summary>PUT /system-rules/{key} — checks the value type and the min/max of the definition.</summary>
     public async Task<SystemRuleDto> UpdateAsync(string key, UpdateSystemRuleRequest request, CancellationToken ct)
     {
@@ -94,4 +102,29 @@ public sealed class RuleService(IAppDbContext db, ICurrentUser user)
         using var doc = JsonDocument.Parse(json);
         return doc.RootElement.ValueKind == JsonValueKind.Number && doc.RootElement.TryGetDecimal(out number);
     }
+}
+
+/// <summary>
+/// Rule values of one tenant. A rule is "enabled" unless the tenant switched it off (Admin › Rules,
+/// status 0); a disabled rule's value falls back to the default, and checks guarded by
+/// <see cref="Enabled"/> are skipped altogether.
+/// </summary>
+public sealed class RuleSet(IReadOnlyDictionary<string, string> defaults, IReadOnlyDictionary<string, (string Value, bool IsEnabled)> values)
+{
+    public bool Enabled(string key) => !values.TryGetValue(key, out var v) || v.IsEnabled;
+
+    public decimal Number(string key, decimal fallback)
+    {
+        using var doc = JsonDocument.Parse(Raw(key) ?? "null");
+        return doc.RootElement.ValueKind == JsonValueKind.Number && doc.RootElement.TryGetDecimal(out var n) ? n : fallback;
+    }
+
+    public bool Bool(string key, bool fallback)
+    {
+        using var doc = JsonDocument.Parse(Raw(key) ?? "null");
+        return doc.RootElement.ValueKind switch { JsonValueKind.True => true, JsonValueKind.False => false, _ => fallback };
+    }
+
+    private string? Raw(string key)
+        => values.TryGetValue(key, out var v) && v.IsEnabled ? v.Value : defaults.GetValueOrDefault(key);
 }

@@ -26,4 +26,6 @@ public static class MasterDataCodes
     public const string ProjectStatusPlanning = "PLANNING";
     public const string ProjectStatusCompleted = "COMPLETED";
     public const string RiskLevelHigh = "HIGH";
+    public const string EmployeeStatusActive = "ACTIVE";
+    public const string EmployeeStatusResigned = "RESIGNED";
 }

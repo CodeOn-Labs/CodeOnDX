@@ -70,4 +70,20 @@ public sealed class ConfigurationController(MasterDataService masterData, RuleSe
             return HandleException(ex);
         }
     }
+
+    /// <summary>PUT /settings — { key: value } of the keys to change; answers every setting.</summary>
+    [HttpPut("settings")]
+    [HasPermission(Permissions.AdminSettings)]
+    [ProducesResponseType<ErrorFullModel<IReadOnlyDictionary<string, string>>>(StatusCodes.Status200OK)]
+    public async Task<IActionResult> UpdateSettings([FromBody] Dictionary<string, System.Text.Json.JsonElement> request, CancellationToken ct)
+    {
+        try
+        {
+            return Success(await settings.UpdateAsync(request, ct), "admin_setting_update.msg_success");
+        }
+        catch (Exception ex)
+        {
+            return HandleException(ex);
+        }
+    }
 }

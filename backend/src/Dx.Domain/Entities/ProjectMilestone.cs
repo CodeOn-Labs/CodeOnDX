@@ -35,6 +35,12 @@ public partial class ProjectMilestone
 
     public Guid? DeletedBy { get; set; }
 
+    public Guid? JustificationBy { get; set; }
+
+    public DateTime? JustificationAt { get; set; }
+
+    public virtual User? JustificationByNavigation { get; set; }
+
     public virtual Project Project { get; set; } = null!;
 
     public virtual Tenant Tenant { get; set; } = null!;

@@ -220,6 +220,10 @@ public partial class DxDbContext : DbContext
                 .HasColumnName("screen_key");
             entity.Property(e => e.SortOrder).HasColumnName("sort_order");
             entity.Property(e => e.TenantId).HasColumnName("tenant_id");
+            entity.Property(e => e.TriggerCondition)
+                .HasMaxLength(30)
+                .HasDefaultValueSql("'always'::character varying")
+                .HasColumnName("trigger_condition");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("now()")
                 .HasColumnName("updated_at");
@@ -281,9 +285,7 @@ public partial class DxDbContext : DbContext
 
             entity.ToTable("ai_prompt_templates", "dx");
 
-            entity.HasIndex(e => new { e.TenantId, e.Scope }, "uq_ai_prompt_templates_tenant_id_scope_active")
-                .IsUnique()
-                .HasFilter("is_active");
+            entity.HasIndex(e => new { e.TenantId, e.Scope }, "ix_ai_prompt_templates_tenant_id_scope").HasFilter("((status)::text = 'active'::text)");
 
             entity.Property(e => e.Id)
                 .HasDefaultValueSql("uuidv7()")
@@ -292,6 +294,9 @@ public partial class DxDbContext : DbContext
                 .HasDefaultValueSql("now()")
                 .HasColumnName("created_at");
             entity.Property(e => e.CreatedBy).HasColumnName("created_by");
+            entity.Property(e => e.Description)
+                .HasMaxLength(500)
+                .HasColumnName("description");
             entity.Property(e => e.IsActive)
                 .HasDefaultValue(true)
                 .HasColumnName("is_active");
@@ -301,12 +306,22 @@ public partial class DxDbContext : DbContext
             entity.Property(e => e.Scope)
                 .HasMaxLength(20)
                 .HasColumnName("scope");
+            entity.Property(e => e.ScreenKeys)
+                .HasDefaultValueSql("'{}'::text[]")
+                .HasColumnName("screen_keys");
+            entity.Property(e => e.Status)
+                .HasMaxLength(10)
+                .HasDefaultValueSql("'active'::character varying")
+                .HasColumnName("status");
             entity.Property(e => e.Template).HasColumnName("template");
             entity.Property(e => e.TenantId).HasColumnName("tenant_id");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("now()")
                 .HasColumnName("updated_at");
             entity.Property(e => e.UpdatedBy).HasColumnName("updated_by");
+            entity.Property(e => e.Version)
+                .HasDefaultValue(1)
+                .HasColumnName("version");
 
             entity.HasOne(d => d.Tenant).WithMany(p => p.AiPromptTemplates)
                 .HasForeignKey(d => d.TenantId)
@@ -2118,6 +2133,8 @@ public partial class DxDbContext : DbContext
             entity.Property(e => e.Justification)
                 .HasMaxLength(2000)
                 .HasColumnName("justification");
+            entity.Property(e => e.JustificationAt).HasColumnName("justification_at");
+            entity.Property(e => e.JustificationBy).HasColumnName("justification_by");
             entity.Property(e => e.Name)
                 .HasMaxLength(300)
                 .HasColumnName("name");
@@ -2129,6 +2146,11 @@ public partial class DxDbContext : DbContext
                 .HasDefaultValueSql("now()")
                 .HasColumnName("updated_at");
             entity.Property(e => e.UpdatedBy).HasColumnName("updated_by");
+
+            entity.HasOne(d => d.JustificationByNavigation).WithMany(p => p.ProjectMilestones)
+                .HasForeignKey(d => d.JustificationBy)
+                .OnDelete(DeleteBehavior.SetNull)
+                .HasConstraintName("fk_project_milestones_justification_by");
 
             entity.HasOne(d => d.Project).WithMany(p => p.ProjectMilestones)
                 .HasForeignKey(d => d.ProjectId)
@@ -2677,6 +2699,8 @@ public partial class DxDbContext : DbContext
             entity.Property(e => e.CreatedBy).HasColumnName("created_by");
             entity.Property(e => e.IsEnabled).HasColumnName("is_enabled");
             entity.Property(e => e.LastSyncAt).HasColumnName("last_sync_at");
+            entity.Property(e => e.LastTestAt).HasColumnName("last_test_at");
+            entity.Property(e => e.LastTestOk).HasColumnName("last_test_ok");
             entity.Property(e => e.SecretsEncrypted).HasColumnName("secrets_encrypted");
             entity.Property(e => e.Settings)
                 .HasDefaultValueSql("'{}'::jsonb")

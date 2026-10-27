@@ -9,7 +9,7 @@ namespace Dx.Api.Common;
 /// {snake_case}. Missing English text falls back to Vietnamese; a missing key returns the key.
 /// Singleton; the culture comes from the current request (Accept-Language).
 /// </summary>
-public sealed partial class JsonStringLocalizer
+public sealed partial class JsonStringLocalizer : Dx.Application.Common.IMessageLocalizer
 {
     public const string DefaultCulture = "vi";
     public static readonly string[] SupportedCultures = ["vi", "en"];

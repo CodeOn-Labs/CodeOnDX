@@ -35,6 +35,7 @@ Lược đồ viết tay theo hướng **DB-first**: script SQL trong `migration
 | `V010__ai_imports_audit.sql` | `ai_insight_results` (cache insight phía server), `import_jobs`, `audit_logs` |
 | `V011__row_level_security.sql` | Policy `tenant_isolation` cho mọi bảng có `tenant_id` (trừ `tenant_users`, `refresh_tokens`, `account_tokens`); hàm `dx.find_css_survey_tenant_id(token)` cho trang khảo sát CSS công khai |
 | `V012__seed_global_catalogs.sql` | 22 permission + 33 định nghĩa quy tắc, sinh từ `mock-data/seed` (cùng id), chạy lại được |
+| `V013__milestone_justification_audit.sql` | `project_milestones.justification_by` / `justification_at`: ai giải trình mốc trễ, lúc nào (26/10) |
 
 Tổng 62 bảng. Dữ liệu theo tenant (vai trò, danh mục, cài đặt, giá trị quy tắc, biểu mẫu PCV/CSS, prompt) do seeder của BE nạp khi tạo tenant hoặc từ `mock-data/seed` cho tenant demo — không nằm trong migration.
 

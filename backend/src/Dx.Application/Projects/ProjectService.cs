@@ -121,7 +121,7 @@ public sealed class ProjectService(IAppDbContext db, ICurrentUser user, RuleServ
     ///                       otherwise budget × avgMonthlyRate (budget given in man-months).
     ///                       e.g. 3 × 4 000 ÷ 383 000 × 100 = 3.13
     /// </summary>
-    private async Task<IReadOnlyList<ProjectListItemDto>> ToListItemsAsync(IReadOnlyList<Project> projects, CancellationToken ct)
+    internal async Task<IReadOnlyList<ProjectListItemDto>> ToListItemsAsync(IReadOnlyList<Project> projects, CancellationToken ct)
     {
         var ids = projects.Select(p => p.Id).ToList();
         var staff = await db.Set<ProjectContractStaff>().AsNoTracking()

@@ -29,6 +29,12 @@ public sealed class UnauthorizedException(string key = "error.unauthorized") : A
 public sealed class NotFoundException(string key = "error.not_found") : AppException(key);
 public sealed class ForbiddenException(string key = "error.forbidden") : AppException(key);
 public sealed class ConflictException(string key = "error.conflict", Dictionary<string, object?>? args = null) : AppException(key, null, args);
+
+/// <summary>410 — a one-time link that expired or was already used.</summary>
+public sealed class GoneException(string key) : AppException(key);
+
+/// <summary>502 — an external service (LLM, connector) failed; details only go to the log.</summary>
+public sealed class UpstreamException(string key) : AppException(key);
 public sealed class TooManyRequestsException(string key = "error.too_many_requests") : AppException(key);
 
 /// <summary>422 — business rule violated, e.g. "timesheet_week_save.err_week_locked".</summary>

@@ -120,8 +120,8 @@ insert('css_templates', db.css_template.map((t) => pickCols(t, { id: 'id', tenan
   ['id', 'tenant_id', 'title', 'intro', 'scale_note', 'comment_label']);
 insert('css_template_questions', db.css_template_questions.map((q) => pickCols(q, { id: 'id', tenant_id: 'tenant_id', template_id: 'template_id', content: 'content', is_required: 'is_required', sort_order: 'sort_seq' })),
   ['id', 'tenant_id', 'template_id', 'content', 'is_required', 'sort_order']);
-insert('ai_prompt_templates', db.ai_prompt_templates.map((t) => pickCols(t, { id: 'id', tenant_id: 'tenant_id', scope: 'scope', name: 'name', template: 'template', is_active: (r) => r.status === 'active' })),
-  ['id', 'tenant_id', 'scope', 'name', 'template', 'is_active']);
+insert('ai_prompt_templates', db.ai_prompt_templates.map((t) => pickCols(t, { id: 'id', tenant_id: 'tenant_id', scope: 'scope', name: 'name', template: 'template', is_active: (r) => r.status === 'active', status: 'status' })),
+  ['id', 'tenant_id', 'scope', 'name', 'template', 'is_active', 'status']);
 insert('ai_insight_configs', db.ai_insights.map((a, i) => pickCols(a, {
   id: 'id', tenant_id: 'tenant_id', screen_key: 'screen_key', name: 'name', data_sources: (r) => raw(textArray(r.data_sources)),
   allowed_role_ids: (r) => raw(uuidArray(r.allowed_roles)), data_prompt: 'data_prompt', sort_order: () => i + 1, is_active: (r) => r.status === 'active',
@@ -155,14 +155,16 @@ insert('projects', db.projects.map((p) => pickCols(p, {
 })), ['id', 'tenant_id', 'code', 'name', 'client_id', 'grade_id', 'status_id', 'risk_level_id', 'description', 'start_date', 'end_date', 'budget', 'currency_code',
   'progress_percent', 'is_deleted', 'created_at', 'updated_at']);
 
-insert('project_contract_staff', db.contract_staff.map((c) => pickCols(c, {
+/** created_at theo thứ tự trong seed (1 giây / dòng) để BE liệt kê vị trí hợp đồng / phân bổ đúng thứ tự như mock API. */
+const seedOrder = (i) => new Date(Date.UTC(2026, 0, 1) + i * 1000).toISOString();
+insert('project_contract_staff', db.contract_staff.map((c, i) => ({ ...pickCols(c, {
   id: 'id', tenant_id: 'tenant_id', project_id: 'project_id', position_id: (r) => position(r.role_code), level_id: 'level_id', quantity: 'quantity',
   fte_per_person: 'fte_per_person', start_date: 'start_date', end_date: 'end_date', monthly_rate: 'price_per_month', is_deleted: 'is_deleted',
-})), ['id', 'tenant_id', 'project_id', 'position_id', 'level_id', 'quantity', 'fte_per_person', 'start_date', 'end_date', 'monthly_rate', 'is_deleted']);
-insert('project_assignments', db.assignments.map((a) => pickCols(a, {
+}), created_at: seedOrder(i) })), ['id', 'tenant_id', 'project_id', 'position_id', 'level_id', 'quantity', 'fte_per_person', 'start_date', 'end_date', 'monthly_rate', 'is_deleted', 'created_at']);
+insert('project_assignments', db.assignments.map((a, i) => ({ ...pickCols(a, {
   id: 'id', tenant_id: 'tenant_id', project_id: 'project_id', employee_id: 'employee_id', contract_staff_id: 'contract_staff_id', slot_index: 'slot_index',
   position_id: (r) => position(r.role_in_project), level_id: 'level_id', fte_allocated: 'fte_allocated', start_date: 'start_date', end_date: 'end_date', is_deleted: 'is_deleted',
-})), ['id', 'tenant_id', 'project_id', 'employee_id', 'contract_staff_id', 'slot_index', 'position_id', 'level_id', 'fte_allocated', 'start_date', 'end_date', 'is_deleted']);
+}), created_at: seedOrder(i) })), ['id', 'tenant_id', 'project_id', 'employee_id', 'contract_staff_id', 'slot_index', 'position_id', 'level_id', 'fte_allocated', 'start_date', 'end_date', 'is_deleted', 'created_at']);
 insert('project_assignment_periods', db.project_assignment_schedules.map((s) => pickCols(s, { id: 'id', tenant_id: 'tenant_id', assignment_id: 'assignment_id', start_date: 'start_date', end_date: 'end_date', fte_allocated: 'fte_allocated' })),
   ['id', 'tenant_id', 'assignment_id', 'start_date', 'end_date', 'fte_allocated']);
 insert('project_members', db.project_members.map((m) => ({ tenant_id: tenantOfProject.get(m.project_id), project_id: m.project_id, employee_id: m.employee_id, position_id: position(m.role), is_manager: m.role === 'PM' })),

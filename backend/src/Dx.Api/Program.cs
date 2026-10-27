@@ -36,6 +36,7 @@ builder.Services.AddScoped<RequestContext>();
 builder.Services.AddScoped<ICurrentUser>(sp => sp.GetRequiredService<RequestContext>());
 builder.Services.AddScoped<ITenantContext>(sp => sp.GetRequiredService<RequestContext>());
 builder.Services.AddSingleton<JsonStringLocalizer>();
+builder.Services.AddSingleton<IMessageLocalizer>(sp => sp.GetRequiredService<JsonStringLocalizer>());
 
 builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);

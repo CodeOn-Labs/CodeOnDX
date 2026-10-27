@@ -25,5 +25,13 @@ public partial class AiPromptTemplate
 
     public Guid? UpdatedBy { get; set; }
 
+    public string Status { get; set; } = null!;
+
+    public List<string> ScreenKeys { get; set; } = null!;
+
+    public string? Description { get; set; }
+
+    public int Version { get; set; }
+
     public virtual Tenant Tenant { get; set; } = null!;
 }
