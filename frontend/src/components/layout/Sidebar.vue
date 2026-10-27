@@ -1,9 +1,10 @@
 <script setup lang="ts">
-// Port Sidebar.tsx: thanh điều hướng dọc 72px — logo, các mục theo quyền, Quản trị, hồ sơ, đăng xuất.
+// Port Sidebar.tsx: thanh điều hướng dọc 72px — logo, các mục theo quyền, Quản trị, hồ sơ, ngôn ngữ (cờ), đăng xuất.
 import { computed } from 'vue';
 import { RouterLink, useRoute, useRouter } from 'vue-router';
 import { LogOut, Settings, User, Zap } from '@lucide/vue';
 import PortalTooltip from '@/shared/components/PortalTooltip.vue';
+import LanguageSwitcher from './LanguageSwitcher.vue';
 import { useAuthStore } from '@/stores/auth';
 import { cn } from '@/shared/utils/cn';
 import { ADMIN_PERMISSIONS, ADMIN_PREFIX, SIDEBAR_ITEMS, navPath, navPermission } from '@/app/navigation';
@@ -83,6 +84,8 @@ const NAV_IDLE = 'text-slate-400 hover:bg-slate-50 hover:text-slate-600';
           <User v-else :size="22" />
         </div>
       </RouterLink>
+
+      <LanguageSwitcher />
 
       <PortalTooltip :content="$t('menu.sign_out')" side="right" :offset="12" :content-class="TOOLTIP_CLASS" arrow-bg="#0f172a" arrow-border-color="transparent">
         <button

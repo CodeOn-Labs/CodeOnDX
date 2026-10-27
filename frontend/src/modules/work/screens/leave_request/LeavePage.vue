@@ -124,7 +124,7 @@ const s = computed(() => summary.data.value);
 </script>
 
 <template>
-  <PageLayout layout="B" :insight-title="$t('leave_request.title_insight_panel')" ai-module="leave" content-padding="24px" disable-scroll insights-width="300px" chat-width="300px">
+  <PageLayout layout="A" :insight-title="$t('leave_request.title_insight_panel')" content-padding="24px" disable-scroll insights-width="300px">
     <template #insights>
       <DynamicInsights :screen="tab === 'approval' ? 'leave_approval' : 'leave_request'" />
     </template>

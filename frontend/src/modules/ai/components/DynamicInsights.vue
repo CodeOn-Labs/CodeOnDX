@@ -4,6 +4,7 @@
 // — BE (hoặc mock API) lo việc chọn cấu hình Insight theo màn/kế thừa màn cha (ADR-0001) và gọi connector AI.
 import { computed, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useRoute } from 'vue-router';
 import { useQuery, useQueryClient } from '@tanstack/vue-query';
 import { RefreshCcw, Sparkles } from '@lucide/vue';
 import Button from '@/shared/components/Button.vue';
@@ -32,12 +33,15 @@ const props = withDefaults(
 const emit = defineEmits<{ status: [status: DynamicInsightsStatus] }>();
 
 const { locale } = useI18n();
+const route = useRoute();
 const queryClient = useQueryClient();
-const queryKey = computed(() => ['ai', 'insights', props.screen, locale.value] as const);
+/** Màn của một dự án (/projects/:id…): BE cần mã dự án để tính cảnh báo của dự án đó. */
+const projectId = computed(() => (typeof route.params.id === 'string' && route.path.startsWith('/projects/') ? route.params.id : undefined));
+const queryKey = computed(() => ['ai', 'insights', props.screen, projectId.value ?? '', locale.value] as const);
 
 const query = useQuery({
   queryKey,
-  queryFn: ({ signal }) => aiApi.insights(props.screen, false, signal),
+  queryFn: ({ signal }) => aiApi.insights(props.screen, false, signal, projectId.value),
   staleTime: 5 * 60_000,
   retry: false,
   meta: { silent: true },
@@ -50,7 +54,7 @@ async function refresh() {
   refreshing.value = true;
   refreshError.value = null;
   try {
-    queryClient.setQueryData(queryKey.value, await aiApi.insights(props.screen, true));
+    queryClient.setQueryData(queryKey.value, await aiApi.insights(props.screen, true, undefined, projectId.value));
   } catch (err) {
     refreshError.value = err instanceof Error ? err : new Error(String(err));
   } finally {

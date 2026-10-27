@@ -550,5 +550,75 @@
   "email_password_reset": {
     "subject": "Reset your DX Platform password",
     "body": "Hello {full_name},\n\nOpen this link to reset your password (valid for {minutes} minutes):\n{link}\n\nIf you did not ask for this, ignore this e-mail; your current password stays the same."
+  },
+  "insight_project_list": {
+    "high_risk_title": "{count} high-risk projects",
+    "high_risk_content": "{names} are at High risk — review staffing and budget this week.",
+    "over_budget_title": "{count} projects used {threshold}% of budget or more",
+    "over_budget_content": "{names} — check staff cost and scope.",
+    "ending_soon_title": "{count} projects ending soon",
+    "ending_soon_content": "{names} end within {days} days — prepare the handover and free the staff.",
+    "planning_title": "{count} projects in planning",
+    "planning_content": "Settle the contract staffing of {names} before they start.",
+    "all_good_title": "Project portfolio is stable",
+    "all_good_content": "No high-risk, over-budget or ending-soon project."
+  },
+  "insight_project_detail": {
+    "missing_positions_title": "{count} contract positions unfilled",
+    "missing_positions_content": "The contract has {contract} active positions; {assigned} have someone assigned.",
+    "fte_gap_title": "Assigned FTE is {gap} below contract",
+    "fte_gap_content": "Contract {contract} FTE, assigned {actual} FTE — add staff or adjust the plan.",
+    "over_budget_title": "{percent}% of budget used",
+    "over_budget_content": "Above the {threshold}% warning — review staff cost and scope.",
+    "hr_alert_title": "{count} people left or are leaving",
+    "hr_alert_content": "{names} — arrange a handover.",
+    "all_good_title": "Project is stable",
+    "all_good_content": "Staffing matches the contract, budget within limits, no staff changes."
+  },
+  "insight_project_detail_metrics_timeline": {
+    "overdue_title": "{count} overdue milestones",
+    "overdue_content": "{names} passed the planned date; {unjustified} still have no reason.",
+    "upcoming_title": "{count} milestones due soon",
+    "upcoming_content": "{names} are due within {days} days."
+  },
+  "insight_employee_list": {
+    "overloaded_title": "{count} overloaded people",
+    "overloaded_content": "Allocated above {threshold}% FTE: {names} — move work to people on the bench.",
+    "bench_title": "{count} people available",
+    "bench_content": "Allocated below {threshold}%: {names} — assign them to projects starting soon.",
+    "utilization_title": "Utilization {percent}%",
+    "utilization_content": "Below the {target}% target — review people on the bench."
+  },
+  "insight_timesheet_week": {
+    "week_hours_title": "This week: {logged}h / {expected}h",
+    "week_hours_content": "{missing}h missing; {days} days without entries: {names}.",
+    "week_complete_title": "This week: {logged}h / {expected}h",
+    "week_complete_content": "Your work log is complete up to today.",
+    "week_share_title": "Week split",
+    "week_share_content": "Projects {project}%, other work {other}%."
+  },
+  "insight_timesheet_day": {
+    "yesterday_title": "Reuse yesterday's entries?",
+    "yesterday_content": "Yesterday you logged {hours}h: {names}.",
+    "yesterday_empty_title": "Nothing logged on {date}",
+    "yesterday_empty_content": "Fill it in before the day is locked."
+  },
+  "insight_leave_request": {
+    "pending_title": "{count} leave / OT requests to approve",
+    "pending_content": "Approve before the leave starts so the work log and monthly report stay current.",
+    "balance_title": "{days} annual leave days left",
+    "balance_content": "Plan your leave to avoid a year-end rush."
+  },
+  "insight_attendance": {
+    "late_title": "{count} late check-ins this month",
+    "late_content": "Checked in after {start} ({grace} minutes allowed): {names}.",
+    "missing_out_title": "{count} days without check-out",
+    "missing_out_content": "{names} — remind them to add the check-out; later a manager must correct it with a note."
+  },
+  "insight_effort": {
+    "overload_title": "{count} people above {mm} MM",
+    "overload_content": "{names} have actual plus OT effort above {mm} MM in {month}.",
+    "free_title": "{count} people with spare capacity",
+    "free_content": "Total spare effort {total} MM: {names}."
   }
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Xem trước dữ liệu connector trả về (thay GitHubExplorer / GitLabExplorer / GoogleDriveExplorer của bản gốc ở mức danh sách).
+// Xem trước dữ liệu connector trả về (issue Jira, công việc Base, deal Bitrix24 — dữ liệu giả lập ở chế độ mock).
 import { computed } from 'vue';
 import { useQuery } from '@tanstack/vue-query';
 import { ExternalLink, FileText } from '@lucide/vue';

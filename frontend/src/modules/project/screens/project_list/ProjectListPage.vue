@@ -196,13 +196,11 @@ async function exportData(mode: ExportMode): Promise<ProjectListItem[]> {
 
 <template>
   <PageLayout
-    layout="B"
+    layout="A"
     :insight-title="$t('project_list.title_insight_panel')"
-    ai-module="projects"
     content-padding="24px"
     disable-scroll
     insights-width="320px"
-    chat-width="300px"
   >
     <template #insights>
       <DynamicInsights screen="project_list" />

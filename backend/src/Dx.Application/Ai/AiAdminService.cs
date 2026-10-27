@@ -38,11 +38,12 @@ public sealed record IntegrationPreviewItemDto(string? Title, string? Subtitle, 
 
 /// <summary>
 /// Admin › AI Insight (what each screen asks the LLM), Admin › Prompt templates and Admin ›
-/// Integrations (the 5 connectors of Q3). Connector secrets never leave the server: the API only
+/// Integrations (the Jira, Base and Bitrix sources of Q3; the AI and e-mail connectors are configured on the
+/// server only and are not listed). Connector secrets never leave the server: the API only
 /// says whether one is configured (appsettings.Secrets.json Integrations:&lt;Key&gt;:&lt;secret&gt;, or stored encrypted).
 /// </summary>
 public sealed partial class AiAdminService(
-    IAppDbContext db, ICurrentUser user, IScreenCatalog screens, IMockDataStore mockData, IEmailOutbox outbox, AiService ai,
+    IAppDbContext db, ICurrentUser user, IScreenCatalog screens, IMockDataStore mockData, AiService ai,
     IConfiguration config, ITenantClock clock)
 {
     /// <summary>When an insight shows (labels in the FE: enum.insight_condition.*).</summary>
@@ -59,23 +60,22 @@ public sealed partial class AiAdminService(
     private static readonly string[] PromptScopes = ["insight", "chat", "translate"];
     private static readonly string[] PromptStatuses = ["draft", "active", "archived"];
 
-    /// <summary>Connector catalog: non-secret settings shown on the screen, the secret's name, preview file in mock mode.</summary>
+    /// <summary>
+    /// Integration sources: non-secret settings shown on the screen, the secret's name, preview file in mock mode.
+    /// Real API calls are not wired yet (stub): test only checks enabled + secret, preview reads mock-data.
+    /// </summary>
     private static readonly Dictionary<string, (string Category, string[] Settings, string Secret, string? PreviewFile)> Connectors = new()
     {
-        ["Ai"] = ("ai", ["baseUrl", "model", "maxTokens"], "ApiKey", null),
-        ["GitHub"] = ("source_control", ["organization"], "Token", "github/repos.json"),
-        ["GitLab"] = ("source_control", ["baseUrl", "group"], "Token", "gitlab/projects.json"),
-        ["GoogleDrive"] = ("file_storage", ["rootFolderId"], "ServiceAccountJson", "google-drive/files.json"),
-        ["Email"] = ("communication", ["fromAddress", "fromName", "smtpHost", "smtpPort"], "SmtpPassword", null),
+        ["Jira"] = ("project_management", ["baseUrl", "accountEmail", "projectKeys"], "ApiToken", "jira/issues.json"),
+        ["Base"] = ("work_management", ["baseUrl"], "AccessToken", "base/tasks.json"),
+        ["Bitrix"] = ("crm", ["baseUrl"], "WebhookToken", "bitrix/deals.json"),
     };
 
     private static readonly Dictionary<string, Dictionary<string, string>> DefaultSettings = new()
     {
-        ["Ai"] = new() { ["baseUrl"] = "https://api.openai.example.com/v1", ["model"] = "gpt-mini", ["maxTokens"] = "2000" },
-        ["GitHub"] = new() { ["organization"] = "codeon-demo" },
-        ["GitLab"] = new() { ["baseUrl"] = "https://gitlab.example.com", ["group"] = "codeon" },
-        ["GoogleDrive"] = new() { ["rootFolderId"] = string.Empty },
-        ["Email"] = new() { ["fromAddress"] = "no-reply@example.com", ["fromName"] = "DX Platform", ["smtpHost"] = "smtp.example.com", ["smtpPort"] = "587" },
+        ["Jira"] = new() { ["baseUrl"] = "https://your-company.atlassian.net", ["accountEmail"] = string.Empty, ["projectKeys"] = string.Empty },
+        ["Base"] = new() { ["baseUrl"] = "https://your-company.base.vn" },
+        ["Bitrix"] = new() { ["baseUrl"] = "https://your-company.bitrix24.vn" },
     };
 
     // ─── insight configs ─────────────────────────────────────────────────────
@@ -273,8 +273,7 @@ public sealed partial class AiAdminService(
             var v = raw.ValueKind switch { JsonValueKind.String => raw.GetString()!.Trim(), JsonValueKind.Null => string.Empty, _ => raw.GetRawText() };
             errors.MaxLength(k, v, 300);
             if (k.EndsWith("Url", StringComparison.OrdinalIgnoreCase) && v.Length > 0 && !v.StartsWith("https://", StringComparison.Ordinal)) errors.Add(k, "integration_update.err_https");
-            if (k == "fromAddress" && v.Length > 0 && !Text.IsEmail(v)) errors.Add(k, "validation.invalid_email");
-            if (k is "smtpPort" or "maxTokens" && v.Length > 0 && !Digits().IsMatch(v)) errors.Add(k, "validation.invalid_number");
+            if (k == "accountEmail" && v.Length > 0 && !Text.IsEmail(v)) errors.Add(k, "validation.invalid_email");
             settings[k] = v;
         }
         if (r.Enabled is null) errors.Add("enabled", "validation.invalid_value");
@@ -301,21 +300,21 @@ public sealed partial class AiAdminService(
         return ToDto(row);
     }
 
-    /// <summary>GET /integrations/{key}/preview — a few items the connector sees (mock data, or the mock e-mail outbox).</summary>
+    /// <summary>GET /integrations/{key}/preview — a few items the source sees (mock-data/jira|base|bitrix).</summary>
     public async Task<IReadOnlyList<IntegrationPreviewItemDto>> PreviewIntegrationAsync(string key, CancellationToken ct)
     {
         var row = await IntegrationAsync(key, ct);
         if (!row.IsEnabled) throw new ConflictException("integration_test.err_disabled");
-        if (row.IntegrationKey == "Email")
-            return outbox.Recent(20).Select(m => new IntegrationPreviewItemDto(m.To, m.Subject, null, m.SentAt.ToString("O"))).ToList();
         if (Connectors[row.IntegrationKey].PreviewFile is not { } file || mockData.Read(file) is not { ValueKind: JsonValueKind.Array } items) return [];
         row.LastSyncAt = clock.UtcNow.UtcDateTime;
         await db.SaveChangesAsync(ct);
         static string? S(JsonElement x, params string[] names)
             => names.Select(n => x.TryGetProperty(n, out var v) && v.ValueKind == JsonValueKind.String ? v.GetString() : null).FirstOrDefault(v => v is not null);
+        // Field names follow the real APIs: Jira issue (key, summary, status, updated), Base task (name, status, updated_at),
+        // Bitrix24 deal (title, stage, date_modify)
         return items.EnumerateArray().Select(x => new IntegrationPreviewItemDto(
-            S(x, "full_name", "path_with_namespace", "name"), S(x, "default_branch", "mimeType") ?? string.Empty,
-            S(x, "html_url", "web_url", "webViewLink"), S(x, "pushed_at", "last_activity_at", "modifiedTime"))).ToList();
+            S(x, "key") is { } issueKey ? $"{issueKey} · {S(x, "summary")}" : S(x, "name", "title"), S(x, "status", "stage") ?? string.Empty,
+            S(x, "url"), S(x, "updated", "updated_at", "date_modify"))).ToList();
     }
 
     private async Task<TenantIntegration> IntegrationAsync(string key, CancellationToken ct)
@@ -345,7 +344,4 @@ public sealed partial class AiAdminService(
 
     [GeneratedRegex(@"\{\{\s*\}\}")]
     private static partial Regex EmptyVariable();
-
-    [GeneratedRegex(@"^\d{1,6}$")]
-    private static partial Regex Digits();
 }

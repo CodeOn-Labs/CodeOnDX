@@ -13,20 +13,20 @@ export const INSIGHT_DATA_SOURCES = ['timesheets', 'employees', 'budget', 'miles
 const PROMPT_SCOPES = ['insight', 'chat', 'translate'];
 const PROMPT_STATUSES = ['draft', 'active', 'archived'];
 
-/** Cấu hình từng connector (Q3). Chỉ trường không bí mật được trả ra/sửa ở đây; khoá bí mật nằm ở appsettings.Secrets.json. */
+/**
+ * Nguồn tích hợp ở Quản trị → Tích hợp (Q3): Jira, Base, Bitrix. Chỉ trường không bí mật được trả ra/sửa ở đây;
+ * khoá bí mật (API token, access token, webhook) nằm ở appsettings.Secrets.json. Connector AI và Email không nằm trong
+ * danh sách này — cấu hình riêng ở Integrations:Ai / Integrations:Email trên server.
+ */
 const CONNECTORS = {
-  Ai: { category: 'ai', settings: ['baseUrl', 'model', 'maxTokens'], secret: 'apiKey', previewFile: null },
-  GitHub: { category: 'source_control', settings: ['organization'], secret: 'token', previewFile: 'github/repos.json' },
-  GitLab: { category: 'source_control', settings: ['baseUrl', 'group'], secret: 'token', previewFile: 'gitlab/projects.json' },
-  GoogleDrive: { category: 'file_storage', settings: ['rootFolderId'], secret: 'serviceAccountJson', previewFile: 'google-drive/files.json' },
-  Email: { category: 'communication', settings: ['fromAddress', 'fromName', 'smtpHost', 'smtpPort'], secret: 'smtpPassword', previewFile: null },
+  Jira: { category: 'project_management', settings: ['baseUrl', 'accountEmail', 'projectKeys'], secret: 'apiToken', previewFile: 'jira/issues.json' },
+  Base: { category: 'work_management', settings: ['baseUrl'], secret: 'accessToken', previewFile: 'base/tasks.json' },
+  Bitrix: { category: 'crm', settings: ['baseUrl'], secret: 'webhookToken', previewFile: 'bitrix/deals.json' },
 };
 const DEFAULT_SETTINGS = {
-  Ai: { baseUrl: 'https://api.openai.example.com/v1', model: 'gpt-mini', maxTokens: '2000' },
-  GitHub: { organization: 'codeon-demo' },
-  GitLab: { baseUrl: 'https://gitlab.example.com', group: 'codeon' },
-  GoogleDrive: { rootFolderId: '' },
-  Email: { fromAddress: 'no-reply@example.com', fromName: 'DX Platform', smtpHost: 'smtp.example.com', smtpPort: '587' },
+  Jira: { baseUrl: 'https://your-company.atlassian.net', accountEmail: '', projectKeys: '' },
+  Base: { baseUrl: 'https://your-company.base.vn' },
+  Bitrix: { baseUrl: 'https://your-company.bitrix24.vn' },
 };
 
 /** Thay {{biến}} / {{a.b}} trong template bằng giá trị trong context — mô phỏng bước biên dịch prompt ở BE. */
@@ -448,8 +448,7 @@ export function systemRoutes({ store, currentUser, requirePermission, screens })
         const v = str(String(raw ?? ''));
         maxLength(errors, k, v, 300);
         if (/url$/i.test(k) && v && !/^https:\/\//.test(v)) addError(errors, k, 'integration_update.err_https');
-        if (k === 'fromAddress' && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) addError(errors, k, 'validation.invalid_email');
-        if (['smtpPort', 'maxTokens'].includes(k) && v && !/^\d{1,6}$/.test(v)) addError(errors, k, 'validation.invalid_number');
+        if (k === 'accountEmail' && v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) addError(errors, k, 'validation.invalid_email');
         settings[k] = v;
       }
       if (typeof body.enabled !== 'boolean') addError(errors, 'enabled', 'validation.invalid_value');
@@ -473,13 +472,13 @@ export function systemRoutes({ store, currentUser, requirePermission, screens })
       const row = findIntegration(url, -2);
       if (!row.enabled) throw new ApiError(409, 'integration_test.err_disabled');
       const def = CONNECTORS[row.key];
-      if (row.key === 'Email') return { data: (db.outbox ?? []).slice(-20).reverse().map((m) => ({ title: m.to, subtitle: m.subject, url: null, updatedAt: m.sent_at })) };
-      if (!def.previewFile) return { data: [] };
+      // File giả lập giữ tên trường gần API thật: Jira issue (key, summary, status, updated), Base task (name, status, updated_at),
+      // Bitrix24 deal (title, stage, date_modify)
       const items = readMock(def.previewFile).map((x) => ({
-        title: x.full_name ?? x.path_with_namespace ?? x.name,
-        subtitle: x.default_branch ?? x.mimeType ?? '',
-        url: x.html_url ?? x.web_url ?? x.webViewLink ?? null,
-        updatedAt: x.pushed_at ?? x.last_activity_at ?? x.modifiedTime ?? null,
+        title: x.key ? `${x.key} · ${x.summary}` : (x.name ?? x.title),
+        subtitle: x.status ?? x.stage ?? '',
+        url: x.url ?? null,
+        updatedAt: x.updated ?? x.updated_at ?? x.date_modify ?? null,
       }));
       row.last_sync_at = nowIso();
       return { data: items };

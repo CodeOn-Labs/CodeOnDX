@@ -3,6 +3,7 @@ import { computed, ref } from 'vue';
 import { registerAuthHandlers, setAccessToken } from '@/api/http';
 import { authApi, type AuthSession, type CurrentUser } from '@/modules/auth/api/auth.api';
 import { queryClient } from '@/api/query-client';
+import { currentLocale, setLocale, SUPPORTED_LOCALES } from '@/i18n';
 
 type AuthStatus = 'unknown' | 'authenticated' | 'anonymous';
 
@@ -22,6 +23,9 @@ export const useAuthStore = defineStore('auth', () => {
   function applySession(session: AuthSession) {
     setAccessToken(session.accessToken);
     user.value = session.user;
+    // Ngôn ngữ lưu trong hồ sơ (đổi bằng nút cờ ở Sidebar) thắng ngôn ngữ đang nhớ trên máy
+    const preferred = session.user.preferredLocale;
+    if (SUPPORTED_LOCALES.includes(preferred) && preferred !== currentLocale()) setLocale(preferred);
     permissions.value = session.permissions;
     status.value = 'authenticated';
   }

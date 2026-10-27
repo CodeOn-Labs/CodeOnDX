@@ -185,7 +185,7 @@ INSERT INTO dx.tenant_settings (tenant_id, key, value) VALUES
     ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'invitation_expiry_hours', '48')
 ON CONFLICT DO NOTHING;
 
--- tenant_rules: 33
+-- tenant_rules: 39
 INSERT INTO dx.tenant_rules (tenant_id, rule_key, value, is_enabled, updated_at) VALUES
     ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'TIMESHEET_MIN_HOURS', '0.25'::jsonb, true, '2026-10-01T08:00:00+07:00'),
     ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'TIMESHEET_MAX_HOURS', '12'::jsonb, true, '2026-10-01T08:00:00+07:00'),
@@ -219,7 +219,13 @@ INSERT INTO dx.tenant_rules (tenant_id, rule_key, value, is_enabled, updated_at)
     ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'QUALITY_DEFECT_RATE_WARN_MAX', '6'::jsonb, true, '2026-10-01T08:00:00+07:00'),
     ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'QUALITY_LEAKAGE_RATE_GOOD_MIN', '0.45'::jsonb, true, '2026-10-01T08:00:00+07:00'),
     ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'QUALITY_LEAKAGE_RATE_GOOD_MAX', '0.5'::jsonb, true, '2026-10-01T08:00:00+07:00'),
-    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'QUALITY_LEAKAGE_RATE_WARN_MAX', '0.55'::jsonb, true, '2026-10-01T08:00:00+07:00')
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'QUALITY_LEAKAGE_RATE_WARN_MAX', '0.55'::jsonb, true, '2026-10-01T08:00:00+07:00'),
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'INSIGHT_FTE_GAP_MIN', '0.5'::jsonb, true, '2026-10-01T08:00:00+07:00'),
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'INSIGHT_MILESTONE_UPCOMING_DAYS', '7'::jsonb, true, '2026-10-01T08:00:00+07:00'),
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'INSIGHT_LEAVE_REMAINING_DAYS', '8'::jsonb, true, '2026-10-01T08:00:00+07:00'),
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'INSIGHT_LEAVE_REMINDER_MONTH', '10'::jsonb, true, '2026-10-01T08:00:00+07:00'),
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'INSIGHT_EFFORT_OVER_MM', '1'::jsonb, true, '2026-10-01T08:00:00+07:00'),
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'INSIGHT_MAX_NAMES', '3'::jsonb, true, '2026-10-01T08:00:00+07:00')
 ON CONFLICT DO NOTHING;
 
 -- holidays: 4
@@ -230,13 +236,11 @@ INSERT INTO dx.holidays (id, tenant_id, holiday_date, name, is_paid) VALUES
     ('f1093375-44f1-55b3-8d63-470c0acdc649', '93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', '2026-09-02', 'Quốc khánh', true)
 ON CONFLICT DO NOTHING;
 
--- tenant_integrations: 5
+-- tenant_integrations: 3
 INSERT INTO dx.tenant_integrations (tenant_id, integration_key, is_enabled, use_mock, last_sync_at) VALUES
-    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'Ai', true, true, NULL),
-    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'GitHub', false, true, NULL),
-    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'GitLab', false, true, NULL),
-    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'GoogleDrive', false, true, NULL),
-    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'Email', true, true, NULL)
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'Jira', false, true, NULL),
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'Base', false, true, NULL),
+    ('93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8', 'Bitrix', false, true, NULL)
 ON CONFLICT DO NOTHING;
 
 -- pcv_template_items: 10

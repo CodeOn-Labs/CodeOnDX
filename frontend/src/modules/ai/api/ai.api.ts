@@ -1,4 +1,4 @@
-import { request, requestFull } from '@/api/http';
+import { request } from '@/api/http';
 import type { ScreenKey } from '@/app/screens';
 
 export type InsightVariant = 'amber' | 'purple' | 'red' | 'teal' | 'blue' | 'green';
@@ -19,14 +19,8 @@ export interface InsightResult {
   items: InsightItem[];
 }
 
-export interface ChatReply {
-  reply: string;
-  module: string;
-}
-
 export const aiApi = {
-  /** refresh = true → chạy lại phân tích (bỏ qua kết quả đã lưu). */
-  insights: (screen: ScreenKey, refresh = false, signal?: AbortSignal) =>
-    request<InsightResult>('/ai/insights', { query: { screen, refresh: refresh || undefined }, signal }),
-  chat: (message: string, module: string) => requestFull<ChatReply>('/ai/chat', { method: 'POST', body: { message, module } }),
+  /** refresh = true → chạy lại phân tích (bỏ qua kết quả đã lưu); projectId = màn của một dự án (/projects/:id…). */
+  insights: (screen: ScreenKey, refresh = false, signal?: AbortSignal, projectId?: string) =>
+    request<InsightResult>('/ai/insights', { query: { screen, refresh: refresh || undefined, projectId }, signal }),
 };

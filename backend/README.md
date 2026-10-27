@@ -80,6 +80,14 @@ Tài khoản demo giống mock: `admin@`, `pm@`, `finance@`, `member@example.com
 | GET / POST | `/api/v1/leave-requests[/summary]`, `/ot-requests` (`?scope=mine|approval`), POST `/{id}/approve|reject|cancel` | tạo: `timesheet.edit`; duyệt: `timesheet.approve` |
 | GET / POST / PUT | `/api/v1/attendance?month=`, `/attendance/today`, POST `/attendance/check-in|check-out` (`timesheet.edit`), PUT `/attendance`, POST `/attendance/import` (`timesheet.all_edit`) | đăng nhập |
 | GET / POST / PATCH / DELETE | `/api/v1/effort?month=`, `/effort/{id}` | xem `effort.view`, sửa `effort.edit` |
+| GET / PUT / POST / DELETE | `/api/v1/projects/{id}/pcv[/items/{iid}]`, `/css`, `/css/form`, `/css/questions[/{qid}]`, `/css/link` | xem `project.view` (+ thành viên); sửa `pcv.manage` / `css.manage` |
+| GET / POST / PUT / DELETE | `/api/v1/projects/{id}/documents`, `/document-groups`, `/risks`, `/changes`, `/issues` (+ `/{itemId}`) | xem `project.view`; sửa `project.manage` |
+| GET / PATCH / POST / PUT / DELETE | `/api/v1/projects/{id}/monthly-reports/{yyyy-MM}` (+ `/header`, `/cells`, `/sync`, `/columns[/{key}]`) | `project.view` (người xem được dự án đều sửa được, như bản gốc) |
+| GET / PUT / POST | `/api/v1/projects/{id}/status-report`, POST `/status-report/ai-fill` | `project.manage` |
+| GET / POST | `/api/v1/public/css-surveys/{token}` | — (không đăng nhập; tenant tìm theo token qua `dx.find_css_survey_tenant_id`) |
+| GET / POST | `/api/v1/ai/insights?screen=&refresh=`, `/ai/chat/greeting`, POST `/ai/chat` | đăng nhập |
+| GET / POST / PUT / DELETE | `/api/v1/ai/insight-configs[/{id}]`, `/preview`; `/ai/prompt-templates[/{id}]`, `/preview` | `admin.insights` |
+| GET / PUT / POST | `/api/v1/integrations`, `/integrations/{key}`, `/{key}/test`, `/{key}/preview` | `admin.integrations` |
 | GET | `/health` | — |
 
 Đợt 1 (26/10, Cấu hình + Tổ chức, 39 endpoint) đã đối chiếu với mock trên tenant demo: 16/16 GET cho `data` giống hệt (trừ `lastLoginAt` theo giờ đăng nhập), 16 ca lỗi 400/404/409 cùng status và cùng field lỗi. Khác cố ý:
@@ -105,6 +113,15 @@ Tài khoản demo giống mock: `admin@`, `pm@`, `finance@`, `member@example.com
 - Chấm công sửa tay lưu `note = ''` khi nhân viên tự bổ sung không ghi chú (cột NOT NULL với dòng manual), API trả `null`; `updatedBy` không hiện với dòng tự bấm Vào/Ra.
 - Công số: cột "vai trò" là tên vị trí (`job_position.name`), lưu `position_id`; ghi chú tối đa 100 ký tự (cột DB); xoá dòng là xoá hẳn (bảng không có thùng rác).
 - Giờ Vào/Ra và "hôm nay" lấy theo múi giờ tenant (`tenants.time_zone`).
+
+Đợt 5 + 6 (27/10, Dự án mở rộng + CSS công khai + AI + tích hợp, 63 endpoint) — **BE đủ 175/175 endpoint của mock**, `npm run dev:backend` chạy được mọi màn. Đối chiếu 36 GET × 2 tài khoản trên tenant demo: dữ liệu giống mock trừ các chỗ cố ý:
+- Dự án chưa có tiêu chí PCV / form CSS: lần đầu mở tab, BE chép biểu mẫu của tenant vào dự án (id câu hỏi CSS là id mới); mock trả danh sách rỗng (PCV) / id ghép tạm (CSS).
+- `updatedAt` của cấu hình AI Insight / prompt: BE có giá trị (cột DB), mock để `null`. Thứ tự kết quả PCV theo DB.
+- Connector AI (`Integrations:Ai`): `UseMock = true` trả lời từ `mock-data/ai` (insight theo chuỗi màn ADR-0001, kịch bản chat); `false` gọi API OpenAI-compatible `{BaseUrl}/chat/completions` (khoá `ApiKey` trong `appsettings.Secrets.json`), insight lưu cache `ai_insight_results` theo `InsightCacheMinutes`. Chat trả JSON như mock (chưa stream SSE). Status report "AI điền" dùng quy tắc từ số liệu (mốc trễ, rủi ro) ở cả hai chế độ.
+- **AI Insight theo quy tắc (27/10):** mặc định `Integrations:Ai:InsightSource = rules` — bảng AI Insight không gọi AI, `InsightRuleEngine` tính thông báo cố định cho 9 màn (danh sách / chi tiết dự án, mốc, nhân sự, nhật ký tuần / ngày, nghỉ phép, chấm công, công số) từ dữ liệu + ngưỡng ở Quản trị › Quy tắc (nhóm `insight` do `V015` thêm, cùng các quy tắc HR / dự án / chấm công sẵn có); tắt quy tắc là ẩn thông báo đó. Màn của một dự án gửi thêm `projectId` (FE `DynamicInsights` lấy từ route). Câu chữ: `insight_<screen>.<mã>_title / _content` trong `Locales`. Đặt `InsightSource = ai` để quay lại dùng LLM / mock-data.
+- `mock-data/` (ai, jira, base, bitrix) và `shared/screens.json` được chép cạnh `Dx.Api` khi build (`JsonMockDataStore`, `ScreenCatalog`); thư mục khác: `Integrations:MockDataPath`.
+- Tích hợp (27/10, `V016`): màn Quản trị › Tích hợp chỉ còn 3 nguồn **Jira, Base, Bitrix** (bỏ Ai / GitHub / GitLab / GoogleDrive / Email khỏi danh sách; connector AI và Email vẫn cấu hình ở `Integrations:Ai` / `Integrations:Email`). Secret chỉ ở server (`Integrations:Jira:ApiToken`, `Integrations:Base:AccessToken`, `Integrations:Bitrix:WebhookToken`), API chỉ trả `hasSecret`. Hiện là **stub**: test kết nối chỉ xét bật + có secret (lỗi → 502), xem trước đọc `mock-data/jira|base|bitrix`; gọi API thật làm sau.
+- Migration `V014`: `ai_prompt_templates` thêm `status` / `screen_keys` / `description` / `version` (bỏ ràng buộc 1 template active / scope), `ai_insight_configs.trigger_condition`, `tenant_integrations.last_test_at` / `last_test_ok`.
 
 Kiểm kê toàn bộ endpoint còn thiếu và thứ tự làm: `docs/be-api-audit.md`.
 

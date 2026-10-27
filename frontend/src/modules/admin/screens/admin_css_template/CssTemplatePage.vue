@@ -94,7 +94,7 @@ const ICON_BUTTON = 'flex h-7 w-7 items-center justify-center rounded-lg text-sl
 </script>
 
 <template>
-  <PageLayout layout="C" ai-module="admin" content-padding="24px">
+  <PageLayout layout="C" content-padding="24px">
     <div class="flex flex-col gap-4 rounded-[24px] border border-slate-200/80 bg-white p-6 shadow-sm">
       <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-2">
         <div class="flex items-center gap-2.5">

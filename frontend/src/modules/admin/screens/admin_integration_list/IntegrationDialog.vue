@@ -34,15 +34,8 @@ watch(
 const fieldLabel = (key: string) =>
   ({
     baseUrl: t('admin_integration_list.lbl_field_base_url'),
-    model: t('admin_integration_list.lbl_field_model'),
-    maxTokens: t('admin_integration_list.lbl_field_max_tokens'),
-    organization: t('admin_integration_list.lbl_field_organization'),
-    group: t('admin_integration_list.lbl_field_group'),
-    rootFolderId: t('admin_integration_list.lbl_field_root_folder'),
-    fromAddress: t('admin_integration_list.lbl_field_from_address'),
-    fromName: t('admin_integration_list.lbl_field_from_name'),
-    smtpHost: t('admin_integration_list.lbl_field_smtp_host'),
-    smtpPort: t('admin_integration_list.lbl_field_smtp_port'),
+    accountEmail: t('admin_integration_list.lbl_field_account_email'),
+    projectKeys: t('admin_integration_list.lbl_field_project_keys'),
   })[key] ?? key;
 
 const save = useFormMutation({

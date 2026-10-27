@@ -278,8 +278,8 @@
     "btn_save": "Save changes"
   },
   "admin_insight_list": {
-    "title_page": "AI Insights",
-    "lbl_kicker": "AI configuration",
+    "title_page": "Insights",
+    "lbl_kicker": "Analysis configuration",
     "ph_search": "Search by name or prompt...",
     "btn_create": "Create insight",
     "lbl_screen": "Screen",
@@ -307,10 +307,6 @@
     "title_page": "Integrations",
     "lbl_kicker": "External connections",
     "hint_page": "Secrets (API keys, tokens) are configured only on the server; here you enable/disable, adjust settings and test connections.",
-    "hint_category_ai": "Analyse data, generate insights and answer AI chat.",
-    "hint_category_source_control": "Sync source repositories, commits, pull requests and development progress.",
-    "hint_category_file_storage": "Store shared resources, technical documents and project files.",
-    "hint_category_communication": "Send automatic notifications, timesheet reminders and periodic updates.",
     "lbl_mode_mock": "Mock",
     "lbl_mode_live": "Live",
     "lbl_secret_set": "Key configured",
@@ -325,25 +321,13 @@
     "title_config_dialog": "Configure {name}",
     "hint_config_dialog": "Non-secret settings only",
     "lbl_enabled": "Enable integration",
-    "lbl_field_base_url": "API address (https://)",
-    "lbl_field_model": "Model",
-    "lbl_field_max_tokens": "Max tokens",
-    "lbl_field_organization": "Organization",
-    "lbl_field_group": "Group",
-    "lbl_field_root_folder": "Root folder ID",
-    "lbl_field_from_address": "Sender email",
-    "lbl_field_from_name": "Sender name",
-    "lbl_field_smtp_host": "SMTP host",
-    "lbl_field_smtp_port": "SMTP port",
+    "lbl_field_base_url": "Site address (https://)",
+    "lbl_field_account_email": "Account email",
+    "lbl_field_project_keys": "Project keys (comma separated)",
     "hint_secret": "The secret goes in Integrations:{key} of appsettings.Secrets.json on the server; it is never entered in the UI.",
     "title_preview_dialog": "Data from {name}",
     "empty_preview": "No data",
     "btn_open_link": "Open link"
-  },
-  "admin_language": {
-    "title_page": "Language",
-    "hint_page": "Your own display language, saved to your profile and used for server messages.",
-    "btn_tenant_default": "Change the company default language in Settings →"
   },
   "admin_pcv_criteria": {
     "title_page": "PCV criteria",
@@ -599,26 +583,6 @@
     "confirm_delete_holiday_title": "Delete holiday?",
     "confirm_delete_holiday_desc": "Remove \"{name}\" ({date}) from the holiday list."
   },
-  "ai_chat": {
-    "title_page": "AI assistant",
-    "lbl_history": "History",
-    "btn_new_session": "New chat",
-    "btn_delete_session": "Delete chat",
-    "empty_title": "Start a conversation",
-    "empty_hint": "Ask me about project data, staffing or in-depth analysis.",
-    "msg_thinking": "AI is thinking...",
-    "btn_scroll_bottom": "Scroll to bottom",
-    "ph_input": "Ask about projects, effort, staffing, finance, or request an action...",
-    "btn_send": "Send message",
-    "opt_team_hours": "Team A hours?",
-    "opt_team_hours_text": "How is Team A doing now?",
-    "opt_new_project": "New project",
-    "opt_new_project_text": "I want to create a new project",
-    "opt_missing_timesheet": "Missing timesheets?",
-    "opt_missing_timesheet_text": "Who has not entered their timesheet this week?",
-    "opt_monthly_report": "Monthly report",
-    "opt_monthly_report_text": "Summarise this month's report for me"
-  },
   "attendance": {
     "title_page": "Attendance",
     "btn_check_in": "Check in",
@@ -743,18 +707,6 @@
     "msg_load_failed": "Could not load data"
   },
   "component": {
-    "chat_full_overlay": {
-      "btn_delete_session": "Delete chat",
-      "btn_minimize": "Minimize",
-      "btn_new_session": "New chat",
-      "btn_scroll_bottom": "Scroll to bottom",
-      "btn_send": "Send message",
-      "empty_hint": "Ask me about project data, staffing or in-depth analytics.",
-      "empty_title": "Start a conversation",
-      "lbl_history": "History",
-      "msg_thinking": "Thinking...",
-      "title_dialog": "Expanded chat"
-    },
     "dx_calendar": {
       "btn_next_month": "Next month",
       "btn_previous_month": "Previous month"
@@ -868,12 +820,9 @@
       "unit_fte": "FTE"
     },
     "page_layout": {
-      "lbl_chat_ai": "Chat AI",
       "lbl_insights": "Insights",
       "tip_collapse_insight": "Collapse the analysis panel",
-      "tip_open_chat": "Open AI chat",
       "tip_open_insight": "Open the analysis panel",
-      "tip_resize_chat": "Drag to resize AI chat",
       "tip_resize_insight": "Drag to resize the analysis panel"
     },
     "page_size_select": {
@@ -891,56 +840,6 @@
       "lbl_rows": "Rows:",
       "lbl_showing": "Showing:",
       "lbl_total_records": "out of {total} records"
-    },
-    "side_chat_panel": {
-      "btn_collapse": "Collapse AI chat",
-      "btn_delete_session": "Delete chat",
-      "btn_hide_suggestions": "Hide suggested questions",
-      "btn_new_session": "New chat",
-      "btn_open_full": "Expand chat",
-      "btn_scroll_bottom": "Scroll to bottom",
-      "btn_send": "Send message",
-      "btn_show_suggestions": "Show suggested questions",
-      "err_cannot_connect": "Could not connect to AI. Please try again later.",
-      "hint_ai_may_be_wrong": "AI may answer incorrectly. Please double-check important information.",
-      "lbl_default_session": "Default chat",
-      "lbl_new_session": "New chat",
-      "lbl_suggestions": "Suggested questions",
-      "msg_greeting": "I am your AI assistant. How can I help?",
-      "msg_new_session_greeting": "Hi! How can I help you today?",
-      "msg_thinking": "Thinking...",
-      "opt_dashboard_low_utilization": "Why is utilization low?",
-      "opt_dashboard_support_needed": "Which projects need support now?",
-      "opt_dashboard_weekly_summary": "Summarize this week's dashboard",
-      "opt_general_available_staff": "Who is available or under-allocated?",
-      "opt_general_summary": "Quick company overview",
-      "opt_general_urgent_projects": "Which projects need attention now?",
-      "opt_hr_bench_list": "List of benched staff",
-      "opt_hr_detail_allocation": "Where is this person allocated?",
-      "opt_hr_detail_growth": "Suggest a suitable growth path",
-      "opt_hr_detail_summary": "Summarize this person's capabilities",
-      "opt_hr_react_skill": "Who has React skills?",
-      "opt_hr_senior_java_available": "Find an available Senior Java developer",
-      "opt_project_detail_delay_risk": "Is this project at risk of delay?",
-      "opt_project_detail_fte_gap": "What is the gap between contract and actual FTE?",
-      "opt_project_detail_key_member": "Which member impacts the project most?",
-      "opt_projects_budget_vs_cost": "Compare budget and actual cost",
-      "opt_projects_most_delayed": "Which project is most delayed?",
-      "opt_projects_understaffed": "Which projects are understaffed?",
-      "opt_rules_project": "Explain project rules",
-      "opt_rules_timesheet": "Explain timesheet rules",
-      "opt_timesheet_anomaly": "Anything unusual in this week's effort?",
-      "opt_timesheet_missing_days": "Which days have no timesheet yet?",
-      "opt_timesheet_task_split": "How are tasks split this week?",
-      "ph_dashboard": "Ask about overall status, risks, forecasts...",
-      "ph_general": "Ask about projects, effort, staff, finance, or request an action...",
-      "ph_hr": "Ask about staff, skills...",
-      "ph_hr_detail": "Ask about this person...",
-      "ph_project_detail": "Ask about this project's staff...",
-      "ph_projects": "Ask about projects, staff, budget...",
-      "ph_rules": "Ask about staff, project, timesheet rules...",
-      "ph_timesheet": "Ask about effort, tasks...",
-      "tip_wait_response": "Waiting for response..."
     },
     "confirm_dialog": {
       "btn_cancel": "Cancel",
@@ -1022,6 +921,10 @@
       "msg_importing": "Importing {done}/{total} rows...",
       "msg_summary": "Imported {created} records · {failed} rows with errors",
       "lbl_row": "Row {row}"
+    },
+    "language_switcher": {
+      "tip_change_language": "Change language",
+      "title_language": "Display language"
     }
   },
   "css_survey_public": {
@@ -1213,7 +1116,8 @@
       "leave": "Leave",
       "overtime": "Overtime",
       "attendance": "Attendance",
-      "quality": "Project quality"
+      "quality": "Project quality",
+      "insight": "AI Insight (automatic notices)"
     },
     "category_type": {
       "project_status": "Project status",
@@ -1301,22 +1205,17 @@
       "archived": "Archived"
     },
     "integration_category": {
-      "ai": "Artificial intelligence",
-      "source_control": "Source control",
-      "file_storage": "File storage",
-      "communication": "Communication"
+      "project_management": "Project management",
+      "work_management": "Work management",
+      "crm": "CRM"
     },
     "connector": {
-      "ai": "AI (LLM)",
-      "ai_desc": "OpenAI-compatible language model for insights and AI chat; every call goes through the server.",
-      "github": "GitHub",
-      "github_desc": "Sync repositories, commits and pull requests to track development progress.",
-      "gitlab": "GitLab",
-      "gitlab_desc": "Sync projects, issues and merge requests from GitLab.",
-      "googledrive": "Google Drive",
-      "googledrive_desc": "Link project documents stored on Google Drive.",
-      "email": "Email",
-      "email_desc": "Send account invitations, password resets, CSS surveys and approval notifications."
+      "jira": "Jira",
+      "jira_desc": "Sync issues, sprints and work status from Jira (Atlassian).",
+      "base": "Base",
+      "base_desc": "Sync tasks, projects and requests from Base (Base Wework, Base Request).",
+      "bitrix": "Bitrix24",
+      "bitrix_desc": "Sync customers, deals and tasks from Bitrix24."
     },
     "risk_category": {
       "schedule": "Schedule",
@@ -1469,15 +1368,15 @@
     "admin_css_template": "CSS template",
     "admin_departments": "Departments & teams",
     "admin_employees": "Employees",
-    "admin_insights": "AI Insights",
+    "admin_hrm": "HRM settings",
+    "admin_insight_group": "Insights",
+    "admin_insights": "Insights",
     "admin_integrations": "Integrations",
-    "admin_language": "Language",
     "admin_pcv_criteria": "PCV criteria",
     "admin_prompt_templates": "Prompt Templates",
     "admin_roles": "Roles",
     "admin_rules": "Rules",
     "admin_settings": "Settings",
-    "ai": "AI",
     "attendance": "Attendance",
     "effort": "Effort",
     "leave": "Leave & overtime",
@@ -1500,7 +1399,6 @@
     "lbl_status": "Status",
     "lbl_tenure_active": "With us",
     "lbl_tenure_resigned": "Left",
-    "title_language": "Display language",
     "title_skills": "Skills",
     "btn_edit_skills": "Edit skills",
     "hint_no_employee": "This account is not linked to an employee profile.",

@@ -92,7 +92,7 @@ const title = computed(() => (isNew.value ? t('admin_role_form.title_create') : 
 </script>
 
 <template>
-  <PageLayout layout="C" ai-module="admin" content-padding="24px" disable-scroll chat-width="300px">
+  <PageLayout layout="C" content-padding="24px" disable-scroll>
     <div v-if="permissions.isPending.value || (!isNew && roleQuery.isPending.value)" class="flex h-full items-center justify-center py-20">
       <div class="animate-pulse text-[13px] font-medium text-slate-400">{{ $t('admin_role_form.lbl_loading') }}</div>
     </div>

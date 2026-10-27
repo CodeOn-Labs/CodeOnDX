@@ -1,0 +1,30 @@
+[
+  {
+    "id": 300,
+    "title": "Gia hạn hợp đồng bảo trì PRJ-01",
+    "stage": "Mới",
+    "url": "https://bitrix.example.com/crm/deal/details/300/",
+    "date_modify": "2026-10-20T10:00:00Z"
+  },
+  {
+    "id": 301,
+    "title": "Gia hạn hợp đồng bảo trì PRJ-02",
+    "stage": "Đang đàm phán",
+    "url": "https://bitrix.example.com/crm/deal/details/301/",
+    "date_modify": "2026-10-18T10:00:00Z"
+  },
+  {
+    "id": 302,
+    "title": "Gia hạn hợp đồng bảo trì PRJ-03",
+    "stage": "Đã gửi báo giá",
+    "url": "https://bitrix.example.com/crm/deal/details/302/",
+    "date_modify": "2026-10-16T10:00:00Z"
+  },
+  {
+    "id": 303,
+    "title": "Gia hạn hợp đồng bảo trì PRJ-04",
+    "stage": "Thành công",
+    "url": "https://bitrix.example.com/crm/deal/details/303/",
+    "date_modify": "2026-10-14T10:00:00Z"
+  }
+]

@@ -24,6 +24,12 @@ public sealed class AiOptions
 
     /// <summary>How long a generated insight is reused before the LLM is asked again.</summary>
     public int InsightCacheMinutes { get; set; } = 360;
+
+    /// <summary>
+    /// Where the AI Insight panel gets its notices: "rules" (default since 27/10/2026 — fixed notices
+    /// from thresholds in Admin › Rules, no LLM), "ai" (LLM, or mock-data/ai when UseMock = true).
+    /// </summary>
+    public string InsightSource { get; set; } = "rules";
 }
 
 /// <summary>Chat-completion call to the configured LLM (only used when UseMock = false).</summary>

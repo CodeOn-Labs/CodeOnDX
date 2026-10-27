@@ -10,7 +10,7 @@
  * - seed/   : mỗi file ứng với một bảng DB (tên cột snake_case) — BE seeder nạp vào tenant demo.
  *   Nhân sự, phòng ban, nghỉ phép, OT, chấm công vào/ra đều là dữ liệu quản lý ngay trong phần mềm
  *   (không đồng bộ từ hệ thống ngoài nào).
- * - ai/, github/, gitlab/, google-drive/ : giả lập response của các connector còn lại (Q3).
+ * - ai/, jira/, base/, bitrix/ : giả lập response của các connector còn lại (Q3).
  * - Mật khẩu tài khoản demo lưu dạng hash ASP.NET Core Identity V3 (PBKDF2-HMACSHA512, 100.000 vòng)
  *   để BE nạp thẳng được. Đổi mật khẩu: đặt DX_DEMO_PASSWORD rồi chạy lại.
  */
@@ -697,6 +697,12 @@ const RULES = [
   ['QUALITY_LEAKAGE_RATE_GOOD_MIN', 'quality', 'number', 0.45, 0, 10, 'Leakage/MM tốt từ', 'Leakage/MM good from', 'Tỷ lệ lỗi lọt/MM dưới mức này tô cam nhạt', 'Leaked defects per MM below this are light orange'],
   ['QUALITY_LEAKAGE_RATE_GOOD_MAX', 'quality', 'number', 0.5, 0, 10, 'Leakage/MM tốt đến (không gồm)', 'Leakage/MM good below', 'Từ mức "tốt từ" đến dưới mức này tô xanh', 'From the good-from level up to (not including) this is green'],
   ['QUALITY_LEAKAGE_RATE_WARN_MAX', 'quality', 'number', 0.55, 0, 10, 'Leakage/MM cảnh báo đến', 'Leakage/MM warning up to', 'Đến mức này tô vàng; cao hơn tô đỏ', 'Up to this is yellow; higher is red'],
+  ['INSIGHT_FTE_GAP_MIN', 'insight', 'number', 0.5, 0, 10, 'Thiếu FTE so với hợp đồng từ', 'FTE shortfall from', 'Cảnh báo khi FTE đang phân bổ thấp hơn FTE hợp đồng của dự án từ mức này trở lên', 'Warn when the assigned FTE is below the contract FTE by at least this much'],
+  ['INSIGHT_MILESTONE_UPCOMING_DAYS', 'insight', 'number', 7, 1, 90, 'Nhắc mốc sắp đến hạn trước (ngày)', 'Upcoming milestone reminder (days)', 'Nhắc các mốc chưa hoàn thành có ngày dự kiến trong số ngày tới', 'Remind unfinished milestones due within this many days'],
+  ['INSIGHT_LEAVE_REMAINING_DAYS', 'insight', 'number', 8, 0, 60, 'Nhắc dùng phép khi còn từ (ngày)', 'Leave reminder from (days left)', 'Từ tháng nhắc phép, nhắc nhân sự còn số ngày phép năm từ mức này trở lên', 'From the reminder month, remind people with at least this many annual leave days left'],
+  ['INSIGHT_LEAVE_REMINDER_MONTH', 'insight', 'number', 10, 1, 12, 'Tháng bắt đầu nhắc dùng phép', 'Leave reminder month', 'Từ tháng này trong năm bắt đầu nhắc nhân sự còn nhiều phép', 'Month of the year from which the leave reminder shows'],
+  ['INSIGHT_EFFORT_OVER_MM', 'insight', 'number', 1, 0.5, 3, 'Công số cảnh báo vượt (MM)', 'Effort overload from (MM)', 'Cảnh báo nhân sự có công số thực tế + OT trong tháng vượt mức này', 'Warn when actual + overtime effort of a person in the month exceeds this'],
+  ['INSIGHT_MAX_NAMES', 'insight', 'number', 3, 1, 10, 'Số tên liệt kê tối đa', 'Names listed at most', 'Số dự án / nhân sự được nêu tên trong một thông báo', 'How many projects / people a notice names'],
 ];
 out('seed/system_rules.json', RULES.map(([key, module, value_type, value, min, max, name, name_en, description, description_en]) => ({
   id: uid(`rule:${key}`), tenant_id: TENANT_ID, key, module, value_type, value, default_value: value, min, max,
@@ -732,7 +738,7 @@ out('seed/ai_prompt_templates.json', [
   { id: uid('prompt:insight'), tenant_id: TENANT_ID, scope: 'insight', status: 'active', name: 'Insight mặc định', template: 'Màn hình: {{screen_key}}. Dữ liệu: {{context}}. Trả JSON {"insights":[{"variant","title","content"}]}.' },
 ]);
 out('seed/integrations.json', [
-  ['Ai', true], ['GitHub', false], ['GitLab', false], ['GoogleDrive', false], ['Email', true],
+  ['Jira', false], ['Base', false], ['Bitrix', false],
 ].map(([key, enabled]) => ({ tenant_id: TENANT_ID, key, enabled, use_mock: true, last_sync_at: null })));
 
 // ─── Nghỉ phép & OT (quản lý ngay trong phần mềm) ─────────────────────────
@@ -996,34 +1002,30 @@ out('ai/translate/vi-ja.json', {
   'Nghiên cứu công nghệ': '技術調査',
 });
 
-// ─── GitHub / GitLab / Google Drive ───────────────────────────────────────
+// ─── Jira / Base / Bitrix24 (nguồn tích hợp ở Quản trị → Tích hợp) ────────
+// Tên trường gần với API thật để sau này thay bằng dữ liệu thật ít phải sửa; địa chỉ đều là example.com.
 
-const repoProjects = live.slice(0, 6);
-out('github/repos.json', repoProjects.map((p, i) => ({
-  id: 9000 + i, name: p.code.toLowerCase(), full_name: `codeon-demo/${p.code.toLowerCase()}`, private: true,
-  default_branch: 'main', html_url: `https://github.example.com/codeon-demo/${p.code.toLowerCase()}`, pushed_at: `${addDays(TODAY, -i)}T09:00:00Z`,
+const syncProjects = live.slice(0, 6);
+const JIRA_STATUSES = ['To Do', 'In Progress', 'In Review', 'Done'];
+const JIRA_SUMMARIES = ['Màn danh sách hiển thị sai số trang', 'Bổ sung xuất Excel báo cáo tháng', 'Tối ưu truy vấn dashboard', 'Lỗi đăng nhập khi hết phiên'];
+out('jira/issues.json', syncProjects.flatMap((p, i) => [0, 1].map((k) => {
+  const key = `${p.code.replace(/[^A-Z0-9]/gi, '').toUpperCase()}-${101 + k}`;
+  return {
+    key, summary: JIRA_SUMMARIES[(i + k) % JIRA_SUMMARIES.length], status: JIRA_STATUSES[(i + k * 2) % JIRA_STATUSES.length],
+    issue_type: k === 0 ? 'Bug' : 'Story', assignee: employees[(i * 2 + k) % EMP_COUNT].email.split('@')[0],
+    url: `https://jira.example.com/browse/${key}`, updated: `${addDays(TODAY, -i - k)}T09:00:00Z`,
+  };
 })));
-out('github/commits.json', repoProjects.flatMap((p, i) => [0, 1, 2].map((k) => ({
-  repo: `codeon-demo/${p.code.toLowerCase()}`, sha: createHash('sha1').update(`${p.id}:${k}`).digest('hex'),
-  message: ['feat: thêm màn danh sách', 'fix: sửa lỗi phân trang', 'chore: cập nhật thư viện'][k],
-  author: employees[(i * 3 + k) % EMP_COUNT].email.split('@')[0], date: `${addDays(TODAY, -k - i)}T1${k}:00:00Z`,
-}))));
-out('gitlab/projects.json', repoProjects.map((p, i) => ({
-  id: 7000 + i, name: p.code.toLowerCase(), path_with_namespace: `codeon/${p.code.toLowerCase()}`,
-  web_url: `https://gitlab.example.com/codeon/${p.code.toLowerCase()}`, default_branch: 'develop', last_activity_at: `${addDays(TODAY, -i)}T08:00:00Z`,
+const BASE_STATUSES = ['Đang làm', 'Chờ duyệt', 'Hoàn thành'];
+out('base/tasks.json', syncProjects.map((p, i) => ({
+  id: 5000 + i, name: `${p.code} - Chuẩn bị báo cáo tiến độ tuần`, project: p.name, status: BASE_STATUSES[i % BASE_STATUSES.length],
+  url: `https://base.example.com/wework/task/${5000 + i}`, updated_at: `${addDays(TODAY, -i)}T08:30:00Z`,
 })));
-out('gitlab/issues.json', repoProjects.flatMap((p, i) => [1, 2].map((k) => ({
-  project_id: 7000 + i, iid: k, title: k === 1 ? 'Lỗi hiển thị trên Safari' : 'Bổ sung xuất Excel', state: k === 1 ? 'opened' : 'closed',
-  labels: k === 1 ? ['bug'] : ['feature'], created_at: `${addDays(TODAY, -10 - k)}T08:00:00Z`,
-}))));
-out('gitlab/merge-requests.json', repoProjects.map((p, i) => ({
-  project_id: 7000 + i, iid: 1, title: 'feat: màn báo cáo tháng', state: 'merged', source_branch: 'feature/monthly-report', target_branch: 'develop',
-  merged_at: `${addDays(TODAY, -2 - i)}T10:00:00Z`,
+const BITRIX_STAGES = ['Mới', 'Đang đàm phán', 'Đã gửi báo giá', 'Thành công'];
+out('bitrix/deals.json', syncProjects.slice(0, 4).map((p, i) => ({
+  id: 300 + i, title: `Gia hạn hợp đồng bảo trì ${p.code}`, stage: BITRIX_STAGES[i % BITRIX_STAGES.length],
+  url: `https://bitrix.example.com/crm/deal/details/${300 + i}/`, date_modify: `${addDays(TODAY, -2 * i)}T10:00:00Z`,
 })));
-out('google-drive/files.json', repoProjects.flatMap((p) => [
-  { id: createHash('md5').update(`${p.id}:spec`).digest('hex'), name: `${p.code} - Đặc tả yêu cầu.docx`, mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', modifiedTime: `${addDays(TODAY, -15)}T08:00:00Z`, webViewLink: 'https://drive.example.com/file/spec' },
-  { id: createHash('md5').update(`${p.id}:plan`).digest('hex'), name: `${p.code} - Kế hoạch dự án.xlsx`, mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', modifiedTime: `${addDays(TODAY, -5)}T08:00:00Z`, webViewLink: 'https://drive.example.com/file/plan' },
-]));
 
 // ─── Chi tiết dự án: quản trị dự án, báo cáo tháng, khảo sát CSS đang chờ ──
 // PRNG riêng để thêm dữ liệu mới không làm đổi dữ liệu đã sinh ở trên.
@@ -1162,7 +1164,7 @@ out('seed/monthly_report_cells.json', monthlyReportCells);
 
 // ─── Ghi file ─────────────────────────────────────────────────────────────
 
-for (const dir of ['seed', 'ai', 'github', 'gitlab', 'google-drive']) {
+for (const dir of ['seed', 'ai', 'jira', 'base', 'bitrix', 'github', 'gitlab', 'google-drive']) {
   const p = join(ROOT, dir);
   if (existsSync(p)) rmSync(p, { recursive: true, force: true });
 }

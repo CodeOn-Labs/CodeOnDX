@@ -1,0 +1,110 @@
+[
+  {
+    "key": "PRJ01-101",
+    "summary": "Màn danh sách hiển thị sai số trang",
+    "status": "To Do",
+    "issue_type": "Bug",
+    "assignee": "vy.pm",
+    "url": "https://jira.example.com/browse/PRJ01-101",
+    "updated": "2026-10-20T09:00:00Z"
+  },
+  {
+    "key": "PRJ01-102",
+    "summary": "Bổ sung xuất Excel báo cáo tháng",
+    "status": "In Review",
+    "issue_type": "Story",
+    "assignee": "trang.ng",
+    "url": "https://jira.example.com/browse/PRJ01-102",
+    "updated": "2026-10-19T09:00:00Z"
+  },
+  {
+    "key": "PRJ02-101",
+    "summary": "Bổ sung xuất Excel báo cáo tháng",
+    "status": "In Progress",
+    "issue_type": "Bug",
+    "assignee": "hieu.vv",
+    "url": "https://jira.example.com/browse/PRJ02-101",
+    "updated": "2026-10-19T09:00:00Z"
+  },
+  {
+    "key": "PRJ02-102",
+    "summary": "Tối ưu truy vấn dashboard",
+    "status": "Done",
+    "issue_type": "Story",
+    "assignee": "dat.la",
+    "url": "https://jira.example.com/browse/PRJ02-102",
+    "updated": "2026-10-18T09:00:00Z"
+  },
+  {
+    "key": "PRJ03-101",
+    "summary": "Tối ưu truy vấn dashboard",
+    "status": "In Review",
+    "issue_type": "Bug",
+    "assignee": "lan.nn",
+    "url": "https://jira.example.com/browse/PRJ03-101",
+    "updated": "2026-10-18T09:00:00Z"
+  },
+  {
+    "key": "PRJ03-102",
+    "summary": "Lỗi đăng nhập khi hết phiên",
+    "status": "To Do",
+    "issue_type": "Story",
+    "assignee": "tam.tm",
+    "url": "https://jira.example.com/browse/PRJ03-102",
+    "updated": "2026-10-17T09:00:00Z"
+  },
+  {
+    "key": "PRJ04-101",
+    "summary": "Lỗi đăng nhập khi hết phiên",
+    "status": "Done",
+    "issue_type": "Bug",
+    "assignee": "son.tq",
+    "url": "https://jira.example.com/browse/PRJ04-101",
+    "updated": "2026-10-17T09:00:00Z"
+  },
+  {
+    "key": "PRJ04-102",
+    "summary": "Màn danh sách hiển thị sai số trang",
+    "status": "In Progress",
+    "issue_type": "Story",
+    "assignee": "son.nv",
+    "url": "https://jira.example.com/browse/PRJ04-102",
+    "updated": "2026-10-16T09:00:00Z"
+  },
+  {
+    "key": "PRJ05-101",
+    "summary": "Màn danh sách hiển thị sai số trang",
+    "status": "To Do",
+    "issue_type": "Bug",
+    "assignee": "thao.bm",
+    "url": "https://jira.example.com/browse/PRJ05-101",
+    "updated": "2026-10-16T09:00:00Z"
+  },
+  {
+    "key": "PRJ05-102",
+    "summary": "Bổ sung xuất Excel báo cáo tháng",
+    "status": "In Review",
+    "issue_type": "Story",
+    "assignee": "binh.nn",
+    "url": "https://jira.example.com/browse/PRJ05-102",
+    "updated": "2026-10-15T09:00:00Z"
+  },
+  {
+    "key": "PRJ06-101",
+    "summary": "Bổ sung xuất Excel báo cáo tháng",
+    "status": "In Progress",
+    "issue_type": "Bug",
+    "assignee": "khanh.ng",
+    "url": "https://jira.example.com/browse/PRJ06-101",
+    "updated": "2026-10-15T09:00:00Z"
+  },
+  {
+    "key": "PRJ06-102",
+    "summary": "Tối ưu truy vấn dashboard",
+    "status": "Done",
+    "issue_type": "Story",
+    "assignee": "tam.ht",
+    "url": "https://jira.example.com/browse/PRJ06-102",
+    "updated": "2026-10-14T09:00:00Z"
+  }
+]

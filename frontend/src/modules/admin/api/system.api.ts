@@ -134,11 +134,11 @@ export interface PromptTemplateFilters {
 
 // ─── Tích hợp ───────────────────────────────────────────────────────────────
 
-export type ConnectorKey = 'Ai' | 'GitHub' | 'GitLab' | 'GoogleDrive' | 'Email';
+export type ConnectorKey = 'Jira' | 'Base' | 'Bitrix';
 
 export interface Integration {
   key: ConnectorKey;
-  category: 'ai' | 'source_control' | 'file_storage' | 'communication';
+  category: 'project_management' | 'work_management' | 'crm';
   enabled: boolean;
   /** Integrations:<Key>:UseMock trên server — chỉ đọc ở giao diện */
   useMock: boolean;

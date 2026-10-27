@@ -32,7 +32,6 @@ const PAGES: Record<RoutedScreenKey, () => Promise<{ default: RouteComponent }>>
   auth_reset_password: () => import('@/modules/auth/screens/auth_reset_password/ResetPasswordPage.vue'),
   css_survey_public: () => import('@/modules/auth/screens/css_survey_public/CssSurveyPage.vue'),
   profile: () => import('@/modules/profile/screens/profile/ProfilePage.vue'),
-  ai_chat: () => import('@/modules/ai/screens/ai_chat/AiChatPage.vue'),
   timesheet: () => import('@/modules/work/screens/timesheet/TimesheetPage.vue'),
   leave_request: () => import('@/modules/work/screens/leave_request/LeavePage.vue'),
   attendance: () => import('@/modules/work/screens/attendance/AttendancePage.vue'),
@@ -54,7 +53,6 @@ const PAGES: Record<RoutedScreenKey, () => Promise<{ default: RouteComponent }>>
   admin_category_list: () => import('@/modules/admin/screens/admin_category_list/CategoryListPage.vue'),
   admin_client_list: () => import('@/modules/admin/screens/admin_client_list/ClientListPage.vue'),
   admin_setting: () => import('@/modules/admin/screens/admin_setting/SettingPage.vue'),
-  admin_language: () => import('@/modules/admin/screens/admin_language/LanguagePage.vue'),
   admin_pcv_criteria: () => import('@/modules/admin/screens/admin_pcv_criteria/PcvCriteriaPage.vue'),
   admin_css_template: () => import('@/modules/admin/screens/admin_css_template/CssTemplatePage.vue'),
 };
@@ -135,7 +133,7 @@ router.beforeEach(async (to) => {
   const denied = to.matched.some((record) => record.meta.permission && !auth.can(record.meta.permission));
   if (denied) {
     const fallback = resolveDefaultRoute(auth.can);
-    return fallback === to.path ? '/ai' : fallback;
+    return fallback === to.path ? '/profile' : fallback;
   }
   return true;
 });

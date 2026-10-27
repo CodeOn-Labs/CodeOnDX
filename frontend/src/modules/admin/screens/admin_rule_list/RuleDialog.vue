@@ -3,7 +3,7 @@
 // FE kiểm tra nhanh khoảng giá trị; BE kiểm tra lại và trả lỗi 400 theo field `value`.
 import { computed, ref, watch, type Component } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { Briefcase, CalendarOff, Check, Clock, Layout, RotateCcw, Timer, UserCheck, Users, X } from '@lucide/vue';
+import { Briefcase, CalendarOff, Check, Clock, Layout, RotateCcw, Sparkles, Timer, UserCheck, Users, X } from '@lucide/vue';
 import BaseDialog from '@/shared/components/BaseDialog.vue';
 import Button from '@/shared/components/Button.vue';
 import FormItem from '@/shared/components/form/FormItem.vue';
@@ -26,6 +26,7 @@ const MODULE_ICON: Record<string, { icon: Component; color: string }> = {
   leave: { icon: CalendarOff, color: 'text-amber-500' },
   overtime: { icon: Timer, color: 'text-rose-500' },
   attendance: { icon: UserCheck, color: 'text-cyan-500' },
+  insight: { icon: Sparkles, color: 'text-violet-500' },
 };
 
 const numberValue = ref<string | number | null>('');

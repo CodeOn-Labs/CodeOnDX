@@ -278,8 +278,8 @@
     "btn_save": "Lưu thay đổi"
   },
   "admin_insight_list": {
-    "title_page": "AI Insights",
-    "lbl_kicker": "Cấu hình AI",
+    "title_page": "Insight",
+    "lbl_kicker": "Cấu hình phân tích",
     "ph_search": "Tìm theo tên hoặc prompt...",
     "btn_create": "Tạo Insight",
     "lbl_screen": "Màn hình",
@@ -307,10 +307,6 @@
     "title_page": "Cài đặt tích hợp",
     "lbl_kicker": "Kết nối hệ thống ngoài",
     "hint_page": "Khoá bí mật (API key, token) chỉ cấu hình trên máy chủ; ở đây bật/tắt, chỉnh thông số và kiểm tra kết nối.",
-    "hint_category_ai": "Phân tích dữ liệu, sinh Insight và trả lời Chat AI.",
-    "hint_category_source_control": "Đồng bộ kho lưu trữ mã nguồn, commits, Pull Requests và quản lý tiến độ phát triển.",
-    "hint_category_file_storage": "Lưu trữ tài nguyên, tài liệu kỹ thuật và hồ sơ dự án dùng chung cho hệ thống.",
-    "hint_category_communication": "Gửi thông báo tự động, nhắc nhở điền công số và cập nhật sự kiện định kỳ.",
     "lbl_mode_mock": "Giả lập",
     "lbl_mode_live": "Thật",
     "lbl_secret_set": "Đã có khoá",
@@ -325,25 +321,13 @@
     "title_config_dialog": "Cấu hình {name}",
     "hint_config_dialog": "Chỉ các thông số không bí mật",
     "lbl_enabled": "Bật tích hợp",
-    "lbl_field_base_url": "Địa chỉ API (https://)",
-    "lbl_field_model": "Mô hình",
-    "lbl_field_max_tokens": "Số token tối đa",
-    "lbl_field_organization": "Tổ chức (organization)",
-    "lbl_field_group": "Nhóm (group)",
-    "lbl_field_root_folder": "Thư mục gốc (folder ID)",
-    "lbl_field_from_address": "Email người gửi",
-    "lbl_field_from_name": "Tên người gửi",
-    "lbl_field_smtp_host": "Máy chủ SMTP",
-    "lbl_field_smtp_port": "Cổng SMTP",
+    "lbl_field_base_url": "Địa chỉ (https://)",
+    "lbl_field_account_email": "Email tài khoản",
+    "lbl_field_project_keys": "Mã dự án (cách nhau bởi dấu phẩy)",
     "hint_secret": "Khoá bí mật đặt ở Integrations:{key} trong appsettings.Secrets.json trên máy chủ, không nhập ở giao diện.",
     "title_preview_dialog": "Dữ liệu từ {name}",
     "empty_preview": "Không có dữ liệu",
     "btn_open_link": "Mở liên kết"
-  },
-  "admin_language": {
-    "title_page": "Ngôn ngữ",
-    "hint_page": "Ngôn ngữ hiển thị của riêng bạn, được lưu vào hồ sơ và dùng cho câu thông báo từ máy chủ.",
-    "btn_tenant_default": "Đổi ngôn ngữ mặc định của công ty ở Cài đặt →"
   },
   "admin_pcv_criteria": {
     "title_page": "Tiêu chí PCV",
@@ -599,26 +583,6 @@
     "confirm_delete_holiday_title": "Xoá ngày lễ?",
     "confirm_delete_holiday_desc": "Xoá \"{name}\" ({date}) khỏi danh sách ngày lễ."
   },
-  "ai_chat": {
-    "title_page": "Trợ lý AI",
-    "lbl_history": "Lịch sử",
-    "btn_new_session": "Tạo chat mới",
-    "btn_delete_session": "Xoá chat",
-    "empty_title": "Bắt đầu hội thoại",
-    "empty_hint": "Hỏi tôi về dữ liệu dự án, nhân sự hoặc phân tích chuyên sâu.",
-    "msg_thinking": "AI đang suy nghĩ...",
-    "btn_scroll_bottom": "Cuộn xuống dưới",
-    "ph_input": "Hỏi về dự án, công số, nhân sự, tài chính, hoặc yêu cầu hành động...",
-    "btn_send": "Gửi tin nhắn",
-    "opt_team_hours": "Team A giờ?",
-    "opt_team_hours_text": "Team A hiện tại thế nào?",
-    "opt_new_project": "Tạo DA mới",
-    "opt_new_project_text": "Tôi muốn tạo dự án mới",
-    "opt_missing_timesheet": "Ai chưa nhập CS?",
-    "opt_missing_timesheet_text": "Những ai chưa nhập timesheet tuần này?",
-    "opt_monthly_report": "Xuất báo cáo tháng",
-    "opt_monthly_report_text": "Tổng hợp báo cáo tháng này cho tôi"
-  },
   "attendance": {
     "title_page": "Chấm công vào/ra",
     "btn_check_in": "Vào",
@@ -743,18 +707,6 @@
     "msg_load_failed": "Không tải được dữ liệu"
   },
   "component": {
-    "chat_full_overlay": {
-      "btn_delete_session": "Xóa chat",
-      "btn_minimize": "Thu gọn",
-      "btn_new_session": "Tạo chat mới",
-      "btn_scroll_bottom": "Cuộn xuống dưới",
-      "btn_send": "Gửi tin nhắn",
-      "empty_hint": "Hỏi tôi về dữ liệu dự án, nhân sự hoặc phân tích chuyên sâu.",
-      "empty_title": "Bắt đầu hội thoại",
-      "lbl_history": "Lịch sử",
-      "msg_thinking": "Đang suy nghĩ...",
-      "title_dialog": "Mở rộng chat"
-    },
     "dx_calendar": {
       "btn_next_month": "Tháng sau",
       "btn_previous_month": "Tháng trước"
@@ -868,12 +820,9 @@
       "unit_fte": "FTE"
     },
     "page_layout": {
-      "lbl_chat_ai": "Chat AI",
       "lbl_insights": "Insights",
       "tip_collapse_insight": "Thu gọn bảng phân tích",
-      "tip_open_chat": "Mở Chat AI",
       "tip_open_insight": "Mở Bảng phân tích",
-      "tip_resize_chat": "Kéo để đổi độ rộng Chat AI",
       "tip_resize_insight": "Kéo để đổi độ rộng bảng phân tích"
     },
     "page_size_select": {
@@ -891,56 +840,6 @@
       "lbl_rows": "Dòng:",
       "lbl_showing": "Hiển thị:",
       "lbl_total_records": "trong tổng số {total} bản ghi"
-    },
-    "side_chat_panel": {
-      "btn_collapse": "Thu gọn Chat AI",
-      "btn_delete_session": "Xóa chat",
-      "btn_hide_suggestions": "Ẩn gợi ý câu hỏi",
-      "btn_new_session": "Tạo chat mới",
-      "btn_open_full": "Mở rộng chat",
-      "btn_scroll_bottom": "Cuộn xuống dưới",
-      "btn_send": "Gửi tin nhắn",
-      "btn_show_suggestions": "Hiện gợi ý câu hỏi",
-      "err_cannot_connect": "Không thể kết nối với AI. Vui lòng thử lại sau.",
-      "hint_ai_may_be_wrong": "AI có thể trả lời sai. Hãy kiểm tra lại thông tin quan trọng.",
-      "lbl_default_session": "Chat mặc định",
-      "lbl_new_session": "Chat mới",
-      "lbl_suggestions": "Gợi ý câu hỏi",
-      "msg_greeting": "Tôi là trợ lý AI. Tôi có thể giúp gì cho bạn?",
-      "msg_new_session_greeting": "Chào bạn, làm sao tôi có thể hỗ trợ bạn hôm nay?",
-      "msg_thinking": "Đang suy nghĩ...",
-      "opt_dashboard_low_utilization": "Vì sao Utilization đang thấp?",
-      "opt_dashboard_support_needed": "Dự án nào cần hỗ trợ ngay?",
-      "opt_dashboard_weekly_summary": "Tóm tắt dashboard tuần này",
-      "opt_general_available_staff": "Nhân sự nào đang rảnh hoặc thiếu việc?",
-      "opt_general_summary": "Tóm tắt nhanh tình hình công ty",
-      "opt_general_urgent_projects": "Dự án nào cần chú ý ngay?",
-      "opt_hr_bench_list": "Danh sách nhân sự đang bench",
-      "opt_hr_detail_allocation": "Nhân sự này đang phân bổ vào đâu?",
-      "opt_hr_detail_growth": "Đề xuất hướng phát triển phù hợp",
-      "opt_hr_detail_summary": "Tóm tắt năng lực nhân sự này",
-      "opt_hr_react_skill": "Ai có kỹ năng React?",
-      "opt_hr_senior_java_available": "Tìm Senior Java đang rảnh",
-      "opt_project_detail_delay_risk": "Dự án này có rủi ro chậm tiến độ không?",
-      "opt_project_detail_fte_gap": "Khoảng lệch giữa FTE hợp đồng và thực tế là gì?",
-      "opt_project_detail_key_member": "Thành viên nào ảnh hưởng nhiều nhất đến dự án?",
-      "opt_projects_budget_vs_cost": "So sánh ngân sách và chi phí thực tế",
-      "opt_projects_most_delayed": "Dự án nào chậm tiến độ nhất?",
-      "opt_projects_understaffed": "Dự án nào thiếu nhân sự?",
-      "opt_rules_project": "Giải thích quy tắc dự án",
-      "opt_rules_timesheet": "Giải thích quy tắc công số",
-      "opt_timesheet_anomaly": "Công số tuần này có gì bất thường?",
-      "opt_timesheet_missing_days": "Ngày nào chưa điền công số?",
-      "opt_timesheet_task_split": "Phân bổ task tuần này thế nào?",
-      "ph_dashboard": "Hỏi về tình hình chung, rủi ro, dự báo...",
-      "ph_general": "Hỏi về dự án, công số, nhân sự, tài chính, hoặc yêu cầu hành động...",
-      "ph_hr": "Hỏi về nhân sự, kỹ năng...",
-      "ph_hr_detail": "Hỏi về nhân sự này...",
-      "ph_project_detail": "Hỏi về nhân sự dự án này...",
-      "ph_projects": "Hỏi về dự án, nhân sự, budget...",
-      "ph_rules": "Hỏi về quy tắc nhân sự, dự án, công số...",
-      "ph_timesheet": "Hỏi về công số, task...",
-      "tip_wait_response": "Đợi phản hồi..."
     },
     "confirm_dialog": {
       "btn_cancel": "Hủy bỏ",
@@ -1022,6 +921,10 @@
       "msg_importing": "Đang import {done}/{total} dòng...",
       "msg_summary": "Đã import {created} bản ghi · {failed} dòng lỗi",
       "lbl_row": "Dòng {row}"
+    },
+    "language_switcher": {
+      "tip_change_language": "Đổi ngôn ngữ",
+      "title_language": "Ngôn ngữ hiển thị"
     }
   },
   "css_survey_public": {
@@ -1213,7 +1116,8 @@
       "leave": "Nghỉ phép",
       "overtime": "Làm thêm giờ (OT)",
       "attendance": "Chấm công vào/ra",
-      "quality": "Chất lượng dự án"
+      "quality": "Chất lượng dự án",
+      "insight": "AI Insight (cảnh báo tự động)"
     },
     "category_type": {
       "project_status": "Trạng thái dự án",
@@ -1301,22 +1205,17 @@
       "archived": "Lưu trữ"
     },
     "integration_category": {
-      "ai": "Trí tuệ nhân tạo",
-      "source_control": "Mã nguồn",
-      "file_storage": "Lưu trữ",
-      "communication": "Giao tiếp"
+      "project_management": "Quản lý dự án",
+      "work_management": "Quản trị công việc",
+      "crm": "CRM"
     },
     "connector": {
-      "ai": "AI (LLM)",
-      "ai_desc": "Mô hình ngôn ngữ dùng cho Insight và Chat AI, chuẩn OpenAI-compatible; mọi lời gọi đi qua máy chủ.",
-      "github": "GitHub",
-      "github_desc": "Đồng bộ kho mã nguồn, commit và pull request để theo dõi tiến độ phát triển.",
-      "gitlab": "GitLab",
-      "gitlab_desc": "Đồng bộ project, issue và merge request từ GitLab.",
-      "googledrive": "Google Drive",
-      "googledrive_desc": "Liên kết tài liệu dự án lưu trên Google Drive.",
-      "email": "Email",
-      "email_desc": "Gửi lời mời tài khoản, đặt lại mật khẩu, khảo sát CSS và thông báo duyệt đơn."
+      "jira": "Jira",
+      "jira_desc": "Đồng bộ issue, sprint và trạng thái công việc từ Jira (Atlassian).",
+      "base": "Base",
+      "base_desc": "Đồng bộ công việc, dự án và đề xuất từ Base (Base Wework, Base Request).",
+      "bitrix": "Bitrix24",
+      "bitrix_desc": "Đồng bộ khách hàng, deal và công việc từ Bitrix24."
     },
     "risk_category": {
       "schedule": "Tiến độ",
@@ -1469,15 +1368,15 @@
     "admin_css_template": "Biểu mẫu CSS",
     "admin_departments": "Phòng ban & Team",
     "admin_employees": "Nhân sự",
-    "admin_insights": "AI Insights",
+    "admin_hrm": "Cài đặt HRM",
+    "admin_insight_group": "Insight",
+    "admin_insights": "Insight",
     "admin_integrations": "Cài đặt tích hợp",
-    "admin_language": "Ngôn ngữ",
     "admin_pcv_criteria": "Tiêu chí PCV",
     "admin_prompt_templates": "Prompt Templates",
     "admin_roles": "Quản lý vai trò",
     "admin_rules": "Quy tắc",
     "admin_settings": "Cài đặt",
-    "ai": "AI",
     "attendance": "Chấm công vào/ra",
     "effort": "Công số",
     "leave": "Nghỉ phép & OT",
@@ -1500,7 +1399,6 @@
     "lbl_status": "Trạng thái",
     "lbl_tenure_active": "Đồng hành",
     "lbl_tenure_resigned": "Đã nghỉ",
-    "title_language": "Ngôn ngữ hiển thị",
     "title_skills": "Kỹ năng",
     "btn_edit_skills": "Sửa kỹ năng",
     "hint_no_employee": "Tài khoản chưa gắn với hồ sơ nhân sự.",

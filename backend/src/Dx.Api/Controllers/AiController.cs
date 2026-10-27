@@ -15,7 +15,7 @@ namespace Dx.Api.Controllers;
 [Authorize]
 public sealed class AiController(AiService ai, AiAdminService admin) : ApiControllerBase
 {
-    /// <summary>GET /ai/insights?screen=project_list&amp;refresh=true</summary>
+    /// <summary>GET /ai/insights?screen=project_list&amp;refresh=true&amp;projectId= (projectId: screens of one project)</summary>
     [HttpGet("ai/insights")]
     [ProducesResponseType<ErrorFullModel<InsightsDto>>(StatusCodes.Status200OK)]
     public async Task<IActionResult> Insights(CancellationToken ct)
@@ -23,7 +23,10 @@ public sealed class AiController(AiService ai, AiAdminService admin) : ApiContro
         try
         {
             var refresh = string.Equals(Request.Query["refresh"], "true", StringComparison.OrdinalIgnoreCase);
-            return Success(await ai.InsightsAsync(Request.Query["screen"].ToString(), refresh, ct), "ai_insight_run.msg_success");
+            var errors = new ValidationErrors();
+            var projectId = errors.Id("projectId", Request.Query["projectId"].ToString());
+            errors.ThrowIfAny();
+            return Success(await ai.InsightsAsync(Request.Query["screen"].ToString(), refresh, ct, projectId), "ai_insight_run.msg_success");
         }
         catch (Exception ex) { return HandleException(ex); }
     }

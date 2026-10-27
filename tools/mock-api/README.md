@@ -53,9 +53,9 @@ Không cần cài thư viện (Node ≥ 20).
 | PUT / DELETE | `/api/v1/css-template/questions/{id}` | `admin.settings` | Sửa / xoá câu hỏi |
 | GET | `/api/v1/projects?search=&statusIds=&gradeIds=&clientIds=&riskLevelIds=&startFrom=&endTo=&deleted=&page=&pageSize=` | `project.view` | Dự án; không có `project.manage` thì chỉ thấy dự án mình tham gia |
 | GET | `/api/v1/projects/summary?<cùng bộ lọc>` | `project.view` | `{ total, running, endingSoon, planning, risky, endingSoonDays }` |
-| GET | `/api/v1/ai/insights?screen=<screen_key>&refresh=` | đăng nhập | Insight theo `screen_key` (connector AI mock): màn hiện tại trước, rồi các màn cha theo `parent` trong `shared/screens.json` (dừng ở màn có `inherit_insights: false` — ADR-0001). `screen` không có trong danh mục → 400 |
+| GET | `/api/v1/ai/insights?screen=<screen_key>&refresh=`  (BE nhận thêm `projectId`; BE tính thông báo theo quy tắc, mock đọc mock-data/ai)| đăng nhập | Insight theo `screen_key` (connector AI mock): màn hiện tại trước, rồi các màn cha theo `parent` trong `shared/screens.json` (dừng ở màn có `inherit_insights: false` — ADR-0001). `screen` không có trong danh mục → 400 |
 | GET | `/api/v1/ai/chat/greeting` | đăng nhập | Câu chào của trợ lý |
-| POST | `/api/v1/ai/chat` | đăng nhập | `{ module, message }` → `{ reply }` (markdown) |
+| POST | `/api/v1/ai/chat` | đăng nhập | `{ module, message }` → `{ reply }` (markdown). FE đã bỏ Chat AI (27/10) — giữ endpoint làm hợp đồng tham chiếu |
 
 ### Tài khoản, hồ sơ, khảo sát CSS công khai
 
@@ -90,8 +90,8 @@ Không cần cài thư viện (Node ≥ 20).
 | GET / POST / DELETE | `/api/v1/roles/{id}/users[/{userId}]` | `admin.roles` | Gán / gỡ người dùng khỏi vai trò |
 | GET / POST / PUT / DELETE | `/api/v1/ai/insight-configs[/{id}]`, `POST …/preview` | `admin.insights` | Cấu hình Insight theo màn; xem trước kết quả |
 | GET / POST / PUT / DELETE | `/api/v1/ai/prompt-templates[/{id}]`, `POST …/preview` | `admin.insights` | Prompt template (render biến ở BE) |
-| GET / PUT | `/api/v1/integrations[/{key}]` | `admin.integrations` | 5 connector (Ai, GitHub, GitLab, GoogleDrive, Email): bật/tắt + cài đặt không bí mật |
-| POST / GET | `/api/v1/integrations/{key}/test`, `/preview` | `admin.integrations` | Kiểm tra kết nối; xem dữ liệu mẫu đọc từ `mock-data/` |
+| GET / PUT | `/api/v1/integrations[/{key}]` | `admin.integrations` | 3 nguồn tích hợp (Jira, Base, Bitrix — 27/10, thay Ai / GitHub / GitLab / GoogleDrive / Email): bật/tắt + cài đặt không bí mật (`baseUrl`, Jira thêm `accountEmail`, `projectKeys`) |
+| POST / GET | `/api/v1/integrations/{key}/test`, `/preview` | `admin.integrations` | Kiểm tra kết nối; xem dữ liệu mẫu đọc từ `mock-data/jira|base|bitrix` |
 
 ### Công việc: nhật ký, nghỉ phép & OT, chấm công (D4)
 

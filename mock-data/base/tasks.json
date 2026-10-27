@@ -1,0 +1,50 @@
+[
+  {
+    "id": 5000,
+    "name": "PRJ-01 - Chuẩn bị báo cáo tiến độ tuần",
+    "project": "Hoshino – Cổng thanh toán B2B",
+    "status": "Đang làm",
+    "url": "https://base.example.com/wework/task/5000",
+    "updated_at": "2026-10-20T08:30:00Z"
+  },
+  {
+    "id": 5001,
+    "name": "PRJ-02 - Chuẩn bị báo cáo tiến độ tuần",
+    "project": "Hoshino – Hệ thống quản lý kho",
+    "status": "Chờ duyệt",
+    "url": "https://base.example.com/wework/task/5001",
+    "updated_at": "2026-10-19T08:30:00Z"
+  },
+  {
+    "id": 5002,
+    "name": "PRJ-03 - Chuẩn bị báo cáo tiến độ tuần",
+    "project": "Minato – Ứng dụng đặt lịch khám",
+    "status": "Hoàn thành",
+    "url": "https://base.example.com/wework/task/5002",
+    "updated_at": "2026-10-18T08:30:00Z"
+  },
+  {
+    "id": 5003,
+    "name": "PRJ-04 - Chuẩn bị báo cáo tiến độ tuần",
+    "project": "Minato – Chatbot chăm sóc khách hàng",
+    "status": "Đang làm",
+    "url": "https://base.example.com/wework/task/5003",
+    "updated_at": "2026-10-17T08:30:00Z"
+  },
+  {
+    "id": 5004,
+    "name": "PRJ-05 - Chuẩn bị báo cáo tiến độ tuần",
+    "project": "Aoba – Cổng bồi thường bảo hiểm",
+    "status": "Chờ duyệt",
+    "url": "https://base.example.com/wework/task/5004",
+    "updated_at": "2026-10-16T08:30:00Z"
+  },
+  {
+    "id": 5005,
+    "name": "PRJ-06 - Chuẩn bị báo cáo tiến độ tuần",
+    "project": "Aoba – Ứng dụng đại lý di động",
+    "status": "Hoàn thành",
+    "url": "https://base.example.com/wework/task/5005",
+    "updated_at": "2026-10-15T08:30:00Z"
+  }
+]

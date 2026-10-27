@@ -189,13 +189,11 @@ const summary = computed(() => summaryQuery.data.value);
 
 <template>
   <PageLayout
-    layout="B"
+    layout="A"
     :insight-title="$t('employee_list.title_insight_panel')"
-    ai-module="hr"
     content-padding="24px"
     disable-scroll
     insights-width="320px"
-    chat-width="300px"
   >
     <template #insights>
       <div class="flex flex-col gap-3">

@@ -100,15 +100,12 @@ const CARD = 'border border-slate-200/50 bg-white/60 backdrop-blur-md rounded-3x
 
 <template>
   <PageLayout
-    layout="B"
+    layout="A"
     :insight-title="$t('employee_detail.title_insight_panel')"
     insight-screen="employee_detail"
-    ai-module="hr_detail"
-    :ai-context-meta="employee ? { personName: employee.fullName, personId: employee.id } : undefined"
     content-padding="24px"
     disable-scroll
     insights-width="340px"
-    chat-width="300px"
   >
     <div v-if="query.isPending.value" class="flex h-full items-center justify-center py-20">
       <div class="animate-pulse text-[13px] font-medium text-slate-400">{{ $t('employee_detail.lbl_loading') }}</div>

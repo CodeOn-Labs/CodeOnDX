@@ -1,12 +1,12 @@
 <script setup lang="ts">
 // Port ProfilePage.tsx — Hồ sơ cá nhân: ảnh đại diện (thu nhỏ 250px trước khi gửi), thông tin cơ bản, kỹ năng (sửa được),
-// dự án đang tham gia, lộ trình đồng hành. Thêm (D4): đổi mật khẩu, chọn ngôn ngữ hiển thị.
+// dự án đang tham gia, lộ trình đồng hành. Thêm (D4): đổi mật khẩu. Ngôn ngữ hiển thị đổi bằng nút cờ ở Sidebar (components/layout/LanguageSwitcher.vue).
 import { computed, reactive, ref, watch } from 'vue';
 import { RouterLink } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useQuery, useQueryClient } from '@tanstack/vue-query';
 import {
-  Activity, Award, Building2, Calendar, Camera, Check, CheckCircle2, Clock, Code, Edit3, KeyRound, Languages, Mail, Phone, Plus, User, X, XCircle,
+  Activity, Award, Building2, Calendar, Camera, Check, CheckCircle2, Clock, Code, Edit3, KeyRound, Mail, Phone, Plus, User, X, XCircle,
 } from '@lucide/vue';
 import PageLayout from '@/components/layout/PageLayout.vue';
 import Button from '@/shared/components/Button.vue';
@@ -14,7 +14,6 @@ import FormItem from '@/shared/components/form/FormItem.vue';
 import BaseInput from '@/shared/components/form/BaseInput.vue';
 import { accountApi } from '@/modules/auth/api/auth.api';
 import { ApiError } from '@/api/http';
-import { setLocale, type AppLocale } from '@/i18n';
 import { useAuthStore } from '@/stores/auth';
 import { useToastStore } from '@/stores/toast';
 import { getPastelAvatarProps } from '@/shared/utils/avatar';
@@ -32,11 +31,11 @@ const displayName = computed(() => profile.value?.fullName || profile.value?.ema
 const avatar = computed(() => getPastelAvatarProps(displayName.value, profile.value?.id));
 const isActive = computed(() => profile.value?.employee?.isActive ?? true);
 
-async function update(input: Parameters<typeof accountApi.updateProfile>[0], silent = false) {
+async function update(input: Parameters<typeof accountApi.updateProfile>[0]) {
   const res = await accountApi.updateProfile(input);
   queryClient.setQueryData(['profile', locale.value], res.data);
   auth.patchUser({ fullName: res.data.fullName, avatarUrl: res.data.avatarUrl, preferredLocale: res.data.preferredLocale });
-  if (!silent) toast.success(res.messageText);
+  toast.success(res.messageText);
   return res.data;
 }
 
@@ -116,20 +115,6 @@ async function changePassword() {
   }
 }
 
-// ─── Ngôn ngữ ───────────────────────────────────────────────────────────────
-const LANGS: Array<{ code: AppLocale; flag: string; name: string }> = [
-  { code: 'vi', flag: '🇻🇳', name: 'Tiếng Việt' },
-  { code: 'en', flag: '🇬🇧', name: 'English' },
-];
-async function changeLocale(code: AppLocale) {
-  setLocale(code);
-  try {
-    await update({ preferredLocale: code }, true);
-  } catch {
-    // giữ ngôn ngữ đã đổi trên máy dù chưa lưu được lên server
-  }
-}
-
 const infoItems = computed(() => {
   const p = profile.value;
   if (!p) return [];
@@ -147,7 +132,7 @@ const CARD = 'border border-slate-200/50 bg-white/60 backdrop-blur-md rounded-3x
 </script>
 
 <template>
-  <PageLayout layout="C" ai-module="hr_detail" content-padding="24px" disable-scroll>
+  <PageLayout layout="C" content-padding="24px" disable-scroll>
     <div v-if="query.isPending.value" class="flex flex-col gap-6 animate-pulse">
       <div class="bg-white/60 border border-slate-200/50 rounded-3xl p-6 flex items-center gap-4">
         <div class="w-20 h-20 bg-slate-200 rounded-[2rem]" />
@@ -207,26 +192,6 @@ const CARD = 'border border-slate-200/50 bg-white/60 backdrop-blur-md rounded-3x
                   <span class="text-[10px] font-bold tracking-wide uppercase">{{ item.label }}</span>
                 </div>
                 <span class="text-[12.5px] font-black text-slate-800 truncate max-w-[170px] text-right" :title="item.value ?? ''">{{ item.value }}</span>
-              </div>
-            </div>
-
-            <div :class="CARD">
-              <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2"><Languages :size="14" />{{ $t('profile.title_language') }}</h3>
-              <div class="flex flex-col gap-2">
-                <button
-                  v-for="opt in LANGS"
-                  :key="opt.code"
-                  type="button"
-                  :class="cn(
-                    'flex items-center gap-3 rounded-2xl border p-3 text-left transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-violet-600',
-                    locale === opt.code ? 'border-violet-200 bg-violet-50 shadow-sm' : 'border-slate-100 bg-white hover:border-violet-200 hover:bg-violet-50/50',
-                  )"
-                  @click="changeLocale(opt.code)"
-                >
-                  <span class="text-[22px] leading-none">{{ opt.flag }}</span>
-                  <span :class="cn('text-[13px] font-semibold', locale === opt.code ? 'text-violet-600' : 'text-slate-700')">{{ opt.name }}</span>
-                  <Check v-if="locale === opt.code" :size="16" class="ml-auto text-violet-600" />
-                </button>
               </div>
             </div>
           </div>

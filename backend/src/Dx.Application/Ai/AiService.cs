@@ -25,15 +25,22 @@ public sealed record ChatReplyDto(string Reply, string Module);
 /// </summary>
 public sealed partial class AiService(
     IAppDbContext db, ICurrentUser user, IScreenCatalog screens, IMockDataStore mockData, IAiClient llm, IOptions<AiOptions> options,
-    Settings.SettingService settings, ITenantClock clock)
+    Settings.SettingService settings, ITenantClock clock, InsightRuleEngine ruleEngine)
 {
     private bool UseMock => options.Value.UseMock;
 
     /// <summary>GET /ai/insights?screen=&amp;refresh= — refresh=true asks the LLM again instead of the cached text.</summary>
-    public async Task<InsightsDto> InsightsAsync(string screen, bool refresh, CancellationToken ct)
+    public async Task<InsightsDto> InsightsAsync(string screen, bool refresh, CancellationToken ct, Guid? projectId = null)
     {
         if (!ScreenKeyPattern().IsMatch(screen) || !screens.Exists(screen)) throw AppValidationException.Single("screen", "validation.invalid_value");
         var now = clock.UtcNow.UtcDateTime;
+        if (options.Value.InsightSource != "ai")
+        {
+            // Fixed notices: the screen first, then its parents (ADR-0001), computed on every call.
+            var notices = new List<InsightItemDto>();
+            foreach (var key in screens.InsightChain(screen)) notices.AddRange(await ruleEngine.ForScreenAsync(key, projectId, ct));
+            return new InsightsDto(screen, now, false, notices);
+        }
         if (UseMock) return new InsightsDto(screen, now, !refresh, MockInsights(screens.InsightChain(screen)));
 
         var chain = screens.InsightChain(screen);

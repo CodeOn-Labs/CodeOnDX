@@ -33,9 +33,9 @@
     <None Include="..\..\..\shared\screens.json" Link="shared\screens.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
     <!-- Fictitious data the connectors answer with in mock mode (Q3, JsonMockDataStore) -->
     <None Include="..\..\..\mock-data\ai\**\*.json" LinkBase="mock-data\ai" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
-    <None Include="..\..\..\mock-data\github\**\*.json" LinkBase="mock-data\github" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
-    <None Include="..\..\..\mock-data\gitlab\**\*.json" LinkBase="mock-data\gitlab" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
-    <None Include="..\..\..\mock-data\google-drive\**\*.json" LinkBase="mock-data\google-drive" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\..\mock-data\jira\**\*.json" LinkBase="mock-data\jira" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\..\mock-data\base\**\*.json" LinkBase="mock-data\base" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\..\..\mock-data\bitrix\**\*.json" LinkBase="mock-data\bitrix" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

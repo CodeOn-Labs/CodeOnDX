@@ -168,15 +168,12 @@ async function runExport(config: ExportConfig) {
 
 <template>
   <PageLayout
-    layout="B"
+    layout="A"
     :insight-title="$t('project_detail.title_insight_panel')"
     :insight-screen="project ? insightScreen : undefined"
-    ai-module="project_detail"
-    :ai-context-meta="project ? { projectName: project.name, projectId: project.id } : undefined"
     content-padding="24px"
     disable-scroll
     insights-width="340px"
-    chat-width="300px"
   >
     <div v-if="detail.isPending.value" class="flex flex-col gap-4">
       <div class="h-8 w-64 animate-pulse rounded-lg bg-[#e8ecf5]" />

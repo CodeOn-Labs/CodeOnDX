@@ -110,7 +110,7 @@ function save() {
 </script>
 
 <template>
-  <PageLayout layout="C" ai-module="admin" content-padding="24px" disable-scroll>
+  <PageLayout layout="C" content-padding="24px" disable-scroll>
     <div class="h-full flex flex-col min-h-0 gap-4">
       <div class="shrink-0 flex flex-col gap-3 rounded-2xl bg-white/60 backdrop-blur-xl p-4 lg:p-5 shadow-xl shadow-slate-200/40 border border-white/60 transition-all duration-300">
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

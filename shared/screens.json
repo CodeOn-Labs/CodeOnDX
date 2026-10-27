@@ -5,7 +5,6 @@
   "auth_reset_password": { "route": "/auth/reset-password/:token", "public": true },
   "css_survey_public": { "route": "/khao-sat-css/:token", "public": true },
   "profile": { "route": "/profile" },
-  "ai_chat": { "route": "/ai" },
   "timesheet": { "route": "/timesheets", "permission": ["timesheet.edit", "timesheet.team"] },
   "timesheet_day": { "parent": "timesheet" },
   "timesheet_week": { "parent": "timesheet" },
@@ -45,7 +44,6 @@
   "admin_category_list": { "route": "/admin/categories", "permission": ["admin.settings"] },
   "admin_client_list": { "route": "/admin/clients", "permission": ["admin.settings"] },
   "admin_setting": { "route": "/admin/settings", "permission": ["admin.settings"] },
-  "admin_language": { "route": "/admin/language", "permission": ["admin.settings"] },
   "admin_pcv_criteria": { "route": "/admin/pcv-criteria", "permission": ["admin.settings"] },
   "admin_css_template": { "route": "/admin/css-template", "permission": ["admin.settings"] }
 }

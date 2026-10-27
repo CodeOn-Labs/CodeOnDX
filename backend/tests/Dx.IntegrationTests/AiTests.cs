@@ -16,7 +16,7 @@ public sealed class AiTests(ApiFixture fx)
         using var insights = await member.GetAsync("/api/v1/ai/insights?screen=project_list");
         var data = (await Envelope.ReadAsync(insights, HttpStatusCode.OK)).GetProperty("data");
         data.GetProperty("screenKey").GetString().ShouldBe("project_list");
-        data.GetProperty("cached").GetBoolean().ShouldBeTrue();
+        data.GetProperty("cached").GetBoolean().ShouldBeFalse(); // rule-based notices are computed on every call
         data.GetProperty("items").GetArrayLength().ShouldBeGreaterThan(0);
 
         using var bad = await member.GetAsync("/api/v1/ai/insights?screen=nope");
@@ -98,30 +98,39 @@ public sealed class AiTests(ApiFixture fx)
     [Fact]
     public async Task Integrations_update_test_and_preview()
     {
-        await fx.ExecuteOwnerAsync($"INSERT INTO dx.tenant_integrations (tenant_id, integration_key, is_enabled, use_mock) VALUES ('{BetaTenant.TenantId}', 'GitHub', false, true), ('{BetaTenant.TenantId}', 'Email', true, true)");
+        await fx.ExecuteOwnerAsync($"DELETE FROM dx.tenant_integrations WHERE tenant_id = '{BetaTenant.TenantId}'");
+        await fx.ExecuteOwnerAsync($"INSERT INTO dx.tenant_integrations (tenant_id, integration_key, is_enabled, use_mock) VALUES ('{BetaTenant.TenantId}', 'Bitrix', true, true), ('{BetaTenant.TenantId}', 'Jira', false, true)");
         var admin = await fx.ClientAs(BetaTenant.AdminEmail);
         try
         {
             using var list = await admin.GetAsync("/api/v1/integrations");
             var items = (await Envelope.ReadAsync(list, HttpStatusCode.OK)).GetProperty("data").EnumerateArray().ToList();
-            items.Select(i => i.GetProperty("key").GetString()).ShouldBe(["GitHub", "Email"]);
-            items[0].GetProperty("settings").GetProperty("organization").GetString().ShouldBe("codeon-demo");
+            // Catalog order (Jira, Base, Bitrix), not insert order; only rows that exist are listed
+            items.Select(i => i.GetProperty("key").GetString()).ShouldBe(["Jira", "Bitrix"]);
+            items[0].GetProperty("category").GetString().ShouldBe("project_management");
+            items[0].GetProperty("settings").GetProperty("baseUrl").GetString().ShouldBe("https://your-company.atlassian.net");
             items[0].GetProperty("hasSecret").GetBoolean().ShouldBeFalse();
 
-            using var disabled = await admin.PostAsync("/api/v1/integrations/GitHub/test", null);
+            using var disabled = await admin.PostAsync("/api/v1/integrations/Jira/test", null);
             await Envelope.ReadAsync(disabled, HttpStatusCode.Conflict);
 
-            using var http = await admin.PutAsJsonAsync("/api/v1/integrations/GitHub", new { enabled = true, settings = new { organization = "acme", nope = "x" } });
-            Errors(await Envelope.ReadAsync(http, HttpStatusCode.BadRequest)).ShouldContainKey("nope");
-            using var update = await admin.PutAsJsonAsync("/api/v1/integrations/GitHub", new { enabled = true, settings = new { organization = "acme" } });
-            (await Envelope.ReadAsync(update, HttpStatusCode.OK)).GetProperty("data").GetProperty("settings").GetProperty("organization").GetString().ShouldBe("acme");
+            using var bad = await admin.PutAsJsonAsync("/api/v1/integrations/Jira", new { enabled = true, settings = new { baseUrl = "http://jira.local", accountEmail = "nope", other = "x" } });
+            Errors(await Envelope.ReadAsync(bad, HttpStatusCode.BadRequest)).Keys.ShouldBe(["baseUrl", "accountEmail", "other"], ignoreOrder: true);
+            using var update = await admin.PutAsJsonAsync("/api/v1/integrations/Jira", new { enabled = true, settings = new { baseUrl = "https://acme.atlassian.net", projectKeys = "DX,OPS" } });
+            var updated = (await Envelope.ReadAsync(update, HttpStatusCode.OK)).GetProperty("data").GetProperty("settings");
+            updated.GetProperty("baseUrl").GetString().ShouldBe("https://acme.atlassian.net");
+            updated.GetProperty("projectKeys").GetString().ShouldBe("DX,OPS");
 
-            using var test = await admin.PostAsync("/api/v1/integrations/GitHub/test", null);
+            using var test = await admin.PostAsync("/api/v1/integrations/Jira/test", null);
             (await Envelope.ReadAsync(test, HttpStatusCode.OK)).GetProperty("data").GetProperty("lastTestOk").GetBoolean().ShouldBeTrue();
-            using var preview = await admin.GetAsync("/api/v1/integrations/GitHub/preview");
-            (await Envelope.ReadAsync(preview, HttpStatusCode.OK)).GetProperty("data").GetArrayLength().ShouldBeGreaterThan(0);
+            using var preview = await admin.GetAsync("/api/v1/integrations/Jira/preview");
+            var first = (await Envelope.ReadAsync(preview, HttpStatusCode.OK)).GetProperty("data").EnumerateArray().First();
+            first.GetProperty("title").GetString()!.ShouldContain(" · ");
+            using var deals = await admin.GetAsync("/api/v1/integrations/Bitrix/preview");
+            (await Envelope.ReadAsync(deals, HttpStatusCode.OK)).GetProperty("data").GetArrayLength().ShouldBeGreaterThan(0);
 
-            using var unknown = await admin.GetAsync("/api/v1/integrations/Slack/preview");
+            // Removed sources are unknown now
+            using var unknown = await admin.GetAsync("/api/v1/integrations/GitHub/preview");
             await Envelope.ReadAsync(unknown, HttpStatusCode.NotFound);
         }
         finally

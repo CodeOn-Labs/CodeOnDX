@@ -550,5 +550,75 @@
   "email_password_reset": {
     "subject": "Đặt lại mật khẩu DX Platform",
     "body": "Chào {full_name},\n\nMở liên kết sau để đặt lại mật khẩu (hiệu lực {minutes} phút):\n{link}\n\nNếu bạn không yêu cầu, hãy bỏ qua email này; mật khẩu hiện tại vẫn giữ nguyên."
+  },
+  "insight_project_list": {
+    "high_risk_title": "{count} dự án rủi ro cao",
+    "high_risk_content": "{names} đang ở mức rủi ro Cao — cần rà soát nhân sự và ngân sách trong tuần này.",
+    "over_budget_title": "{count} dự án đã dùng từ {threshold}% ngân sách",
+    "over_budget_content": "{names} — kiểm tra chi phí nhân sự và phạm vi công việc.",
+    "ending_soon_title": "{count} dự án sắp kết thúc",
+    "ending_soon_content": "{names} kết thúc trong {days} ngày tới — chuẩn bị kế hoạch bàn giao và giải phóng nhân sự.",
+    "planning_title": "{count} dự án đang lập kế hoạch",
+    "planning_content": "Cần chốt nhân sự hợp đồng cho {names} trước ngày bắt đầu.",
+    "all_good_title": "Danh mục dự án ổn định",
+    "all_good_content": "Không có dự án rủi ro cao, vượt ngân sách hay sắp kết thúc."
+  },
+  "insight_project_detail": {
+    "missing_positions_title": "Thiếu {count} vị trí theo hợp đồng",
+    "missing_positions_content": "Hợp đồng có {contract} vị trí đang hiệu lực, mới có {assigned} vị trí được gán người.",
+    "fte_gap_title": "FTE thực tế thấp hơn hợp đồng {gap}",
+    "fte_gap_content": "Hợp đồng {contract} FTE, đang phân bổ {actual} FTE — bổ sung nhân sự hoặc điều chỉnh kế hoạch.",
+    "over_budget_title": "Đã dùng {percent}% ngân sách",
+    "over_budget_content": "Vượt ngưỡng cảnh báo {threshold}% — rà soát chi phí nhân sự và phạm vi.",
+    "hr_alert_title": "{count} nhân sự đã hoặc sắp nghỉ việc",
+    "hr_alert_content": "{names} — cần sắp xếp người nhận bàn giao.",
+    "all_good_title": "Dự án đang ổn định",
+    "all_good_content": "Nhân sự đủ theo hợp đồng, ngân sách trong ngưỡng, không có biến động nhân sự."
+  },
+  "insight_project_detail_metrics_timeline": {
+    "overdue_title": "{count} mốc quá hạn",
+    "overdue_content": "{names} đã quá ngày kế hoạch; {unjustified} mốc chưa có lý do.",
+    "upcoming_title": "{count} mốc sắp đến hạn",
+    "upcoming_content": "{names} đến hạn trong {days} ngày tới."
+  },
+  "insight_employee_list": {
+    "overloaded_title": "{count} nhân sự quá tải",
+    "overloaded_content": "Phân bổ trên {threshold}% FTE: {names} — cân nhắc chuyển bớt việc sang nhân sự đang chờ việc.",
+    "bench_title": "{count} nhân sự chờ việc",
+    "bench_content": "Phân bổ dưới {threshold}%: {names} — ưu tiên gán vào dự án sắp bắt đầu.",
+    "utilization_title": "Tỷ lệ sử dụng {percent}%",
+    "utilization_content": "Thấp hơn mục tiêu {target}% — rà soát nhân sự chờ việc."
+  },
+  "insight_timesheet_week": {
+    "week_hours_title": "Tuần này: {logged}h / {expected}h",
+    "week_hours_content": "Bạn còn thiếu {missing}h; {days} ngày chưa ghi công: {names}.",
+    "week_complete_title": "Tuần này: {logged}h / {expected}h",
+    "week_complete_content": "Bạn đã ghi đủ công tới hôm nay.",
+    "week_share_title": "Phân bổ tuần",
+    "week_share_content": "Dự án chiếm {project}%, công việc khác {other}%."
+  },
+  "insight_timesheet_day": {
+    "yesterday_title": "Áp dụng lại công hôm qua?",
+    "yesterday_content": "Hôm qua bạn ghi {hours}h: {names}.",
+    "yesterday_empty_title": "Ngày {date} chưa ghi công",
+    "yesterday_empty_content": "Bổ sung công trước khi ngày công bị khoá."
+  },
+  "insight_leave_request": {
+    "pending_title": "{count} đơn nghỉ / OT chờ duyệt",
+    "pending_content": "Duyệt trước ngày nghỉ để nhật ký công việc và báo cáo tháng cập nhật kịp.",
+    "balance_title": "Bạn còn {days} ngày phép năm",
+    "balance_content": "Lên kế hoạch nghỉ để tránh dồn vào cuối năm."
+  },
+  "insight_attendance": {
+    "late_title": "{count} lượt đi muộn trong tháng",
+    "late_content": "Vào sau {start} (đã cho phép {grace} phút): {names}.",
+    "missing_out_title": "{count} ngày thiếu giờ ra",
+    "missing_out_content": "{names} — nhắc bổ sung giờ ra, quá hạn cần quản lý sửa tay kèm ghi chú."
+  },
+  "insight_effort": {
+    "overload_title": "{count} nhân sự vượt {mm} MM",
+    "overload_content": "{names} có công số thực tế cộng OT vượt {mm} MM trong tháng {month}.",
+    "free_title": "{count} nhân sự còn rảnh",
+    "free_content": "Tổng công số rảnh {total} MM: {names}."
   }
 }

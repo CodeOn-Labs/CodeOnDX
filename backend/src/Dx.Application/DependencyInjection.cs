@@ -44,6 +44,7 @@ public static class DependencyInjection
         services.AddScoped<ProjectQualityFormsService>();
         services.AddScoped<ProjectAdminService>();
         services.AddScoped<MonthlyReportService>();
+        services.AddScoped<InsightRuleEngine>();
         services.AddScoped<AiService>();
         services.AddScoped<AiAdminService>();
         return services;

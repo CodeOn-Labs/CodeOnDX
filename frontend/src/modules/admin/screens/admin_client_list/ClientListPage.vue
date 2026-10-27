@@ -171,7 +171,7 @@ const summary = computed(() => summaryQuery.data.value);
 </script>
 
 <template>
-  <PageLayout layout="D" ai-module="admin" content-padding="24px" disable-scroll chat-width="320px">
+  <PageLayout layout="C" content-padding="24px" disable-scroll>
     <div class="h-full flex flex-col min-h-0 gap-3">
       <ListToolbar
         v-model:search="draft.search"

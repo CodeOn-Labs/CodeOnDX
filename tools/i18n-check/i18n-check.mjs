@@ -189,6 +189,11 @@ for (const key of Object.keys(beVi)) {
   if (parts.length !== 2) err(`BE: "${key}" — key BE có dạng <chức_năng>_<hành_động>.<key> (2 cấp)`);
   if (parts.some((p) => !SEGMENT.test(p))) err(`BE: "${key}" — mọi đoạn key phải là snake_case`);
   const [group, leaf] = parts;
+  // Câu thông báo Insight theo quy tắc: insight_<screen_key>.<mã>_title / _content
+  if (group?.startsWith('insight_')) {
+    if (!/_(title|content)$/.test(leaf ?? '')) err(`BE: "${key}" — câu Insight có key lá <mã>_title hoặc <mã>_content`);
+    continue;
+  }
   // Mẫu email (connector Email): email_<mẫu>.subject / .body
   if (group?.startsWith('email_')) {
     if (!['subject', 'body'].includes(leaf)) err(`BE: "${key}" — mẫu email chỉ có key lá subject và body`);

@@ -36,6 +36,9 @@ Lược đồ viết tay theo hướng **DB-first**: script SQL trong `migration
 | `V011__row_level_security.sql` | Policy `tenant_isolation` cho mọi bảng có `tenant_id` (trừ `tenant_users`, `refresh_tokens`, `account_tokens`); hàm `dx.find_css_survey_tenant_id(token)` cho trang khảo sát CSS công khai |
 | `V012__seed_global_catalogs.sql` | 22 permission + 33 định nghĩa quy tắc, sinh từ `mock-data/seed` (cùng id), chạy lại được |
 | `V013__milestone_justification_audit.sql` | `project_milestones.justification_by` / `justification_at`: ai giải trình mốc trễ, lúc nào (26/10) |
+| `V016__integrations_jira_base_bitrix.sql` | `tenant_integrations`: chỉ còn khoá `Jira` / `Base` / `Bitrix` (xoá dòng cũ, đổi CHECK, thêm 3 dòng tắt + mock cho tenant đang có) (27/10) |
+| `V015__insight_rules.sql` | 6 quy tắc ngưỡng nhóm `insight` cho AI Insight theo quy tắc (thiếu FTE, mốc sắp đến hạn, nhắc phép, công số vượt, số tên liệt kê) (27/10) |
+| `V014__ai_admin_fields.sql` | Prompt AI: `status` / `screen_keys` / `description` / `version`, scope `translate`; `ai_insight_configs.trigger_condition`; `tenant_integrations.last_test_at` / `last_test_ok` (27/10) |
 
 Tổng 62 bảng. Dữ liệu theo tenant (vai trò, danh mục, cài đặt, giá trị quy tắc, biểu mẫu PCV/CSS, prompt) do seeder của BE nạp khi tạo tenant hoặc từ `mock-data/seed` cho tenant demo — không nằm trong migration.
 
