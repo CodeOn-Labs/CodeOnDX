@@ -143,7 +143,7 @@ public sealed partial class DepartmentService(IAppDbContext db)
         var errors = new ValidationErrors();
         var (code, name, description) = await ValidateUnitAsync(errors, r.Code, r.Name, r.Description,
             c => db.Set<Department>().AnyAsync(d => d.Code == c && d.Id != row.Id, ct));
-        var managerId = await EmployeeIdAsync(errors, "managerId", r.ManagerId, ct);
+        var managerId = await EmployeeIdAsync(errors, "managerId", r.ManagerId, row.ManagerEmployeeId, ct);
         errors.ThrowIfAny();
 
         row.Code = code;
@@ -161,7 +161,7 @@ public sealed partial class DepartmentService(IAppDbContext db)
         var departmentId = string.IsNullOrWhiteSpace(r.DepartmentId) && !isNew ? row.DepartmentId : errors.Id("departmentId", r.DepartmentId);
         if (departmentId is not { } dep || !await db.Set<Department>().AnyAsync(d => d.Id == dep, ct))
             errors.Add("departmentId", isNew ? "validation.required" : "validation.invalid_value");
-        var leaderId = await EmployeeIdAsync(errors, "leaderId", r.LeaderId, ct);
+        var leaderId = await EmployeeIdAsync(errors, "leaderId", r.LeaderId, row.LeaderEmployeeId, ct);
         errors.ThrowIfAny();
 
         row.DepartmentId = departmentId!.Value;
@@ -188,10 +188,14 @@ public sealed partial class DepartmentService(IAppDbContext db)
         return (code, name, Text.OrNull(description));
     }
 
-    private async Task<Guid?> EmployeeIdAsync(ValidationErrors errors, string field, string? raw, CancellationToken ct)
+    /// <summary>
+    /// Manager / leader id. The unit's current person is accepted as is, so a unit whose head was deleted
+    /// before deletion was blocked (employee in the trash) can still be saved without picking someone else.
+    /// </summary>
+    private async Task<Guid?> EmployeeIdAsync(ValidationErrors errors, string field, string? raw, Guid? current, CancellationToken ct)
     {
         var id = errors.Id(field, raw);
-        if (id is { } v && !await db.Set<Employee>().AnyAsync(e => e.Id == v, ct))
+        if (id is { } v && v != current && !await db.Set<Employee>().AnyAsync(e => e.Id == v, ct))
         {
             errors.Add(field, "validation.invalid_value");
             return null;

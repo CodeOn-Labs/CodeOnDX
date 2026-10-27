@@ -37,6 +37,9 @@ public sealed class PipelineTests(ApiFixture fx)
         response.Headers.GetValues("X-Content-Type-Options").ShouldBe(["nosniff"]);
         response.Headers.GetValues("X-Frame-Options").ShouldBe(["DENY"]);
         response.Headers.GetValues("Referrer-Policy").ShouldBe(["strict-origin-when-cross-origin"]);
+        var csp = response.Headers.GetValues("Content-Security-Policy").Single();
+        csp.ShouldContain("script-src 'self';");
+        csp.ShouldContain("frame-ancestors 'none'");
     }
 
     [Fact]

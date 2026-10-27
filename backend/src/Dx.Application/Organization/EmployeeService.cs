@@ -138,13 +138,23 @@ public sealed partial class EmployeeService(
         return await ReloadAsync(row.Id, ct);
     }
 
-    /// <summary>DELETE /employees/{id} — to the trash; refused while an assignment is running today.</summary>
+    /// <summary>
+    /// DELETE /employees/{id} — to the trash. Refused for the caller's own record, while an assignment is
+    /// running today, and while the person heads a department / team (the unit would keep a manager that
+    /// no longer exists and could not be saved until changed).
+    /// </summary>
     public async Task<string> DeleteAsync(Guid id, CancellationToken ct)
     {
         var row = await FindAsync(id, ct);
+        if (row.UserId is { } own && own == user.UserId)
+            throw new ConflictException("employee_delete.err_self");
         var today = await clock.TodayAsync(ct);
         if (await RunningAssignments(today).AnyAsync(a => a.EmployeeId == row.Id, ct))
             throw new ConflictException("employee_delete.err_has_assignments", new() { ["name"] = row.FullName });
+        if (await db.Set<Department>().Where(d => d.ManagerEmployeeId == row.Id).Select(d => d.Name).FirstOrDefaultAsync(ct) is { } department)
+            throw new ConflictException("employee_delete.err_is_manager", new() { ["name"] = row.FullName, ["unit"] = department });
+        if (await db.Set<Team>().Where(t => t.LeaderEmployeeId == row.Id).Select(t => t.Name).FirstOrDefaultAsync(ct) is { } team)
+            throw new ConflictException("employee_delete.err_is_leader", new() { ["name"] = row.FullName, ["unit"] = team });
         row.IsDeleted = true;
         row.DeletedAt = DateTime.UtcNow;
         row.DeletedBy = user.UserId;

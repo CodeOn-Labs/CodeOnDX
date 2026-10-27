@@ -155,7 +155,10 @@
   },
   "employee_delete": {
     "msg_success": "Đã chuyển \"{name}\" vào thùng rác",
-    "err_has_assignments": "\"{name}\" đang được phân công vào dự án, hãy kết thúc phân công trước"
+    "err_has_assignments": "\"{name}\" đang được phân công vào dự án, hãy kết thúc phân công trước",
+    "err_is_manager": "\"{name}\" đang là trưởng phòng ban \"{unit}\", hãy đổi trưởng phòng trước",
+    "err_is_leader": "\"{name}\" đang là trưởng team \"{unit}\", hãy đổi trưởng team trước",
+    "err_self": "Không thể xoá hồ sơ nhân sự của chính bạn"
   },
   "employee_restore": {
     "msg_success": "Đã khôi phục \"{name}\""

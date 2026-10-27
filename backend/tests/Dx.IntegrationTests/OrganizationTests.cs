@@ -240,6 +240,48 @@ public sealed class OrganizationTests(ApiFixture fx)
     }
 
     [Fact]
+    public async Task Own_record_and_department_or_team_heads_cannot_be_deleted()
+    {
+        var admin = await fx.ClientAs(BetaTenant.AdminEmail);
+        using var self = await admin.DeleteAsync($"/api/v1/employees/{BetaTenant.EmployeeAdmin}");
+        (await Envelope.ReadAsync(self, HttpStatusCode.Conflict)).GetProperty("messageText").GetString().ShouldBe("Không thể xoá hồ sơ nhân sự của chính bạn");
+
+        var head = Guid.NewGuid();
+        await fx.ExecuteOwnerAsync($"INSERT INTO dx.employees (id, tenant_id, code, full_name, email, status_id) VALUES ('{head}', '{BetaTenant.TenantId}', 'B901', 'Head Temp', 'head@example.test', '{BetaTenant.EmployeeActive}')");
+        Guid? depId = null, teamId = null;
+        try
+        {
+            using var dep = await admin.PostAsJsonAsync("/api/v1/departments", new { code = "hd", name = "Head Dep", managerId = head });
+            depId = (await Envelope.ReadAsync(dep, HttpStatusCode.Created)).GetProperty("data").Id();
+            using var team = await admin.PostAsJsonAsync("/api/v1/teams", new { departmentId = depId, code = "HT", name = "Head Team", leaderId = head });
+            teamId = (await Envelope.ReadAsync(team, HttpStatusCode.Created)).GetProperty("data").Id();
+
+            using var asManager = await admin.DeleteAsync($"/api/v1/employees/{head}");
+            (await Envelope.ReadAsync(asManager, HttpStatusCode.Conflict)).GetProperty("messageText").GetString()
+                .ShouldBe("\"Head Temp\" đang là trưởng phòng ban \"Head Dep\", hãy đổi trưởng phòng trước");
+
+            await fx.ExecuteOwnerAsync($"UPDATE dx.departments SET manager_employee_id = NULL WHERE id = '{depId}'");
+            using var asLeader = await admin.DeleteAsync($"/api/v1/employees/{head}");
+            (await Envelope.ReadAsync(asLeader, HttpStatusCode.Conflict)).GetProperty("messageText").GetString()
+                .ShouldBe("\"Head Temp\" đang là trưởng team \"Head Team\", hãy đổi trưởng team trước");
+
+            // A unit whose head went to the trash before this rule existed can still be saved unchanged
+            await fx.ExecuteOwnerAsync($"UPDATE dx.departments SET manager_employee_id = '{head}' WHERE id = '{depId}'");
+            await fx.ExecuteOwnerAsync($"UPDATE dx.employees SET is_deleted = true, deleted_at = now() WHERE id = '{head}'");
+            using var save = await admin.PutAsJsonAsync($"/api/v1/departments/{depId}", new { code = "HD", name = "Head Dep 2", managerId = head });
+            await Envelope.ReadAsync(save, HttpStatusCode.OK);
+            using var saveTeam = await admin.PutAsJsonAsync($"/api/v1/teams/{teamId}", new { departmentId = depId, code = "HT", name = "Head Team 2", leaderId = head });
+            await Envelope.ReadAsync(saveTeam, HttpStatusCode.OK);
+        }
+        finally
+        {
+            if (teamId is not null) await fx.ExecuteOwnerAsync($"DELETE FROM dx.teams WHERE id = '{teamId}'");
+            if (depId is not null) await fx.ExecuteOwnerAsync($"DELETE FROM dx.departments WHERE id = '{depId}'");
+            await fx.ExecuteOwnerAsync($"DELETE FROM dx.employees WHERE id = '{head}'");
+        }
+    }
+
+    [Fact]
     public async Task Employee_detail_has_the_leave_balance_of_this_year()
     {
         var year = BetaTenant.Today.Year;

@@ -2,6 +2,9 @@ using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
 using Dx.IntegrationTests.Infrastructure;
+using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Net.Http.Headers;
 using Shouldly;
 
@@ -29,6 +32,7 @@ public sealed class AuthTests(ApiFixture fx)
         var cookie = SetCookie(response).ShouldNotBeNull();
         cookie.Value.Value.ShouldNotBeNullOrWhiteSpace();
         cookie.HttpOnly.ShouldBeTrue();
+        cookie.Secure.ShouldBeTrue(); // test server speaks plain HTTP: Secure no longer depends on Request.IsHttps
         cookie.SameSite.ShouldBe(SameSiteMode.Strict);
         cookie.Path.Value.ShouldBe("/api/v1/auth");
         cookie.Expires.ShouldNotBeNull();
@@ -190,6 +194,17 @@ public sealed class AuthTests(ApiFixture fx)
         var reasons = await fx.ScalarOwnerAsync<string>(
             $"SELECT string_agg(revoked_reason, ',' ORDER BY created_at) FROM dx.refresh_tokens WHERE token_hash IN ('{Hash(first)}', '{Hash(second)}')");
         reasons.ShouldBe("rotated,reuse_detected");
+    }
+
+    [Fact]
+    public void Refresh_has_its_own_rate_limit_bucket()
+    {
+        // Every page load refreshes once, so it must not eat the 30/min login bucket of an office NAT
+        var endpoints = fx.Factory.Services.GetRequiredService<EndpointDataSource>().Endpoints.OfType<RouteEndpoint>().ToList();
+        string? Policy(string route) => endpoints.Single(e => e.RoutePattern.RawText == route).Metadata.GetMetadata<EnableRateLimitingAttribute>()?.PolicyName;
+        Policy("api/v1/auth/refresh").ShouldBe(RateLimitPolicies.Refresh);
+        Policy("api/v1/auth/login").ShouldBe(RateLimitPolicies.Auth);
+        Policy("api/v1/auth/logout").ShouldBe(RateLimitPolicies.Auth);
     }
 
     [Fact]

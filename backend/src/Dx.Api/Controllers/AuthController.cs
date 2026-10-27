@@ -9,11 +9,11 @@ namespace Dx.Api.Controllers;
 
 /// <summary>
 /// Sign-in endpoints (D2). Access token in the body; refresh token in cookie dx_rt
-/// (HttpOnly, SameSite=Strict, Secure on HTTPS, Path=/api/v1/auth) — never in localStorage.
+/// (HttpOnly, SameSite=Strict, Secure outside Development, Path=/api/v1/auth) — never in localStorage.
 /// </summary>
 [Route("api/v1/auth")]
 [EnableRateLimiting(RateLimitPolicies.Auth)]
-public sealed class AuthController(AuthService auth, IOptions<AuthOptions> options) : ApiControllerBase
+public sealed class AuthController(AuthService auth, IOptions<AuthOptions> options, IWebHostEnvironment env) : ApiControllerBase
 {
     public const string RefreshCookie = "dx_rt";
 
@@ -36,6 +36,7 @@ public sealed class AuthController(AuthService auth, IOptions<AuthOptions> optio
 
     [HttpPost("refresh")]
     [AllowAnonymous]
+    [EnableRateLimiting(RateLimitPolicies.Refresh)] // every page load refreshes once: own, looser bucket (S4)
     [ProducesResponseType<ErrorFullModel<AuthResponse>>(StatusCodes.Status200OK)]
     public async Task<IActionResult> Refresh(CancellationToken ct)
     {
@@ -91,7 +92,9 @@ public sealed class AuthController(AuthService auth, IOptions<AuthOptions> optio
     private CookieOptions CookieOptions(DateTimeOffset? expires) => new()
     {
         HttpOnly = true,
-        Secure = Request.IsHttps,
+        // Always Secure in production: behind the Cloudflare Tunnel Kestrel sees plain HTTP, so Request.IsHttps
+        // depends on X-Forwarded-Proto. Plain http://localhost only in Development.
+        Secure = Request.IsHttps || !env.IsDevelopment(),
         SameSite = SameSiteMode.Strict,
         Path = "/api/v1/auth",
         Expires = expires,

@@ -90,6 +90,11 @@ builder.Services.AddRateLimiter(o =>
     o.AddPolicy(RateLimitPolicies.Auth, ctx => RateLimitPartition.GetFixedWindowLimiter(
         ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown",
         _ => new FixedWindowRateLimiterOptions { PermitLimit = 30, Window = TimeSpan.FromMinutes(1) }));
+    // /auth/refresh runs on every page load / F5, so a whole office behind one NAT shares the bucket.
+    // Guessing a 256-bit refresh token is hopeless anyway; this limit only caps load (S4).
+    o.AddPolicy(RateLimitPolicies.Refresh, ctx => RateLimitPartition.GetFixedWindowLimiter(
+        ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+        _ => new FixedWindowRateLimiterOptions { PermitLimit = 300, Window = TimeSpan.FromMinutes(1) }));
     o.OnRejected = (ctx, _) => new ValueTask(ErrorResponses.WriteAsync(ctx.HttpContext, 429, "error.too_many_requests"));
 });
 
@@ -133,8 +138,13 @@ app.Use(async (ctx, next) =>
     ctx.Response.Headers.XContentTypeOptions = "nosniff";
     ctx.Response.Headers["Referrer-Policy"] = "strict-origin-when-cross-origin";
     ctx.Response.Headers.XFrameOptions = "DENY";
+    // CSP for the SPA served from wwwroot (S3). Scalar (/docs) pulls its own CDN assets, so it is left out.
+    if (!ctx.Request.Path.StartsWithSegments("/docs"))
+        ctx.Response.Headers.ContentSecurityPolicy = SecurityHeaders.ContentSecurityPolicy;
     await next();
 });
+// HSTS is only sent on HTTPS (X-Forwarded-Proto from the tunnel); never on http://localhost in Development.
+if (!app.Environment.IsDevelopment()) app.UseHsts();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
@@ -179,6 +189,20 @@ static string FieldName(string key)
 public static class RateLimitPolicies
 {
     public const string Auth = "auth";
+    public const string Refresh = "auth-refresh";
+}
+
+public static class SecurityHeaders
+{
+    /// <summary>
+    /// Scripts only from our own origin (Vite build, export worker). Styles allow inline because Vue / Reka UI set
+    /// style attributes at runtime; fonts come from Google Fonts (frontend/index.html); avatars can be any https image.
+    /// </summary>
+    public const string ContentSecurityPolicy =
+        "default-src 'self'; script-src 'self'; worker-src 'self' blob:; " +
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; " +
+        "img-src 'self' data: blob: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; " +
+        "form-action 'self'; frame-ancestors 'none'";
 }
 
 public partial class Program;

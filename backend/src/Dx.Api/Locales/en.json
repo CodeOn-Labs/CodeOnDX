@@ -155,7 +155,10 @@
   },
   "employee_delete": {
     "msg_success": "Moved \"{name}\" to trash",
-    "err_has_assignments": "\"{name}\" is assigned to projects; end the assignments first"
+    "err_has_assignments": "\"{name}\" is assigned to projects; end the assignments first",
+    "err_is_manager": "\"{name}\" manages the department \"{unit}\"; change its manager first",
+    "err_is_leader": "\"{name}\" leads the team \"{unit}\"; change its leader first",
+    "err_self": "You cannot delete your own employee record"
   },
   "employee_restore": {
     "msg_success": "Restored \"{name}\""
