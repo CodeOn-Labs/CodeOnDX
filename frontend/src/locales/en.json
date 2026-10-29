@@ -943,6 +943,8 @@
     "lbl_kicker": "Effort Allocation",
     "title_insight_panel": "AI Insights",
     "ph_search": "Search by name or ezID...",
+    "btn_show_extra": "Show home team / role / note",
+    "btn_hide_extra": "Hide home team / role / note",
     "btn_clear_search": "Clear search",
     "col_name": "Full name",
     "col_code": "ezID",

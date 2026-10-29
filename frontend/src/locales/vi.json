@@ -943,6 +943,8 @@
     "lbl_kicker": "Effort Allocation",
     "title_insight_panel": "AI Insights",
     "ph_search": "Tìm theo tên hoặc ezID...",
+    "btn_show_extra": "Hiện Team gốc / Role / Note",
+    "btn_hide_extra": "Ẩn Team gốc / Role / Note",
     "btn_clear_search": "Xoá tìm kiếm",
     "col_name": "Họ và tên",
     "col_code": "ezID",

@@ -8,7 +8,7 @@
 import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuery, useQueryClient } from '@tanstack/vue-query';
-import { Lock, Search, Trash2, X } from '@lucide/vue';
+import { Columns3, Lock, Search, Trash2, X } from '@lucide/vue';
 import PageLayout from '@/components/layout/PageLayout.vue';
 import DynamicInsights from '@/modules/ai/components/DynamicInsights.vue';
 import MonthNavigator from '@/shared/components/form/MonthNavigator.vue';
@@ -60,8 +60,10 @@ const gridRows = computed<GridRow[]>(() => {
   });
 });
 
-// ─── Tìm kiếm ───────────────────────────────────────────────────────────────
+// ─── Tìm kiếm + cột phụ ─────────────────────────────────────────────────────
 const search = ref('');
+/** Nút "Hiện Team gốc / Role / Note" như bản gốc: mặc định ẩn, không lưu lựa chọn (tải lại trang là ẩn). */
+const showExtra = ref(false);
 const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').toLowerCase();
 const matches = (r: GridRow) => {
   const q = fold(search.value.trim());
@@ -101,7 +103,11 @@ const WIDTH: Record<ColKey, string> = {
   homeTeam: 'w-36 min-w-36', role: 'w-32', note: 'w-40', project: 'w-44', hd: 'w-24', ttEffort: 'w-24', otEffort: 'w-24', performance: 'w-36',
   actual: 'w-20', actual1: 'w-20', free: 'w-20', free1: 'w-20',
 };
-const visibleCols: ColKey[] = ['homeTeam', 'role', 'note', 'project', 'hd', 'ttEffort', 'otEffort', 'performance', 'actual', 'actual1', 'free', 'free1'];
+const EXTRA: ColKey[] = ['homeTeam', 'role', 'note'];
+const visibleCols = computed<ColKey[]>(() => [
+  ...(showExtra.value ? EXTRA : []),
+  'project', 'hd', 'ttEffort', 'otEffort', 'performance', 'actual', 'actual1', 'free', 'free1',
+]);
 const colLabel = (k: ColKey) =>
   ({
     homeTeam: t('effort.col_home_team'), role: t('effort.col_role'), note: t('effort.col_note'), project: t('effort.col_project'), hd: t('effort.col_hd'),
@@ -185,7 +191,7 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
         <MonthNavigator v-model="month" />
       </div>
 
-      <div class="flex items-center gap-3">
+      <div class="flex items-center justify-between gap-3">
         <div class="group relative flex items-center">
           <Search :size="15" class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-pr" />
           <input
@@ -199,6 +205,15 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
             <X :size="13" />
           </button>
         </div>
+        <button
+          type="button"
+          :aria-pressed="showExtra"
+          :class="cn('flex h-9 items-center gap-2 rounded-xl border px-3 text-[12px] font-bold transition-all', showExtra ? 'border-pr/40 bg-pr/5 text-pr' : 'border-slate-200 bg-white text-slate-600 hover:border-pr hover:text-pr')"
+          @click="showExtra = !showExtra"
+        >
+          <Columns3 :size="14" />
+          {{ showExtra ? $t('effort.btn_hide_extra') : $t('effort.btn_show_extra') }}
+        </button>
       </div>
 
       <div class="flex-1 min-h-0 overflow-auto rounded-lg border border-[#e5e8f2] bg-white">
