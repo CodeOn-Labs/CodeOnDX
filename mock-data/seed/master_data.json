@@ -1010,5 +1010,95 @@
     "sort_seq": 4,
     "is_active": true,
     "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "c65dade2-9341-52ae-9a9f-bf1e7fa4441e",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "tech_request_type",
+    "code": "NEW_FEATURE",
+    "name": "Phát triển tính năng mới",
+    "name_en": "New feature",
+    "description": null,
+    "metadata": {
+      "color": "blue"
+    },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "e2e0ebbf-2414-5d52-b71e-a87b4871da70",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "tech_request_type",
+    "code": "CHANGE_REQUEST",
+    "name": "Thay đổi theo yêu cầu khách hàng",
+    "name_en": "Customer change request",
+    "description": null,
+    "metadata": {
+      "color": "violet"
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "69a36b39-4aaa-5fd0-827b-072c37165158",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "tech_request_type",
+    "code": "BUG_FIX",
+    "name": "Sửa lỗi",
+    "name_en": "Bug fix",
+    "description": null,
+    "metadata": {
+      "color": "rose"
+    },
+    "sort_seq": 3,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "464e1882-eb10-5dd2-bb10-daf32bcb8954",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "tech_request_type",
+    "code": "CUSTOMER_SUPPORT",
+    "name": "Hỗ trợ khách hàng",
+    "name_en": "Customer support",
+    "description": null,
+    "metadata": {
+      "color": "amber"
+    },
+    "sort_seq": 4,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "828bd6aa-e7f9-5c33-bb4a-1bbdf559f170",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "tech_request_type",
+    "code": "INTEGRATION",
+    "name": "Tích hợp hệ thống",
+    "name_en": "System integration",
+    "description": null,
+    "metadata": {
+      "color": "emerald"
+    },
+    "sort_seq": 5,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "1fec167c-ed3e-568e-b16b-289ca2c739a8",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "tech_request_type",
+    "code": "INFRA",
+    "name": "Hạ tầng – DevOps",
+    "name_en": "Infrastructure & DevOps",
+    "description": null,
+    "metadata": {
+      "color": "slate"
+    },
+    "sort_seq": 6,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
   }
 ]

@@ -53,6 +53,8 @@ const CR_AREAS = ['scope', 'schedule', 'cost', 'quality'];
 const ISSUE_TYPES = ['parent', 'sprint', 'milestone'];
 const ISSUE_KINDS = ['task', 'bug'];
 const REPORT_STATUSES = ['GOOD', 'RISK', 'SOS'];
+/** typeId của logwork thuộc issue chưa gán Loại yêu cầu kỹ thuật. */
+const UNCLASSIFIED = 'unclassified';
 
 /** Mã kế tiếp dạng CR-01, R-07 theo max + 1 trên mọi mã đã có (kể cả bản ghi đã xoá) — mã không tái dùng. */
 export function nextSequenceCode(prefix, codes) {
@@ -265,6 +267,59 @@ export function projectExtraRoutes({ store, currentUser, requirePermission }) {
     urlField(errors, 'url', link);
     throwIfErrors(errors);
     return { type: body.type, kind: body.kind, name, url: link };
+  }
+
+  /**
+   * Logwork theo Loại yêu cầu kỹ thuật (Quản trị dự án › Issue) — nguồn: logwork issue Jira (bảng project_issue_worklogs).
+   *   Giờ của 1 loại      = tổng giờ logwork các issue thuộc loại đó trong tháng.
+   *   Tỷ trọng (%)        = giờ của loại / tổng giờ của dự án × 100 → kế toán dùng để phân bổ chi phí dự án theo loại yêu cầu.
+   *   MM                  = giờ / (số giờ 1 FTE × số ngày làm việc của tháng); số giờ 1 FTE = quy tắc TIMESHEET_FTE_HOURS,
+   *                         ngày làm việc = thứ 2–6 trừ ngày lễ. VD tháng 22 ngày làm việc, 8 giờ/FTE: 88 giờ = 88 / 176 = 0,5 MM.
+   *   Chưa phân loại      = issue chưa gán Loại yêu cầu kỹ thuật trên Jira — PMO cần bổ sung để chi phí không bị phân bổ sai.
+   * Quyền xem: người có project.manage hoặc PM của dự án xem mọi thành viên; thành viên khác chỉ xem logwork của chính mình.
+   * Danh sách loại = danh mục `tech_request_type` (Quản trị › Danh mục), chỉ loại đang dùng.
+   */
+  function issueWorklogsData(p, month, ctx, canManage, culture) {
+    const selfId = ctx.user.employee_id;
+    const isPm = !!selfId && db.assignments.some((a) => a.project_id === p.id && a.employee_id === selfId && a.role_in_project === 'PM' && !a.is_deleted);
+    const canViewAll = canManage || isPm;
+    const types = db.master_data.filter((m) => m.type === 'tech_request_type' && m.is_active).sort((a, b) => a.sort_seq - b.sort_seq)
+      .map((m) => store.masterRef(m.id, culture));
+    const typeIds = new Set(types.map((t) => t.id));
+    // Loại đã bị tắt / xoá ở danh mục → coi như chưa phân loại
+    const typeOf = (w) => (w.request_type_id && typeIds.has(w.request_type_id) ? w.request_type_id : UNCLASSIFIED);
+    const rows = (db.project_issue_worklogs ?? []).filter((w) => w.project_id === p.id && w.work_date.startsWith(month) && (canViewAll || w.employee_id === selfId));
+    const holidays = new Set(db.holidays.map((h) => h.holiday_date));
+    const workingDays = daysOfMonth(month).filter((d) => !isWeekend(d) && !holidays.has(d)).length;
+    const hoursPerMm = store.ruleValue('TIMESHEET_FTE_HOURS', 8) * workingDays;
+    const toMm = (h) => (hoursPerMm > 0 ? round2(h / hoursPerMm) : 0);
+    const sum = (list) => round2(list.reduce((s, w) => s + Number(w.hours), 0));
+    const totalHours = sum(rows);
+    const byType = [...types.map((t) => t.id), UNCLASSIFIED].map((typeId) => {
+      const list = rows.filter((w) => typeOf(w) === typeId);
+      const hours = sum(list);
+      return { typeId, hours, mm: toMm(hours), percent: totalHours > 0 ? round2((hours / totalHours) * 100) : 0, issueCount: new Set(list.map((w) => w.issue_key)).size };
+    });
+    const members = [...new Set(rows.map((w) => w.employee_id))].map((employeeId) => {
+      const e = employeeById(employeeId);
+      const list = rows.filter((w) => w.employee_id === employeeId);
+      const hours = sum(list);
+      return {
+        employeeId, code: e?.code ?? '', fullName: e?.full_name ?? '', teamName: db.teams.find((t) => t.id === e?.team_id)?.name ?? null,
+        totalHours: hours, mm: toMm(hours),
+        hoursByType: Object.fromEntries([...types.map((t) => t.id), UNCLASSIFIED].map((id) => [id, sum(list.filter((w) => typeOf(w) === id))])),
+      };
+    }).sort((a, b) => b.totalHours - a.totalHours || a.fullName.localeCompare(b.fullName, 'vi'));
+    const items = rows.map((w) => ({
+      id: w.id, issueKey: w.issue_key, summary: w.issue_summary, url: w.issue_url, status: w.issue_status, typeId: typeOf(w),
+      employeeId: w.employee_id, employeeName: employeeById(w.employee_id)?.full_name ?? '', hours: Number(w.hours), lastLoggedDate: w.work_date,
+    })).sort((a, b) => b.hours - a.hours || a.issueKey.localeCompare(b.issueKey));
+    const unclassified = byType.find((b) => b.typeId === UNCLASSIFIED);
+    return {
+      month, canViewAll, hoursPerMm, types, byType, members, items,
+      totals: { hours: totalHours, mm: toMm(totalHours), issueCount: new Set(rows.map((w) => w.issue_key)).size, memberCount: members.length, unclassifiedHours: unclassified.hours, unclassifiedIssueCount: unclassified.issueCount },
+      syncedAt: rows.reduce((m, w) => (w.synced_at > m ? w.synced_at : m), '') || null,
+    };
   }
 
   /** CRUD chung cho 1 bảng quản trị dự án: list(p) → data; parse(body) → cột; extra(p) → cột thêm khi tạo. */
@@ -603,6 +658,10 @@ export function projectExtraRoutes({ store, currentUser, requirePermission }) {
       onCreate: (row, p) => { row.code = nextSequenceCode('CR', db.project_change_requests.filter((c) => c.project_id === p.id).map((c) => c.code)); },
     }),
     ...crud('issues', 'project_issue_links', { key: 'project_issue', list: issuesData, parse: parseIssue, labelOf: (i) => i.name }),
+    ['GET', new RegExp(`${P}/issue-worklogs$`), async ({ req, url, culture }) => {
+      const { ctx, p, canManage } = openProject(req, url);
+      return { data: issueWorklogsData(p, monthParam(url), ctx, canManage, culture) };
+    }],
 
     // Báo cáo tháng (mọi người xem được dự án đều sửa được — giống bản gốc)
     ['GET', new RegExp(`${MR}$`), async ({ req, url }) => {

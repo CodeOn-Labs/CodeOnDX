@@ -226,6 +226,16 @@ const MASTER = {
     ['CTV', 'Cộng tác viên', 'Collaborator', { coefficient: 0.5, color: 'amber' }],
     ['TTS', 'Thực tập sinh', 'Intern', { coefficient: 0.5, color: 'slate' }],
   ],
+  // Loại yêu cầu kỹ thuật của issue Jira (màn Quản trị dự án › Issue): logwork mỗi issue được cộng theo loại này
+  // để kế toán phân bổ chi phí theo dự án × loại yêu cầu. Bộ mặc định của tenant demo, sửa ở Quản trị › Danh mục.
+  tech_request_type: [
+    ['NEW_FEATURE', 'Phát triển tính năng mới', 'New feature', { color: 'blue' }],
+    ['CHANGE_REQUEST', 'Thay đổi theo yêu cầu khách hàng', 'Customer change request', { color: 'violet' }],
+    ['BUG_FIX', 'Sửa lỗi', 'Bug fix', { color: 'rose' }],
+    ['CUSTOMER_SUPPORT', 'Hỗ trợ khách hàng', 'Customer support', { color: 'amber' }],
+    ['INTEGRATION', 'Tích hợp hệ thống', 'System integration', { color: 'emerald' }],
+    ['INFRA', 'Hạ tầng – DevOps', 'Infrastructure & DevOps', { color: 'slate' }],
+  ],
 };
 const masterRows = [];
 const M = {}; // M.project_status.RUNNING = id
@@ -1115,6 +1125,61 @@ out('seed/project_documents.json', documents);
 out('seed/project_risks.json', risks);
 out('seed/project_change_requests.json', changeRequests);
 out('seed/project_issue_links.json', issueLinks);
+
+// Logwork theo issue Jira (đồng bộ qua connector Jira) — 1 dòng = 1 người × 1 issue × 1 tháng, cộng dồn giờ.
+// request_type_id = Loại yêu cầu kỹ thuật của issue; null = issue chưa được phân loại trên Jira (PMO cần bổ sung).
+// Dùng RNG riêng để không làm lệch các dữ liệu sinh trước đó.
+const rand3 = mulberry32(20261030);
+const between3 = (min, max) => min + Math.floor(rand3() * (max - min + 1));
+const ISSUE_SUMMARIES = {
+  NEW_FEATURE: ['Màn quản lý đơn hàng', 'Báo cáo doanh thu theo tháng', 'Phân quyền theo vai trò', 'Xuất Excel danh sách'],
+  CHANGE_REQUEST: ['Đổi luồng phê duyệt theo yêu cầu khách', 'Bổ sung trường thông tin hợp đồng', 'Thay đổi mẫu in hoá đơn'],
+  BUG_FIX: ['Sai số trang ở danh sách', 'Lỗi đăng nhập khi hết phiên', 'Lệch múi giờ khi lưu ngày'],
+  CUSTOMER_SUPPORT: ['Hỗ trợ khách cấu hình tài khoản', 'Kiểm tra dữ liệu báo cáo sai lệch', 'Xử lý sự cố không gửi được email'],
+  INTEGRATION: ['Kết nối cổng thanh toán', 'Đồng bộ dữ liệu với hệ thống kế toán'],
+  INFRA: ['Nâng cấp máy chủ staging', 'Cấu hình sao lưu cơ sở dữ liệu'],
+};
+// Tỷ trọng loại yêu cầu mặc định; người đầu tiên của dự án đầu tiên nghiêng hẳn về hỗ trợ khách hàng (minh hoạ cảnh báo)
+const TYPE_WEIGHTS = [['NEW_FEATURE', 5], ['CHANGE_REQUEST', 2], ['BUG_FIX', 3], ['CUSTOMER_SUPPORT', 2], ['INTEGRATION', 1], ['INFRA', 1]];
+const SUPPORT_HEAVY = [['CUSTOMER_SUPPORT', 8], ['BUG_FIX', 2], ['NEW_FEATURE', 1]];
+function weightedType(weights) {
+  let r = rand3() * weights.reduce((s, [, w]) => s + w, 0);
+  for (const [code, w] of weights) if ((r -= w) < 0) return code;
+  return weights[0][0];
+}
+const issueWorklogs = [];
+mgmtProjects.forEach((p, pi) => {
+  const jiraKey = p.code.replace(/[^A-Z0-9]/gi, '').toUpperCase();
+  const issueNo = new Map(); // tiêu đề → số issue, để nhiều người cùng log vào 1 issue
+  membersOf(p).forEach((employeeId, mi) => {
+    for (const month of ['2026-08', '2026-09', '2026-10']) {
+      const weights = pi === 0 && mi === 0 ? SUPPORT_HEAVY : TYPE_WEIGHTS;
+      const lastDay = month === TODAY.slice(0, 7) ? Number(TODAY.slice(8)) : 28;
+      for (let k = between3(3, 6); k > 0; k--) {
+        const code = weightedType(weights);
+        const summary = ISSUE_SUMMARIES[code][between3(0, ISSUE_SUMMARIES[code].length - 1)];
+        if (!issueNo.has(summary)) issueNo.set(summary, 201 + issueNo.size);
+        const key = `${jiraKey}-${issueNo.get(summary)}`;
+        const unclassified = rand3() < 0.06;
+        const existing = issueWorklogs.find((w) => w.project_id === p.id && w.employee_id === employeeId && w.issue_key === key && w.work_date.startsWith(month));
+        const hours = between3(2, 16) + (code === 'CUSTOMER_SUPPORT' && weights === SUPPORT_HEAVY ? 12 : 0);
+        if (existing) {
+          existing.hours += hours;
+          continue;
+        }
+        issueWorklogs.push({
+          id: uid(`worklog:${p.id}:${employeeId}:${key}:${month}`), tenant_id: TENANT_ID, project_id: p.id, employee_id: employeeId,
+          issue_key: key, issue_summary: summary, issue_url: `https://jira.example.com/browse/${key}`,
+          issue_status: month < TODAY.slice(0, 7) ? 'Done' : ['In Progress', 'In Review', 'Done'][between3(0, 2)],
+          request_type_id: unclassified ? null : M.tech_request_type[code],
+          work_date: `${month}-${String(between3(1, lastDay)).padStart(2, '0')}`, hours, source: 'jira',
+          synced_at: `${TODAY}T07:00:00+07:00`,
+        });
+      }
+    }
+  });
+});
+out('seed/project_issue_worklogs.json', issueWorklogs);
 
 // Báo cáo tháng (作業報告書 兼 納品書 — mẫu báo cáo cho khách, cấu hình được) tháng 9, 10 cho 3 dự án đang chạy.
 // Mỗi báo cáo: thông tin chung + danh sách cột (cột hệ thống lấy dữ liệu tự động + cột bổ sung do PO thêm) + ô theo nhân sự × ngày.

@@ -7,7 +7,7 @@ import { ApiError, badRequest, listParam, notFound, paginate, readJson } from '.
 /** Loại danh mục quản trị được sửa ở màn admin_category_list (cùng thứ tự hiển thị trong bộ lọc). */
 export const CATEGORY_TYPES = [
   'project_status', 'project_level', 'risk_level', 'hr_level', 'job_position', 'performance_level',
-  'task_type', 'employee_status', 'leave_type', 'link_type', 'currency', 'country', 'industry',
+  'task_type', 'tech_request_type', 'employee_status', 'leave_type', 'link_type', 'currency', 'country', 'industry',
 ];
 
 const TIME_ZONES = ['Asia/Ho_Chi_Minh', 'Asia/Tokyo', 'Asia/Singapore', 'UTC'];

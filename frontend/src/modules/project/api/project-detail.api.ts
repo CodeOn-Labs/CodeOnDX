@@ -462,6 +462,66 @@ export interface IssueInput {
   url: string;
 }
 
+/** typeId của logwork thuộc issue chưa gán Loại yêu cầu kỹ thuật trên Jira. */
+export const UNCLASSIFIED_TYPE = 'unclassified';
+
+/** Một loại yêu cầu kỹ thuật (danh mục `tech_request_type`). */
+export interface TechRequestType {
+  id: string;
+  code: string;
+  name: string;
+  color: string | null;
+}
+
+/** Tổng logwork của dự án theo 1 loại yêu cầu (typeId = id loại hoặc UNCLASSIFIED_TYPE). */
+export interface IssueWorklogByType {
+  typeId: string;
+  hours: number;
+  mm: number;
+  /** Tỷ trọng giờ của loại trên tổng giờ dự án trong tháng (0–100) */
+  percent: number;
+  issueCount: number;
+}
+
+export interface IssueWorklogMember {
+  employeeId: string;
+  code: string;
+  fullName: string;
+  teamName: string | null;
+  totalHours: number;
+  mm: number;
+  /** Giờ theo typeId (gồm UNCLASSIFIED_TYPE) */
+  hoursByType: Record<string, number>;
+}
+
+export interface IssueWorklogItem {
+  id: string;
+  issueKey: string;
+  summary: string;
+  url: string;
+  status: string;
+  typeId: string;
+  employeeId: string;
+  employeeName: string;
+  hours: number;
+  lastLoggedDate: string;
+}
+
+/** GET /projects/:id/issue-worklogs?month= — logwork issue Jira theo Loại yêu cầu kỹ thuật (BE tính sẵn tổng, tỷ trọng, MM). */
+export interface IssueWorklogsData {
+  month: string;
+  /** false = chỉ thấy logwork của chính mình (không phải PM dự án / không có project.manage) */
+  canViewAll: boolean;
+  /** Số giờ của 1 MM trong tháng = giờ 1 FTE × số ngày làm việc */
+  hoursPerMm: number;
+  types: TechRequestType[];
+  byType: IssueWorklogByType[];
+  members: IssueWorklogMember[];
+  items: IssueWorklogItem[];
+  totals: { hours: number; mm: number; issueCount: number; memberCount: number; unclassifiedHours: number; unclassifiedIssueCount: number };
+  syncedAt: string | null;
+}
+
 // ─── Báo cáo tháng ───────────────────────────────────────────────────────
 
 export type MonthlyReportColumnSource = 'date' | 'hours' | 'content' | 'checkIn' | 'checkOut';
@@ -573,6 +633,7 @@ export const projectDetailApi = {
   changes: (id: string, o: Opt = {}) => request<ChangesData>(`${base(id)}/changes`, o),
   change: crud<ChangeInput>('changes'),
   issues: (id: string, o: Opt = {}) => request<IssuesData>(`${base(id)}/issues`, o),
+  issueWorklogs: (id: string, month: string, o: Opt = {}) => request<IssueWorklogsData>(`${base(id)}/issue-worklogs`, { query: { month }, ...o }),
   issue: crud<IssueInput>('issues'),
 
   monthlyReport: (id: string, month: string, o: Opt = {}) => request<MonthlyReport>(`${base(id)}/monthly-reports/${month}`, o),

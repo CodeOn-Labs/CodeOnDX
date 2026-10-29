@@ -15,6 +15,7 @@ Lệnh trên xoá và ghi lại `seed/`, `ai/`, `jira/`, `base/`, `bitrix/` (và
 | `ai/insights/<screen_key>.json` | connector `Ai` (mock) | Insight theo màn, tên file trùng `screen_key` trong `shared/screens.json` |
 | `ai/chat/scenarios.json`, `ai/translate/vi-ja.json` | connector `Ai` (mock) | Kịch bản Chat AI, bản dịch báo cáo tháng |
 | `jira/issues.json`, `base/tasks.json`, `bitrix/deals.json` | nguồn tích hợp Jira / Base / Bitrix (mock) | Issue, công việc, deal — xem ở Quản trị › Tích hợp › Xem dữ liệu |
+| `seed/project_issue_worklogs.json` | màn Quản trị dự án › Issue | Logwork issue Jira đã đồng bộ: 1 dòng = 1 người × 1 issue × 1 tháng (`hours` cộng dồn), `request_type_id` → danh mục `tech_request_type` (null = chưa phân loại). Chưa có bảng DB / BE |
 | `email/outbox/` | connector `Email` (mock) | Email "gửi đi" được ghi ra đây (gitignore) |
 
 Bảng `seed/` mock API đang nạp: `tenants users roles permissions role_permissions user_roles employees departments teams clients master_data projects contract_staff assignments project_members system_rules system_settings ai_insights integrations`. Các bảng còn lại (timesheets, effort, PCV/CSS, nghỉ phép/OT, chấm công, ngày lễ…) để sẵn cho các màn sắp chuyển.

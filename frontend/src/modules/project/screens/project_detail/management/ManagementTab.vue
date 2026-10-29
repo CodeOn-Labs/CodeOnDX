@@ -1,33 +1,28 @@
 <script setup lang="ts">
-// Port ProjectManagementTab + ManagementSubTabBar: 4 màn con Tài liệu · Thay đổi (CR) · Issue · Rủi ro (?subtab=),
-// mỗi màn giữ từ khoá tìm kiếm riêng (đổi màn không mang từ khoá sang; mất khi rời tab).
-// Khác bản gốc: ô tìm kiếm lọc ngay danh sách của màn (bỏ popup gợi ý kết quả + nhảy tới dòng).
+// Quản trị dự án: 2 màn con Rủi ro · Issue (?subtab=), mỗi màn giữ từ khoá tìm kiếm riêng (đổi màn không mang từ khoá sang; mất khi rời tab).
+// Khác bản gốc: bỏ Tài liệu và Thay đổi (CR) khỏi tab; ô tìm kiếm lọc ngay danh sách của màn (bỏ popup gợi ý kết quả + nhảy tới dòng).
 import { computed, reactive } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { FileWarning, FolderOpen, GitPullRequest, Search, ShieldAlert, X } from '@lucide/vue';
+import { FileWarning, Search, ShieldAlert, X } from '@lucide/vue';
 import TabBar, { type TabItem } from '@/shared/components/TabBar.vue';
-import DocumentsScreen from './DocumentsScreen.vue';
-import ChangeScreen from './ChangeScreen.vue';
 import IssueScreen from './IssueScreen.vue';
 import RiskScreen from './RiskScreen.vue';
 import type { ProjectDetail } from '@/modules/project/api/project-detail.api';
 
-type Sub = 'documents' | 'change' | 'issue' | 'risk';
+type Sub = 'risk' | 'issue';
 const props = defineProps<{ project: ProjectDetail }>();
 const subtab = defineModel<string>('subtab', { required: true });
 const { t } = useI18n();
-const SUBS: Sub[] = ['documents', 'change', 'issue', 'risk'];
+const SUBS: Sub[] = ['risk', 'issue'];
 const current = computed<Sub>({
-  get: () => (SUBS.includes(subtab.value as Sub) ? (subtab.value as Sub) : 'documents'),
+  get: () => (SUBS.includes(subtab.value as Sub) ? (subtab.value as Sub) : 'risk'),
   set: (v) => (subtab.value = v),
 });
 const tabs = computed<TabItem<Sub>[]>(() => [
-  { key: 'documents', label: t('project_detail.management_section.lbl_documents'), icon: FolderOpen },
-  { key: 'change', label: t('project_detail.management_section.lbl_change'), icon: GitPullRequest },
-  { key: 'issue', label: t('project_detail.management_section.lbl_issue'), icon: FileWarning },
   { key: 'risk', label: t('project_detail.management_section.lbl_risk'), icon: ShieldAlert },
+  { key: 'issue', label: t('project_detail.management_section.lbl_issue'), icon: FileWarning },
 ]);
-const queries = reactive<Record<Sub, string>>({ documents: '', change: '', issue: '', risk: '' });
+const queries = reactive<Record<Sub, string>>({ risk: '', issue: '' });
 </script>
 
 <template>
@@ -40,9 +35,7 @@ const queries = reactive<Record<Sub, string>>({ documents: '', change: '', issue
         <button v-if="queries[current]" type="button" class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-0.5 text-slate-400 hover:bg-slate-100" :aria-label="$t('project_detail.btn_clear_search')" @click="queries[current] = ''"><X :size="13" /></button>
       </div>
     </div>
-    <DocumentsScreen v-if="current === 'documents'" :project="props.project" :query="queries.documents" />
-    <ChangeScreen v-else-if="current === 'change'" :project="props.project" :query="queries.change" />
-    <IssueScreen v-else-if="current === 'issue'" :project="props.project" :query="queries.issue" />
-    <RiskScreen v-else :project="props.project" :query="queries.risk" />
+    <RiskScreen v-if="current === 'risk'" :project="props.project" :query="queries.risk" />
+    <IssueScreen v-else :project="props.project" :query="queries.issue" />
   </div>
 </template>
