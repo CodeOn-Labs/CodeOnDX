@@ -2,11 +2,13 @@
 // Port EffortPage.tsx + EffortGrid.tsx + EffortGridToolbar.tsx + EffortGridHeaderRow.tsx + EffortDepartmentGroup.tsx + EffortGroupHeader.tsx:
 // lưới Công số theo tháng, nhóm theo phòng ban (dòng tổng nhóm), sửa ô lưu ngay khi rời ô, thêm thành viên, xoá dòng.
 // Khác bản gốc (D12): Mức hiệu suất lấy từ danh mục performance_level (hệ số ở metadata.coefficient) thay bộ HV/CT1/TV/CT2 cố định;
-// danh sách vai trò lấy từ danh mục Vị trí nhân sự (job_position); cột "ldap" đổi thành Mã nhân sự.
+// danh sách vai trò lấy từ danh mục Vị trí nhân sự (job_position); cột "ldap" đổi thành ezID (mã nhân sự).
+// 15 cột theo đặc tả 28/10/2026: Họ và tên · ezID · Team gốc 🔒 · Role · Note · Project · Kế hoạch · Thực tế · OT Effort 🔒 ·
+// Performance 🔒 · Actual · Actual1 · Free · Free1 · Thao tác. Cột 🔒 lấy từ hệ thống khác, chỉ xem trên lưới.
 import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuery, useQueryClient } from '@tanstack/vue-query';
-import { Columns3, Search, Trash2, X } from '@lucide/vue';
+import { Lock, Search, Trash2, X } from '@lucide/vue';
 import PageLayout from '@/components/layout/PageLayout.vue';
 import DynamicInsights from '@/modules/ai/components/DynamicInsights.vue';
 import MonthNavigator from '@/shared/components/form/MonthNavigator.vue';
@@ -17,7 +19,7 @@ import EffortNoteCell from './EffortNoteCell.vue';
 import AddMemberPopover from './AddMemberPopover.vue';
 import { effortApi, type EffortMonth, type EffortPatch, type EffortRow } from '@/modules/effort/api/effort.api';
 import {
-  buildFreeByMemberMap, calcActual, calcActual1, calcFree1, calcGroupTotals, formatEffortNumber, FREE_EPSILON, roundToDecimals, type GroupTotals,
+  buildFreeByMemberMap, calcActual, calcActual1, calcGroupTotals, formatEffortNumber, FREE_EPSILON, roundToDecimals, type GroupTotals,
 } from '@/modules/effort/utils/effort-calculations';
 import { useConfirmStore } from '@/stores/confirm';
 import { useToastStore } from '@/stores/toast';
@@ -44,20 +46,22 @@ const canEdit = computed(() => !!data.value?.canEdit);
 /** Thêm Actual / Actual1 / Free / Free1 vào từng dòng (công thức ở effort-calculations.ts). */
 const gridRows = computed<GridRow[]>(() => {
   const rows = data.value?.rows ?? [];
-  const input = rows.map((r) => ({ employee_id: r.employee?.id ?? r.id, hd: r.hd, tt_effort: r.ttEffort, performance: r.performance, allocate_rate: r.allocateRate }));
+  const input = rows.map((r) => ({ employee_id: r.employee?.id ?? r.id, tt_effort: r.ttEffort, ot_effort: r.otEffort, performance: r.performance }));
   const freeByMember = buildFreeByMemberMap(input);
-  return rows.map((r, i) => ({
-    ...r,
-    actual: roundToDecimals(calcActual(r.ttEffort, r.allocateRate)),
-    actual1: roundToDecimals(calcActual1(r.ttEffort, r.performance, r.allocateRate)),
-    free: roundToDecimals(freeByMember.get(input[i]!.employee_id) ?? 0),
-    free1: roundToDecimals(calcFree1(input[i]!)),
-  }));
+  return rows.map((r, i) => {
+    const member = freeByMember.get(input[i]!.employee_id);
+    return {
+      ...r,
+      actual: roundToDecimals(calcActual(r.ttEffort, r.otEffort)),
+      actual1: roundToDecimals(calcActual1(r.ttEffort, r.otEffort, r.performance)),
+      free: roundToDecimals(member?.free ?? 0),
+      free1: roundToDecimals(member?.free1 ?? 0),
+    };
+  });
 });
 
-// ─── Tìm kiếm + cột phụ ─────────────────────────────────────────────────────
+// ─── Tìm kiếm ───────────────────────────────────────────────────────────────
 const search = ref('');
-const showExtra = ref(false);
 const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').toLowerCase();
 const matches = (r: GridRow) => {
   const q = fold(search.value.trim());
@@ -76,46 +80,47 @@ function totalsOf(rows: GridRow[]): GroupTotals {
 }
 
 // ─── Cột ────────────────────────────────────────────────────────────────────
-type ColKey = 'homeTeam' | 'role' | 'note' | 'project' | 'hd' | 'ttEffort' | 'otEffort' | 'performance' | 'allocateRate' | 'actual' | 'actual1' | 'free' | 'free1';
+type ColKey = 'homeTeam' | 'role' | 'note' | 'project' | 'hd' | 'ttEffort' | 'otEffort' | 'performance' | 'actual' | 'actual1' | 'free' | 'free1';
 const COLUMN_COLORS: Partial<Record<ColKey, { bg: string; text: string }>> = {
   hd: { bg: '#dbeafe', text: '#1d4ed8' },
   ttEffort: { bg: '#ccfbf1', text: '#0f766e' },
   otEffort: { bg: '#fce7f3', text: '#be185d' },
   performance: { bg: '#ede9fe', text: '#6d28d9' },
-  allocateRate: { bg: '#fef3c7', text: '#b45309' },
   actual: { bg: '#cffafe', text: '#0e7490' },
   actual1: { bg: '#e0e7ff', text: '#4338ca' },
   free: { bg: '#dcfce7', text: '#15803d' },
   free1: { bg: '#ecfccb', text: '#4d7c0f' },
 };
-const EXTRA: ColKey[] = ['homeTeam', 'role', 'note'];
-const NUMERIC: ColKey[] = ['hd', 'ttEffort', 'otEffort', 'allocateRate', 'actual', 'actual1', 'free', 'free1'];
+const NUMERIC: ColKey[] = ['hd', 'ttEffort', 'otEffort', 'actual', 'actual1', 'free', 'free1'];
 const COMPUTED: ColKey[] = ['actual', 'actual1', 'free', 'free1'];
+/** Cột khoá (🔒): dữ liệu đồng bộ từ hệ thống khác, không sửa trên lưới. */
+const LOCKED: ColKey[] = ['homeTeam', 'otEffort', 'performance'];
+/** Team gốc ghim cạnh Họ và tên + ezID khi cuộn ngang. */
+const PINNED_LEFT: Partial<Record<ColKey, string>> = { homeTeam: 'left-72' };
 const WIDTH: Record<ColKey, string> = {
-  homeTeam: 'w-28', role: 'w-32', note: 'w-40', project: 'w-44', hd: 'w-20', ttEffort: 'w-24', otEffort: 'w-24', performance: 'w-36', allocateRate: 'w-28',
+  homeTeam: 'w-36 min-w-36', role: 'w-32', note: 'w-40', project: 'w-44', hd: 'w-24', ttEffort: 'w-24', otEffort: 'w-24', performance: 'w-36',
   actual: 'w-20', actual1: 'w-20', free: 'w-20', free1: 'w-20',
 };
-const visibleCols = computed<ColKey[]>(() => [
-  ...(showExtra.value ? EXTRA : []),
-  'project', 'hd', 'ttEffort', 'otEffort', 'performance', 'allocateRate', 'actual', 'actual1', 'free', 'free1',
-]);
+const visibleCols: ColKey[] = ['homeTeam', 'role', 'note', 'project', 'hd', 'ttEffort', 'otEffort', 'performance', 'actual', 'actual1', 'free', 'free1'];
 const colLabel = (k: ColKey) =>
   ({
     homeTeam: t('effort.col_home_team'), role: t('effort.col_role'), note: t('effort.col_note'), project: t('effort.col_project'), hd: t('effort.col_hd'),
-    ttEffort: t('effort.col_tt_effort'), otEffort: t('effort.col_ot_effort'), performance: t('effort.col_performance'), allocateRate: t('effort.col_allocate_rate'),
+    ttEffort: t('effort.col_tt_effort'), otEffort: t('effort.col_ot_effort'), performance: t('effort.col_performance'),
     actual: t('effort.col_actual'), actual1: t('effort.col_actual1'), free: t('effort.col_free'), free1: t('effort.col_free1'),
   })[k];
+/** Họ và tên, ezID, Role, Note, Project, Thao tác không có chú thích. */
 const colTip = (k: ColKey) =>
   ({
-    hd: t('effort.tip_hd'), ttEffort: t('effort.tip_tt_effort'), otEffort: t('effort.tip_ot_effort'), performance: t('effort.tip_performance'), allocateRate: t('effort.tip_allocate_rate'),
+    homeTeam: t('effort.tip_home_team'), hd: t('effort.tip_hd'), ttEffort: t('effort.tip_tt_effort'), otEffort: t('effort.tip_ot_effort'), performance: t('effort.tip_performance'),
     actual: t('effort.tip_actual'), actual1: t('effort.tip_actual1'), free: t('effort.tip_free'), free1: t('effort.tip_free1'),
   })[k as 'hd'] ?? '';
+/** Performance hiện mã mức kèm hệ số, VD "TV (0.8)"; tên đầy đủ ở title của ô. */
+const performanceLabel = (r: GridRow) => (r.performanceLevel ? `${r.performanceLevel.code} (${r.performance.toFixed(1)})` : r.performance.toFixed(1));
 const totalValue = (k: ColKey, totals: GroupTotals): number | null =>
   ({ hd: totals.hd, ttEffort: totals.ttEffort, otEffort: totals.otEffort, actual: totals.actual, actual1: totals.actual1, free: totals.free, free1: totals.free1 })[k as 'hd'] ?? null;
 
 const teamOptions = computed(() => (data.value?.teams ?? []).map((tm) => ({ value: tm.id, label: tm.name })));
 const roleOptions = computed(() => (data.value?.roles ?? []).map((r) => ({ value: r, label: r })));
-const perfOptions = computed(() => (data.value?.performanceLevels ?? []).map((p) => ({ value: p.id, label: `${p.name} (${p.coefficient.toFixed(1)})` })));
 const projectOptionsFor = (departmentId: string) =>
   (data.value?.projects ?? []).filter((p) => !p.departmentId || p.departmentId === departmentId).map((p) => ({ value: p.id, label: p.name }));
 
@@ -180,7 +185,7 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
         <MonthNavigator v-model="month" />
       </div>
 
-      <div class="flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
         <div class="group relative flex items-center">
           <Search :size="15" class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-pr" />
           <input
@@ -194,14 +199,6 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
             <X :size="13" />
           </button>
         </div>
-        <button
-          type="button"
-          :class="cn('flex h-9 items-center gap-2 rounded-xl border px-3 text-[12px] font-bold transition-all', showExtra ? 'border-pr/40 bg-pr/5 text-pr' : 'border-slate-200 bg-white text-slate-600 hover:border-pr hover:text-pr')"
-          @click="showExtra = !showExtra"
-        >
-          <Columns3 :size="14" />
-          {{ showExtra ? $t('effort.btn_hide_extra') : $t('effort.btn_show_extra') }}
-        </button>
       </div>
 
       <div class="flex-1 min-h-0 overflow-auto rounded-lg border border-[#e5e8f2] bg-white">
@@ -210,14 +207,17 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
             <tr>
               <th :class="cn(HEAD, 'z-30 left-0 w-48 min-w-48')">{{ $t('effort.col_name') }}</th>
               <th :class="cn(HEAD, 'z-30 left-48 w-24 min-w-24')">{{ $t('effort.col_code') }}</th>
-              <th :class="cn(HEAD, 'z-30 left-72 w-36 min-w-36')">{{ $t('effort.col_team') }}</th>
               <th
                 v-for="k in visibleCols"
                 :key="k"
-                :class="cn(HEAD, 'z-20 relative', WIDTH[k], NUMERIC.includes(k) && 'text-right')"
+                :class="cn(HEAD, PINNED_LEFT[k] ? ['z-30', PINNED_LEFT[k]] : 'z-20 relative', WIDTH[k], NUMERIC.includes(k) && 'text-right')"
                 :style="COLUMN_COLORS[k] ? { backgroundColor: COLUMN_COLORS[k]!.bg, color: COLUMN_COLORS[k]!.text } : undefined"
               >
                 {{ colLabel(k) }}
+                <template v-if="LOCKED.includes(k)">
+                  <Lock :size="11" class="ml-1 inline-block -mt-0.5 opacity-70" aria-hidden="true" />
+                  <span class="sr-only">{{ $t('effort.lbl_locked') }}</span>
+                </template>
                 <template v-if="colTip(k)">
                   <span class="pointer-events-none absolute top-0 right-0 h-0 w-0 border-t-[9px] border-l-[9px] border-t-amber-400 border-l-transparent" />
                   <PortalTooltip side="top" arrow-border-color="#e2e8f0">
@@ -233,17 +233,16 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
           </thead>
           <tbody>
             <tr v-if="query.isPending.value">
-              <td :colspan="visibleCols.length + 4" class="px-3 py-6 text-center text-slate-400">{{ $t('effort.lbl_loading') }}</td>
+              <td :colspan="visibleCols.length + 3" class="px-3 py-6 text-center text-slate-400">{{ $t('effort.lbl_loading') }}</td>
             </tr>
             <tr v-else-if="search.trim() && groups.length === 0">
-              <td :colspan="visibleCols.length + 4" class="px-3 py-6 text-center text-slate-400">{{ $t('effort.empty_no_search_result', { query: search }) }}</td>
+              <td :colspan="visibleCols.length + 3" class="px-3 py-6 text-center text-slate-400">{{ $t('effort.empty_no_search_result', { query: search }) }}</td>
             </tr>
             <template v-for="g in groups" v-else :key="g.department.id">
               <tr class="border-b border-pr/15">
                 <td :class="cn(PINNED, GROUP_CELL, 'left-0 w-48')">{{ g.department.name }}</td>
                 <td :class="cn(PINNED, GROUP_CELL, 'left-48 w-24')" />
-                <td :class="cn(PINNED, GROUP_CELL, 'left-72 w-36')" />
-                <td v-for="k in visibleCols" :key="k" :class="cn(GROUP_CELL, WIDTH[k], NUMERIC.includes(k) && 'text-right')">
+                <td v-for="k in visibleCols" :key="k" :class="cn(PINNED_LEFT[k] && [PINNED, PINNED_LEFT[k]], GROUP_CELL, WIDTH[k], NUMERIC.includes(k) && 'text-right')">
                   <span v-if="totalValue(k, g.totals) !== null" :class="cn(totalValue(k, g.totals) === 0 && 'text-prt/50')">{{ formatEffortNumber(totalValue(k, g.totals)!) }}</span>
                 </td>
                 <td v-if="canEdit" :class="cn(GROUP_CELL, 'w-20')" />
@@ -251,14 +250,14 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
               <tr v-for="(row, i) in g.visible" :key="row.id" :class="cn(i % 2 === 0 ? 'bg-white' : 'bg-slate-50', saving.has(row.id) && 'opacity-60')">
                 <td :class="cn(PINNED, 'left-0 w-48 px-3 py-1.5 whitespace-nowrap truncate border-b border-slate-100', i % 2 === 0 ? 'bg-white' : 'bg-slate-50')" :title="row.employee?.fullName">{{ row.employee?.fullName }}</td>
                 <td :class="cn(PINNED, 'left-48 w-24 px-3 py-1.5 whitespace-nowrap border-b border-slate-100 text-slate-500', i % 2 === 0 ? 'bg-white' : 'bg-slate-50')">{{ row.employee?.code ?? '—' }}</td>
-                <td :class="cn(PINNED, 'left-72 w-36 px-2 py-1 whitespace-nowrap border-b border-slate-100', i % 2 === 0 ? 'bg-white' : 'bg-slate-50')">
-                  <EffortSelectCell v-if="canEdit" :value="row.teamId ?? ''" :options="teamOptions" :disabled="saving.has(row.id)" @change="saveField(row, { teamId: $event })" />
-                  <template v-else>{{ row.teamName ?? '—' }}</template>
-                </td>
                 <td
                   v-for="k in visibleCols"
                   :key="k"
-                  :class="cn('px-2 py-1 whitespace-nowrap border-b border-slate-100', WIDTH[k], NUMERIC.includes(k) && 'text-right', COMPUTED.includes(k) && 'font-bold', k === 'free' && row.free > FREE_EPSILON && 'bg-amber-50')"
+                  :class="cn(
+                    'px-2 py-1 whitespace-nowrap border-b border-slate-100', WIDTH[k],
+                    PINNED_LEFT[k] && [PINNED, PINNED_LEFT[k], 'px-3 py-1.5 truncate', i % 2 === 0 ? 'bg-white' : 'bg-slate-50'],
+                    NUMERIC.includes(k) && 'text-right', COMPUTED.includes(k) && 'font-bold', k === 'free' && row.free > FREE_EPSILON && 'bg-amber-50',
+                  )"
                   :style="{ color: k === 'free1' && row.free1 < 0 ? '#e11d48' : COLUMN_COLORS[k]?.text }"
                 >
                   <template v-if="k === 'homeTeam'">{{ row.homeTeamName ?? '—' }}</template>
@@ -274,11 +273,9 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
                     <EffortSelectCell v-if="canEdit" :value="row.projectId" :options="projectOptionsFor(g.department.id)" :disabled="saving.has(row.id)" @change="saveField(row, { projectId: $event })" />
                     <template v-else>{{ row.projectName }}</template>
                   </template>
-                  <template v-else-if="k === 'performance'">
-                    <EffortSelectCell v-if="canEdit" :value="row.performanceLevel?.id ?? ''" :options="perfOptions" :disabled="saving.has(row.id)" @change="saveField(row, { performanceLevelId: $event })" />
-                    <template v-else>{{ row.performanceLevel?.name ?? row.performance }}</template>
-                  </template>
-                  <template v-else-if="k === 'hd' || k === 'ttEffort' || k === 'otEffort'">
+                  <span v-else-if="k === 'performance'" :title="row.performanceLevel?.name">{{ performanceLabel(row) }}</span>
+                  <template v-else-if="k === 'otEffort'">{{ formatEffortNumber(row.otEffort) }}</template>
+                  <template v-else-if="k === 'hd' || k === 'ttEffort'">
                     <EffortNumberCell
                       v-if="canEdit"
                       :value="row[k]"
@@ -289,10 +286,6 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
                       :on-commit="(v) => saveField(row, { [k]: v })"
                     />
                     <template v-else>{{ formatEffortNumber(row[k]) }}</template>
-                  </template>
-                  <template v-else-if="k === 'allocateRate'">
-                    <EffortNumberCell v-if="canEdit" :value="row.allocateRate" :min="0" :max="100" :step="1" :decimals="0" suffix="%" :disabled="saving.has(row.id)" :on-commit="(v) => saveField(row, { allocateRate: v })" />
-                    <template v-else>{{ row.allocateRate }}%</template>
                   </template>
                   <div v-else :class="cn(k === 'free' && row.free > FREE_EPSILON && 'flex flex-col items-end gap-0.5')">
                     {{ formatEffortNumber(row[k]) }}
@@ -312,7 +305,7 @@ const GROUP_CELL = 'h-11 bg-prbg text-prt text-[12px] font-black px-3 py-1.5 whi
                 </td>
               </tr>
               <tr v-if="canEdit && !search.trim()">
-                <td :colspan="visibleCols.length + 4" class="p-0 border-b border-slate-100">
+                <td :colspan="visibleCols.length + 3" class="p-0 border-b border-slate-100">
                   <div class="sticky left-0 w-fit min-h-9 flex items-center px-3 py-2">
                     <AddMemberPopover
                       :month="month"

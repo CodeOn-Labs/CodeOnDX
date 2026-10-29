@@ -113,7 +113,7 @@ Không cần cài thư viện (Node ≥ 20).
 | Method | Đường dẫn | Quyền | Mô tả |
 |---|---|---|---|
 | GET | `/api/v1/effort?month=YYYY-MM` | `effort.view` | Lưới công số + phòng ban, team, dự án, vai trò, mức hiệu suất |
-| PATCH / POST / DELETE | `/api/v1/effort/{id}`, `/api/v1/effort` | `effort.edit` | Sửa ô (đồng bộ TT effort / hiệu suất cho mọi dòng của người đó) / thêm / xoá dòng |
+| PATCH / POST / DELETE | `/api/v1/effort/{id}`, `/api/v1/effort` | `effort.edit` | Sửa ô (gửi `hd` không kèm `ttEffort` → Thực tế = Kế hoạch; mức hiệu suất đồng bộ cho mọi dòng của người đó) / thêm / xoá dòng |
 
 ### Dự án — tạo, sửa, import, chi tiết
 

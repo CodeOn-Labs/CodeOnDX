@@ -48,7 +48,7 @@ Công thức cố định trong code, tham số nằm ở DB:
 
 | Tham số | Lưu ở |
 |---|---|
-| Mức hiệu suất và hệ số (Học việc 0, Hỗ trợ một phần 0,5, Thử việc 0,8, Chính thức 1…) | `master_data` type `performance_level`, `metadata.coefficient`; `effort_allocations.performance_coefficient` lưu bản chụp lúc lưu để tháng cũ không đổi khi sửa danh mục |
+| Mức hiệu suất và hệ số theo loại hợp đồng (TV Thử việc 0,8, CT Chính thức 1, CTV Cộng tác viên 0,5, TTS Thực tập sinh 0,5…) | `master_data` type `performance_level`, `metadata.coefficient`; `effort_allocations.performance_coefficient` lưu bản chụp lúc lưu để tháng cũ không đổi khi sửa danh mục |
 | Số giờ / FTE, giới hạn công, OT, phép, chấm công, ngưỡng PCV / CSS / EE / defect / leakage | `system_rules` (định nghĩa, mặc định, min/max) + `tenant_rules` (giá trị của tenant; không có dòng = dùng mặc định) |
 | Giờ làm việc, tuần làm việc, báo cáo tháng song ngữ Nhật, cho phép bấm Vào/Ra, độ dài mật khẩu, hạn lời mời | `tenant_settings` |
 | Loại nghỉ (có lương, trừ quỹ phép, cần đính kèm), trạng thái nhân sự (còn làm việc hay không) | `master_data.metadata` |

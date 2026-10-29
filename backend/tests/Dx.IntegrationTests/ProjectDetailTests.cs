@@ -300,8 +300,8 @@ public sealed class ProjectDetailTests(ApiFixture fx)
         var month = new DateOnly(BetaTenant.Today.Year, BetaTenant.Today.Month, 1).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
         var monthKey = month[..7];
         await fx.ExecuteOwnerAsync($"""
-            INSERT INTO dx.effort_allocations (tenant_id, employee_id, project_id, period_month, position_id, contract_effort, actual_effort, allocation_rate)
-            VALUES ('{BetaTenant.TenantId}', '{BetaTenant.EmployeeMember}', '{BetaTenant.P1}', '{month}', '{BetaTenant.PositionDev}', 1, 1.5, 60)
+            INSERT INTO dx.effort_allocations (tenant_id, employee_id, project_id, period_month, position_id, contract_effort, actual_effort, overtime_effort, allocation_rate)
+            VALUES ('{BetaTenant.TenantId}', '{BetaTenant.EmployeeMember}', '{BetaTenant.P1}', '{month}', '{BetaTenant.PositionDev}', 1, 0.8, 0.1, 60)
             """);
         var admin = await fx.ClientAs(BetaTenant.AdminEmail);
         try
@@ -309,7 +309,7 @@ public sealed class ProjectDetailTests(ApiFixture fx)
             using var ee = await admin.GetAsync($"/api/v1/projects/{BetaTenant.P1}/ee?month={monthKey}");
             var data = (await Envelope.ReadAsync(ee, HttpStatusCode.OK)).GetProperty("data");
             var row = data.GetProperty("months").EnumerateArray().Single(m => m.GetProperty("month").GetString() == monthKey);
-            row.GetProperty("eeMonth").GetDecimal().ShouldBe(90m); // 1.5 × 60 % = 0.9 MM of 1 MM
+            row.GetProperty("eeMonth").GetDecimal().ShouldBe(90m); // Actual = 0.8 + OT 0.1 = 0.9 MM of 1 MM planned; allocation rate is not used
             row.GetProperty("eeMonthTone").GetString().ShouldBe("green");
             data.GetProperty("chartMonth").GetString().ShouldBe(monthKey);
             data.GetProperty("members")[0].GetProperty("code").GetString().ShouldBe("B001");

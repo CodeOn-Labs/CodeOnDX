@@ -242,23 +242,24 @@ public sealed class InsightRuleEngine(
     }
 
     /// <summary>
-    /// Effort grid of this month, per person (TT effort is the same on all their rows):
-    ///   overload red   TT effort + Σ OT effort &gt; INSIGHT_EFFORT_OVER_MM
-    ///   free     green Σ contract effort (HĐ) &lt; 1 MM → spare = 1 − Σ HĐ, total spare in MM
+    /// Effort grid of this month, per person (same formulas as the grid, effort-calculations.ts):
+    ///   Actual of a person = Σ (actual effort + OT effort) over their rows
+    ///   overload red   Actual &gt; INSIGHT_EFFORT_OVER_MM
+    ///   free     green Free = 1 − Actual &gt; 0 → total spare = Σ Free in MM
     /// </summary>
     private async Task EffortAsync(Notices n, RuleSet set, CancellationToken ct)
     {
         var grid = await effort.GridAsync(null, ct);
         var people = grid.Rows.Where(r => r.Employee is not null).GroupBy(r => r.Employee!.Id)
-            .Select(g => new { g.First().Employee!.FullName, Tt = g.First().TtEffort, Ot = g.Sum(r => r.OtEffort), Hd = g.Sum(r => r.Hd) }).ToList();
+            .Select(g => new { g.First().Employee!.FullName, Actual = g.Sum(r => r.TtEffort + r.OtEffort) }).ToList();
         if (set.Enabled("INSIGHT_EFFORT_OVER_MM"))
         {
             var limit = set.Number("INSIGHT_EFFORT_OVER_MM", 1);
-            var over = people.Where(p => p.Tt + p.Ot > limit).ToList();
+            var over = people.Where(p => p.Actual > limit).ToList();
             n.Add("overload", "red", over.Count, over.Select(p => p.FullName), ("mm", limit), ("month", grid.Month));
         }
-        var free = people.Where(p => p.Hd < 1).ToList();
-        n.Add("free", "green", free.Count, free.Select(p => p.FullName), ("total", WorkDates.Round2(free.Sum(p => 1 - p.Hd))));
+        var free = people.Where(p => 1 - p.Actual > 0.001m).ToList();
+        n.Add("free", "green", free.Count, free.Select(p => p.FullName), ("total", WorkDates.Round2(free.Sum(p => 1 - p.Actual))));
     }
 
     /// <summary>Collects the notices of one screen; a notice with count 0 is skipped.</summary>

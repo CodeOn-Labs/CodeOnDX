@@ -29,8 +29,11 @@ public sealed record AddEffortRequest(string? Month, string? EmployeeId, string?
 /// <summary>
 /// Effort grid (Công số): one row = one employee × project × position × month. A project belongs
 /// to one department (project_cost_centers), which is the row's department. "Member" fields
-/// (actual effort, performance level / coefficient) are the same on every row of a person in a
-/// month. Actual / Actual1 / Free / Free1 are computed by the FE (effort-calculations.ts, D12).
+/// (performance level / coefficient) are the same on every row of a person in a month; planned
+/// (hd) and actual effort (ttEffort) belong to the row, and saving the plan alone sets the actual
+/// effort to the same value. OT effort and the performance level are read-only on the grid (synced
+/// from other systems) but still accepted here for that sync. Actual / Actual1 / Free / Free1 are
+/// computed by the FE (effort-calculations.ts, D12).
 /// Rows are addressed by the position NAME (column "role" of the grid).
 /// </summary>
 public sealed class EffortService(IAppDbContext db, ICurrentUser user, ITenantClock clock)
@@ -60,10 +63,11 @@ public sealed class EffortService(IAppDbContext db, ICurrentUser user, ITenantCl
     }
 
     /// <summary>
-    /// PATCH /effort/{id} — fields saved when the user leaves a cell: hd / ttEffort / otEffort (0–2),
-    /// allocateRate (0–100), performanceLevelId (copies its coefficient), teamId, role, note,
-    /// projectId (+ departmentId: a project already mapped to another department is refused).
-    /// Member fields are copied to the person's other rows of the month; answers all those rows.
+    /// PATCH /effort/{id} — fields saved when the user leaves a cell: hd / ttEffort / otEffort (0–2;
+    /// hd without ttEffort also sets ttEffort = hd), allocateRate (0–100), performanceLevelId (copies
+    /// its coefficient), teamId, role, note, projectId (+ departmentId: a project already mapped to
+    /// another department is refused). Member fields are copied to the person's other rows of the
+    /// month; answers all those rows.
     /// </summary>
     public async Task<(IReadOnlyList<EffortRowDto> Rows, string Name)> UpdateAsync(Guid id, IReadOnlyDictionary<string, JsonElement> body, CancellationToken ct)
     {
@@ -77,10 +81,15 @@ public sealed class EffortService(IAppDbContext db, ICurrentUser user, ITenantCl
             switch (field)
             {
                 case "hd":
-                    if (errors.Number(field, value, 0, 2) is { } hd) row.ContractEffort = hd;
+                    if (errors.Number(field, value, 0, 2) is { } hd)
+                    {
+                        row.ContractEffort = hd;
+                        // Entering the plan fills the actual effort; PMO edits ttEffort on its own when the month changes.
+                        if (!body.ContainsKey("ttEffort")) row.ActualEffort = hd;
+                    }
                     break;
                 case "ttEffort":
-                    if (errors.Number(field, value, 0, 2) is { } tt) { row.ActualEffort = tt; memberFields = true; }
+                    if (errors.Number(field, value, 0, 2) is { } tt) row.ActualEffort = tt;
                     break;
                 case "otEffort":
                     if (errors.Number(field, value, 0, 2) is { } ot) row.OvertimeEffort = ot;
@@ -148,7 +157,7 @@ public sealed class EffortService(IAppDbContext db, ICurrentUser user, ITenantCl
         var siblings = await db.Set<EffortAllocation>().Where(r => r.EmployeeId == row.EmployeeId && r.PeriodMonth == row.PeriodMonth && r.Id != row.Id).ToListAsync(ct);
         if (memberFields)
             foreach (var s in siblings)
-                (s.ActualEffort, s.PerformanceLevelId, s.PerformanceCoefficient) = (row.ActualEffort, row.PerformanceLevelId, row.PerformanceCoefficient);
+                (s.PerformanceLevelId, s.PerformanceCoefficient) = (row.PerformanceLevelId, row.PerformanceCoefficient);
         await db.SaveChangesAsync(ct);
 
         // The old project has no row left in any month → its department mapping goes.
@@ -166,8 +175,9 @@ public sealed class EffortService(IAppDbContext db, ICurrentUser user, ITenantCl
     }
 
     /// <summary>
-    /// POST /effort — new row. A person who already has rows that month inherits their member
-    /// fields; otherwise actual effort 0 and performance level FULL (coefficient of the level).
+    /// POST /effort — new row with plan / actual effort 0. A person who already has rows that month
+    /// inherits their performance level; otherwise performance level CT (official contract), or the
+    /// first level of the tenant's catalog when it has no CT.
     /// </summary>
     public async Task<(EffortRowDto Row, string Name)> AddAsync(AddEffortRequest r, CancellationToken ct)
     {
@@ -197,16 +207,23 @@ public sealed class EffortService(IAppDbContext db, ICurrentUser user, ITenantCl
         if (center is null) db.Set<ProjectCostCenter>().Add(new ProjectCostCenter { ProjectId = projectId, DepartmentId = departmentId });
         var sibling = await db.Set<EffortAllocation>().AsNoTracking().FirstOrDefaultAsync(x => x.EmployeeId == employee!.Id && x.PeriodMonth == month, ct);
         var full = await db.Set<MasterDatum>().AsNoTracking().Where(x => x.Type == MasterDataTypes.PerformanceLevel)
-            .OrderBy(x => x.Code == "FULL" ? 0 : 1).ThenBy(x => x.SortOrder).FirstOrDefaultAsync(ct);
+            .OrderBy(x => x.Code == "CT" ? 0 : 1).ThenBy(x => x.SortOrder).FirstOrDefaultAsync(ct);
         var row = new EffortAllocation
         {
             EmployeeId = employee!.Id, ProjectId = projectId, PeriodMonth = month!.Value, TeamId = teamId, PositionId = positionId!.Value,
-            ContractEffort = 0, ActualEffort = sibling?.ActualEffort ?? 0, OvertimeEffort = 0,
+            ContractEffort = 0, ActualEffort = 0, OvertimeEffort = 0,
             PerformanceLevelId = sibling?.PerformanceLevelId ?? full?.Id,
             PerformanceCoefficient = sibling?.PerformanceCoefficient ?? Coefficient(full?.Metadata) ?? 1, AllocationRate = 100,
         };
         db.Set<EffortAllocation>().Add(row);
         await db.SaveChangesAsync(ct);
+        // actual_effort has DB default 1 (V008) and EF leaves the CLR default 0 out of the INSERT,
+        // so the row comes back with 1 → reset it: a new row starts with plan = actual = 0.
+        if (row.ActualEffort != 0)
+        {
+            row.ActualEffort = 0;
+            await db.SaveChangesAsync(ct);
+        }
         return ((await RowsAsync(db.Set<EffortAllocation>().Where(x => x.Id == row.Id), ct)).Single(), employee.FullName);
     }
 

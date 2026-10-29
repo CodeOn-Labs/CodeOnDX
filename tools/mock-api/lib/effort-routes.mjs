@@ -1,6 +1,8 @@
 // Endpoint lưới Công số (màn effort): mỗi dòng = 1 nhân sự × 1 dự án × 1 vai trò × 1 tháng.
 // Phòng ban của dòng = phòng ban "trung tâm" của dự án (effort_project_centers) — một dự án chỉ thuộc một phòng ban.
-// Trường cấp nhân sự (TT effort, mức hiệu suất) đồng bộ cho mọi dòng của người đó trong tháng (port syncMemberLevelFields).
+// Trường cấp nhân sự (mức hiệu suất / hệ số Performance) đồng bộ cho mọi dòng của người đó trong tháng (port syncMemberLevelFields).
+// Kế hoạch (hd) và Thực tế (tt_effort) là số của từng dòng; sửa Kế hoạch mà không gửi kèm Thực tế → Thực tế = Kế hoạch.
+// OT effort và mức hiệu suất khoá trên lưới (đồng bộ từ hệ thống OT / hồ sơ nhân sự) nhưng API vẫn nhận để job đồng bộ ghi vào.
 // Actual / Actual1 / Free / Free1 tính ở FE theo frontend/src/modules/effort/utils/effort-calculations.ts (công thức cố định, D12).
 import { randomUUID } from 'node:crypto';
 import { ApiError, forbidden, notFound, readJson } from './http.mjs';
@@ -107,11 +109,13 @@ export function effortRoutes({ store, currentUser, requirePermission }) {
         const role = patch.role ?? row.role;
         if (db.effort_allocations.some((r) => r.id !== row.id && !r.is_deleted && r.employee_id === row.employee_id && r.year_month === row.year_month && r.project_id === projectId && r.role === role)) addError(errors, 'role', 'effort_add.err_duplicate');
       }
+      // Nhập Kế hoạch → Thực tế tự bằng Kế hoạch (PMO sửa Thực tế riêng khi trong tháng có thay đổi)
+      if ('hd' in patch && !('ttEffort' in body)) patch.tt_effort = patch.hd;
       throwIfErrors(errors);
       const oldProject = row.project_id;
       Object.assign(row, patch);
       // Trường cấp nhân sự đồng bộ sang mọi dòng của người đó trong tháng
-      const memberPatch = Object.fromEntries(Object.entries(patch).filter(([k]) => ['tt_effort', 'performance', 'performance_level_id'].includes(k)));
+      const memberPatch = Object.fromEntries(Object.entries(patch).filter(([k]) => ['performance', 'performance_level_id'].includes(k)));
       const siblings = db.effort_allocations.filter((r) => r.employee_id === row.employee_id && r.year_month === row.year_month && !r.is_deleted);
       if (Object.keys(memberPatch).length) for (const s of siblings) Object.assign(s, memberPatch);
       // Dự án cũ không còn dòng nào trong mọi tháng → bỏ ánh xạ phòng ban
@@ -142,12 +146,13 @@ export function effortRoutes({ store, currentUser, requirePermission }) {
       if (month && employee && db.effort_allocations.some((r) => !r.is_deleted && r.employee_id === employee.id && r.year_month === month && r.project_id === projectId && r.role === role)) addError(errors, 'role', 'effort_add.err_duplicate');
       throwIfErrors(errors);
       if (!center) db.effort_project_centers.push({ id: randomUUID(), tenant_id: db.tenants[0].id, project_id: projectId, department_id: departmentId });
-      // Người đã có dòng trong tháng → kế thừa TT effort / mức hiệu suất (trường cấp nhân sự)
+      // Người đã có dòng trong tháng → kế thừa mức hiệu suất (trường cấp nhân sự); Kế hoạch / Thực tế của dòng mới bắt đầu từ 0
       const sibling = db.effort_allocations.find((r) => r.employee_id === employee.id && r.year_month === month && !r.is_deleted);
-      const full = db.master_data.find((m) => m.type === 'performance_level' && m.code === 'FULL') ?? db.master_data.find((m) => m.type === 'performance_level');
+      // Mặc định mức "CT" (Chính thức); tenant không có mã này → mức đầu tiên của danh mục
+      const full = db.master_data.find((m) => m.type === 'performance_level' && m.code === 'CT') ?? db.master_data.find((m) => m.type === 'performance_level');
       const row = {
         id: randomUUID(), tenant_id: db.tenants[0].id, employee_id: employee.id, project_id: projectId, year_month: month, team_id: teamId, role, note: null,
-        hd: 0, tt_effort: sibling?.tt_effort ?? 0, ot_effort: 0, performance: sibling?.performance ?? coefficientOf(full?.id), performance_level_id: sibling?.performance_level_id ?? full?.id ?? null, allocate_rate: 100,
+        hd: 0, tt_effort: 0, ot_effort: 0, performance: sibling?.performance ?? coefficientOf(full?.id), performance_level_id: sibling?.performance_level_id ?? full?.id ?? null, allocate_rate: 100,
       };
       db.effort_allocations.push(row);
       return { status: 201, key: 'effort_add.msg_success', args: { name: employee.full_name }, data: rowDto(row, culture) };

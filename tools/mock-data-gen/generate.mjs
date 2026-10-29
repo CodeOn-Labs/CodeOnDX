@@ -217,13 +217,14 @@ const MASTER = {
     ['SOFTWARE', 'Phần mềm', 'Software', {}], ['FOOD', 'Thực phẩm', 'Food & beverage', {}],
   ],
   currency: [['USD', 'USD', 'USD', { symbol: '$' }], ['JPY', 'JPY', 'JPY', { symbol: '¥' }], ['VND', 'VND', 'VND', { symbol: '₫' }]],
-  // Mức hiệu suất dùng ở lưới Công số (D12 — cấu hình theo tenant). metadata.coefficient = hệ số nhân vào
-  // TT effort khi tính Actual1 (xem frontend/src/modules/effort/utils/effort-calculations.ts). Bộ mặc định của tenant demo.
+  // Mức hiệu suất (Performance) dùng ở lưới Công số (D12 — cấu hình theo tenant), theo loại hợp đồng của nhân sự.
+  // metadata.coefficient = hệ số nhân vào (Thực tế + OT) khi tính Actual1 (xem frontend/src/modules/effort/utils/effort-calculations.ts).
+  // Lưới hiện mã kèm hệ số, VD "TV (0.8)". Bộ mặc định của tenant demo.
   performance_level: [
-    ['TRAINEE', 'Học việc', 'Trainee', { coefficient: 0, color: 'slate' }],
-    ['PARTIAL', 'Hỗ trợ một phần', 'Partial contribution', { coefficient: 0.5, color: 'amber' }],
-    ['PROBATION', 'Thử việc', 'Probation', { coefficient: 0.8, color: 'blue' }],
-    ['FULL', 'Chính thức', 'Full contribution', { coefficient: 1, color: 'emerald' }],
+    ['TV', 'Thử việc', 'Probation', { coefficient: 0.8, color: 'blue' }],
+    ['CT', 'Chính thức', 'Official', { coefficient: 1, color: 'emerald' }],
+    ['CTV', 'Cộng tác viên', 'Collaborator', { coefficient: 0.5, color: 'amber' }],
+    ['TTS', 'Thực tập sinh', 'Intern', { coefficient: 0.5, color: 'slate' }],
   ],
 };
 const masterRows = [];
@@ -576,7 +577,7 @@ for (const a of activeAssign) {
     year_month: '2026-10-01', team_id: emp.team_id, role: EFFORT_ROLE[a.role_in_project] || 'Dev BE', note: null,
     hd: round(a.fte_allocated, 2), tt_effort: round(a.fte_allocated, 2), ot_effort: rand() > 0.85 ? 0.1 : 0,
     // performance = hệ số của mức hiệu suất (performance_level.metadata.coefficient) tại thời điểm nhập
-    performance: perf, performance_level_id: perf === 1 ? M.performance_level.FULL : M.performance_level.PROBATION, allocate_rate: 100,
+    performance: perf, performance_level_id: perf === 1 ? M.performance_level.CT : M.performance_level.TV, allocate_rate: 100,
   });
 }
 out('seed/effort_allocations.json', effort.map(({ _key, ...rest }) => rest));

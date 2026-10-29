@@ -514,12 +514,12 @@ export function projectRoutes({ store, currentUser, requirePermission, localize 
 
   /**
    * EE (Effort Efficiency) theo tháng — port computeProjectEE / buildMemberSeries:
-   * - HĐ (MM) của một người trong tháng = cột HĐ ở màn Công số; Actual (MM) = TT effort × allocate rate / 100 (cột Actual ở Công số);
+   * - Kế hoạch (MM) của một người trong tháng = cột Kế hoạch (`hd`) ở màn Công số; Actual (MM) = Thực tế + OT (cột Actual ở Công số, chưa nhân Performance);
    * - 1 MM quy ra giờ = số ngày T2–T6 của tháng × 8 giờ (chưa trừ ngày lễ) → mỗi tháng 1 MM ra số giờ khác nhau;
-   * - EE tháng (%) = Actual giờ / HĐ giờ × 100; HĐ = 0 → không tính được (null);
-   * - EE luỹ kế năm = Σ Actual / Σ HĐ của các tháng có EE trong cùng năm dương lịch, tính đến tháng đó;
+   * - EE tháng (%) = Actual giờ / Kế hoạch giờ × 100; Kế hoạch = 0 → không tính được (null);
+   * - EE luỹ kế năm = Σ Actual / Σ Kế hoạch của các tháng có EE trong cùng năm dương lịch, tính đến tháng đó;
    * - Logwork = tổng giờ Nhật ký công việc vào dự án (chỉ để đối chiếu, không dùng tính EE).
-   * Ví dụ: tháng 10/2026 có 22 ngày làm việc → 1 MM = 176h; HĐ 2 MM = 352h, Actual 1,8 MM = 316,8h → EE = 90%.
+   * Ví dụ: tháng 10/2026 có 22 ngày làm việc → 1 MM = 176h; Kế hoạch 2 MM = 352h, Actual 1,6 + OT 0,2 = 1,8 MM = 316,8h → EE = 90%.
    */
   function eeData(p, ctx, canManage, monthParam) {
     const STANDARD = 8;
@@ -537,7 +537,7 @@ export function projectRoutes({ store, currentUser, requirePermission, localize 
       if (a.project_id !== p.id || a.is_deleted || (onlyMine && a.employee_id !== onlyMine)) continue;
       const r = rowFor(a.employee_id, a.year_month.slice(0, 7));
       r.hdMM += Number(a.hd || 0);
-      r.actualMM += (Number(a.tt_effort || 0) * Number(a.allocate_rate ?? 100)) / 100;
+      r.actualMM += Number(a.tt_effort || 0) + Number(a.ot_effort || 0);
     }
     for (const t of db.timesheets) {
       if (t.project_id !== p.id || (onlyMine && t.employee_id !== onlyMine)) continue;
@@ -614,8 +614,8 @@ export function projectRoutes({ store, currentUser, requirePermission, localize 
       const key = `${year}-${String(m).padStart(2, '0')}`;
       if (key >= from && key <= to) months.push(key);
     }
-    // MM tính tiền của tháng = Σ Actual (TT effort × allocate rate / 100) của dự án ở màn Công số
-    const billable = (month) => round2(db.effort_allocations.filter((a) => a.project_id === p.id && !a.is_deleted && a.year_month.startsWith(month)).reduce((s, a) => s + (Number(a.tt_effort || 0) * Number(a.allocate_rate ?? 100)) / 100, 0));
+    // MM tính tiền của tháng = Σ Actual (Thực tế + OT) của dự án ở màn Công số
+    const billable = (month) => round2(db.effort_allocations.filter((a) => a.project_id === p.id && !a.is_deleted && a.year_month.startsWith(month)).reduce((s, a) => s + Number(a.tt_effort || 0) + Number(a.ot_effort || 0), 0));
     const r = qualityRules(store);
     const ratio = (a, b) => (b > 0 ? Math.round((a / b) * 10000) / 10000 : null);
     const ytd = { defects: 0, size: 0, billable: 0 };

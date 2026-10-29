@@ -45,7 +45,7 @@ public sealed class WorkTests(ApiFixture fx)
                 ('{{TaskOt}}', {{t}}, 'task_type', 'OT', 'Làm thêm', '{}', 4, true),
                 ('{{TaskMeeting}}', {{t}}, 'task_type', 'MEETING', 'Họp', '{}', 5, false),
                 ('{{LeaveAnnual}}', {{t}}, 'leave_type', 'ANNUAL', 'Phép năm', '{"deduct_balance":true}', 1, false),
-                ('{{LevelFull}}', {{t}}, 'performance_level', 'FULL', 'Chính thức', '{"coefficient":1}', 1, false)
+                ('{{LevelFull}}', {{t}}, 'performance_level', 'CT', 'Chính thức', '{"coefficient":1}', 1, false)
             ON CONFLICT DO NOTHING;
             INSERT INTO dx.departments (id, tenant_id, code, name) VALUES ('{{Department}}', {{t}}, 'WD', 'Work Dept') ON CONFLICT DO NOTHING;
             INSERT INTO dx.teams (id, tenant_id, department_id, code, name) VALUES ('{{Team}}', {{t}}, '{{Department}}', 'WT', 'Work Team') ON CONFLICT DO NOTHING
@@ -292,7 +292,7 @@ public sealed class WorkTests(ApiFixture fx)
     // ─── effort grid ─────────────────────────────────────────────────────────
 
     [Fact]
-    public async Task Effort_rows_add_sync_member_fields_and_delete()
+    public async Task Effort_rows_add_plan_fills_actual_and_delete()
     {
         await SeedLookupsAsync();
         var admin = await fx.ClientAs(BetaTenant.AdminEmail);
@@ -304,7 +304,7 @@ public sealed class WorkTests(ApiFixture fx)
             var row = (await Envelope.ReadAsync(add, HttpStatusCode.Created)).GetProperty("data");
             row.GetProperty("role").GetString().ShouldBe("Lập trình viên");
             row.GetProperty("departmentName").GetString().ShouldBe("Work Dept");
-            row.GetProperty("performanceLevel").GetProperty("code").GetString().ShouldBe("FULL");
+            row.GetProperty("performanceLevel").GetProperty("code").GetString().ShouldBe("CT");
 
             using var duplicate = await admin.PostAsJsonAsync("/api/v1/effort",
                 new { month, employeeId = BetaTenant.EmployeeMember, departmentId = Department, projectId = BetaTenant.P1, teamId = Team, role = "DEV" });
@@ -317,7 +317,14 @@ public sealed class WorkTests(ApiFixture fx)
             using var patch = await admin.PatchAsJsonAsync($"/api/v1/effort/{row.Id()}", new { ttEffort = 0.8, hd = 1 });
             var rows = (await Envelope.ReadAsync(patch, HttpStatusCode.OK)).GetProperty("data").EnumerateArray().ToList();
             rows.Count.ShouldBe(2);
-            rows.ShouldAllBe(r => r.GetProperty("ttEffort").GetDecimal() == 0.8m); // member field copied to the other row
+            var edited = rows.Single(r => r.Id() == row.Id());
+            edited.GetProperty("ttEffort").GetDecimal().ShouldBe(0.8m); // explicit actual effort wins over the plan
+            rows.Single(r => r.Id() != row.Id()).GetProperty("ttEffort").GetDecimal().ShouldBe(0m); // actual effort is per row
+
+            using var plan = await admin.PatchAsJsonAsync($"/api/v1/effort/{row.Id()}", new { hd = 0.6 });
+            var planned = (await Envelope.ReadAsync(plan, HttpStatusCode.OK)).GetProperty("data").EnumerateArray().Single(r => r.Id() == row.Id());
+            planned.GetProperty("hd").GetDecimal().ShouldBe(0.6m);
+            planned.GetProperty("ttEffort").GetDecimal().ShouldBe(0.6m); // the plan alone fills the actual effort
 
             using var grid = await admin.GetAsync($"/api/v1/effort?month={month}");
             var data = (await Envelope.ReadAsync(grid, HttpStatusCode.OK)).GetProperty("data");

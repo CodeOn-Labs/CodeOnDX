@@ -179,13 +179,14 @@ public sealed class ProjectTimelineService(IAppDbContext db, ICurrentUser user, 
 
     /// <summary>
     /// GET /projects/{id}/ee?month=yyyy-MM — Effort Efficiency per month (from the Effort grid):
-    ///   contract MM of a person = effort_allocations.contract_effort; actual MM = actual_effort × allocation_rate / 100
+    ///   planned MM of a person = effort_allocations.contract_effort (column Kế hoạch);
+    ///   actual MM = actual_effort + overtime_effort (column Actual = Thực tế + OT, before Performance)
     ///   1 MM in hours = Mon–Fri days of the month × 8 (holidays not removed), so each month differs
-    ///   EE month (%) = actual hours ÷ contract hours × 100; contract 0 → null
-    ///   EE year-to-date = Σ actual ÷ Σ contract of the months with an EE in the same calendar year so far
+    ///   EE month (%) = actual hours ÷ planned hours × 100; planned 0 → null
+    ///   EE year-to-date = Σ actual ÷ Σ planned of the months with an EE in the same calendar year so far
     ///   logwork = hours logged on the project (shown for comparison, not used in EE)
-    /// Example: October 2026 has 22 weekdays → 1 MM = 176 h; contract 2 MM = 352 h, actual 1.8 MM =
-    /// 316.8 h → EE = 90 %. Member chart of the month: cumulative per day, contract / actual spread
+    /// Example: October 2026 has 22 weekdays → 1 MM = 176 h; planned 2 MM = 352 h, actual 1.6 + OT 0.2 =
+    /// 1.8 MM = 316.8 h → EE = 90 %. Member chart of the month: cumulative per day, planned / actual spread
     /// over weekdays (MM × 8 h a day). A user without project.manage only sees their own rows.
     /// </summary>
     public async Task<EeDto> EeAsync(Guid projectId, string? monthParam, CancellationToken ct)
@@ -196,7 +197,7 @@ public sealed class ProjectTimelineService(IAppDbContext db, ICurrentUser user, 
 
         var allocations = await db.Set<EffortAllocation>().AsNoTracking()
             .Where(a => a.ProjectId == p.Id && (onlyMine == null || a.EmployeeId == onlyMine))
-            .Select(a => new { a.EmployeeId, a.PeriodMonth, a.ContractEffort, a.ActualEffort, a.AllocationRate }).ToListAsync(ct);
+            .Select(a => new { a.EmployeeId, a.PeriodMonth, a.ContractEffort, a.ActualEffort, a.OvertimeEffort }).ToListAsync(ct);
         var logs = await db.Set<TimesheetEntry>().AsNoTracking()
             .Where(t => t.ProjectId == p.Id && (onlyMine == null || t.EmployeeId == onlyMine))
             .GroupBy(t => new { t.EmployeeId, t.WorkDate }).Select(g => new { g.Key.EmployeeId, g.Key.WorkDate, Hours = g.Sum(t => t.Hours) })
@@ -222,7 +223,7 @@ public sealed class ProjectTimelineService(IAppDbContext db, ICurrentUser user, 
         {
             var r = RowFor(a.EmployeeId, ProjectDates.MonthKey(a.PeriodMonth));
             r.HdMM += a.ContractEffort;
-            r.ActualMM += a.ActualEffort * a.AllocationRate / 100m;
+            r.ActualMM += a.ActualEffort + a.OvertimeEffort;
         }
         foreach (var l in logs)
         {
@@ -352,7 +353,7 @@ public sealed class ProjectTimelineService(IAppDbContext db, ICurrentUser user, 
     /// <summary>
     /// Defect (kind defect) or leakage rates per month of one year plus year-to-date:
     ///   ratePerSize = defects ÷ product size (e.g. KLOC); ratePerMM = defects ÷ billable MM, where
-    ///   billable MM of a month = Σ actual_effort × allocation_rate / 100 of the project (Effort grid) — not × 100
+    ///   billable MM of a month = Σ Actual (actual_effort + overtime_effort) of the project (Effort grid) — not × 100
     ///   year-to-date only adds the months entered (a month without data adds no billable MM either)
     ///   a zero denominator gives null. Rates are rounded to 4 decimals. Example: 12 defects, 6 MM → 2 defects / MM.
     /// Months that can be entered: project start month … min(project end month, current month).
@@ -369,9 +370,9 @@ public sealed class ProjectTimelineService(IAppDbContext db, ICurrentUser user, 
 
         var metrics = await db.Set<ProjectQualityMetric>().AsNoTracking().Where(q => q.ProjectId == p.Id && q.Kind == kind).ToListAsync(ct);
         var billable = (await db.Set<EffortAllocation>().AsNoTracking().Where(a => a.ProjectId == p.Id)
-                .Select(a => new { a.PeriodMonth, a.ActualEffort, a.AllocationRate }).ToListAsync(ct))
+                .Select(a => new { a.PeriodMonth, a.ActualEffort, a.OvertimeEffort }).ToListAsync(ct))
             .GroupBy(a => ProjectDates.MonthKey(a.PeriodMonth))
-            .ToDictionary(g => g.Key, g => ProjectDates.Round2(g.Sum(a => a.ActualEffort * a.AllocationRate / 100m)));
+            .ToDictionary(g => g.Key, g => ProjectDates.Round2(g.Sum(a => a.ActualEffort + a.OvertimeEffort)));
         var t = await QualityThresholds.LoadAsync(rules, ct);
         static decimal? Ratio(decimal a, decimal b) => b > 0 ? Math.Round(a / b, 4, MidpointRounding.AwayFromZero) : null;
 

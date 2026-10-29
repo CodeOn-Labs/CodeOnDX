@@ -948,42 +948,10 @@
     "updated_at": "2026-10-01T08:00:00+07:00"
   },
   {
-    "id": "4cacaede-b6db-54ed-9c88-d2e72e9f8a6b",
+    "id": "fa90efc4-32be-5f27-b9e3-641e467b5e33",
     "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
     "type": "performance_level",
-    "code": "TRAINEE",
-    "name": "Học việc",
-    "name_en": "Trainee",
-    "description": null,
-    "metadata": {
-      "coefficient": 0,
-      "color": "slate"
-    },
-    "sort_seq": 1,
-    "is_active": true,
-    "updated_at": "2026-10-01T08:00:00+07:00"
-  },
-  {
-    "id": "5e9b2c72-8f32-535f-8e7f-63f042d76b67",
-    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
-    "type": "performance_level",
-    "code": "PARTIAL",
-    "name": "Hỗ trợ một phần",
-    "name_en": "Partial contribution",
-    "description": null,
-    "metadata": {
-      "coefficient": 0.5,
-      "color": "amber"
-    },
-    "sort_seq": 2,
-    "is_active": true,
-    "updated_at": "2026-10-01T08:00:00+07:00"
-  },
-  {
-    "id": "340dbc63-d54c-54c9-8ea5-7a6627165412",
-    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
-    "type": "performance_level",
-    "code": "PROBATION",
+    "code": "TV",
     "name": "Thử việc",
     "name_en": "Probation",
     "description": null,
@@ -991,21 +959,53 @@
       "coefficient": 0.8,
       "color": "blue"
     },
+    "sort_seq": 1,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "a75cd24c-d3a4-5f9c-9758-3153329d6f7c",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "performance_level",
+    "code": "CT",
+    "name": "Chính thức",
+    "name_en": "Official",
+    "description": null,
+    "metadata": {
+      "coefficient": 1,
+      "color": "emerald"
+    },
+    "sort_seq": 2,
+    "is_active": true,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
+    "id": "24e34da1-996a-546e-a178-59070c2484a6",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "type": "performance_level",
+    "code": "CTV",
+    "name": "Cộng tác viên",
+    "name_en": "Collaborator",
+    "description": null,
+    "metadata": {
+      "coefficient": 0.5,
+      "color": "amber"
+    },
     "sort_seq": 3,
     "is_active": true,
     "updated_at": "2026-10-01T08:00:00+07:00"
   },
   {
-    "id": "46cb99d9-cea7-5872-b5a3-bce0f2b3a2ff",
+    "id": "74978dbd-a45c-5016-8dcd-7a9f2e2de130",
     "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
     "type": "performance_level",
-    "code": "FULL",
-    "name": "Chính thức",
-    "name_en": "Full contribution",
+    "code": "TTS",
+    "name": "Thực tập sinh",
+    "name_en": "Intern",
     "description": null,
     "metadata": {
-      "coefficient": 1,
-      "color": "emerald"
+      "coefficient": 0.5,
+      "color": "slate"
     },
     "sort_seq": 4,
     "is_active": true,
