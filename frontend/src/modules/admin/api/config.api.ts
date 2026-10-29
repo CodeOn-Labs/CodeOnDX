@@ -15,6 +15,7 @@ export const CATEGORY_TYPES = [
   'job_position',
   'performance_level',
   'task_type',
+  'tech_request_type',
   'employee_status',
   'leave_type',
   'link_type',

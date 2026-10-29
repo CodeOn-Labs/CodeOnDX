@@ -67,11 +67,11 @@ const METRIC_SCREENS: Record<string, ScreenKey> = {
   css: 'project_detail_metrics_css', defect: 'project_detail_metrics_defect', leakage: 'project_detail_metrics_leakage',
 };
 const MANAGEMENT_SCREENS: Record<string, ScreenKey> = {
-  documents: 'project_detail_management_documents', risk: 'project_detail_management_risk', change: 'project_detail_management_change', issue: 'project_detail_management_issue',
+  risk: 'project_detail_management_risk', issue: 'project_detail_management_issue',
 };
 const insightScreen = computed<ScreenKey>(() => {
   if (tab.value === 'metrics') return METRIC_SCREENS[subtab.value] ?? 'project_detail_metrics_timeline';
-  if (tab.value === 'management') return MANAGEMENT_SCREENS[subtab.value] ?? 'project_detail_management_documents';
+  if (tab.value === 'management') return MANAGEMENT_SCREENS[subtab.value] ?? 'project_detail_management_risk';
   if (tab.value === 'monthly-report') return 'project_detail_monthly_report';
   return 'project_detail_overview';
 });

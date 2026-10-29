@@ -16,6 +16,8 @@ public static class MasterDataTypes
     public const string Industry = "industry";
     public const string Currency = "currency";
     public const string PerformanceLevel = "performance_level";
+    /// <summary>Technical request type of a Jira issue — issue logwork is summed per type for cost allocation.</summary>
+    public const string TechRequestType = "tech_request_type";
 }
 
 /// <summary>Codes the application logic relies on (system rows of master_data).</summary>

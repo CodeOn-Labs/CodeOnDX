@@ -27,7 +27,7 @@ public sealed partial class CategoryService(IAppDbContext db)
     public static readonly string[] Types =
     [
         MasterDataTypes.ProjectStatus, MasterDataTypes.ProjectLevel, MasterDataTypes.RiskLevel, MasterDataTypes.HrLevel,
-        MasterDataTypes.JobPosition, MasterDataTypes.PerformanceLevel, MasterDataTypes.TaskType, MasterDataTypes.EmployeeStatus,
+        MasterDataTypes.JobPosition, MasterDataTypes.PerformanceLevel, MasterDataTypes.TaskType, MasterDataTypes.TechRequestType, MasterDataTypes.EmployeeStatus,
         MasterDataTypes.LeaveType, MasterDataTypes.LinkType, MasterDataTypes.Currency, MasterDataTypes.Country, MasterDataTypes.Industry,
     ];
 

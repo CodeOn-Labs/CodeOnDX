@@ -1,7 +1,7 @@
 // Cấu hình hiển thị của từng loại danh mục: màu + icon (port TYPE_CONFIG_MAP của CategoryTable.tsx).
 import type { Component } from 'vue';
 import {
-  Activity, AlertTriangle, Briefcase, Building2, CalendarOff, ClipboardList, Coins, Gauge, Globe, Layers, Link, ShieldCheck, UserCheck,
+  Activity, AlertTriangle, Briefcase, Building2, CalendarOff, ClipboardList, Coins, Gauge, Globe, Layers, Link, ShieldCheck, UserCheck, Wrench,
 } from '@lucide/vue';
 import type { CategoryType } from '@/modules/admin/api/config.api';
 
@@ -13,6 +13,7 @@ export const CATEGORY_TYPE_STYLE: Record<CategoryType, { color: string; icon: Co
   job_position: { color: '#4b5563', icon: Briefcase },
   performance_level: { color: '#0d9488', icon: Gauge },
   task_type: { color: '#0369a1', icon: ClipboardList },
+  tech_request_type: { color: '#4f46e5', icon: Wrench },
   employee_status: { color: '#16a34a', icon: UserCheck },
   leave_type: { color: '#ea580c', icon: CalendarOff },
   link_type: { color: '#db2777', icon: Link },
