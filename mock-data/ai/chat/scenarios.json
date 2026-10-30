@@ -29,8 +29,8 @@
         "progress"
       ],
       "reply": {
-        "vi": "Các dự án sắp đến hạn: Hoshino – Hệ thống quản lý kho, Minato – Chatbot chăm sóc khách hàng, Kawase – Giám sát dây chuyền IoT. Kiểm tra tab Metrics › Timeline để xem milestone trễ.",
-        "en": "Projects close to their deadline: Hoshino – Hệ thống quản lý kho, Minato – Chatbot chăm sóc khách hàng, Kawase – Giám sát dây chuyền IoT. Check Metrics › Timeline for late milestones."
+        "vi": "Các dự án sắp đến hạn: Hoshino – Hệ thống quản lý kho, Minato – Chatbot chăm sóc khách hàng, Kawase – Giám sát dây chuyền IoT. Kiểm tra tab KPI › Timeline để xem milestone trễ.",
+        "en": "Projects close to their deadline: Hoshino – Hệ thống quản lý kho, Minato – Chatbot chăm sóc khách hàng, Kawase – Giám sát dây chuyền IoT. Check KPI › Timeline for late milestones."
       }
     },
     {

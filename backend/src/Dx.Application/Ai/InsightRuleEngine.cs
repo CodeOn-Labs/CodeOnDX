@@ -245,6 +245,9 @@ public sealed class InsightRuleEngine(
     /// Effort grid of this month, per person (same formulas as the grid, effort-calculations.ts):
     ///   Actual of a person = Σ (actual effort + OT effort) over their rows
     ///   overload red   Actual &gt; INSIGHT_EFFORT_OVER_MM
+    ///   plan_gap amber some row of the person has |Thực tế − Kế hoạch| = |TtEffort − Hd| &gt; INSIGHT_EFFORT_PLAN_GAP_MM
+    ///                  (per row = person × project × role, OT not counted; above or below the plan both count),
+    ///                  e.g. Kế hoạch 1, Thực tế 0.7 → gap 0.3 &gt; 0.2 → listed; Kế hoạch 0.5, Thực tế 0.65 → 0.15 → not listed
     ///   free     green Free = 1 − Actual &gt; 0 → total spare = Σ Free in MM
     /// </summary>
     private async Task EffortAsync(Notices n, RuleSet set, CancellationToken ct)
@@ -257,6 +260,13 @@ public sealed class InsightRuleEngine(
             var limit = set.Number("INSIGHT_EFFORT_OVER_MM", 1);
             var over = people.Where(p => p.Actual > limit).ToList();
             n.Add("overload", "red", over.Count, over.Select(p => p.FullName), ("mm", limit), ("month", grid.Month));
+        }
+        if (set.Enabled("INSIGHT_EFFORT_PLAN_GAP_MM"))
+        {
+            var gapMax = set.Number("INSIGHT_EFFORT_PLAN_GAP_MM", 0.2m);
+            var offRows = grid.Rows.Where(r => r.Employee is not null && Math.Abs(r.TtEffort - r.Hd) > gapMax).ToList();
+            var offPeople = offRows.GroupBy(r => r.Employee!.Id).Select(g => g.First().Employee!.FullName).ToList();
+            n.Add("plan_gap", "amber", offPeople.Count, offPeople, ("gap", gapMax), ("rows", offRows.Count), ("month", grid.Month));
         }
         var free = people.Where(p => 1 - p.Actual > 0.001m).ToList();
         n.Add("free", "green", free.Count, free.Select(p => p.FullName), ("total", WorkDates.Round2(free.Sum(p => 1 - p.Actual))));

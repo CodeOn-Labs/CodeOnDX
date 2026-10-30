@@ -646,6 +646,23 @@
     "updated_at": "2026-10-01T08:00:00+07:00"
   },
   {
+    "id": "f0177c15-d922-562f-abda-16888cc5f2df",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "key": "INSIGHT_EFFORT_PLAN_GAP_MM",
+    "module": "insight",
+    "value_type": "number",
+    "value": 0.2,
+    "default_value": 0.2,
+    "min": 0,
+    "max": 2,
+    "name": "Kế hoạch lệch thực tế trên (MM)",
+    "name_en": "Plan vs actual gap above (MM)",
+    "description": "Cảnh báo nhân sự có dòng công số trong tháng mà Thực tế lệch Kế hoạch (tăng hoặc giảm) nhiều hơn mức này",
+    "description_en": "Warn when a person has an effort row this month whose Actual differs from the Plan (up or down) by more than this",
+    "status": 1,
+    "updated_at": "2026-10-01T08:00:00+07:00"
+  },
+  {
     "id": "18179aaf-8f6d-515a-816b-773707568dc6",
     "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
     "key": "INSIGHT_MAX_NAMES",

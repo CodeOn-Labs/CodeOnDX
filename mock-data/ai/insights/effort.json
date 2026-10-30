@@ -12,6 +12,11 @@
         "variant": "red",
         "title": "2 nhân sự vượt 100%",
         "content": "Hai nhân sự Phòng Phát triển 2 có công số thực tế cộng OT vượt 1,0 MM trong tháng 10."
+      },
+      {
+        "variant": "amber",
+        "title": "6 nhân sự lệch kế hoạch trên 0,2 MM",
+        "content": "Phạm Thị Mai, Bùi Hoài Sơn, Bùi Minh Trang và 3 người khác có Thực tế lệch Kế hoạch hơn 0,2 MM ở 7 dòng công số tháng 10 — rà soát lại kế hoạch hoặc cập nhật Thực tế."
       }
     ],
     "en": [
@@ -24,6 +29,11 @@
         "variant": "red",
         "title": "2 people above 100%",
         "content": "Two Development 2 members exceed 1.0 MM including overtime in October."
+      },
+      {
+        "variant": "amber",
+        "title": "6 people off plan by more than 0.2 MM",
+        "content": "Phạm Thị Mai, Bùi Hoài Sơn, Bùi Minh Trang and 3 more: Actual differs from the Plan by more than 0.2 MM on 7 effort rows in October — review the plan or update Actual."
       }
     ]
   }

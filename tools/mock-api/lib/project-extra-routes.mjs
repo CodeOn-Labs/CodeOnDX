@@ -483,7 +483,7 @@ export function projectExtraRoutes({ store, currentUser, requirePermission }) {
     const status = high.length > 1 || overdue.length > 1 ? 'SOS' : high.length > 0 || overdue.length > 0 ? 'RISK' : 'GOOD';
     const items = [
       { metric: 'Tiến độ', content: overdue.length > 0 ? `- Đánh giá chung: NG\n- ${overdue.length} mốc đã quá hạn: ${overdue.map((m) => m.name).join(', ')}\n- Action: rà soát kế hoạch, thống nhất mốc mới với khách hàng` : '- Đánh giá chung: OK\n- Các mốc bàn giao đúng kế hoạch' },
-      { metric: 'Chất lượng', content: '- Đánh giá chung: OK\n- Theo dõi Defect/Leakage ở tab Metrics' },
+      { metric: 'Chất lượng', content: '- Đánh giá chung: OK\n- Theo dõi Defect/Leakage ở tab KPI' },
       { metric: 'Nhân sự', content: '- Đánh giá chung: OK\n- Xem cảnh báo biến động nhân sự ở tab Tổng quan (nếu có)' },
       { metric: 'Rủi ro', content: risks.length > 0 ? `- ${risks.length} rủi ro đang theo dõi, ${high.length} ở mức Cao/Nghiêm trọng\n${high.map((r) => `- ${r.code} ${r.name}: ${r.response_plan ?? ''}`).join('\n')}` : '- Không có rủi ro đang mở' },
     ];

@@ -184,7 +184,7 @@
     "btn_add_question": "Add question",
     "btn_edit_question": "Edit question",
     "btn_delete_question": "Delete question",
-    "hint_template": "Each new project gets a copy of this content and these questions as its own CSS form, editable in Metrics → CSS. Changes here are saved immediately and only apply to projects created afterwards.",
+    "hint_template": "Each new project gets a copy of this content and these questions as its own CSS form, editable in KPI → CSS. Changes here are saved immediately and only apply to projects created afterwards.",
     "err_load": "Could not load CSS data.",
     "empty_questions": "No questions yet.",
     "col_question": "Question",
@@ -333,7 +333,7 @@
     "title_page": "PCV criteria",
     "lbl_subtitle": "Default PCV checklist applied to new projects",
     "btn_add": "Add criterion",
-    "hint_template": "Each new project gets a copy of these criteria and can then edit its own list in Metrics → PCV. Changes here are saved immediately and only apply to projects created afterwards.",
+    "hint_template": "Each new project gets a copy of these criteria and can then edit its own list in KPI → PCV. Changes here are saved immediately and only apply to projects created afterwards.",
     "err_load": "Could not load PCV data.",
     "empty_items": "The template has no criteria yet.",
     "col_category": "Group",
@@ -1429,7 +1429,7 @@
     "btn_back_list": "Back to project list",
     "tab_overview": "Overview",
     "tab_monthly_report": "Monthly report",
-    "tab_metrics": "Metrics",
+    "tab_metrics": "KPI",
     "tab_management": "Project management",
     "tab_timeline": "Timeline",
     "lbl_loading": "Loading...",
@@ -2034,7 +2034,7 @@
     "title_page": "Risks"
   },
   "project_detail_metrics": {
-    "title_page": "Metrics"
+    "title_page": "KPI"
   },
   "project_detail_metrics_css": {
     "title_page": "CSS"

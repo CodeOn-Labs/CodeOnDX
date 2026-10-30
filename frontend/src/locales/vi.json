@@ -184,7 +184,7 @@
     "btn_add_question": "Thêm câu hỏi",
     "btn_edit_question": "Sửa câu hỏi",
     "btn_delete_question": "Xoá câu hỏi",
-    "hint_template": "Mỗi dự án khi tạo sẽ nhận bản sao nội dung và câu hỏi dưới đây làm form CSS riêng, sau đó có thể sửa riêng ở tab Metrics → CSS của dự án. Thay đổi ở đây lưu ngay và chỉ áp dụng cho dự án tạo mới sau đó.",
+    "hint_template": "Mỗi dự án khi tạo sẽ nhận bản sao nội dung và câu hỏi dưới đây làm form CSS riêng, sau đó có thể sửa riêng ở tab KPI → CSS của dự án. Thay đổi ở đây lưu ngay và chỉ áp dụng cho dự án tạo mới sau đó.",
     "err_load": "Không tải được dữ liệu CSS.",
     "empty_questions": "Chưa có câu hỏi nào.",
     "col_question": "Câu hỏi",
@@ -333,7 +333,7 @@
     "title_page": "Tiêu chí PCV",
     "lbl_subtitle": "Biểu mẫu checklist PCV áp dụng khi tạo dự án mới",
     "btn_add": "Thêm tiêu chí",
-    "hint_template": "Mỗi dự án khi tạo sẽ nhận bản sao các tiêu chí dưới đây, sau đó có thể thêm/sửa/xoá riêng ở tab Metrics → PCV của dự án. Thay đổi ở đây lưu ngay và chỉ áp dụng cho dự án tạo mới sau đó.",
+    "hint_template": "Mỗi dự án khi tạo sẽ nhận bản sao các tiêu chí dưới đây, sau đó có thể thêm/sửa/xoá riêng ở tab KPI → PCV của dự án. Thay đổi ở đây lưu ngay và chỉ áp dụng cho dự án tạo mới sau đó.",
     "err_load": "Không tải được dữ liệu PCV.",
     "empty_items": "Biểu mẫu chưa có tiêu chí nào.",
     "col_category": "Nhóm tiêu chí",
@@ -1429,7 +1429,7 @@
     "btn_back_list": "Quay lại danh sách dự án",
     "tab_overview": "Tổng quan",
     "tab_monthly_report": "Báo cáo tháng",
-    "tab_metrics": "Metrics",
+    "tab_metrics": "KPI",
     "tab_management": "Quản trị dự án",
     "tab_timeline": "Timeline",
     "lbl_loading": "Đang tải dữ liệu...",
@@ -2034,7 +2034,7 @@
     "title_page": "Rủi ro"
   },
   "project_detail_metrics": {
-    "title_page": "Metrics"
+    "title_page": "KPI"
   },
   "project_detail_metrics_css": {
     "title_page": "CSS"

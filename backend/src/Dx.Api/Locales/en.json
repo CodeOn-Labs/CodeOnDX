@@ -621,6 +621,8 @@
   "insight_effort": {
     "overload_title": "{count} people above {mm} MM",
     "overload_content": "{names} have actual plus OT effort above {mm} MM in {month}.",
+    "plan_gap_title": "{count} people off plan by more than {gap} MM",
+    "plan_gap_content": "{names}: Actual differs from the Plan by more than {gap} MM on {rows} effort rows in {month} — review the plan or update Actual.",
     "free_title": "{count} people with spare capacity",
     "free_content": "Total spare effort {total} MM: {names}."
   }

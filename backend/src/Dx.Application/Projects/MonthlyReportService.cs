@@ -369,7 +369,7 @@ public sealed class MonthlyReportService(IAppDbContext db, ICurrentUser user, Pr
             new("Tiến độ", overdue.Count > 0
                 ? $"- Đánh giá chung: NG\n- {overdue.Count} mốc đã quá hạn: {string.Join(", ", overdue)}\n- Action: rà soát kế hoạch, thống nhất mốc mới với khách hàng"
                 : "- Đánh giá chung: OK\n- Các mốc bàn giao đúng kế hoạch"),
-            new("Chất lượng", "- Đánh giá chung: OK\n- Theo dõi Defect/Leakage ở tab Metrics"),
+            new("Chất lượng", "- Đánh giá chung: OK\n- Theo dõi Defect/Leakage ở tab KPI"),
             new("Nhân sự", "- Đánh giá chung: OK\n- Xem cảnh báo biến động nhân sự ở tab Tổng quan (nếu có)"),
             new("Rủi ro", risks.Count > 0
                 ? $"- {risks.Count} rủi ro đang theo dõi, {high.Count} ở mức Cao/Nghiêm trọng\n{string.Join("\n", high.Select(r => $"- {r.Code} {r.Title}: {r.ResponsePlan ?? string.Empty}"))}"

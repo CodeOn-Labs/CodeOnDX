@@ -695,7 +695,7 @@ const RULES = [
   ['OT_MAX_HOURS_PER_YEAR', 'overtime', 'number', 200, 0, 1000, 'OT tối đa mỗi năm', 'Max overtime per year', 'Số giờ OT tối đa mỗi năm', 'Maximum overtime hours per year'],
   ['ATTENDANCE_LATE_GRACE_MINUTES', 'attendance', 'number', 15, 0, 240, 'Phút đi muộn bỏ qua', 'Late grace (minutes)', 'Số phút đi muộn được bỏ qua sau giờ bắt đầu làm việc', 'Minutes after the start time that are not counted as late'],
   ['ATTENDANCE_EDIT_LIMIT_DAYS', 'attendance', 'number', 7, 0, 365, 'Hạn tự bổ sung giờ vào/ra', 'Self-correction limit (days)', 'Số ngày nhân viên được tự bổ sung giờ vào/ra đã qua', 'How many past days employees may add missing check-in/out times'],
-  // Ngưỡng tô màu chỉ số chất lượng ở tab Metrics (D12 — mỗi tenant tự đặt; công thức chỉ số giữ trong code)
+  // Ngưỡng tô màu chỉ số chất lượng ở tab KPI (D12 — mỗi tenant tự đặt; công thức chỉ số giữ trong code)
   ['QUALITY_PCV_GREEN_MIN', 'quality', 'number', 90, 0, 100, 'PCV đạt (xanh) từ', 'PCV good (green) from', 'Điểm PCV (%) từ mức này trở lên tô xanh', 'PCV score (%) at or above this is shown green'],
   ['QUALITY_PCV_ORANGE_MIN', 'quality', 'number', 70, 0, 100, 'PCV cảnh báo (cam) từ', 'PCV warning (orange) from', 'Điểm PCV (%) từ mức này đến dưới mức xanh tô cam; thấp hơn tô đỏ', 'PCV score (%) from this up to the green level is orange; below is red'],
   ['QUALITY_CSS_GREEN_MIN', 'quality', 'number', 4.5, 1, 5, 'CSS đạt (xanh) từ', 'CSS good (green) from', 'Điểm CSS (thang 1–5) từ mức này trở lên tô xanh', 'CSS score (1–5) at or above this is shown green'],
@@ -713,6 +713,8 @@ const RULES = [
   ['INSIGHT_LEAVE_REMAINING_DAYS', 'insight', 'number', 8, 0, 60, 'Nhắc dùng phép khi còn từ (ngày)', 'Leave reminder from (days left)', 'Từ tháng nhắc phép, nhắc nhân sự còn số ngày phép năm từ mức này trở lên', 'From the reminder month, remind people with at least this many annual leave days left'],
   ['INSIGHT_LEAVE_REMINDER_MONTH', 'insight', 'number', 10, 1, 12, 'Tháng bắt đầu nhắc dùng phép', 'Leave reminder month', 'Từ tháng này trong năm bắt đầu nhắc nhân sự còn nhiều phép', 'Month of the year from which the leave reminder shows'],
   ['INSIGHT_EFFORT_OVER_MM', 'insight', 'number', 1, 0.5, 3, 'Công số cảnh báo vượt (MM)', 'Effort overload from (MM)', 'Cảnh báo nhân sự có công số thực tế + OT trong tháng vượt mức này', 'Warn when actual + overtime effort of a person in the month exceeds this'],
+  // Kế hoạch (hd) so với Thực tế (tt_effort) của một dòng công số (nhân sự × dự án × vai trò × tháng): |Thực tế − Kế hoạch| > ngưỡng = lệch nhiều
+  ['INSIGHT_EFFORT_PLAN_GAP_MM', 'insight', 'number', 0.2, 0, 2, 'Kế hoạch lệch thực tế trên (MM)', 'Plan vs actual gap above (MM)', 'Cảnh báo nhân sự có dòng công số trong tháng mà Thực tế lệch Kế hoạch (tăng hoặc giảm) nhiều hơn mức này', 'Warn when a person has an effort row this month whose Actual differs from the Plan (up or down) by more than this'],
   ['INSIGHT_MAX_NAMES', 'insight', 'number', 3, 1, 10, 'Số tên liệt kê tối đa', 'Names listed at most', 'Số dự án / nhân sự được nêu tên trong một thông báo', 'How many projects / people a notice names'],
 ];
 out('seed/system_rules.json', RULES.map(([key, module, value_type, value, min, max, name, name_en, description, description_en]) => ({
@@ -739,6 +741,8 @@ const INSIGHT_CONFIGS = [
   ['leave_request', 'Tình hình nghỉ phép & OT', ['leave_requests', 'ot_requests']],
   ['attendance', 'Đi muộn / thiếu giờ vào ra', ['attendance_records']],
   ['employee_list', 'Phân bổ nhân sự', ['employees', 'assignments']],
+  // Thêm 30/10 — để cuối danh sách cho id (theo vị trí) của các cấu hình cũ không đổi
+  ['effort', 'Kế hoạch lệch thực tế theo nhân sự', ['effort']],
 ];
 out('seed/ai_insights.json', INSIGHT_CONFIGS.map(([screen_key, name, data_sources], i) => ({
   id: uid(`insight:${i}`), tenant_id: TENANT_ID, screen_key, name, data_sources, allowed_roles: [], status: 'active',
@@ -935,13 +939,6 @@ insight('timesheet_day', [
 ], [
   { variant: 'blue', title: 'Reuse yesterday\'s entries?', content: 'Yesterday you logged 5h on your main project, 3h on the second project and 1h of meetings.' },
 ]);
-insight('effort', [
-  { variant: 'green', title: '5 nhân sự còn rảnh ở Phòng Phát triển 1', content: 'Tổng công số rảnh 2,5 MM — có thể bổ sung cho dự án đang thiếu Dev BE.' },
-  { variant: 'red', title: '2 nhân sự vượt 100%', content: 'Hai nhân sự Phòng Phát triển 2 có công số thực tế cộng OT vượt 1,0 MM trong tháng 10.' },
-], [
-  { variant: 'green', title: '5 people available in Development 1', content: '2.5 MM of free effort — could cover projects short of backend developers.' },
-  { variant: 'red', title: '2 people above 100%', content: 'Two Development 2 members exceed 1.0 MM including overtime in October.' },
-]);
 const pendingLeave = leaveRequests.filter((r) => r.status === 'pending').length;
 const pendingOt = otRequests.filter((r) => r.status === 'pending').length;
 const lateCount = attendance.filter((a) => a.check_in > '08:45').length;
@@ -985,8 +982,8 @@ out('ai/chat/scenarios.json', {
     {
       keywords: ['chậm', 'tiến độ', 'late', 'delay', 'progress'],
       reply: {
-        vi: `Các dự án sắp đến hạn: ${names(endingSoon)}. Kiểm tra tab Metrics › Timeline để xem milestone trễ.`,
-        en: `Projects close to their deadline: ${names(endingSoon)}. Check Metrics › Timeline for late milestones.`,
+        vi: `Các dự án sắp đến hạn: ${names(endingSoon)}. Kiểm tra tab KPI › Timeline để xem milestone trễ.`,
+        en: `Projects close to their deadline: ${names(endingSoon)}. Check KPI › Timeline for late milestones.`,
       },
     },
     {
@@ -1056,7 +1053,29 @@ for (const month of ['2026-06-01', '2026-07-01', '2026-08-01', '2026-09-01']) {
     effortHistory.push({ ...rest, id: uid(`effort:${_key}:${month}`), year_month: month, tt_effort: tt });
   }
 }
+// Tháng 10: vài nhân sự có Thực tế lệch Kế hoạch > INSIGHT_EFFORT_PLAN_GAP_MM (0,2 MM) — đi hỗ trợ dự án khác, nghỉ dài, dồn việc.
+// Sửa SAU khi chép lịch sử để công số các tháng trước giữ nguyên; PRNG riêng để không đổi dữ liệu sinh phía sau.
+const randPlanGap = mulberry32(20261030 + 7);
+const PLAN_GAP_MM = 0.2;
+for (const row of effort) {
+  if (row.hd < 0.5 || randPlanGap() > 0.15) continue;
+  row.tt_effort = round(Math.max(0, row.hd + (randPlanGap() > 0.5 ? 0.25 : -0.3)), 2);
+}
 out('seed/effort_allocations.json', [...effort.map(({ _key, ...rest }) => rest), ...effortHistory]);
+
+// Insight màn Công số (connector AI mock) — dòng "lệch kế hoạch" tính từ dữ liệu tháng 10 ở trên, giống InsightRuleEngine.EffortAsync ở BE.
+const planGapRows = effort.filter((r) => round(Math.abs(r.tt_effort - r.hd), 2) > PLAN_GAP_MM);
+const planGapNames = [...new Set(planGapRows.map((r) => employees.find((e) => e.id === r.employee_id).full_name))];
+const listNames = (list, more) => list.slice(0, 3).join(', ') + (list.length > 3 ? more(list.length - 3) : '');
+insight('effort', [
+  { variant: 'green', title: '5 nhân sự còn rảnh ở Phòng Phát triển 1', content: 'Tổng công số rảnh 2,5 MM — có thể bổ sung cho dự án đang thiếu Dev BE.' },
+  { variant: 'red', title: '2 nhân sự vượt 100%', content: 'Hai nhân sự Phòng Phát triển 2 có công số thực tế cộng OT vượt 1,0 MM trong tháng 10.' },
+  { variant: 'amber', title: `${planGapNames.length} nhân sự lệch kế hoạch trên 0,2 MM`, content: `${listNames(planGapNames, (n) => ` và ${n} người khác`)} có Thực tế lệch Kế hoạch hơn 0,2 MM ở ${planGapRows.length} dòng công số tháng 10 — rà soát lại kế hoạch hoặc cập nhật Thực tế.` },
+], [
+  { variant: 'green', title: '5 people available in Development 1', content: '2.5 MM of free effort — could cover projects short of backend developers.' },
+  { variant: 'red', title: '2 people above 100%', content: 'Two Development 2 members exceed 1.0 MM including overtime in October.' },
+  { variant: 'amber', title: `${planGapNames.length} people off plan by more than 0.2 MM`, content: `${listNames(planGapNames, (n) => ` and ${n} more`)}: Actual differs from the Plan by more than 0.2 MM on ${planGapRows.length} effort rows in October — review the plan or update Actual.` },
+]);
 
 const pmOf = (p) => projectMembers.find((m) => m.project_id === p.id && m.role === 'PM')?.employee_id ?? projectMembers.find((m) => m.project_id === p.id)?.employee_id ?? null;
 const membersOf = (p) => [...new Set(projectMembers.filter((m) => m.project_id === p.id).map((m) => m.employee_id))];

@@ -121,5 +121,17 @@
     "allowed_roles": [],
     "status": "active",
     "data_prompt": "Phân tích dữ liệu employees, assignments và nêu tối đa 3 nhận định quan trọng nhất."
+  },
+  {
+    "id": "bb64639c-071f-5311-b534-7cd5ca8aeb22",
+    "tenant_id": "93dd2d4c-d1b9-5ba8-98a1-f900e4c64fa8",
+    "screen_key": "effort",
+    "name": "Kế hoạch lệch thực tế theo nhân sự",
+    "data_sources": [
+      "effort"
+    ],
+    "allowed_roles": [],
+    "status": "active",
+    "data_prompt": "Phân tích dữ liệu effort và nêu tối đa 3 nhận định quan trọng nhất."
   }
 ]

@@ -621,6 +621,8 @@
   "insight_effort": {
     "overload_title": "{count} nhân sự vượt {mm} MM",
     "overload_content": "{names} có công số thực tế cộng OT vượt {mm} MM trong tháng {month}.",
+    "plan_gap_title": "{count} nhân sự lệch kế hoạch trên {gap} MM",
+    "plan_gap_content": "{names} có Thực tế lệch Kế hoạch hơn {gap} MM ở {rows} dòng công số tháng {month} — rà soát lại kế hoạch hoặc cập nhật Thực tế.",
     "free_title": "{count} nhân sự còn rảnh",
     "free_content": "Tổng công số rảnh {total} MM: {names}."
   }

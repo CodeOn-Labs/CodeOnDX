@@ -45,7 +45,9 @@ const detail = useQuery({
 const project = computed(() => detail.data.value);
 const noAccess = computed(() => detail.error.value instanceof ApiError && detail.error.value.status === 403);
 
-const TABS: MainTab[] = ['overview', 'monthly-report', 'metrics', 'management'];
+// Tab Báo cáo tháng tạm ẩn (30/10): giữ nguyên MonthlyReportTab, đổi thành true để hiện lại.
+const SHOW_MONTHLY_REPORT = false;
+const TABS: MainTab[] = SHOW_MONTHLY_REPORT ? ['overview', 'monthly-report', 'metrics', 'management'] : ['overview', 'metrics', 'management'];
 const tab = computed<MainTab>({
   get: () => (TABS.includes(route.query.tab as MainTab) ? (route.query.tab as MainTab) : 'overview'),
   // Đổi tab chính phải xoá subtab (subtab dùng chung giữa Metrics và Quản trị dự án)
@@ -55,12 +57,12 @@ const subtab = computed({
   get: () => (typeof route.query.subtab === 'string' ? route.query.subtab : ''),
   set: (next: string) => void router.replace({ query: { ...route.query, subtab: next } }),
 });
-const tabs = computed<TabItem<MainTab>[]>(() => [
+const tabs = computed(() => ([
   { key: 'overview', label: t('project_detail.tab_overview'), icon: Info },
   { key: 'monthly-report', label: t('project_detail.tab_monthly_report'), icon: FileSpreadsheet },
   { key: 'metrics', label: t('project_detail.tab_metrics'), icon: Activity },
   { key: 'management', label: t('project_detail.tab_management'), icon: ClipboardList },
-]);
+] satisfies TabItem<MainTab>[]).filter((item) => TABS.includes(item.key)));
 
 const METRIC_SCREENS: Record<string, ScreenKey> = {
   timeline: 'project_detail_metrics_timeline', ee: 'project_detail_metrics_ee', pcv: 'project_detail_metrics_pcv',
